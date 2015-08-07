@@ -17,23 +17,36 @@ EDGE_Plantilla = {
     portada_on_show: null,
     basic_contenedor_name: ["contenedor_home"],
     basic_contenedor_popup: ["overlay", "container_overlay"],
-    basic_contenedor_portada: ["overlay_portada"],
+    basic_contenedor_portada: ["contenedor_portada"],
     button_menutools: {
-        fullscreen: "Stage_btn_full",
-        creditos: "Stage_btn_creditos",
-        ayuda: "Stage_btn_ayuda",
-        audio: "Stage_btn_audio",
-        info: "Stage_btn_info",
-        accesibilidad: "Stage_btn_accesibilidad"
+        fullscreen: "btn_full",
+        creditos: "btn_creditos",
+        ayuda: "btn_ayuda",
+        audio: "btn_audio",
+        info: "btn_info",
+        accesibilidad: "btn_accesibilidad"
     },
     button_nav: {
-        R1: "Stage_btnR_1",
-        R2: "Stage_btnR_2",
-        R3: "Stage_btnR_3",
-        R4: "Stage_btnR_4",
-        R5: "Stage_btnR_5",
-        R6: "Stage_btnR_6",
-        R7: "Stage_btnR_7"
+        R1: "btnR_1",
+        R2: "btnR_2",
+        R3: "btnR_3",
+        R4: "btnR_4",
+        R5: "btnR_5",
+        R6: "btnR_6",
+        R7: "btnR_7",
+        learning: "btn_puntoApren",
+        vocabulario: "btn_vocabulario2"
+    },
+    img_button_nav: {
+        R1: "rec_1",
+        R2: "rec_2",
+        R3: "rec_3",
+        R4: "rec_4",
+        R5: "rec_5",
+        R6: "rec_6",
+        R7: "rec_7",
+        learning: "punto_A",
+        vocabulario: "vocabulario"
     }
 
 };
@@ -133,6 +146,8 @@ ion.sound({
             } else {
                 sym_element = sym.$(value);
             }
+            
+            //console.log("STYLE NAV", sym_element, boolShow);
 
             if (boolShow) {
                 sym_element.show();
@@ -141,18 +156,45 @@ ion.sound({
             }
 
         });
+        
+        $.each(EDGE_Plantilla.img_button_nav, function (key, value) {
+            var sym_element;
+            if (typeof value !== "string") {
+                sym_element = buscar_sym(sym, value, true);
+            } else {
+                sym_element = sym.$(value);
+            }
+            
+            //console.log("STYLE NAV", sym_element, boolShow);
+
+            if (boolShow) {
+                sym_element.show();
+            } else {
+                sym_element.hide();
+            }
+
+        });
+        
+        var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name, true);
+        
+        if(boolShow){
+            sym_contenedor.show();
+        }else{
+            sym_contenedor.hide();
+        }
     }
 
     function buscar_sym(sym, arrSymSearch, boolJQUERY) {
         var temp = sym;
         $.each(arrSymSearch, function (index, value) {
-            //EDGE_Plantilla.debug ? console.log(temp) : false;
+            EDGE_Plantilla.debug ? console.log(temp, index, value, arrSymSearch) : false;
 
             if (!isEmpty(boolJQUERY) && index === arrSymSearch.length - 1) {
                 temp = temp.$(value);
-                //console.log("UNDEF",temp);
+                console.log("UNDEF",temp);
             } else {
                 temp = temp.getSymbol(value);
+                console.log("GET SYMVALUE", value);
             }
 
         });
@@ -164,7 +206,7 @@ ion.sound({
         //EDGE_Plantilla.config
         var sym = EDGE_Plantilla.plantilla_sym;
         EDGE_Plantilla.debug ? console.log(strPagina) : false;
-        var sym_contenedor;
+        var sym_contenedor = null;
 
         if (!EDGE_Plantilla.config.paginas.hasOwnProperty(strPagina)) {
             console.error(strPagina, EDGE_Plantilla.config.paginas, "PAGINA No encontrado");
@@ -184,6 +226,8 @@ ion.sound({
         } else {
             objRetro = null;
         }
+        
+        EDGE_Plantilla.debug ? console.log("START DETECTING", EDGE_Plantilla) : false;
 
         switch (pagina.type) {
             case "portada":
@@ -194,7 +238,7 @@ ion.sound({
                 break;
             case "popup_mini":
             case "popup_full":
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup, true);
+                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup);
                 EDGE_Plantilla.popup_on_show = pagina;
                 handle_popup(true);
                 break;
@@ -253,6 +297,14 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log("close") : false;
         EDGE_Plantilla.popup_on_show = null;
     });
+    
+    $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
+        play_buttons();
+        handle_portada(false);
+        handle_style_nav(true);
+        EDGE_Plantilla.debug ? console.log("close") : false;
+        EDGE_Plantilla.popup_on_show = null;
+    });
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Controles de la plantilla">
@@ -260,22 +312,22 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log(evt) : false;
         EDGE_Plantilla.debug ? console.log(evt.evt.currentTarget.id) : false;
         switch (evt.evt.currentTarget.id) {
-            case EDGE_Plantilla.button_menutools.fullscreen:
+            case "Stage_" + EDGE_Plantilla.button_menutools.fullscreen:
                 fullscreen();
                 break;
-            case EDGE_Plantilla.button_menutools.creditos:
+            case "Stage_" + EDGE_Plantilla.button_menutools.creditos:
                 mostrar_pagina("creditos");
                 break;
-            case EDGE_Plantilla.button_menutools.ayuda:
+            case "Stage_" + EDGE_Plantilla.button_menutools.ayuda:
                 mostrar_pagina("ayudas");
                 break;
-            case EDGE_Plantilla.button_menutools.audio:
+            case "Stage_" + EDGE_Plantilla.button_menutools.audio:
                 EDGE_Plantilla.play_general_sound = !EDGE_Plantilla.play_general_sound;
                 break;
-            case EDGE_Plantilla.button_menutools.info:
+            case "Stage_" + EDGE_Plantilla.button_menutools.info:
                 mostrar_pagina("info");
                 break;
-            case EDGE_Plantilla.button_menutools.accesibilidad:
+            case "Stage_" + EDGE_Plantilla.button_menutools.accesibilidad:
                 mostrar_pagina("muy_bien", {mensaje: "¡Esto está BIEN!", titulo: "Excelente"});
                 break;
         }
@@ -287,24 +339,24 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log(evt) : false;
         EDGE_Plantilla.debug ? console.log(evt.evt.currentTarget.id) : false;
         switch (evt.evt.currentTarget.id) {
-            case EDGE_Plantilla.button_nav.R1:
+            case "Stage_" + EDGE_Plantilla.button_nav.R1:
                 mostrar_pagina("1");
                 break;
-            case EDGE_Plantilla.button_nav.R2:
+            case "Stage_" + EDGE_Plantilla.button_nav.R2:
                 mostrar_pagina("2");
                 break;
-            case EDGE_Plantilla.button_nav.R3:
+            case "Stage_" + EDGE_Plantilla.button_nav.R3:
                 mostrar_pagina("3");
                 break;
-            case EDGE_Plantilla.button_nav.R4:
+            case "Stage_" + EDGE_Plantilla.button_nav.R4:
                 mostrar_pagina("4");
                 break;
-            case EDGE_Plantilla.button_nav.R5:
+            case "Stage_" + EDGE_Plantilla.button_nav.R5:
                 mostrar_pagina("portada");
                 break;
-            case EDGE_Plantilla.button_nav.R6:
+            case "Stage_" + EDGE_Plantilla.button_nav.R6:
                 break;
-            case EDGE_Plantilla.button_nav.R7:
+            case "Stage_" + EDGE_Plantilla.button_nav.R7:
                 break;
             default:
                 break;
