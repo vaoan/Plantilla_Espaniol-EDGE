@@ -83,6 +83,12 @@ ion.sound({
     $("body").on("EDGE_Container_loaded", function (evt) {
         EDGE_Plantilla.plantilla_sym = evt.sym;
         EDGE_Plantilla.config = getRemote().responseJSON;
+        $("html").css({
+            "background-image": 'url("http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg") !important',
+            "background-size": "cover",
+            "background-repeat": "no-repeat",
+            "background-position": "center center"
+        });
         //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
     });
 
@@ -385,8 +391,8 @@ ion.sound({
                 return false;
             }
         });
-        
-        if(is_empty){
+
+        if (is_empty) {
             return false;
         }
 
