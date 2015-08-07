@@ -1,0 +1,103 @@
+{
+    "default": {
+        "url_pages": "compositions/",
+        "default_page": "0"
+    },
+    "paginas": {
+        "0": {
+            "type": "portada",
+            "recurso": "1",
+            "url": "PORTADA/portada_edge/portada.html"
+        },
+        "1": {
+            "type": "recurso",
+            "recurso": "6",
+            "url": "compositions/contenido_recurso/recurso6test/recurso6.html"
+        },
+        "2" :{
+            "type" : "actividad",
+            "recurso": "3",
+            "actividad" : "drag_drop"
+        },
+        "3" :{
+            "type" : "actividad",
+            "recurso": "3",
+            "actividad" : "drag_drop_many"
+        }
+    },
+    "actividades": {
+        "matching": {
+            "url": "",
+            "necesita_datos_externos": true
+        },
+        "drag_drop": {
+            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
+            "necesita_datos_externos": false
+        },
+        "drag_drop_many": {
+            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
+            "necesita_datos_externos": false
+        }
+    },
+    "popups": {
+        "muy_bien": {
+            "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
+            "type": "popup_mini",
+            "symbols": {
+                "titulo": [
+                    "muybien_cont",
+                    "trans_popup",
+                    "titulo"
+                ],
+                "mensaje": [
+                    "muybien_cont",
+                    "trans_popup",
+                    "recuad_texto",
+                    "txt_mensaje"
+                ]
+            }
+        },
+        "perfect": {
+            "url": "14_retroal_edge/pop_up_Actividades/perfect/perfect.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "bronce": {
+            "url": "14_retroal_edge/pop_up_Actividades/edge_lupa-bronce/lup_bronceEdge/lupaBronce_edge.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "plata": {
+            "url": "14_retroal_edge/pop_up_Actividades/edge_med-plata/med_plataEdge/med-plata_edge.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "med_estrella": {
+            "url": "14_retroal_edge/pop_up_Actividades/retroal_medEstrella/retroal_medEstrella.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "creditos": {
+            "url": "elementos_plantilla/popup_creditos/popup_creditos.html",
+            "type": "popup_full",
+            "symbols": {
+            }
+        },
+        "info":{
+            "url": "elementos_plantilla/Informacion/Informacion.html",
+            "type": "popup_full",
+            "symbols": {
+            }
+        },
+        "ayudas":{
+            "url": "elementos_plantilla/Menuayuda/Menuayuda.html",
+            "type": "popup_full",
+            "symbols": {
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+[0806/171923:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/171923:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/171923:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/171923:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0806/171933:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/171933:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/171933:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/171933:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0806/172026:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (about:blank:0:45), <anonymous>:1:7)
+    at about:blank:0:45", source:  (1)
+[0806/172026:ERROR:renderer_main.cc(226)] Running without renderer sandbox
