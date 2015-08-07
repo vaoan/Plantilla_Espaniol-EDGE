@@ -36,6 +36,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btnR_7}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          cambiarColorBordes(sym, 7);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end
@@ -216,30 +221,55 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_5}", "click", function(sym, e) {
          cambiarColorBordes(sym, 5);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_4}", "click", function(sym, e) {
          cambiarColorBordes(sym, 4);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_3}", "click", function(sym, e) {
          cambiarColorBordes(sym, 3);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_2}", "click", function(sym, e) {
          cambiarColorBordes(sym, 2);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_1}", "click", function(sym, e) {
          cambiarColorBordes(sym, 1);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end
@@ -312,6 +342,28 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          // introducir aquí código para clic de ratón
          $("body").trigger({
                          type: "EDGE_Self_Plantilla_ClickMenuTools",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_puntoApren}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_vocabulario2}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
                          sym: sym,
                          evt: e
                      });
