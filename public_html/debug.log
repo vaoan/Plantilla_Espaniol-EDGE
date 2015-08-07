@@ -30,3 +30,6 @@
     at eval (eval at <anonymous> (about:blank:0:45), <anonymous>:1:7)
     at about:blank:0:45", source:  (1)
 [0806/214706:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/214921:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/214921:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/214921:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
