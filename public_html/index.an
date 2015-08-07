@@ -61,6 +61,12 @@
 			"timelineColor":"0x00bda4",
 			"animationEnabled":"true",
 			"epOpened":"false"}},
+	"symbol_overlay_portada":{
+		"element_${Rectangle}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a9fa"}},
 	"symbol_vocabulario":{
 		"element_${TextCopy}":{
 			"timelineColor2":"0xd35d6e",
@@ -335,6 +341,11 @@
 \"Nivel inferior\": {\
    \"timelines\": {\
 \
+   }},\
+\"overlay_portada\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
    }}\
 }",
 	"Symbol_1-Default Timeline_playhead_ms":"0",
@@ -562,7 +573,7 @@
 			"timelineColor3":"0x4a485e",
 			"animationEnabled":"false",
 			"timelineColor":"0x63599f"}},
-	"StageZoomFactor":"29",
+	"StageZoomFactor":"19",
 	"pixelsPerMs":"0.2",
 	"symbol_contenedor_home":{
 		"element_${Rectangle}":{
@@ -743,10 +754,10 @@
 			"animationEnabled":"false",
 			"timelineColor":"0x63599f"},
 		"element_${Rectangle}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
-			"timelineColor":"0x00a9fa"},
+			"timelineColor":"0xfb657a"},
 		"element_${Tool_r6Copy6}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
@@ -762,6 +773,10 @@
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"true",
 			"timelineColor":"0x91c767"},
+		"element_${BTN-tools-ES}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"},
 		"element_${Rectangle3}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
@@ -777,10 +792,11 @@
 			"timelineColor3":"0x295a6d",
 			"animationEnabled":"true",
 			"timelineColor":"0x008dc8"},
-		"element_${BTN-tools-ES}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"},
+		"element_${overlay_portada}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"animationEnabled":"true",
+			"timelineColor":"0xceaef4"},
 		"element_${grisCopy}":{
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
@@ -1194,16 +1210,16 @@
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"true",
 			"timelineColor":"0x91c767"}},
-	"TransitionIdCounter":"217",
+	"TransitionIdCounter":"218",
 	"rec_1-Default Timeline_playhead_ms":"0",
-	"viewStartY":"1000",
+	"viewStartY":"676",
 	"expanded:images/RECURSO2.png":"nil",
 	"symbol_btn_full":{
 		"element_${RectangleCopy}":{
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"}},
-	"nextElementColorIndex":"10",
+	"nextElementColorIndex":"12",
 	"symbol_rec_2":{
 		"element_${TextCopy}":{
 			"timelineColor2":"0x1aa38f",

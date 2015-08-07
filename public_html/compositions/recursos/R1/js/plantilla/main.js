@@ -14,8 +14,10 @@ EDGE_Plantilla = {
     config: null,
     popup_on_show: null,
     recurso_on_show: null,
+    portada_on_show: null,
     basic_contenedor_name: ["contenedor_home"],
     basic_contenedor_popup: ["overlay", "container_overlay"],
+    basic_contenedor_portada: ["overlay_portada"],
     button_menutools: {
         fullscreen: "Stage_btn_full",
         creditos: "Stage_btn_creditos",
@@ -101,6 +103,25 @@ ion.sound({
             EDGE_Plantilla.debug ? console.log("COPY contenedor pop", index) : false;
         });
     }
+    
+    function handle_portada(boolShow) {
+        var sym = EDGE_Plantilla.plantilla_sym;
+        var copy = EDGE_Plantilla.basic_contenedor_portada;
+        var temp_arr = [];
+
+        $.each(copy, function (index, value) {
+            temp_arr.push(value);
+            var sym_element = buscar_sym(sym, temp_arr, true);
+
+            EDGE_Plantilla.debug ? console.log("HANDLE", sym_element) : false;
+            if (boolShow) {
+                sym_element.show();
+            } else {
+                sym_element.hide();
+            }
+            EDGE_Plantilla.debug ? console.log("COPY contenedor PORTADA", index) : false;
+        });
+    }
 
     function handle_style_nav(boolShow) {
         var sym = EDGE_Plantilla.plantilla_sym;
@@ -125,7 +146,7 @@ ion.sound({
     function buscar_sym(sym, arrSymSearch, boolJQUERY) {
         var temp = sym;
         $.each(arrSymSearch, function (index, value) {
-            EDGE_Plantilla.debug ? console.log(temp) : false;
+            //EDGE_Plantilla.debug ? console.log(temp) : false;
 
             if (!isEmpty(boolJQUERY) && index === arrSymSearch.length - 1) {
                 temp = temp.$(value);
@@ -167,10 +188,13 @@ ion.sound({
         switch (pagina.type) {
             case "portada":
                 handle_style_nav(false);
+                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_portada);
+                EDGE_Plantilla.portada_on_show = pagina;
+                handle_portada(true);
+                break;
             case "popup_mini":
             case "popup_full":
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup);
-                EDGE_Plantilla.debug ? console.log("SYM de carga POPUP", sym_contenedor) : false;
+                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup, true);
                 EDGE_Plantilla.popup_on_show = pagina;
                 handle_popup(true);
                 break;
@@ -179,8 +203,12 @@ ion.sound({
                 EDGE_Plantilla.recurso_on_show = pagina;
                 break;
         }
+        
+        EDGE_Plantilla.debug ? console.log("SYM de carga GENERAL", sym_contenedor, pagina) : false;
 
         EDGE_Plantilla.debug ? console.log(strPagina, objRetro, pagina) : false;
+        
+        EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config.default.url_pages + pagina.url, sym_contenedor) : false;
 
         // Load Third Composition and inject data
         var promise = EC.loadComposition(EDGE_Plantilla.config.default.url_pages + pagina.url,
@@ -205,13 +233,16 @@ ion.sound({
     $("body").on("EDGE_Container_loaded", function (evt) {
         EDGE_Plantilla.plantilla_sym = evt.sym;
         EDGE_Plantilla.config = getRemote().responseJSON;
+        
+        var url = $(location).attr('href');
+        
+        EDGE_Plantilla.config.default.url_pages = url.substring(0, url.lastIndexOf('/')) + "/" + EDGE_Plantilla.config.default.url_pages;
         document.body.style.background = "url(http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg) 50% 50% / cover no-repeat gray";
         $("body").css({
             "background-size": "cover",
             "background-repeat": "no-repeat",
             "background-position": "center center"
         });
-        console.log($("html"));
 
         //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
     });

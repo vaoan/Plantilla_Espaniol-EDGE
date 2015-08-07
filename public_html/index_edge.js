@@ -20,6 +20,7 @@
             js+"jquery-ui-1.11.4.custom/jquery-ui.min.js",
             js+"jquery.fullscreen-0.5.0/jquery.fullscreen.min.js",
             js+"ion.sound-3.0.5/js/ion.sound.min.js",
+            js+"plantilla/utilities.js",
             js+"plantilla/utility.js",
             js+"plantilla/main.js",
             js+"EdgeCommons.js"
@@ -175,16 +176,17 @@
                             fill: ["rgba(0,0,0,0)",im+"RECURSO2.png",'0px','0px']
                         },
                         {
+                            id: 'overlay_portada',
+                            symbolName: 'overlay_portada',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['0', '136', '1920', '944', 'auto', 'auto']
+                        },
+                        {
                             id: 'banner',
                             type: 'image',
                             rect: ['20px', '20px', '1882px', '114px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"banner.png",'0px','0px']
-                        },
-                        {
-                            id: 'nivel',
-                            type: 'image',
-                            rect: ['19px', '56px', '1880px', '80px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"nivel.png",'0px','0px']
                         },
                         {
                             id: 'RoundRect',
@@ -236,6 +238,12 @@
                                 fill: ["rgba(0,0,0,0)",im+"Full%20screen.png",'0px','0px'],
                                 transform: [[],[],[],['0.25','0.25']]
                             }]
+                        },
+                        {
+                            id: 'nivel',
+                            type: 'image',
+                            rect: ['19px', '56px', '1880px', '80px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"nivel.png",'0px','0px']
                         },
                         {
                             id: 'Tool_creditos',
@@ -356,12 +364,12 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid215",
+                            "eid217",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${overlay}",
+                            "${overlay_portada}",
                             'none',
                             'none'
                         ],
@@ -372,6 +380,16 @@
                             0,
                             "linear",
                             "${RECURSO2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid215",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${overlay}",
                             'none',
                             'none'
                         ]
@@ -3072,6 +3090,38 @@
                     style: {
                         '${symbolSelector}': {
                             rect: [null, null, '1838px', '785px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
+                    ]
+                }
+            },
+            "overlay_portada": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '1920px', '944px', 'auto', 'auto'],
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(192,192,192,1)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1920px', '944px']
                         }
                     }
                 },

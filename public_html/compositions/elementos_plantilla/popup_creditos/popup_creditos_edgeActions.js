@@ -21,12 +21,12 @@
                 sym: sym,
                 evt: e
             });
-
+            
         });
         //Edge binding end
 
     })("stage");
-    //Edge symbol end:'stage'
+   //Edge symbol end:'stage'
 
     //=========================================================
 
@@ -35,20 +35,7 @@
 
         Symbol.bindElementAction(compId, symbolName, "${cerrar}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
-            //console.log("click");
-            //console.log(parent.$(parent.document));
-            
-            cont_max = 9;
-            cont = 0;
-
-            var par = window.parent;
-            while (par.parent !== window.parent && cont <= cont_max && typeof par.EDGE_Plantilla === "undefined") {
-                par = par.parent;
-                console.log("parent",par);
-                cont++;
-            }
-
-            par.$(parent.document).trigger({
+            parent.$(parent.document).trigger({
                 type: 'EDGE_Plantilla_ClosePopup',
                 sym: sym,
                 evt: e
@@ -71,7 +58,7 @@
         //Edge binding end
 
     })("popup_creditos");
-    //Edge symbol end:'popup_creditos'
+   //Edge symbol end:'popup_creditos'
 
     //=========================================================
 
@@ -79,7 +66,7 @@
     (function (symbolName) {
 
     })("titulo_creditos");
-    //Edge symbol end:'titulo_creditos'
+   //Edge symbol end:'titulo_creditos'
 
     //=========================================================
 
@@ -94,7 +81,7 @@
         //Edge binding end
 
     })("creditos");
-    //Edge symbol end:'creditos'
+   //Edge symbol end:'creditos'
 
     //=========================================================
 
@@ -102,7 +89,7 @@
     (function (symbolName) {
 
     })("banner_superior");
-    //Edge symbol end:'banner_superior'
+   //Edge symbol end:'banner_superior'
 
     //=========================================================
 
@@ -110,6 +97,6 @@
     (function (symbolName) {
 
     })("falsob_boton");
-    //Edge symbol end:'falsob_boton'
+   //Edge symbol end:'falsob_boton'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-35468122");
