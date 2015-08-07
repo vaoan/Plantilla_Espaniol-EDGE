@@ -70,3 +70,4 @@
     at eval (eval at <anonymous> (about:blank:0:45), <anonymous>:1:7)
     at about:blank:0:47", source:  (1)
 [0806/221708:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/222202:ERROR:gpu_info_collector_win.cc(102)] Can't retrieve a valid WinSAT assessment.
