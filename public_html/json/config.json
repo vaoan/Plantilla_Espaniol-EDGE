@@ -1,45 +1,54 @@
 {
     "default": {
         "url_pages": "compositions/",
-        "default_page": "0"
+        "default_page": "1"
     },
     "paginas": {
-        "0": {
+        "portada":{
             "type": "portada",
             "recurso": "1",
-            "url": "PORTADA/portada_edge/portada.html"
+            "url": "elementos_plantilla/PORTADA/portada_edge/portada.html"
         },
         "1": {
-            "type": "recurso",
-            "recurso": "6",
-            "url": "compositions/contenido_recurso/recurso6test/recurso6.html"
+            "type": "portada",
+            "recurso": "1",
+            "url": "recursos/R1/R1.html"
         },
-        "2" :{
-            "type" : "actividad",
+        "2": {
+            "type": "actividad",
             "recurso": "3",
-            "actividad" : "drag_drop"
+            "actividad": "drag_drop",
+            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html"
         },
-        "3" :{
-            "type" : "actividad",
+        "3": {
+            "type": "actividad",
             "recurso": "3",
-            "actividad" : "drag_drop_many"
-        }
-    },
-    "actividades": {
-        "matching": {
-            "url": "",
-            "necesita_datos_externos": true
+            "actividad": "drag_drop_many",
+            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html"
         },
-        "drag_drop": {
-            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
-            "necesita_datos_externos": false
+        "4": {
+            "type": "actividad",
+            "recurso": "4",
+            "actividad": "pick_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html"
         },
-        "drag_drop_many": {
-            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
-            "necesita_datos_externos": false
-        }
-    },
-    "popups": {
+        "muy_bien": {
+            "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
+            "type": "popup_mini",
+            "symbols": {
+                "titulo": [
+                    "muybien_cont",
+                    "trans_popup",
+                    "titulo"
+                ],
+                "mensaje": [
+                    "muybien_cont",
+                    "trans_popup",
+                    "recuad_texto",
+                    "txt_mensaje"
+                ]
+            }
+        },
         "muy_bien": {
             "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
             "type": "popup_mini",
@@ -87,13 +96,13 @@
             "symbols": {
             }
         },
-        "info":{
+        "info": {
             "url": "elementos_plantilla/Informacion/Informacion.html",
             "type": "popup_full",
             "symbols": {
             }
         },
-        "ayudas":{
+        "ayudas": {
             "url": "elementos_plantilla/Menuayuda/Menuayuda.html",
             "type": "popup_full",
             "symbols": {
