@@ -24,11 +24,7 @@
             "actividad": "drag_drop",
             "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
             "interaction": {
-                "1": {
-                    "questions": {
-                        "ALL": true
-                    }
-                }
+                "ALL": true
             }
         },
         "3": {
@@ -37,11 +33,7 @@
             "actividad": "drag_drop_many",
             "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
             "interaction": {
-                "1": {
-                    "questions": {
-                        "ALL": true
-                    }
-                }
+                "ALL": true
             }
         },
         "4": {

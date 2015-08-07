@@ -215,6 +215,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_6}", "click", function(sym, e) {
          cambiarColorBordes(sym, 6);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
 
       });
       //Edge binding end

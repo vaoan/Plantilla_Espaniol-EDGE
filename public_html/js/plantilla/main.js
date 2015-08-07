@@ -443,20 +443,36 @@ ion.sound({
         }
     });
 
-    function upload_interaction(json_data) {
+    function upload_interaction(json_data, answers) {
         var pagina = EDGE_Plantilla.recurso_on_show;
         if (isEmpty(pagina.recurso)) {
             console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
             return;
         }
 
-        if (!isEmpty(pagina.interactions)) {
-            if (!isEmpty(pagina.interactions.ALL)) {
-                var id_interaction = pagina.recurso + "-ALL";
-            } else {
+        var id_interaction;
+        var interactions = {};
+        EDGE_Plantilla.debug ? console.log("Trying to upload interactions", json_data, pagina) : false;
+
+        if (!isEmpty(pagina.interaction)) {
+            if (pagina.interaction.ALL) {
+                id_interaction = pagina.recurso + "000" + "0";
                 
+            } else {
+                id_interaction = pagina.recurso + "000";
+                $.each(answers, function (key, value) {
+                    //console.log("upload interactions", key);
+                    interactions[id_interaction + key] = {
+                        pregunta: json_data[key].pregunta,
+                        respuesta: JSON.stringify(value)
+                    };
+                });
+
             }
         }
+
+        EDGE_Plantilla.debug ? console.log("UPLOADING interactions", interactions, pagina) : false;
+        EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions);
     }
 
     function filling_blanks_santiago_created(evt) {
@@ -465,7 +481,7 @@ ion.sound({
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger({
             type: "EDGE_Recurso_sendPreviousData",
             block: false,
-            previous_data: ["palabra", "distribution", "ok"],
+            previous_data: {"1": "palabra", "2": "distribution", "3": "ok"},
             attempts: 2,
             sym: evt.sym,
             identify: {}
@@ -544,7 +560,7 @@ ion.sound({
         $.each(evt.answer, function (index, value) {
             //console.log(isEmpty(value));
             if (isEmpty(value)) {
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", index, value, evt.answer) : false;
                 //mostrar_pagina("med_estrella");
                 is_empty = true;
                 return false;
@@ -554,8 +570,8 @@ ion.sound({
         if (is_empty) {
             return false;
         }
-        
-        
+
+        upload_interaction(evt.json.preguntas, evt.answer);
     }
 
     function drag_drop_toscano_submit(evt) {
@@ -571,7 +587,8 @@ ion.sound({
         $.each(evt.answer, function (index, value) {
             //console.log(isEmpty(value));
             if (isEmpty(value)) {
-                mostrar_pagina("med_estrella");
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
+                //mostrar_pagina("med_estrella");
                 is_empty = true;
                 return false;
             }
@@ -584,7 +601,8 @@ ion.sound({
         var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
         if (evt.results !== "incorrect") {
-            mostrar_pagina("muy_bien", {mensaje: "Tu drag and drop ha sido respondido correctamente"});
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
 
             objEvt = merge_options(objEvt, {
                 block: true,
@@ -593,6 +611,9 @@ ion.sound({
             });
 
         } else {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!!") : false;
+            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
+
             var this_block = false;
             var this_show_answers = false;
 
@@ -625,20 +646,6 @@ ion.sound({
             return false;
         }
 
-        $.each(evt.answer, function (index, value) {
-            //console.log(isEmpty(value));
-            if (isEmpty(value)) {
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
-                //mostrar_pagina("med_estrella");
-                is_empty = true;
-                return false;
-            }
-        });
-
-        if (is_empty) {
-            return false;
-        }
-
         var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
         $.each(evt.answer, function (index, value) {
@@ -657,23 +664,36 @@ ion.sound({
 
         //console.log(data);
 
-        var this_block = false;
-        var this_show_answers = false;
+        if (evt.results !== "incorrect") {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
 
-        var intentos = evt.attempts + 1;
+            objEvt = merge_options(objEvt, {
+                block: true,
+                show_answers: false,
+                attempts: evt.attempts
+            });
 
-        if (intentos >= evt.attempts_limit) {
-            this_block = true;
-            this_show_answers = true;
+        } else {
+
+            var this_block = false;
+            var this_show_answers = false;
+
+            var intentos = evt.attempts + 1;
+
+            if (intentos >= evt.attempts_limit) {
+                this_block = true;
+                this_show_answers = true;
+            }
+
+            objEvt = {
+                type: "EDGE_Recurso_postSubmitApplied",
+                block: this_block,
+                show_answers: this_show_answers,
+                attempts: intentos,
+                sym: evt.sym
+            };
         }
-
-        var objEvt = {
-            type: "EDGE_Recurso_postSubmitApplied",
-            block: this_block,
-            show_answers: this_show_answers,
-            attempts: intentos,
-            sym: evt.sym
-        };
 
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }

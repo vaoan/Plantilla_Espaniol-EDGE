@@ -1,18 +1,18 @@
 {
-    "preguntas": [
-        {
+    "preguntas": {
+        "1": {
             "ed_palabra": "palabra",
             "pregunta": "pregunta 1"
         },
-        {
+        "2": {
             "ed_palabra": "distribution",
             "pregunta": "pregunta 2"
         },
-        {
+        "3": {
             "ed_palabra": "PLUS",
             "pregunta": "pregunta 3"
         }
-    ],
+    },
     "pregunta": "ESTA ES UNA PREGUNTA DE PRUEBA PARA TOMAR TODAS LAS INTERACCIONES",
     "feedback": {
         "attempts": {

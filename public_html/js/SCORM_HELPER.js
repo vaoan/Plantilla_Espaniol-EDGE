@@ -33,7 +33,7 @@ $(document).on('loadedInteractions', function (e) {
 
 function SCORM_INITIALIZE() {
 
-    LOAD_INTERACTIONS();
+    //LOAD_INTERACTIONS();
     IS_SCORM = getAPI() !== null;
 
     if (!IS_SCORM) {
