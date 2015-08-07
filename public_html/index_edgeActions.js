@@ -245,7 +245,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       //Edge binding end
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         
+         $("body").trigger({
+                type: "EDGE_Container_loaded",
+                sym: sym
+            });
 
       });
       //Edge binding end
@@ -253,7 +256,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_full}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
+                         type: "EDGE_Self_Plantilla_ClickMenuTools",
                          sym: sym,
                          evt: e
                      });
@@ -264,7 +267,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_creditos}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
+                         type: "EDGE_Self_Plantilla_ClickMenuTools",
                          sym: sym,
                          evt: e
                      });
@@ -275,7 +278,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_ayuda}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
+                         type: "EDGE_Self_Plantilla_ClickMenuTools",
                          sym: sym,
                          evt: e
                      });
@@ -286,7 +289,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_audio}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
+                         type: "EDGE_Self_Plantilla_ClickMenuTools",
                          sym: sym,
                          evt: e
                      });
@@ -297,7 +300,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_info}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
+                         type: "EDGE_Self_Plantilla_ClickMenuTools",
                          sym: sym,
                          evt: e
                      });
@@ -308,7 +311,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_accesibilidad}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
+                         type: "EDGE_Self_Plantilla_ClickMenuTools",
                          sym: sym,
                          evt: e
                      });

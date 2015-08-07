@@ -59,7 +59,7 @@ ion.sound({
         if ($.fullscreen.isFullScreen()) {
             $.fullscreen.exit();
         } else {
-            $("body").fullscreen();
+            $("html").fullscreen();
         }
     }
 
@@ -83,12 +83,14 @@ ion.sound({
     $("body").on("EDGE_Container_loaded", function (evt) {
         EDGE_Plantilla.plantilla_sym = evt.sym;
         EDGE_Plantilla.config = getRemote().responseJSON;
-        $("html").css({
-            "background-image": 'url("http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg") !important',
+        document.body.style.background = "url(http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg) 50% 50% / cover no-repeat gray";
+        $("body").css({
             "background-size": "cover",
             "background-repeat": "no-repeat",
             "background-position": "center center"
         });
+        console.log($("html"));
+        
         //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
     });
 
@@ -105,22 +107,22 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log(evt) : false;
         EDGE_Plantilla.debug ? console.log(evt.evt.currentTarget.id) : false;
         switch (evt.evt.currentTarget.id) {
-            case "Stage_barra_herramientas_barra_herramientasMov_btn_fullscreen":
+            case "Stage_btn_full":
                 fullscreen();
                 break;
-            case "Stage_barra_herramientas_barra_herramientasMov_btn_creditos":
+            case "Stage_btn_creditos":
                 mostrar_popup("creditos");
                 break;
-            case "Stage_barra_herramientas_barra_herramientasMov_btn_ayuda":
+            case "Stage_btn_ayuda":
                 mostrar_popup("ayudas");
                 break;
-            case "Stage_barra_herramientas_barra_herramientasMov_btn_audio":
+            case "Stage_btn_audio":
                 EDGE_Plantilla.play_general_sound = !EDGE_Plantilla.play_general_sound;
                 break;
-            case "Stage_barra_herramientas_barra_herramientasMov_btn_info":
+            case "Stage_btn_info":
                 mostrar_popup("info");
                 break;
-            case "Stage_barra_herramientas_barra_herramientasMov_btn_acces":
+            case "Stage_btn_accesibilidad":
                 mostrar_popup("muy_bien", {mensaje: "¡Esto está BIEN!", titulo: "Excelente"});
                 break;
         }
