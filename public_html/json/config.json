@@ -4,7 +4,7 @@
         "default_page": "1"
     },
     "paginas": {
-        "portada":{
+        "portada": {
             "type": "portada",
             "recurso": "1",
             "url": "elementos_plantilla/PORTADA/portada_edge/portada.html"
@@ -12,25 +12,64 @@
         "1": {
             "type": "portada",
             "recurso": "1",
-            "url": "recursos/R1/R1.html"
+            "url": "recursos/R1/R1.html",
+            "al_cerrar": {
+                "cargar" : "2",
+                "click" : "btnR_2"
+            }
         },
         "2": {
             "type": "actividad",
             "recurso": "3",
             "actividad": "drag_drop",
-            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html"
+            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
+            "interaction": {
+                "1": {
+                    "questions": {
+                        "ALL": true
+                    }
+                }
+            }
         },
         "3": {
             "type": "actividad",
             "recurso": "3",
             "actividad": "drag_drop_many",
-            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html"
+            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
+            "interaction": {
+                "1": {
+                    "questions": {
+                        "ALL": true
+                    }
+                }
+            }
         },
         "4": {
             "type": "actividad",
             "recurso": "4",
             "actividad": "pick_many",
-            "url": "actividades/EDGE_PickMany-master/bolita.html"
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            }
+        },
+        "5": {
+            "type": "actividad",
+            "recurso": "4",
+            "actividad": "filling_blanks",
+            "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
+            "interaction": {
+                "ALL": true
+            }
+        },
+        "6": {
+            "type": "actividad",
+            "recurso": "4",
+            "actividad": "filling_blanks",
+            "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
+            "interaction": {
+                "ALL": false
+            }
         },
         "muy_bien": {
             "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",

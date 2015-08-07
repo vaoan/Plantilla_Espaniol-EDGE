@@ -47,6 +47,8 @@ EDGE_Plantilla = {
         R7: "rec_7",
         learning: "punto_A",
         vocabulario: "vocabulario"
+    },
+    temp_scorm: {
     }
 
 };
@@ -116,7 +118,7 @@ ion.sound({
             EDGE_Plantilla.debug ? console.log("COPY contenedor pop", index) : false;
         });
     }
-    
+
     function handle_portada(boolShow) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var copy = EDGE_Plantilla.basic_contenedor_portada;
@@ -146,7 +148,7 @@ ion.sound({
             } else {
                 sym_element = sym.$(value);
             }
-            
+
             //console.log("STYLE NAV", sym_element, boolShow);
 
             if (boolShow) {
@@ -156,7 +158,7 @@ ion.sound({
             }
 
         });
-        
+
         $.each(EDGE_Plantilla.img_button_nav, function (key, value) {
             var sym_element;
             if (typeof value !== "string") {
@@ -164,7 +166,7 @@ ion.sound({
             } else {
                 sym_element = sym.$(value);
             }
-            
+
             //console.log("STYLE NAV", sym_element, boolShow);
 
             if (boolShow) {
@@ -174,12 +176,12 @@ ion.sound({
             }
 
         });
-        
+
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name, true);
-        
-        if(boolShow){
+
+        if (boolShow) {
             sym_contenedor.show();
-        }else{
+        } else {
             sym_contenedor.hide();
         }
     }
@@ -191,7 +193,7 @@ ion.sound({
 
             if (!isEmpty(boolJQUERY) && index === arrSymSearch.length - 1) {
                 temp = temp.$(value);
-                console.log("UNDEF",temp);
+                console.log("UNDEF", temp);
             } else {
                 temp = temp.getSymbol(value);
                 console.log("GET SYMVALUE", value);
@@ -226,7 +228,7 @@ ion.sound({
         } else {
             objRetro = null;
         }
-        
+
         EDGE_Plantilla.debug ? console.log("START DETECTING", EDGE_Plantilla) : false;
 
         switch (pagina.type) {
@@ -247,11 +249,11 @@ ion.sound({
                 EDGE_Plantilla.recurso_on_show = pagina;
                 break;
         }
-        
+
         EDGE_Plantilla.debug ? console.log("SYM de carga GENERAL", sym_contenedor, pagina) : false;
 
         EDGE_Plantilla.debug ? console.log(strPagina, objRetro, pagina) : false;
-        
+
         EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config.default.url_pages + pagina.url, sym_contenedor) : false;
 
         // Load Third Composition and inject data
@@ -277,9 +279,9 @@ ion.sound({
     $("body").on("EDGE_Container_loaded", function (evt) {
         EDGE_Plantilla.plantilla_sym = evt.sym;
         EDGE_Plantilla.config = getRemote().responseJSON;
-        
+
         var url = $(location).attr('href');
-        
+
         EDGE_Plantilla.config.default.url_pages = url.substring(0, url.lastIndexOf('/')) + "/" + EDGE_Plantilla.config.default.url_pages;
         document.body.style.background = "url(http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg) 50% 50% / cover no-repeat gray";
         $("body").css({
@@ -287,6 +289,8 @@ ion.sound({
             "background-repeat": "no-repeat",
             "background-position": "center center"
         });
+
+        mostrar_pagina(EDGE_Plantilla.config.default.default_page);
 
         //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
     });
@@ -297,13 +301,24 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log("close") : false;
         EDGE_Plantilla.popup_on_show = null;
     });
-    
+
     $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
+        var pagina = EDGE_Plantilla.portada_on_show;
         play_buttons();
         handle_portada(false);
         handle_style_nav(true);
         EDGE_Plantilla.debug ? console.log("close") : false;
         EDGE_Plantilla.popup_on_show = null;
+
+        if (!isEmpty(pagina.al_cerrar)) {
+            !isEmpty(pagina.al_cerrar.cargar) ?
+                    mostrar_pagina(pagina.al_cerrar.cargar) : false;
+            !isEmpty(pagina.al_cerrar.click) ?
+                    console.log(evt.sym.$(pagina.al_cerrar.click)) : false;
+        }
+
+        //console.log("MOSTRAR CLICK ",evt.sym.getSymbol(EDGE_Plantilla.button_nav.R2));
+        //evt.sym.$(EDGE_Plantilla.button_nav.R2).click();
     });
     //</editor-fold>
 
@@ -352,11 +367,13 @@ ion.sound({
                 mostrar_pagina("4");
                 break;
             case "Stage_" + EDGE_Plantilla.button_nav.R5:
-                mostrar_pagina("portada");
+                mostrar_pagina("5");
                 break;
             case "Stage_" + EDGE_Plantilla.button_nav.R6:
+                mostrar_pagina("6");
                 break;
             case "Stage_" + EDGE_Plantilla.button_nav.R7:
+                mostrar_pagina("7");
                 break;
             default:
                 break;
@@ -417,8 +434,44 @@ ion.sound({
             case "pick_many":
                 pick_many_toscano_created(evt);
                 break;
+            case "filling_blanks":
+                filling_blanks_santiago_created(evt);
+                break;
+            default:
+                console.error("Creation inexistente", EDGE_Plantilla.recurso_on_show.actividad);
+                break;
         }
     });
+
+    function upload_interaction(json_data) {
+        var pagina = EDGE_Plantilla.recurso_on_show;
+        if (isEmpty(pagina.recurso)) {
+            console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
+            return;
+        }
+
+        if (!isEmpty(pagina.interactions)) {
+            if (!isEmpty(pagina.interactions.ALL)) {
+                var id_interaction = pagina.recurso + "-ALL";
+            } else {
+                
+            }
+        }
+    }
+
+    function filling_blanks_santiago_created(evt) {
+        var sym = EDGE_Plantilla.plantilla_sym;
+        var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name);
+        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger({
+            type: "EDGE_Recurso_sendPreviousData",
+            block: false,
+            previous_data: ["palabra", "distribution", "ok"],
+            attempts: 2,
+            sym: evt.sym,
+            identify: {}
+        });
+    }
+
     function drag_drop_toscano_created(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name);
@@ -472,8 +525,39 @@ ion.sound({
             case "pick_many":
                 pick_many_toscano_submit(evt);
                 break;
+            case "filling_blanks":
+                filling_blanks_santiago_submit(evt);
+                break;
         }
     });
+    function filling_blanks_santiago_submit(evt) {
+        console.log(evt);
+        var sym = EDGE_Plantilla.plantilla_sym;
+        var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name);
+        var is_empty = false;
+        EDGE_Plantilla.debug ? console.log(evt) : false;
+
+        if (evt.attempts >= evt.attempts_limit) {
+            return false;
+        }
+
+        $.each(evt.answer, function (index, value) {
+            //console.log(isEmpty(value));
+            if (isEmpty(value)) {
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
+                //mostrar_pagina("med_estrella");
+                is_empty = true;
+                return false;
+            }
+        });
+
+        if (is_empty) {
+            return false;
+        }
+        
+        
+    }
+
     function drag_drop_toscano_submit(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name);
@@ -544,7 +628,24 @@ ion.sound({
         $.each(evt.answer, function (index, value) {
             //console.log(isEmpty(value));
             if (isEmpty(value)) {
-                mostrar_pagina("med_estrella");
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
+                //mostrar_pagina("med_estrella");
+                is_empty = true;
+                return false;
+            }
+        });
+
+        if (is_empty) {
+            return false;
+        }
+
+        var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
+
+        $.each(evt.answer, function (index, value) {
+            //console.log(isEmpty(value));
+            if (isEmpty(value)) {
+                //mostrar_pagina("med_estrella");
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
                 is_empty = true;
                 return false;
             }

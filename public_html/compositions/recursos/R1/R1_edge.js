@@ -30,16 +30,30 @@
                         {
                             id: 'Rectangle2',
                             type: 'rect',
-                            rect: ['46px', '615px', '1821px', '278px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0.4706)"],
+                            rect: ['46px', '620px', '1821px', '278px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,1.00)"],
                             stroke: [0,"rgb(0, 0, 0)","none"]
                         },
                         {
                             id: 'btn_empezar',
                             symbolName: 'btn_empezar',
                             type: 'rect',
-                            rect: ['1530', '699', '169', '137', 'auto', 'auto'],
-                            cursor: 'pointer'
+                            rect: ['1640px', '689px', '169', '137', 'auto', 'auto'],
+                            cursor: 'pointer',
+                            transform: [[],['3']]
+                        },
+                        {
+                            id: 'precarga_gif',
+                            type: 'image',
+                            rect: ['1111px', '146px', '734px', '390px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"precarga_gif.gif",'0px','0px']
+                        },
+                        {
+                            id: 'Rectangle',
+                            type: 'rect',
+                            rect: ['90px', '152px', '727px', '400px', 'auto', 'auto'],
+                            fill: ["rgba(255,182,0,1.00)"],
+                            stroke: [0,"rgb(0, 0, 0)","none"]
                         }
                     ],
                     style: {
@@ -74,12 +88,13 @@
                             id: 'Ellipse',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'ellipse',
-                            fill: ['rgba(0,0,0,0.4706)']
+                            fill: ['rgba(132,47,189,1.00)']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '169px', '137px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '169px', '137px']
                         }
                     }
                 },

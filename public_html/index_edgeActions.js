@@ -274,14 +274,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         $("body").trigger({
-                type: "EDGE_Container_loaded",
-                sym: sym
-            });
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${btn_full}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
@@ -367,6 +360,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+         $("body").trigger({
+                type: "EDGE_Container_loaded",
+                sym: sym
+            });
+         
 
       });
       //Edge binding end
