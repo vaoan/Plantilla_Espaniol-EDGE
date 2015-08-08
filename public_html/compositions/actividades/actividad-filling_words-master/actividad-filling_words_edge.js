@@ -17,7 +17,8 @@
         ],
         scripts = [
             js+"jquery-1.10.2.js",
-            js+"main.js"
+            js+"main.js",
+            js+"utility.js"
         ],
         symbols = {
             "stage": {

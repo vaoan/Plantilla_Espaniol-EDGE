@@ -18,7 +18,8 @@
         scripts = [
             js+"interactionUtilities.js",
             js+"jquery-1.10.2.js",
-            js+"pickManyUtilities.js"
+            js+"pickManyUtilities.js",
+            js+"utility.js"
         ],
         symbols = {
             "stage": {

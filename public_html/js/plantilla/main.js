@@ -269,18 +269,16 @@ ion.sound({
     function buscar_sym(sym, arrSymSearch, boolJQUERY) {
         var temp = sym;
         $.each(arrSymSearch, function (index, value) {
-            EDGE_Plantilla.debug ? console.log(temp, index, value, arrSymSearch) : false;
+            //EDGE_Plantilla.debug ? console.log(temp, index, value, arrSymSearch) : false;
 
             if (!isEmpty(boolJQUERY) && index === arrSymSearch.length - 1) {
                 temp = temp.$(value);
-                console.log("UNDEF", temp);
             } else {
                 temp = temp.getSymbol(value);
-                console.log("GET SYMVALUE", value);
             }
 
         });
-        EDGE_Plantilla.debug ? console.log(temp, arrSymSearch, boolJQUERY) : false;
+        //EDGE_Plantilla.debug ? console.log(temp, arrSymSearch, boolJQUERY) : false;
         return temp;
     }
 
@@ -329,8 +327,6 @@ ion.sound({
         //evt.sym.$(EDGE_Plantilla.button_nav.R2).click();
     });
     //</editor-fold>
-
-
 
     //<editor-fold defaultstate="collapsed" desc="Controles de la plantilla">
     $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
@@ -425,14 +421,15 @@ ion.sound({
         });
     });
     //</editor-fold>
-    
+
     //<editor-fold defaultstate="collapsed" desc="Actividades CREATED">
     /* El recurso envía un evento a la plantilla informando que ya está creado 
      * y está listo para recibir su estado inicial
      */
     $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
-        var temp_pagina = EDGE_Plantilla.recurso_on_show;
-        
+        //var temp_pagina = EDGE_Plantilla.recurso_on_show;
+        EDGE_Plantilla.debug ? console.log(evt) : false;
+
         switch (EDGE_Plantilla.recurso_on_show.actividad) {
             case "drag_drop":
                 drag_drop_toscano_created(evt);
@@ -451,52 +448,75 @@ ion.sound({
                 break;
         }
     });
-    
+
     function filling_blanks_santiago_created(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger({
+
+        var objEvt = {
             type: "EDGE_Recurso_sendPreviousData",
-            block: false,
             previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
-            attempts: 2,
             sym: evt.sym,
-            identify: EDGE_Plantilla.recurso_on_show
-        });
+            block: false,
+            identify: EDGE_Plantilla.recurso_on_show,
+            attempts: 0
+        };
+
+        objEvt = merge_options(objEvt, read_extra_data());
+        
+        //console.log(objEvt);
+
+        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
-    
+
     function drag_drop_toscano_created(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-        
+
         EDGE_Plantilla.debug ? console.log(evt) : false;
-        EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
-        
+        //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
+
         // previous_data debe ser interpretado del scorm
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger({
+
+        var objEvt = {
             type: "EDGE_Recurso_sendPreviousData",
             block: false,
             previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
             attempts: 0,
             sym: evt.sym,
             identify: EDGE_Plantilla.recurso_on_show
-        });
+        };
+
+        objEvt = merge_options(objEvt, read_extra_data());
+        
+        if(objEvt.block){
+            objEvt.show_answers = true;
+        }
+
+        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
-    
+
     function pick_many_toscano_created(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-        
+
         EDGE_Plantilla.debug ? console.log(evt) : false;
-        EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
-        
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger({
+        //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
+
+        var objEvt = {
             type: "EDGE_Recurso_sendPreviousData",
             block: false,
             previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
             attempts: 0,
             sym: evt.sym
-        });
+        };
+        objEvt = merge_options(objEvt, read_extra_data());
+        
+        if(objEvt.block){
+            objEvt.show_answers = true;
+        }
+
+        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
     //</editor-fold>
 
@@ -506,8 +526,8 @@ ion.sound({
      * que hacer con este request y enviarle una respuesta para que reaccione
      */
     $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
-        var temp_pagina = EDGE_Plantilla.recurso_on_show;
-
+        //var temp_pagina = EDGE_Plantilla.recurso_on_show;
+        EDGE_Plantilla.debug ? console.log(evt) : false;
         switch (EDGE_Plantilla.recurso_on_show.actividad) {
             case "drag_drop":
                 drag_drop_toscano_submit(evt);
@@ -524,7 +544,7 @@ ion.sound({
         }
     });
     function filling_blanks_santiago_submit(evt) {
-        console.log(evt);
+        
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var is_empty = false;
@@ -585,8 +605,9 @@ ion.sound({
             });
         }
         
+        console.log(objEvt);
         save_extra_data(objEvt);
-        upload_interaction(evt.json.preguntas, evt.answer);
+        upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right);
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
 
@@ -651,7 +672,7 @@ ion.sound({
             });
         }
         save_extra_data(objEvt);
-        upload_interaction("", evt.answer);
+        upload_interaction("", evt.answer, evt.results);
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
 
@@ -705,25 +726,27 @@ ion.sound({
                 this_show_answers = true;
             }
 
-            objEvt = merge_options(objEvt,{
+            objEvt = merge_options(objEvt, {
                 block: this_block,
                 show_answers: this_show_answers,
                 attempts: intentos
             });
         }
         save_extra_data(objEvt);
-        upload_interaction(evt.json.preguntas, evt.answer);
+        upload_interaction(evt.question, evt.answer, evt.results);
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
-    function upload_interaction(json_data, answers) {
+    function upload_interaction(json_data, answers, estado_answers, typeInteraction) {
         var pagina = EDGE_Plantilla.recurso_on_show;
         if (isEmpty(pagina.recurso)) {
             console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
             return;
         }
+        
+        typeInteraction = isEmpty(typeInteraction) ? "other" : typeInteraction;
 
         var id_interaction = pagina.recurso + "000";
         var interactions = {};
@@ -731,15 +754,28 @@ ion.sound({
 
         if (!isEmpty(pagina.interaction)) {
             if (pagina.interaction.ALL) {
+                var estado;
+                if (typeof estado_answers !== "string") {
+                    estado = estado_answers ? "correct" : "incorrect";
+                }
+
                 interactions[id_interaction + "0"] = {
                     pregunta: "",
-                    respuesta: answers
+                    respuesta: answers,
+                    estado: estado_answers,
+                    type: typeInteraction
                 };
             } else {
                 $.each(answers, function (key, value) {
+                    var estado;
+                    if (typeof estado_answers !== "string") {
+                        estado = estado_answers[key] ? "correct" : "incorrect";
+                    }
                     //console.log("upload interactions", key);
                     interactions[id_interaction + key] = {
                         pregunta: json_data[key].pregunta,
+                        estado: estado,
+                        type: typeInteraction,
                         respuesta: value//JSON.stringify(value)
                     };
                 });
@@ -750,10 +786,10 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log("UPLOADING interactions", interactions, pagina, EDGE_Plantilla.temp_scorm) : false;
 
     }
-    
+
     function read_interactions() {
         var pagina = EDGE_Plantilla.recurso_on_show;
-        EDGE_Plantilla.debug ? console.log("READING interactions", pagina.recurso) : false;
+        //EDGE_Plantilla.debug ? console.log("READING interactions", pagina.recurso) : false;
         var id_interaction = pagina.recurso + "000";
         var objData = {};
 
@@ -778,27 +814,35 @@ ion.sound({
         var pagina = EDGE_Plantilla.recurso_on_show;
         var id_interaction = pagina.recurso;
         var interaction = {};
-        
+
         var arrObjNeedKeys = [
             "attempts", "block"
         ];
-        
+
         var objTrueData = {};
-        
-        $.each(arrObjNeedKeys, function(key, value){
+
+        $.each(arrObjNeedKeys, function (key, value) {
             objTrueData[value] = objData[value];
         });
-        
+
         interaction[id_interaction] = objTrueData;
-        
-        EDGE_Plantilla.temp_scorm_suspendData = 
+
+        EDGE_Plantilla.temp_scorm_suspendData =
                 merge_options(EDGE_Plantilla.temp_scorm_suspendData, interaction);
+
+        EDGE_Plantilla.debug ?
+                console.log("UPLOADED extradata", EDGE_Plantilla.temp_scorm_suspendData) : false;
     }
-    
-    function read_extra_data(){
+
+    function read_extra_data() {
         var pagina = EDGE_Plantilla.recurso_on_show;
         var id_interaction = pagina.recurso;
-        return EDGE_Plantilla.temp_scorm_suspendData[id_interaction];
+        var extra_data = EDGE_Plantilla.temp_scorm_suspendData[id_interaction];
+        extra_data = !isEmpty(extra_data) ? extra_data : {};
+
+        EDGE_Plantilla.debug ?
+                console.log("READ extradata", extra_data) : false;
+        return extra_data;
     }
     //</editor-fold>
 

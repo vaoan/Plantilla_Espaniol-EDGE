@@ -1,9 +1,112 @@
+//********************************************************** EVENT LISTENERS START***************************************************************************
 
-//Inicializa una actividad drag and drop donde a cada drop solo le corresponde un drag
+//test de función controlador
+/*
+parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
+    $("body").trigger({
+        type: "EDGE_Recurso_sendPreviousData",
+        block: false,
+        attempts: 0,
+        timer: {"timerObj": null, "remaining_time": null, "current_state": null},
+        previous_data: {"DROP_1_(Un cuadro azul)": [], "DROP_2_(Un cuadro rojo)": []},
+        sym: data.sym
+    });
+});
+
+parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
+
+    var this_block = false;
+    var this_show_answers = false;
+
+    var intentos = data.attempts + 1;
+    if (intentos >= data.attempts_limit) {
+        this_block = true;
+        this_show_answers = true;
+    }
+
+    $("body").trigger({
+        type: "EDGE_Recurso_postSubmitApplied",
+        block: this_block,
+        show_answers: this_show_answers,
+        attempts: intentos,
+        timer: {"timerObj": null, "reset_timer": null},
+        sym: data.sym
+    });
+});
+
+//*/
+
+//***********************************************************************
+
+//Evento que se dispara después de que el controlador recibe y transforma los resultados de una interacción.
+
+$("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
+    var stage = $(data.sym.getComposition().getStage().ele);
+
+    if (data.show_answers) {
+        switch (stage.prop("tipo")) {
+            case "uno a uno":
+            {
+                mostrarRespuestasDragAndDropUnoAUno(data.sym);
+                break;
+            }
+
+            case "uno a muchos":
+            {
+                mostrarRespuestasDragAndDropUnoAMuchos(data.sym);
+                break;
+            }
+        }
+    }
+
+    if (data.block) {
+        inhabilitarDragsYDrops(data.sym);
+        stage.prop("blocked", true);
+        if (stage.prop("usa_timer")) {
+            if (data.timer.timerObj !== null) {
+                stopTimer(data.timer.timerObj);
+            }
+        }
+    } else {
+        if (stage.prop("usa_timer")) {
+            if (data.timer.timerObj !== null && data.timer.reset_timer) {
+                resetTimer(data.sym, data.timer.timerObj);
+            }
+        }
+    }
+    stage.prop("intentos_previos", data.attempts);
+
+});
+
+$("body").on("EDGE_Recurso_sendPreviousData", function (data) {
+    var stage = $(data.sym.getComposition().getStage().ele);
+    aplicarCambiosPreviosDragAndDrop(data.previous_data, data.sym);
+
+    if (data.block) {
+        inhabilitarDragsYDrops(data.sym);
+        stage.prop("blocked", true);
+
+        if (stage.prop("usa_timer") && data.timer.timerObj !== null) {
+            setHTMLTimer(data.timer.remaining_time, data.timer.timerObj);
+            cambiarEstadoTimer(data.sym, data.timer.timerObj, data.timer.current_state);
+        }
+    }
+
+    if (data.attempts > 0) {
+        stage.prop("intentos_previos", data.attempts);
+    }
+});
+//********************************************************** EVENT LISTENERS END***************************************************************************
+
+
+//********************************************************** FUNCIONES ***************************************************************************
+
+//Inicializa una actividad drag and drop
 
 function inicializarDragAndDrop(sym) {
 
     var stage = $(sym.getComposition().getStage().ele);
+    stage.prop("interaction_type", "matching");
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
 
@@ -39,60 +142,11 @@ function inicializarDragAndDrop(sym) {
                 break;
             }
         }
+
+        stage.prop("usa_timer", typeof startTimer == 'function');
         enviarEventoActividadTerminada(sym);
     });
 }
-
-//***********************************************************************
-
-
-
-//***********************************************************************
-
-//Evento que se dispara después de que el controlador recibe y transforma los resultados de una interacción.
-
-$("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
-
-    var stage = $(data.sym.getComposition().getStage().ele);
-
-    if (data.show_answers) {
-        switch (stage.prop("tipo")) {
-            case "uno a uno":
-            {
-                mostrarRespuestasDragAndDropUnoAUno(data.sym);
-                break;
-            }
-
-            case "uno a muchos":
-            {
-                mostrarRespuestasDragAndDropUnoAMuchos(data.sym);
-                break;
-            }
-        }
-    }
-
-    if (data.block) {
-        inhabilitarDragsYDrops(data.sym);
-        stage.prop("blocked", true);
-    }
-
-    stage.prop("intentos_previos", data.attempts);
-
-});
-
-$("body").on("EDGE_Recurso_sendPreviousData", function (data) {
-    var stage = $(data.sym.getComposition().getStage().ele);
-    aplicarCambiosPrevios(data.previous_data, data.sym);
-
-    if (data.block) {
-        inhabilitarDragsYDrops(data.sym);
-        stage.prop("blocked", true);
-    }
-
-    if (data.attempts > 0) {
-        stage.prop("intentos_previos", data.attempts);
-    }
-});
 
 //***********************************************************************
 
@@ -257,8 +311,6 @@ function checkAnswersDragAndDrop(sym) {
     var stage = $(sym.getComposition().getStage().ele);
     if (!stage.prop("blocked"))
     {
-        var idInteraccion = getIdInteraccion();
-
         var objRespuesta;
         switch (stage.prop("tipo")) {
             case "uno a uno":
@@ -277,8 +329,6 @@ function checkAnswersDragAndDrop(sym) {
 
         var CANTIDAD_DROPS = stage.prop("cantidad_drops");
 
-        var intentos = stage.prop("num_intentos");
-
         var answerCorrect = true;
 
         for (var i = 1; i <= CANTIDAD_DROPS; i++) {
@@ -289,11 +339,23 @@ function checkAnswersDragAndDrop(sym) {
             }
         }
 
+        var timer = {};
+        if (stage.prop("usa_timer")) {
+            timer.timerObj = stage.prop("timer");
+            timer.remaining_time = timer.timerObj.prop("segundos_restantes");
+            timer.current_state = timer.timerObj.prop("alertState");
+        } else {
+            timer.timerObj = null;
+            timer.remaining_time = null;
+            timer.current_state = null;
+        }
+        timer.time_out = false;
+
         if (answerCorrect) {
-            enviarEventoInteraccion(idInteraccion, "matching", objRespuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), sym);
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
         else {
-            enviarEventoInteraccion(idInteraccion, "matching", objRespuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), sym);
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
     }
 
@@ -305,7 +367,6 @@ function checkAnswersDragAndDrop(sym) {
 
 function mostrarRespuestasDragAndDropUnoAUno(sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    var CANTIDAD_DRAGS = stage.prop("cantidad_drags");
     var CANTIDAD_DROPS = stage.prop("cantidad_drops");
 
     for (var i = 1; i <= CANTIDAD_DROPS; i++) {
@@ -470,7 +531,7 @@ function nombreANumero(strNombre) {
 
 //analiza los datos recibidos del controlador y aplica los cambios correspondientes a la actividad.
 
-function aplicarCambiosPrevios(dataObj, sym) {
+function aplicarCambiosPreviosDragAndDrop(dataObj, sym) {
 
     var stage = $(sym.getComposition().getStage().ele);
 

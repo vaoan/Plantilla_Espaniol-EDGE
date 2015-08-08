@@ -220,6 +220,9 @@ function checkAnswersPickMany(sym) {
 //**********************************************************************************
 
 function aplicarCambiosPreviosPickMany(data, sym) {
+    if(isEmpty(data)){
+        return;
+    }
     $.each(data.selected, function (key, val) {
         seleccionarPick(sym, "PICK_" + nombreANumero(val));
     });
