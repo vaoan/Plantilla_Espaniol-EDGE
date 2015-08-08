@@ -834,4 +834,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    })("overlay_portada");
    //Edge symbol end:'overlay_portada'
 
+   //=========================================================
+   
+   //Edge symbol: 'back_contenedor_home'
+   (function(symbolName) {   
+   
+   })("back_contenedor_home");
+   //Edge symbol end:'back_contenedor_home'
+
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");

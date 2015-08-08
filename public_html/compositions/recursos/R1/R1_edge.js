@@ -93,8 +93,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '169px', '137px']
+                            rect: [null, null, '169px', '137px']
                         }
                     }
                 },

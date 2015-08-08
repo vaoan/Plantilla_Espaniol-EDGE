@@ -94,11 +94,11 @@
                             fill: ['rgba(191,0,0,1.00)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​</p>',
-                            type: 'text',
-                            rect: ['0px', '0px', '140px', '43px', 'auto', 'auto']
+                            rect: ['0px', '0px', '140px', '43px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -133,13 +133,13 @@
                             fill: ['rgba(0,0,220,1.00)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​</p>',
+                            rect: ['0px', '0px', '167px', '43px', 'auto', 'auto'],
                             align: 'left',
-                            rect: ['0px', '0px', '167px', '43px', 'auto', 'auto']
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​</p>',
+                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -174,13 +174,13 @@
                             fill: ['rgba(0,132,37,1.00)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text3',
-                            text: '<p style=\"margin: 0px;\">​</p>',
+                            rect: ['0px', '0px', '128px', '43px', 'auto', 'auto'],
                             align: 'left',
-                            rect: ['0px', '0px', '128px', '43px', 'auto', 'auto']
+                            id: 'Text3',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​</p>',
+                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {

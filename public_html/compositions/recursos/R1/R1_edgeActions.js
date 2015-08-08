@@ -131,4 +131,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    })("btn_empezar");
    //Edge symbol end:'btn_empezar'
 
+   //=========================================================
+   
+   //Edge symbol: 'Precargador'
+   (function(symbolName) {   
+   
+   })("Precargador");
+   //Edge symbol end:'Precargador'
+
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");
