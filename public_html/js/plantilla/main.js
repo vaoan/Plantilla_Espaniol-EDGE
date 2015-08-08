@@ -543,160 +543,117 @@ ion.sound({
                 break;
         }
     });
+
     function filling_blanks_santiago_submit(evt) {
 
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-        var is_empty = false;
+        var strRetro = null;
 
         if (evt.attempts >= evt.attempts_limit) {
             return false;
         }
 
-        if (!isEmpty(evt.answer)) {
-            $.each(evt.answer, function (index, value) {
-                //console.log(isEmpty(value));
-                if (isEmpty(value)) {
-
-                    //mostrar_pagina("med_estrella");
-                    is_empty = true;
-                    return false;
-                }
-            });
-        } else {
-            is_empty = true;
-        }
-
-
-        if (is_empty) {
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.answer) : false;
-            return false;
-        }
-
         var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
-        if (evt.results !== "incorrect") {
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
-            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
+        if (!isEmpty(evt.timer) && evt.timer.time_out) {
+            delete evt.timer.time_out;
+            strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        } else {
+            if (!check_answers(evt)) {
+                strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+                evt.results = "neutral";
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+            }
+        }
 
+        if (evt.results === "correct") {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
             objEvt = merge_options(objEvt, {
                 block: true,
                 show_answers: false,
                 attempts: evt.attempts
             });
+            strRetro = isEmpty(strRetro) ? "correct" : strRetro;
 
-        } else {
-            //EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!!") : false;
-            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
-
-            var this_block = false;
-            var this_show_answers = false;
-
-            var intentos = evt.attempts + 1;
-            if (intentos >= evt.attempts_limit) {
-                this_block = true;
-                this_show_answers = true;
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!! DEFINITIVAS") : false;
-                //mostrar_pagina("bronce");
-            } else {
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!!", intentos) : false;
-                //mostrar_pagina("plata");
+        } else if (evt.results === "incorrect") {
+            if (!isEmpty(evt.timer)) {
+                var timer = {reset_timer: true};
+                objEvt = merge_options(objEvt, {timer: timer});
             }
-
-            objEvt = merge_options(objEvt, {
-                block: this_block,
-                show_answers: this_show_answers,
-                attempts: intentos
-            });
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+            var attemps = attemps_answer(evt);
+            objEvt = merge_options(objEvt, attemps);
+            strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
         }
 
-        console.log(objEvt);
+        retroalimentacion(strRetro);
         save_extra_data(objEvt);
         upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right);
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        send_interactions(sym_contenedor, objEvt, evt.results);
     }
 
     function drag_drop_toscano_submit(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-        var is_empty = false;
+        var strRetro = null;
 
         if (evt.attempts >= evt.attempts_limit) {
             return false;
         }
 
-        if (!isEmpty(evt.answer)) {
-            $.each(evt.answer, function (index, value) {
-                //console.log(isEmpty(value));
-                if (isEmpty(value)) {
-
-                    //mostrar_pagina("med_estrella");
-                    is_empty = true;
-                    return false;
-                }
-            });
-        } else {
-            is_empty = true;
-        }
-
-
-        if (is_empty) {
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.answer) : false;
-            return false;
-        }
-
         var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
-        if (evt.results !== "incorrect") {
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
-            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
+        if (!isEmpty(evt.timer) && evt.timer.time_out) {
+            delete evt.timer.time_out;
+            strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        } else {
+            if (!check_answers(evt)) {
+                strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+                evt.results = "neutral";
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+            }
+        }
 
+        if (evt.results === "correct") {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS", evt.results) : false;
             objEvt = merge_options(objEvt, {
                 block: true,
                 show_answers: false,
                 attempts: evt.attempts
             });
-
-        } else {
-            //EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!!") : false;
-            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
-
-            var this_block = false;
-            var this_show_answers = false;
-
-            var intentos = evt.attempts + 1;
-            if (intentos >= evt.attempts_limit) {
-                this_block = true;
-                this_show_answers = true;
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!! DEFINITIVAS") : false;
-                //mostrar_pagina("bronce");
-            } else {
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS!!", intentos) : false;
-                //mostrar_pagina("plata");
+            if (!isEmpty(evt.timer)) {
+                objEvt = merge_options(objEvt, {timer: evt.timer});
             }
+            strRetro = isEmpty(strRetro) ? "correct" : strRetro;
 
-            objEvt = merge_options(objEvt, {
-                block: this_block,
-                show_answers: this_show_answers,
-                attempts: intentos
-            });
+        } else if (evt.results === "incorrect") {
+            if (!isEmpty(evt.timer)) {
+                var timer = {reset_timer: true};
+                objEvt = merge_options(objEvt, {timer: timer});
+            }
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS", evt.results) : false;
+            var attemps = attemps_answer(evt);
+            objEvt = merge_options(objEvt, attemps);
+            strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
         }
 
+
+        retroalimentacion(strRetro);
         save_extra_data(objEvt);
-
-        if (!isEmpty(evt.timer)) {
-            //timer: {"timerObj": null, "reset_timer": null},
-        }
-
-
         upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+
+        send_interactions(sym_contenedor, objEvt, evt.results);
     }
 
     function pick_many_toscano_submit(evt) {
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-        var is_empty = false;
+        var strRetro = null;
 
         if (evt.attempts >= evt.attempts_limit) {
             return false;
@@ -704,6 +661,49 @@ ion.sound({
 
         var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
+        if (!isEmpty(evt.timer) && evt.timer.time_out) {
+            delete evt.timer.time_out;
+            strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        } else {
+            if (!check_answers(evt)) {
+                strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+                evt.results = "neutral";
+                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+            }
+        }
+
+        if (evt.results === "correct") {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+            objEvt = merge_options(objEvt, {
+                block: true,
+                show_answers: false,
+                attempts: evt.attempts
+            });
+            strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+        } else if (evt.results === "incorrect") {
+            if (!isEmpty(evt.timer)) {
+                var timer = {reset_timer: true};
+                objEvt = merge_options(objEvt, {timer: timer});
+            }
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+            var attemps = attemps_answer(evt);
+            objEvt = merge_options(objEvt, attemps);
+            strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        }
+
+        retroalimentacion(strRetro);
+        save_extra_data(objEvt);
+        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
+        send_interactions(sym_contenedor, objEvt, evt.results);
+    }
+    //</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="Check data Actividades">
+    function check_answers(evt) {
+        var is_empty = false;
         if (!isEmpty(evt.answer)) {
             $.each(evt.answer, function (index, value) {
                 //console.log(isEmpty(value));
@@ -720,43 +720,48 @@ ion.sound({
 
 
         if (is_empty) {
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.answer) : false;
             return false;
         }
 
-        //console.log(data);
+        return true;
+    }
 
-        if (evt.results !== "incorrect") {
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
-            //mostrar_pagina("muy_bien", {mensaje: "Tu Actividad ha sido respondido correctamente"});
+    function retroalimentacion(strRetroalimentacion, objTextInject) {
+        EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
+    }
 
-            objEvt = merge_options(objEvt, {
-                block: true,
-                show_answers: false,
-                attempts: evt.attempts
-            });
+    function send_interactions(sym_contenedor, objEvt, results) {
 
-        } else {
-
-            var this_block = false;
-            var this_show_answers = false;
-
-            var intentos = evt.attempts + 1;
-
-            if (intentos >= evt.attempts_limit) {
-                this_block = true;
-                this_show_answers = true;
-            }
-
-            objEvt = merge_options(objEvt, {
-                block: this_block,
-                show_answers: this_show_answers,
-                attempts: intentos
-            });
+        switch (results) {
+            case "correct":
+            case "incorrect":
+                EDGE_Plantilla.debug ? console.log("EVENT TO SEND", objEvt) : false;
+                $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+                break;
+            default :
+                break;
         }
-        save_extra_data(objEvt);
-        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+
+    }
+
+    function attemps_answer(evt) {
+        var this_block = false;
+        var this_show_answers = false;
+        var intentos = evt.attempts + 1;
+        var objAttemps = {};
+
+        if (intentos >= evt.attempts_limit) {
+            this_block = true;
+            this_show_answers = true;
+            //objAttemps = merge_options(objAttemps, {results: "incorrect"});
+        }
+
+        objAttemps = merge_options(objAttemps, {
+            block: this_block,
+            show_answers: this_show_answers,
+            attempts: intentos
+        });
+        return objAttemps;
     }
     //</editor-fold>
 
@@ -836,6 +841,9 @@ ion.sound({
         var pagina = EDGE_Plantilla.recurso_on_show;
         var id_interaction = pagina.recurso;
         var interaction = {};
+
+        EDGE_Plantilla.debug ?
+                console.log("READING extradata", objData) : false;
 
         var arrObjNeedKeys = [
             "attempts", "block", "timer"

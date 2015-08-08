@@ -2,39 +2,39 @@
 
 //test de función controlador
 /*
-parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
-    $("body").trigger({
-        type: "EDGE_Recurso_sendPreviousData",
-        block: false,
-        attempts: 0,
-        timer: {"timerObj": null, "remaining_time": null, "current_state": null},
-        previous_data: {"DROP_1_(Un cuadro azul)": [], "DROP_2_(Un cuadro rojo)": []},
-        sym: data.sym
-    });
-});
-
-parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
-
-    var this_block = false;
-    var this_show_answers = false;
-
-    var intentos = data.attempts + 1;
-    if (intentos >= data.attempts_limit) {
-        this_block = true;
-        this_show_answers = true;
-    }
-
-    $("body").trigger({
-        type: "EDGE_Recurso_postSubmitApplied",
-        block: this_block,
-        show_answers: this_show_answers,
-        attempts: intentos,
-        timer: {"timerObj": null, "reset_timer": null},
-        sym: data.sym
-    });
-});
-
-//*/
+ parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
+ $("body").trigger({
+ type: "EDGE_Recurso_sendPreviousData",
+ block: false,
+ attempts: 0,
+ timer: {"timerObj": null, "remaining_time": null, "current_state": null},
+ previous_data: {"DROP_1_(Un cuadro azul)": [], "DROP_2_(Un cuadro rojo)": []},
+ sym: data.sym
+ });
+ });
+ 
+ parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
+ 
+ var this_block = false;
+ var this_show_answers = false;
+ 
+ var intentos = data.attempts + 1;
+ if (intentos >= data.attempts_limit) {
+ this_block = true;
+ this_show_answers = true;
+ }
+ 
+ $("body").trigger({
+ type: "EDGE_Recurso_postSubmitApplied",
+ block: this_block,
+ show_answers: this_show_answers,
+ attempts: intentos,
+ timer: {"timerObj": null, "reset_timer": null},
+ sym: data.sym
+ });
+ });
+ 
+ //*/
 
 //***********************************************************************
 
@@ -63,12 +63,12 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
         inhabilitarDragsYDrops(data.sym);
         stage.prop("blocked", true);
         if (stage.prop("usa_timer")) {
-            stopTimer(buscar_sym(stage.prop("timer"),true));
+            stopTimer(data.sym);
         }
     } else {
         if (stage.prop("usa_timer")) {
             if (data.timer.reset_timer) {
-                resetTimer(data.sym, buscar_sym(stage.prop("timer"),true));
+                resetTimer(data.sym);
             }
         }
     }
@@ -85,8 +85,8 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
         stage.prop("blocked", true);
 
         if (stage.prop("usa_timer")) {
-            setHTMLTimer(data.timer.remaining_time, buscar_sym(stage.prop("timer"),true));
-            cambiarEstadoTimer(data.sym, buscar_sym(stage.prop("timer"),true), data.timer.current_state);
+            setHTMLTimer(data.timer.remaining_time, data.sym);
+            cambiarEstadoTimer(data.sym, data.timer.current_state);
         }
     }
 
@@ -339,7 +339,7 @@ function checkAnswersDragAndDrop(sym) {
 
         var timer = {};
         if (stage.prop("usa_timer")) {
-            var timerObj = buscar_sym(sym, stage.prop("timer"),true);
+            var timerObj = buscar_sym(sym, stage.prop("timer"), true);
             timer.remaining_time = timerObj.prop("segundos_restantes");
             timer.current_state = timerObj.prop("alertState");
         } else {

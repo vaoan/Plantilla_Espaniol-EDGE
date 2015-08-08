@@ -5,10 +5,12 @@
  */
 
 $("body").on("TimeAlert", function (data) {
-    cambiarEstadoTimer(data.sym, data.timerObj, data.remaining_time);
+    cambiarEstadoTimer(data.sym, data.remaining_time);
 });
 
-function cambiarEstadoTimer(sym, timerObj, estado) {
+function cambiarEstadoTimer(sym, estado) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
     var nombre = timerObj.prop("nombre");
     if (timerObj.prop("alertState") !== ("" + estado)) {
         buscar_sym(sym, nombre).play(estado);
@@ -31,7 +33,7 @@ function inicializarTimer(sym) {
         stage.prop("timer", data.sym);
         var spanElement = timerObj.find("p");
         timerObj.prop("timer_text", spanElement);
-        setHTMLTimer(timerObj.prop("segundos"), timerObj);
+        setHTMLTimer(timerObj.prop("segundos"), sym);
         timerObj.prop("segundos_restantes", timerObj.prop("segundos"));
         timerObj.prop("interval_id", -1);
         timerObj.prop("nombre", data.sym);
@@ -42,8 +44,9 @@ function inicializarTimer(sym) {
 
 //*************************************************************************************
 
-function startTimer(sym, objTimer) {
-    var timerObj = objTimer;
+function startTimer(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
     //console.log(timerObj);
     if (timerObj.prop("interval_id") < 0 && !timerObj.prop("stopped"))
     {
@@ -63,7 +66,7 @@ function startTimer(sym, objTimer) {
             }
 
             if (currentTime <= 0) {
-                stopTimer(timerObj);
+                stopTimer(sym);
                 $("body").trigger({
                     type: "TimeOut",
                     sym: sym
@@ -77,7 +80,9 @@ function startTimer(sym, objTimer) {
 
 //*************************************************************************************
 
-function stopTimer(timerObj) {
+function stopTimer(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
     if (timerObj.prop("interval_id") >= 0) {
         clearInterval(timerObj.prop("interval_id"));
         timerObj.prop("interval_id", -1);
@@ -87,7 +92,9 @@ function stopTimer(timerObj) {
 
 //*************************************************************************************
 
-function resetTimer(sym, timerObj) {
+function resetTimer(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
     if (timerObj.prop("interval_id") >= 0) {
         clearInterval(timerObj.prop("interval_id"));
         timerObj.prop("interval_id", -1);
@@ -100,13 +107,15 @@ function resetTimer(sym, timerObj) {
     timerObj.prop("timer_text", spanElement);
     timerObj.prop("stopped", false);
 
-    cambiarEstadoTimer(sym, timerObj, "normal");
+    cambiarEstadoTimer(sym, "normal");
 }
 
 //*************************************************************************************
 
-function setHTMLTimer(seconds, timerObj) {
+function setHTMLTimer(seconds, sym) {
+    var stage = $(sym.getComposition().getStage().ele);
     var newSpan = $('<span />').html(secondsToClockFormat(seconds));
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
     timerObj.prop("timer_text").html(newSpan);
 }
 
