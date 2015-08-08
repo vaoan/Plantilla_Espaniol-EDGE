@@ -5,15 +5,15 @@
  */
 
 $("body").on("TimeAlert", function (data) {
-    cambiarEstadoTimer(data.sym, data.remaining_time);
+    cambiarEstadoTimer(data.sym, data.remaining_time);  //POSIBLEMENTE CON ERROR
 });
 
 function cambiarEstadoTimer(sym, estado) {
     var stage = $(sym.getComposition().getStage().ele);
-    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
-    var nombre = timerObj.prop("nombre");
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+
     if (timerObj.prop("alertState") !== ("" + estado)) {
-        buscar_sym(sym, nombre).play(estado);
+        buscar_sym(sym, stage.prop("timer")).play(estado);
         timerObj.prop("alertState", "" + estado);
     }
 }
@@ -22,14 +22,14 @@ function cambiarEstadoTimer(sym, estado) {
 
 function inicializarTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    
-    
+
+
     $.getJSON("timer_config.json").done(function (data) {
         var timerObj = buscar_sym(sym, data.sym, true);
         $.each(data, function (key, val) {
             timerObj.prop(key, val);
         });
-        
+
         stage.prop("timer", data.sym);
         var spanElement = timerObj.find("p");
         timerObj.prop("timer_text", spanElement);
@@ -46,7 +46,7 @@ function inicializarTimer(sym) {
 
 function startTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
     //console.log(timerObj);
     if (timerObj.prop("interval_id") < 0 && !timerObj.prop("stopped"))
     {
@@ -82,7 +82,7 @@ function startTimer(sym) {
 
 function stopTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
     if (timerObj.prop("interval_id") >= 0) {
         clearInterval(timerObj.prop("interval_id"));
         timerObj.prop("interval_id", -1);
@@ -94,7 +94,7 @@ function stopTimer(sym) {
 
 function resetTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    var timerObj = buscar_sym(sym, stage.prop("timer") ,true);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
     if (timerObj.prop("interval_id") >= 0) {
         clearInterval(timerObj.prop("interval_id"));
         timerObj.prop("interval_id", -1);
