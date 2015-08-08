@@ -63,14 +63,12 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
         inhabilitarDragsYDrops(data.sym);
         stage.prop("blocked", true);
         if (stage.prop("usa_timer")) {
-            if (data.timer.timerObj !== null) {
-                stopTimer(data.timer.timerObj);
-            }
+            stopTimer(buscar_sym(stage.prop("timer"),true));
         }
     } else {
         if (stage.prop("usa_timer")) {
-            if (data.timer.timerObj !== null && data.timer.reset_timer) {
-                resetTimer(data.sym, data.timer.timerObj);
+            if (data.timer.reset_timer) {
+                resetTimer(data.sym, buscar_sym(stage.prop("timer"),true));
             }
         }
     }
@@ -86,9 +84,9 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
         inhabilitarDragsYDrops(data.sym);
         stage.prop("blocked", true);
 
-        if (stage.prop("usa_timer") && data.timer.timerObj !== null) {
-            setHTMLTimer(data.timer.remaining_time, data.timer.timerObj);
-            cambiarEstadoTimer(data.sym, data.timer.timerObj, data.timer.current_state);
+        if (stage.prop("usa_timer")) {
+            setHTMLTimer(data.timer.remaining_time, buscar_sym(stage.prop("timer"),true));
+            cambiarEstadoTimer(data.sym, buscar_sym(stage.prop("timer"),true), data.timer.current_state);
         }
     }
 
@@ -341,15 +339,15 @@ function checkAnswersDragAndDrop(sym) {
 
         var timer = {};
         if (stage.prop("usa_timer")) {
-            timer.timerObj = stage.prop("timer");
-            timer.remaining_time = timer.timerObj.prop("segundos_restantes");
-            timer.current_state = timer.timerObj.prop("alertState");
+            var timerObj = buscar_sym(sym, stage.prop("timer"),true);
+            timer.remaining_time = timerObj.prop("segundos_restantes");
+            timer.current_state = timerObj.prop("alertState");
         } else {
-            timer.timerObj = null;
+            //timer.timerObj = null;
             timer.remaining_time = null;
             timer.current_state = null;
         }
-        timer.time_out = false;
+        //timer.time_out = false;
 
         if (answerCorrect) {
             enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);

@@ -463,7 +463,7 @@ ion.sound({
         };
 
         objEvt = merge_options(objEvt, read_extra_data());
-        
+
         //console.log(objEvt);
 
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
@@ -488,8 +488,8 @@ ion.sound({
         };
 
         objEvt = merge_options(objEvt, read_extra_data());
-        
-        if(objEvt.block){
+
+        if (objEvt.block) {
             objEvt.show_answers = true;
         }
 
@@ -511,8 +511,8 @@ ion.sound({
             sym: evt.sym
         };
         objEvt = merge_options(objEvt, read_extra_data());
-        
-        if(objEvt.block){
+
+        if (objEvt.block) {
             objEvt.show_answers = true;
         }
 
@@ -544,27 +544,32 @@ ion.sound({
         }
     });
     function filling_blanks_santiago_submit(evt) {
-        
+
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var is_empty = false;
-        EDGE_Plantilla.debug ? console.log(evt) : false;
 
         if (evt.attempts >= evt.attempts_limit) {
             return false;
         }
 
-        $.each(evt.answer, function (index, value) {
-            //console.log(isEmpty(value));
-            if (isEmpty(value)) {
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", index, value, evt.answer) : false;
-                //mostrar_pagina("med_estrella");
-                is_empty = true;
-                return false;
-            }
-        });
+        if (!isEmpty(evt.answer)) {
+            $.each(evt.answer, function (index, value) {
+                //console.log(isEmpty(value));
+                if (isEmpty(value)) {
+
+                    //mostrar_pagina("med_estrella");
+                    is_empty = true;
+                    return false;
+                }
+            });
+        } else {
+            is_empty = true;
+        }
+
 
         if (is_empty) {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.answer) : false;
             return false;
         }
 
@@ -604,7 +609,7 @@ ion.sound({
                 attempts: intentos
             });
         }
-        
+
         console.log(objEvt);
         save_extra_data(objEvt);
         upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right);
@@ -615,23 +620,28 @@ ion.sound({
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var is_empty = false;
-        EDGE_Plantilla.debug ? console.log(evt) : false;
 
         if (evt.attempts >= evt.attempts_limit) {
             return false;
         }
 
-        $.each(evt.answer, function (index, value) {
-            //console.log(isEmpty(value));
-            if (isEmpty(value)) {
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
-                //mostrar_pagina("med_estrella");
-                is_empty = true;
-                return false;
-            }
-        });
+        if (!isEmpty(evt.answer)) {
+            $.each(evt.answer, function (index, value) {
+                //console.log(isEmpty(value));
+                if (isEmpty(value)) {
+
+                    //mostrar_pagina("med_estrella");
+                    is_empty = true;
+                    return false;
+                }
+            });
+        } else {
+            is_empty = true;
+        }
+
 
         if (is_empty) {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.answer) : false;
             return false;
         }
 
@@ -671,8 +681,15 @@ ion.sound({
                 attempts: intentos
             });
         }
+
         save_extra_data(objEvt);
-        upload_interaction("", evt.answer, evt.results);
+
+        if (!isEmpty(evt.timer)) {
+            //timer: {"timerObj": null, "reset_timer": null},
+        }
+
+
+        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
 
@@ -680,7 +697,6 @@ ion.sound({
         var sym = EDGE_Plantilla.plantilla_sym;
         var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var is_empty = false;
-        EDGE_Plantilla.debug ? console.log(evt) : false;
 
         if (evt.attempts >= evt.attempts_limit) {
             return false;
@@ -688,17 +704,23 @@ ion.sound({
 
         var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
-        $.each(evt.answer, function (index, value) {
-            //console.log(isEmpty(value));
-            if (isEmpty(value)) {
-                //mostrar_pagina("med_estrella");
-                EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR") : false;
-                is_empty = true;
-                return false;
-            }
-        });
+        if (!isEmpty(evt.answer)) {
+            $.each(evt.answer, function (index, value) {
+                //console.log(isEmpty(value));
+                if (isEmpty(value)) {
+
+                    //mostrar_pagina("med_estrella");
+                    is_empty = true;
+                    return false;
+                }
+            });
+        } else {
+            is_empty = true;
+        }
+
 
         if (is_empty) {
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.answer) : false;
             return false;
         }
 
@@ -733,7 +755,7 @@ ion.sound({
             });
         }
         save_extra_data(objEvt);
-        upload_interaction(evt.question, evt.answer, evt.results);
+        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
         $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
     }
     //</editor-fold>
@@ -745,7 +767,7 @@ ion.sound({
             console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
             return;
         }
-        
+
         typeInteraction = isEmpty(typeInteraction) ? "other" : typeInteraction;
 
         var id_interaction = pagina.recurso + "000";
@@ -760,7 +782,7 @@ ion.sound({
                 }
 
                 interactions[id_interaction + "0"] = {
-                    pregunta: "",
+                    pregunta: json_data,
                     respuesta: answers,
                     estado: estado_answers,
                     type: typeInteraction
@@ -816,13 +838,15 @@ ion.sound({
         var interaction = {};
 
         var arrObjNeedKeys = [
-            "attempts", "block"
+            "attempts", "block", "timer"
         ];
 
         var objTrueData = {};
 
         $.each(arrObjNeedKeys, function (key, value) {
-            objTrueData[value] = objData[value];
+            if (!isEmpty(objData[value])) {
+                objTrueData[value] = objData[value];
+            }
         });
 
         interaction[id_interaction] = objTrueData;

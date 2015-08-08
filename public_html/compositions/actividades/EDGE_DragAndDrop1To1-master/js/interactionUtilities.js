@@ -23,9 +23,25 @@ $("body").on("TimeOut", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
 
     var timer = {};
-    timer.timerObj = stage.prop("timer");
+    var timerObj = buscar_sym(data.sym, stage.prop("timer"), true);
     timer.remaining_time = 0;
-    timer.time_out = false;
-    timer.current_state = timer.timerObj.prop("alertState");
+    timer.time_out = true;
+    timer.current_state = timerObj.prop("alertState");
     enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), "", "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, data.sym);
 });
+
+function buscar_sym(sym, arrSymSearch, boolJQUERY) {
+    var temp = sym;
+    $.each(arrSymSearch, function (index, value) {
+        //EDGE_Plantilla.debug ? console.log(temp, index, value, arrSymSearch) : false;
+
+        if (!isEmpty(boolJQUERY) && index === arrSymSearch.length - 1) {
+            temp = temp.$(value);
+        } else {
+            temp = temp.getSymbol(value);
+        }
+
+    });
+    //EDGE_Plantilla.debug ? console.log(temp, arrSymSearch, boolJQUERY) : false;
+    return temp;
+}
