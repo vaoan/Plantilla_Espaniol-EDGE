@@ -36,6 +36,10 @@ $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', fun
 {
     console.log("EVENTO!!!!", evt);
     var stage = $(evt.sym.getComposition().getStage().ele);
+    
+    if(!isEmpty(evt.identify)){
+        stage.prop("ed_identify", evt.identify);
+    }
 
     if (!isEmpty(evt.previous_data))
     {
@@ -81,7 +85,8 @@ $('body').on('ed_check_activity', function (evt) {
         answer: {},
         position_which_is_right: {},
         attempts: stage.prop("ed_attempts"),
-        json: json_stage
+        json: json_stage,
+        identify: stage.prop("ed_identify")
     };
 
     if (stage.prop('ed_blocked')) {

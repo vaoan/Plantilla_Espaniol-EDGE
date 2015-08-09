@@ -18,6 +18,7 @@
         scripts = [
             js+"jquery-1.10.2.js",
             js+"ion.sound-3.0.5/js/ion.sound.min.js",
+            js+"EdgeCommons.js",
             js+"utility.js",
             js+"timerUtilities.js",
             js+"main.js",
@@ -28,8 +29,8 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
+                scaleToFit: "both",
+                centerStage: "horizontal",
                 resizeInstances: false,
                 content: {
                     dom: [
@@ -56,7 +57,7 @@
                             transform: [[],['360']]
                         },
                         {
-                            id: 'timer2',
+                            id: 'TIMER_CONTAINER',
                             symbolName: 'timer',
                             type: 'rect',
                             rect: ['818', '29', '174', '174', 'auto', 'auto']
@@ -280,13 +281,13 @@
                             fill: ['rgba(78,23,199,1.00)']
                         },
                         {
+                            rect: ['11px', '44px', '152px', '81px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [45, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            type: 'text',
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text3',
                             text: '<p style=\"margin: 0px; text-align: center;\">​TIMER</p>',
+                            id: 'Text3',
+                            textStyle: ['', '', '', '', 'none'],
                             align: 'left',
-                            rect: ['11px', '44px', '152px', '81px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {

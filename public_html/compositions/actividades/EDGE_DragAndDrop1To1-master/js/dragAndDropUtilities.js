@@ -79,6 +79,7 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
     aplicarCambiosPreviosDragAndDrop(data.previous_data, data.sym);
+    stage.prop("ed_identify", data.identify);
 
     if (data.block) {
         inhabilitarDragsYDrops(data.sym);

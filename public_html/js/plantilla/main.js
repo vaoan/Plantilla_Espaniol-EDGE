@@ -7,6 +7,7 @@
 
 //<editor-fold defaultstate="collapsed" desc="Global values">
 EDGE_Plantilla = {
+    allow_popups: true,
     play_general_sound: true,
     plantilla_sym: null,
     debug: true,
@@ -197,19 +198,33 @@ ion.sound({
 
         switch (pagina.type) {
             case "portada":
+                if(!EDGE_Plantilla.allow_popups) return;
                 handle_style_nav(false);
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_portada);
+                if(!isEmpty(pagina.sym)){
+                    sym_contenedor = buscar_sym(sym, pagina.sym);
+                }else{
+                    sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_portada);
+                }
                 EDGE_Plantilla.portada_on_show = pagina;
                 handle_portada(true);
                 break;
             case "popup_mini":
             case "popup_full":
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup);
+                if(!EDGE_Plantilla.allow_popups) return;
+                if(!isEmpty(pagina.sym)){
+                    sym_contenedor = buscar_sym(sym, pagina.sym);
+                }else{
+                    sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup);
+                }
                 EDGE_Plantilla.popup_on_show = pagina;
                 handle_popup(true);
                 break;
             default:
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+                if(!isEmpty(pagina.sym)){
+                    sym_contenedor = buscar_sym(sym, pagina.sym);
+                }else{
+                    sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+                }
                 EDGE_Plantilla.recurso_on_show = pagina;
                 break;
         }
@@ -289,14 +304,23 @@ ion.sound({
         var url = $(location).attr('href');
 
         EDGE_Plantilla.config.default.url_pages = url.substring(0, url.lastIndexOf('/')) + "/" + EDGE_Plantilla.config.default.url_pages;
+        /*
         document.body.style.background = "url(http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg) 50% 50% / cover no-repeat gray";
         $("body").css({
             "background-size": "cover",
             "background-repeat": "no-repeat",
             "background-position": "center center"
         });
-
-        mostrar_pagina(EDGE_Plantilla.config.default.default_page);
+        
+        //*/
+        
+        if(typeof EDGE_Plantilla.config.default.default_page === "string"){
+            mostrar_pagina(EDGE_Plantilla.config.default.default_page);
+        }else{
+            $.each(EDGE_Plantilla.config.default.default_page, function(key, value){
+                mostrar_pagina(value);
+            });
+        }
 
         //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
     });
@@ -429,6 +453,9 @@ ion.sound({
     $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         //var temp_pagina = EDGE_Plantilla.recurso_on_show;
         EDGE_Plantilla.debug ? console.log(evt) : false;
+        if(!isEmpty(evt.identify)){
+            EDGE_Plantilla.recurso_on_show = evt.identify;
+        }
 
         switch (EDGE_Plantilla.recurso_on_show.actividad) {
             case "drag_drop":
@@ -466,7 +493,7 @@ ion.sound({
 
         //console.log(objEvt);
 
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, "created");
     }
 
     function drag_drop_toscano_created(evt) {
@@ -493,7 +520,7 @@ ion.sound({
             objEvt.show_answers = true;
         }
 
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, "created");
     }
 
     function pick_many_toscano_created(evt) {
@@ -516,7 +543,7 @@ ion.sound({
             objEvt.show_answers = true;
         }
 
-        $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, "created");
     }
     //</editor-fold>
 
@@ -545,9 +572,6 @@ ion.sound({
     });
 
     function filling_blanks_santiago_submit(evt) {
-
-        var sym = EDGE_Plantilla.plantilla_sym;
-        var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var strRetro = null;
 
         if (evt.attempts >= evt.attempts_limit) {
@@ -592,12 +616,10 @@ ion.sound({
         retroalimentacion(strRetro);
         save_extra_data(objEvt);
         upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right);
-        send_interactions(sym_contenedor, objEvt, evt.results);
+        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, evt.results);
     }
 
     function drag_drop_toscano_submit(evt) {
-        var sym = EDGE_Plantilla.plantilla_sym;
-        var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var strRetro = null;
 
         if (evt.attempts >= evt.attempts_limit) {
@@ -647,12 +669,12 @@ ion.sound({
         save_extra_data(objEvt);
         upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
 
-        send_interactions(sym_contenedor, objEvt, evt.results);
+        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, evt.results);
     }
 
     function pick_many_toscano_submit(evt) {
-        var sym = EDGE_Plantilla.plantilla_sym;
-        var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+        //var sym = EDGE_Plantilla.plantilla_sym;
+        //var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         var strRetro = null;
 
         if (evt.attempts >= evt.attempts_limit) {
@@ -697,7 +719,7 @@ ion.sound({
         retroalimentacion(strRetro);
         save_extra_data(objEvt);
         upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
-        send_interactions(sym_contenedor, objEvt, evt.results);
+        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, evt.results);
     }
     //</editor-fold>
 
@@ -730,12 +752,23 @@ ion.sound({
         EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
     }
 
-    function send_interactions(sym_contenedor, objEvt, results) {
+    function send_interactions(pagina, objEvt, results) {
+        
+        var sym_contenedor;
+        
+        if(!isEmpty(pagina.sym)){
+            sym_contenedor = buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym);
+        }else{
+            sym_contenedor = buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+        }
+        
+        objEvt = merge_options(objEvt, {identify: EDGE_Plantilla.recurso_on_show});
 
         switch (results) {
             case "correct":
             case "incorrect":
-                EDGE_Plantilla.debug ? console.log("EVENT TO SEND", objEvt) : false;
+            case "created":
+                EDGE_Plantilla.debug ? console.log("EVENT TO SEND", objEvt, sym_contenedor) : false;
                 $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
                 break;
             default :

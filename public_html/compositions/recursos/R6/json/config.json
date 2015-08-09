@@ -1,147 +1,48 @@
 {
     "default": {
         "url_pages": "compositions/",
-        "default_page": "1"
+        "default_page": [
+            "1",
+            "2",
+            "3"
+        ]
     },
     "paginas": {
         "1": {
-            "type": "portada",
-            "recurso": "1",
-            "url": "recursos/R1/R1.html",
-            "al_cerrar": {
-                "cargar" : "2",
-                "click" : "btnR_2"
-            }
+            "type": "actividad",
+            "recurso": "3",
+            "actividad": "drag_drop",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": [
+                "contenedor_1"
+            ]
         },
         "2": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "drag_drop",
-            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
+            "actividad": "drag_drop_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
             "interaction": {
                 "ALL": true
-            }
+            },
+            "sym": [
+                "contenedor_2"
+            ]
         },
         "3": {
-            "type": "actividad",
-            "recurso": "3",
-            "actividad": "drag_drop_many",
-            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
-            "interaction": {
-                "ALL": true
-            }
-        },
-        "4": {
             "type": "actividad",
             "recurso": "4",
             "actividad": "pick_many",
             "url": "actividades/EDGE_PickMany-master/bolita.html",
             "interaction": {
                 "ALL": true
-            }
-        },
-        "5": {
-            "type": "actividad",
-            "recurso": "5",
-            "actividad": "filling_blanks",
-            "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
-            "interaction": {
-                "ALL": true
-            }
-        },
-        "6": {
-            "type": "actividad",
-            "recurso": "6",
-            "actividad": "filling_blanks",
-            "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
-            "interaction": {
-                "ALL": false
-            }
-        },
-        "7": {
-            "type": "actividad",
-            "recurso": "7",
-            "actividad": "R6",
-            "url": "recursos/R6/R6.html",
-            "interaction": {
-                "ALL": false
-            }
-        },
-        "muy_bien": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
-            "type": "popup_mini",
-            "symbols": {
-                "titulo": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "titulo"
-                ],
-                "mensaje": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "recuad_texto",
-                    "txt_mensaje"
-                ]
-            }
-        },
-        "muy_bien": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
-            "type": "popup_mini",
-            "symbols": {
-                "titulo": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "titulo"
-                ],
-                "mensaje": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "recuad_texto",
-                    "txt_mensaje"
-                ]
-            }
-        },
-        "perfect": {
-            "url": "14_retroal_edge/pop_up_Actividades/perfect/perfect.html",
-            "type": "popup_mini",
-            "symbols": {
-            }
-        },
-        "bronce": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_lupa-bronce/lup_bronceEdge/lupaBronce_edge.html",
-            "type": "popup_mini",
-            "symbols": {
-            }
-        },
-        "plata": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_med-plata/med_plataEdge/med-plata_edge.html",
-            "type": "popup_mini",
-            "symbols": {
-            }
-        },
-        "med_estrella": {
-            "url": "14_retroal_edge/pop_up_Actividades/retroal_medEstrella/retroal_medEstrella.html",
-            "type": "popup_mini",
-            "symbols": {
-            }
-        },
-        "creditos": {
-            "url": "elementos_plantilla/popup_creditos/popup_creditos.html",
-            "type": "popup_full",
-            "symbols": {
-            }
-        },
-        "info": {
-            "url": "elementos_plantilla/Informacion/Informacion.html",
-            "type": "popup_full",
-            "symbols": {
-            }
-        },
-        "ayudas": {
-            "url": "elementos_plantilla/Menuayuda/Menuayuda.html",
-            "type": "popup_full",
-            "symbols": {
-            }
+            },
+            "sym": [
+                "contenedor_3"
+            ]
         }
     }
 }

@@ -72,7 +72,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          // Insertar código para ejecutarse cuando el símbolo se crea aquí
          
          $("body").trigger({
-             type: "ed_init_data",
+             type: "EDGE_Container_loaded",
              sym: sym
          });
          
