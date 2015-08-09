@@ -22,7 +22,7 @@
         },
         "2": {
             "type": "actividad",
-            "recurso": "3",
+            "recurso": "4",
             "actividad": "drag_drop_many",
             "url": "actividades/EDGE_PickMany-master/bolita.html",
             "interaction": {
@@ -34,7 +34,7 @@
         },
         "3": {
             "type": "actividad",
-            "recurso": "4",
+            "recurso": "5",
             "actividad": "pick_many",
             "url": "actividades/EDGE_PickMany-master/bolita.html",
             "interaction": {

@@ -241,6 +241,8 @@ ion.sound({
 
         promise.done(function (comp) {
             var stage = comp.getStage();
+            $(stage.ele).prop("ed_identify", pagina);
+            //console.log(stage);
             if (!isEmpty(objRetro)) {
                 $.each(objRetro, function (index, value) {
                     var arrSymSearch = pagina.symbols[index];
@@ -321,6 +323,8 @@ ion.sound({
                 mostrar_pagina(value);
             });
         }
+        
+        EDGE_Plantilla.debug ? console.log("****************** ENDED LOAD ********************") : false;
 
         //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
     });
@@ -485,7 +489,6 @@ ion.sound({
             previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
             sym: evt.sym,
             block: false,
-            identify: EDGE_Plantilla.recurso_on_show,
             attempts: 0
         };
 
@@ -510,8 +513,7 @@ ion.sound({
             block: false,
             previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
             attempts: 0,
-            sym: evt.sym,
-            identify: EDGE_Plantilla.recurso_on_show
+            sym: evt.sym
         };
 
         objEvt = merge_options(objEvt, read_extra_data());
@@ -761,8 +763,6 @@ ion.sound({
         }else{
             sym_contenedor = buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
         }
-        
-        objEvt = merge_options(objEvt, {identify: EDGE_Plantilla.recurso_on_show});
 
         switch (results) {
             case "correct":

@@ -36,10 +36,6 @@ $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', fun
 {
     console.log("EVENTO!!!!", evt);
     var stage = $(evt.sym.getComposition().getStage().ele);
-    
-    if(!isEmpty(evt.identify)){
-        stage.prop("ed_identify", evt.identify);
-    }
 
     if (!isEmpty(evt.previous_data))
     {
