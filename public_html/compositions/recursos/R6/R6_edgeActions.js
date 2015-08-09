@@ -76,6 +76,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
              sym: sym
          });
          
+         enviarEventoActividadTerminada(sym);
+         
       });
       //Edge binding end
 

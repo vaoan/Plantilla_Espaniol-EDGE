@@ -1,13 +1,17 @@
 function enviarEventoActividadTerminada(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var identify = stage.prop("ed_identify");
     parent.$(parent.document).trigger({
         type: "EDGE_Plantilla_creationComplete",
-        sym: sym
+        sym: sym,
+        identify: identify
     });
 }
 
 function enviarEventoInteraccion(tipo, pregunta, respuesta, resultado, intentos_previos, limite_intentos, timerObj, sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    var identify = stage.prop("ed_identify");    
+    var identify = stage.prop("ed_identify");
+    
     parent.$(parent.document).trigger({
         type: "EDGE_Plantilla_submitApplied",
         interactionType: tipo,

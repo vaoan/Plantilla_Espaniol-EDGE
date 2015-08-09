@@ -22,6 +22,7 @@
             js+"utility.js",
             js+"timerUtilities.js",
             js+"main.js",
+            js+"r6.js",
             js+"interactionUtilities.js"
         ],
         symbols = {

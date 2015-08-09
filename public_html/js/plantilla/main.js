@@ -14,7 +14,6 @@ EDGE_Plantilla = {
     base_audio: new Audio('sounds/snap.mp3'),
     config: null,
     popup_on_show: null,
-    recurso_on_show: null,
     portada_on_show: null,
     basic_contenedor_name: {
         "contenedor": ["contenedor_home"],
@@ -225,7 +224,6 @@ ion.sound({
                 }else{
                     sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
                 }
-                EDGE_Plantilla.recurso_on_show = pagina;
                 break;
         }
 
@@ -455,13 +453,10 @@ ion.sound({
      * y está listo para recibir su estado inicial
      */
     $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
-        //var temp_pagina = EDGE_Plantilla.recurso_on_show;
+        //var temp_pagina = evt.identify;
         EDGE_Plantilla.debug ? console.log(evt) : false;
-        if(!isEmpty(evt.identify)){
-            EDGE_Plantilla.recurso_on_show = evt.identify;
-        }
 
-        switch (EDGE_Plantilla.recurso_on_show.actividad) {
+        switch (evt.identify.actividad) {
             case "drag_drop":
                 drag_drop_toscano_created(evt);
                 break;
@@ -475,7 +470,7 @@ ion.sound({
                 filling_blanks_santiago_created(evt);
                 break;
             default:
-                console.error("Creation inexistente", EDGE_Plantilla.recurso_on_show.actividad);
+                console.error("Creation inexistente", evt.identify);
                 break;
         }
     });
@@ -486,17 +481,17 @@ ion.sound({
 
         var objEvt = {
             type: "EDGE_Recurso_sendPreviousData",
-            previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
+            previous_data: read_interactions(evt.identify),
             sym: evt.sym,
             block: false,
             attempts: 0
         };
 
-        objEvt = merge_options(objEvt, read_extra_data());
+        objEvt = merge_options(objEvt, read_extra_data(evt));
 
         //console.log(objEvt);
 
-        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, "created");
+        send_interactions(evt.identify, objEvt, "created");
     }
 
     function drag_drop_toscano_created(evt) {
@@ -511,18 +506,18 @@ ion.sound({
         var objEvt = {
             type: "EDGE_Recurso_sendPreviousData",
             block: false,
-            previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
+            previous_data: read_interactions(evt.identify),
             attempts: 0,
             sym: evt.sym
         };
 
-        objEvt = merge_options(objEvt, read_extra_data());
+        objEvt = merge_options(objEvt, read_extra_data(evt));
 
         if (objEvt.block) {
             objEvt.show_answers = true;
         }
 
-        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, "created");
+        send_interactions(evt.identify, objEvt, "created");
     }
 
     function pick_many_toscano_created(evt) {
@@ -535,17 +530,17 @@ ion.sound({
         var objEvt = {
             type: "EDGE_Recurso_sendPreviousData",
             block: false,
-            previous_data: read_interactions(EDGE_Plantilla.recurso_on_show),
+            previous_data: read_interactions(evt),
             attempts: 0,
             sym: evt.sym
         };
-        objEvt = merge_options(objEvt, read_extra_data());
+        objEvt = merge_options(objEvt, read_extra_data(evt));
 
         if (objEvt.block) {
             objEvt.show_answers = true;
         }
 
-        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, "created");
+        send_interactions(evt.identify, objEvt, "created");
     }
     //</editor-fold>
 
@@ -555,9 +550,9 @@ ion.sound({
      * que hacer con este request y enviarle una respuesta para que reaccione
      */
     $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
-        //var temp_pagina = EDGE_Plantilla.recurso_on_show;
+        //var temp_pagina = evt.identify;
         EDGE_Plantilla.debug ? console.log(evt) : false;
-        switch (EDGE_Plantilla.recurso_on_show.actividad) {
+        switch (evt.identify.actividad) {
             case "drag_drop":
                 drag_drop_toscano_submit(evt);
                 break;
@@ -616,9 +611,9 @@ ion.sound({
         }
 
         retroalimentacion(strRetro);
-        save_extra_data(objEvt);
-        upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right);
-        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, evt.results);
+        save_extra_data(objEvt, evt);
+        upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+        send_interactions(evt.identify, objEvt, evt.results);
     }
 
     function drag_drop_toscano_submit(evt) {
@@ -668,10 +663,10 @@ ion.sound({
 
 
         retroalimentacion(strRetro);
-        save_extra_data(objEvt);
-        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
+        save_extra_data(objEvt, evt);
+        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
 
-        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, evt.results);
+        send_interactions(evt.identify, objEvt, evt.results);
     }
 
     function pick_many_toscano_submit(evt) {
@@ -719,9 +714,9 @@ ion.sound({
         }
 
         retroalimentacion(strRetro);
-        save_extra_data(objEvt);
-        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType);
-        send_interactions(EDGE_Plantilla.recurso_on_show, objEvt, evt.results);
+        save_extra_data(objEvt, evt);
+        upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
+        send_interactions(evt.identify, objEvt, evt.results);
     }
     //</editor-fold>
 
@@ -799,8 +794,8 @@ ion.sound({
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
-    function upload_interaction(json_data, answers, estado_answers, typeInteraction) {
-        var pagina = EDGE_Plantilla.recurso_on_show;
+    function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
+        var pagina = evt.identify;
         if (isEmpty(pagina.recurso)) {
             console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
             return;
@@ -847,9 +842,9 @@ ion.sound({
 
     }
 
-    function read_interactions() {
-        var pagina = EDGE_Plantilla.recurso_on_show;
-        //EDGE_Plantilla.debug ? console.log("READING interactions", pagina.recurso) : false;
+    function read_interactions(evt) {
+        var pagina = evt.identify;
+        EDGE_Plantilla.debug ? console.log("READING interactions", pagina, evt) : false;
         var id_interaction = pagina.recurso + "000";
         var objData = {};
 
@@ -870,8 +865,8 @@ ion.sound({
         return objData;
     }
 
-    function save_extra_data(objData) {
-        var pagina = EDGE_Plantilla.recurso_on_show;
+    function save_extra_data(objData, evt) {
+        var pagina = evt.identify;
         var id_interaction = pagina.recurso;
         var interaction = {};
 
@@ -899,8 +894,8 @@ ion.sound({
                 console.log("UPLOADED extradata", EDGE_Plantilla.temp_scorm_suspendData) : false;
     }
 
-    function read_extra_data() {
-        var pagina = EDGE_Plantilla.recurso_on_show;
+    function read_extra_data(evt) {
+        var pagina = evt.identify;
         var id_interaction = pagina.recurso;
         var extra_data = EDGE_Plantilla.temp_scorm_suspendData[id_interaction];
         extra_data = !isEmpty(extra_data) ? extra_data : {};
