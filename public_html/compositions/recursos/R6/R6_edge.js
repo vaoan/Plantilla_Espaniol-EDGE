@@ -20,8 +20,9 @@
             js+"ion.sound-3.0.5/js/ion.sound.min.js",
             js+"EdgeCommons.js",
             js+"utility.js",
-            js+"timerUtilities.js",
             js+"main.js",
+            js+"timerUtilities.js",
+            js+"actividades_result.js",
             js+"r6.js",
             js+"interactionUtilities.js"
         ],
@@ -75,6 +76,13 @@
                             symbolName: 'btn_adelante',
                             type: 'rect',
                             rect: ['717', '599', '174', '148', 'auto', 'auto'],
+                            cursor: 'pointer'
+                        },
+                        {
+                            id: 'btn_start',
+                            symbolName: 'btn_start',
+                            type: 'rect',
+                            rect: ['35', '39', '950', '694', 'auto', 'auto'],
                             cursor: 'pointer'
                         }
                     ],
@@ -192,24 +200,24 @@
                             '360deg'
                         ],
                         [
-                            "eid219",
+                            "eid171",
                             "left",
-                            1000,
+                            500,
                             500,
                             "linear",
-                            "${contenedor_3}",
+                            "${contenedor_2}",
                             '5%',
-                            '1.49%'
+                            '-18.83%'
                         ],
                         [
-                            "eid163",
-                            "left",
-                            0,
+                            "eid170",
+                            "scaleY",
+                            500,
                             500,
                             "linear",
-                            "${contenedor_1}",
-                            '5.05%',
-                            '-32.89%'
+                            "${contenedor_2}",
+                            '1',
+                            '0.1'
                         ],
                         [
                             "eid220",
@@ -242,24 +250,24 @@
                             'block'
                         ],
                         [
-                            "eid170",
-                            "scaleY",
-                            500,
+                            "eid163",
+                            "left",
+                            0,
                             500,
                             "linear",
-                            "${contenedor_2}",
-                            '1',
-                            '0.1'
+                            "${contenedor_1}",
+                            '5.05%',
+                            '-32.89%'
                         ],
                         [
-                            "eid171",
+                            "eid219",
                             "left",
-                            500,
+                            1000,
                             500,
                             "linear",
-                            "${contenedor_2}",
+                            "${contenedor_3}",
                             '5%',
-                            '-18.83%'
+                            '1.49%'
                         ]
                     ]
                 }
@@ -282,13 +290,13 @@
                             fill: ['rgba(78,23,199,1.00)']
                         },
                         {
-                            rect: ['11px', '44px', '152px', '81px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [45, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; text-align: center;\">​TIMER</p>',
-                            id: 'Text3',
-                            textStyle: ['', '', '', '', 'none'],
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text3',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​TIMER</p>',
+                            textStyle: ['', '', '', '', 'none'],
+                            rect: ['11px', '44px', '152px', '81px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -347,10 +355,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '174px', '148px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle8',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '174px', '148px', 'auto', 'auto'],
                             fill: ['rgba(0,255,7,1.00)']
                         }
                     ],
@@ -378,10 +386,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '174px', '148px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle7',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '174px', '148px', 'auto', 'auto'],
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
@@ -409,10 +417,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '880px', '630px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle9',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '880px', '630px', 'auto', 'auto'],
                             fill: ['rgba(247,255,0,1.00)']
                         }
                     ],
@@ -427,16 +435,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid99",
-                            "top",
-                            500,
-                            0,
-                            "linear",
-                            "${Rectangle9}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
                             "eid100",
                             "width",
                             500,
@@ -445,6 +443,16 @@
                             "${Rectangle9}",
                             '880px',
                             '880px'
+                        ],
+                        [
+                            "eid99",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${Rectangle9}",
+                            '0px',
+                            '0px'
                         ],
                         [
                             "eid101",
@@ -479,16 +487,48 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0%', '0%', '873px', '680px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle11',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0%', '0%', '873px', '680px', 'auto', 'auto'],
                             fill: ['rgba(255,0,255,1)']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
                             rect: [null, null, '873px', '680px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
+                    ]
+                }
+            },
+            "btn_start": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '950px', '694px', 'auto', 'auto'],
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(192,192,192,1)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '950px', '694px']
                         }
                     }
                 },

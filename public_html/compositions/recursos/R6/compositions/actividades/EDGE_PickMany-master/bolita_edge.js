@@ -60,7 +60,8 @@
                             id: 'Submit',
                             symbolName: 'Submit',
                             type: 'rect',
-                            rect: ['390', '303px', '128', '31', 'auto', 'auto']
+                            rect: ['390', '303px', '128', '31', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'TIMER_CONTAINER',
@@ -113,14 +114,14 @@
                             '129px'
                         ],
                         [
-                            "eid35",
-                            "left",
+                            "eid42",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${PICK_1}",
-                            '45px',
-                            '45px'
+                            "${Submit}",
+                            '303px',
+                            '303px'
                         ],
                         [
                             "eid37",
@@ -143,14 +144,14 @@
                             '129px'
                         ],
                         [
-                            "eid42",
-                            "top",
+                            "eid35",
+                            "left",
                             500,
                             0,
                             "linear",
-                            "${Submit}",
-                            '303px',
-                            '303px'
+                            "${PICK_1}",
+                            '45px',
+                            '45px'
                         ]
                     ]
                 }
@@ -385,18 +386,18 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(241,248,33,1.00)']
                         },
                         {
-                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​otro botón</p>',
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -423,19 +424,19 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             type: 'text',
+                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto']
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {

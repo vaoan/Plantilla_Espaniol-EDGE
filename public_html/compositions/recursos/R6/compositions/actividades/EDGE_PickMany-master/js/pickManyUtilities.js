@@ -73,7 +73,7 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
-        if (stage.prop("usa_timer") ) {
+        if (stage.prop("usa_timer")) {
             setHTMLTimer(data.timer.remaining_time, data.sym);
             cambiarEstadoTimer(data.sym, data.timer.current_state);
         }
@@ -94,12 +94,10 @@ function inicializarPickMany(sym) {
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
 
-    $.getJSON("config.json", function (data) {
+    $.getJSON("config.json").done(function (data) {
         $.each(data, function (key, val) {
             stage.prop(key, val);
         });
-    }).done(function () {
-
         var cont = 0;
         $.each(stage.prop("picks"), function (key, val) {
             cont++;
