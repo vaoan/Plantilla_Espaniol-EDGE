@@ -4,11 +4,6 @@
         "default_page": "1"
     },
     "paginas": {
-        "portada": {
-            "type": "portada",
-            "recurso": "1",
-            "url": "elementos_plantilla/PORTADA/portada_edge/portada.html"
-        },
         "1": {
             "type": "portada",
             "recurso": "1",
