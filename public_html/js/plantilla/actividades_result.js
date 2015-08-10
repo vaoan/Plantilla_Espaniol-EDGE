@@ -299,10 +299,10 @@ function retroalimentacion(strRetroalimentacion, objTextInject) {
 
 function send_interactions(pagina, objEvt, results) {
     if (isEmpty(pagina)) {
-        console.error("NOT SEND");
+        console.error("NOT SEND TO FATHER", objEvt);
         return false;
     } else {
-        EDGE_Plantilla.debug ? console.log("SENDING...", pagina) : false;
+        EDGE_Plantilla.debug ? console.log("SENDING...", pagina, objEvt) : false;
     }
 
     var sym_contenedor;
@@ -367,6 +367,10 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
             if (typeof estado_answers !== "string") {
                 estado = estado_answers ? "correct" : "incorrect";
             }
+            
+            if(estado_answers === "neutral"){
+                return;
+            }
 
             interactions[id_interaction + "0"] = {
                 pregunta: json_data,
@@ -379,6 +383,11 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                 var estado;
                 if (typeof estado_answers !== "string") {
                     estado = estado_answers[key] ? "correct" : "incorrect";
+                }else{
+                    estado = estado_answers[key];
+                }
+                if(estado === "neutral"){
+                    return true;
                 }
                 //console.log("upload interactions", key);
                 interactions[id_interaction + key] = {

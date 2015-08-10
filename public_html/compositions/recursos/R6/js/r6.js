@@ -50,7 +50,6 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     var identify = stage.prop("ed_identify");
     stopTimer(evt.sym);
-
     var result = check_every_answer();
 
     var objEvt = {
@@ -66,26 +65,49 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
         identify: identify
     };
 
-    $("body").trigger(objEvt);
+    if (!isEmpty(evt.timer)) {
+
+    }
+
+    send_interactions(identify, objEvt, result);
 });
 
 function check_every_answer() {
-    var boolRespuesta = false;
-
     $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
         var pagina = EDGE_Plantilla.config.paginas[value];
         var stage = EDGE_Plantilla.config.paginas[value].stage;
-
 
         $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
                 .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
     });
 
-    $.each(EDGE_Plantilla.temp_scorm, function (key, value) {
+    var respuestas = {};
+    var result = "correct";
 
+    $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
+        var page_respuestas = {};
+        var pagina = EDGE_Plantilla.config.paginas[value];
+        if (pagina.type === "actividad") {
+            $.each(EDGE_Plantilla.temp_scorm, function (i, valor) {
+                if (i.startsWith(pagina.recurso)) {
+                    if (valor.estado === "correct") {
+                        page_respuestas[i] = "correct";
+                    } else {
+                        page_respuestas[i] = "incorrect";
+                        result = "incorrect";
+                    }
+                }
+            });
+        }
+        
+        if(isEmpty(page_respuestas)){
+            page_respuestas[pagina.recurso + "0000"] = "incorrect";
+        }
+        
+        respuestas = merge_options(respuestas, page_respuestas);
     });
 
-    return boolRespuesta ? "correct" : "incorrect";
+    return respuestas;
 }
 
 function reload_pages() {

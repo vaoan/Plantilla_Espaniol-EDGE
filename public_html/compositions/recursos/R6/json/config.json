@@ -2,6 +2,7 @@
     "default": {
         "url_pages": "compositions/",
         "default_page": [
+            "1"
         ],
         "limit_attemps": 3
     },
