@@ -1,0 +1,51 @@
+{
+    "num_intentos": 2,
+    "pregunta":"prueba de pregunta drag and drop",
+    "tipo": "uno a uno",
+    "drags": {
+        "1": {
+            "descripcion": "cuadro 1"
+        },
+        "2": {
+            "descripcion": "cuadro 2"
+        },
+		"3": {
+            "descripcion": "cuadro 3"
+        },
+		"4": {
+            "descripcion": "cuadro 4"
+        },
+		"5": {
+            "descripcion": "cuadro 5"
+        },
+		"6": {
+            "descripcion": "cuadro 6"
+        }
+    },
+    "drops": {
+        "1": {
+            "descripcion": "lugar 1",
+            "accepted": []
+        },
+        "2": {
+            "descripcion": "lugar 2",
+            "accepted": []
+        },
+		 "3": {
+            "descripcion": "lugar 3",
+            "accepted": []
+        },
+		 "4": {
+            "descripcion": "lugar 4",
+            "accepted": []
+        },
+		 "5": {
+            "descripcion": "lugar 5",
+            "accepted": []
+        },
+		 "6": {
+            "descripcion": "lugar 6",
+            "accepted": []
+        }
+    }
+}

@@ -16,7 +16,9 @@
             "al_cerrar": {
                 "cargar" : "2",
                 "click" : "btnR_2"
-            }
+            },
+			"titulo": "Empecemos",
+			"subtitulo": "las letras"
         },
         "2": {
             "type": "actividad",
@@ -25,7 +27,9 @@
             "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
             "interaction": {
                 "ALL": true
-            }
+            },
+			"titulo": "Exploremos",
+			"subtitulo": "las letras"
         },
         "3": {
             "type": "actividad",
@@ -34,7 +38,9 @@
             "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
             "interaction": {
                 "ALL": true
-            }
+            },
+			"titulo": "Practiquemos",
+			"subtitulo": "las letras"
         },
         "4": {
             "type": "actividad",
@@ -43,7 +49,9 @@
             "url": "actividades/EDGE_PickMany-master/bolita.html",
             "interaction": {
                 "ALL": true
-            }
+            },
+			"titulo": "Practiquemos",
+			"subtitulo": "las letras"
         },
         "5": {
             "type": "actividad",
@@ -52,7 +60,9 @@
             "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
             "interaction": {
                 "ALL": true
-            }
+            },
+			"titulo": "Practiquemos",
+			"subtitulo": "las letras"
         },
         "6": {
             "type": "actividad",
@@ -61,7 +71,9 @@
             "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
             "interaction": {
                 "ALL": false
-            }
+            },
+			"titulo": "Evaluemos",
+			"subtitulo": "las letras"
         },
         "7": {
             "type": "actividad",
@@ -70,7 +82,9 @@
             "url": "recursos/R6/R6.html",
             "interaction": {
                 "ALL": false
-            }
+            },
+			"titulo": "Aprendamos en papel",
+			"subtitulo": "las letras"
         },
         "muy_bien": {
             "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",

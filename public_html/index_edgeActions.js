@@ -41,6 +41,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+         
+         
 
       });
       //Edge binding end
@@ -220,6 +222,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+         
+         
 
       });
       //Edge binding end
@@ -231,6 +235,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+         
+         
 
       });
       //Edge binding end
@@ -242,17 +248,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+         
+         
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnR_3}", "click", function(sym, e) {
          cambiarColorBordes(sym, 3);
+         
          $("body").trigger({
                          type: "EDGE_Self_Plantilla_ClickNav",
                          sym: sym,
                          evt: e
                      });
+         
 
       });
       //Edge binding end
@@ -264,6 +274,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+         
+         
+         
 
       });
       //Edge binding end
@@ -275,6 +288,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                          sym: sym,
                          evt: e
                      });
+         
+         
+         
 
       });
       //Edge binding end
@@ -374,6 +390,39 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                 type: "EDGE_Container_loaded",
                 sym: sym
             });
+         
+         
+         // Ocultar un elemento 
+         sym.$("menu_grafico").hide();
+         	sym.$("btn_full").hide();
+         	sym.$("btn_creditos").hide();
+         	sym.$("btn_ayuda").hide();
+         	sym.$("btn_audio").hide();
+         	sym.$("btn_info").hide();
+         	sym.$("btn_accesibilidad").hide();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_menugrafico}", "click", function(sym, e) {
+         // muestra/oculta menu grafico
+         if (sym.$("menu_grafico").is(":visible")) {
+         	sym.$("menu_grafico").hide();
+         	sym.$("btn_full").hide();
+         	sym.$("btn_creditos").hide();
+         	sym.$("btn_ayuda").hide();
+         	sym.$("btn_audio").hide();
+         	sym.$("btn_info").hide();
+         	sym.$("btn_accesibilidad").hide();
+         } else {
+         	sym.$("menu_grafico").show();
+         	sym.$("btn_full").show();
+         	sym.$("btn_creditos").show();
+         	sym.$("btn_ayuda").show();
+         	sym.$("btn_audio").show();
+         	sym.$("btn_info").show();
+         	sym.$("btn_accesibilidad").show();
+         }
          
 
       });
@@ -841,5 +890,29 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("back_contenedor_home");
    //Edge symbol end:'back_contenedor_home'
+
+   //=========================================================
+   
+   //Edge symbol: 'menu_grafico'
+   (function(symbolName) {   
+   
+   })("menu_grafico");
+   //Edge symbol end:'menu_grafico'
+
+   //=========================================================
+   
+   //Edge symbol: 'btn_menugrafico'
+   (function(symbolName) {   
+   
+   })("btn_menugrafico");
+   //Edge symbol end:'btn_menugrafico'
+
+   //=========================================================
+   
+   //Edge symbol: 'titulo'
+   (function(symbolName) {   
+   
+   })("titulo");
+   //Edge symbol end:'titulo'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");

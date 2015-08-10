@@ -5,12 +5,15 @@
  */
 
 
-$("body").on("EDGE_Container_loaded", function (evt) {
-
-    document.body.style.background = "url(http://www.globalasia.com/wp-content/uploads/2014/03/malaga.jpg) 50% 50% / cover no-repeat gray";
+$("body").on("EDGE_Container_loaded", function () {
+    document.body.style.background = "url('images/fondo.png') 50% 50% / cover no-repeat gray";
     $("body").css({
         "background-size": "cover",
         "background-repeat": "no-repeat",
         "background-position": "center center"
+    });
+    
+    $("body").css({
+        overflow : "hidden"
     });
 });
