@@ -11,7 +11,7 @@ function enviarEventoActividadTerminada(sym) {
 function enviarEventoInteraccion(tipo, pregunta, respuesta, resultado, intentos_previos, limite_intentos, timerObj, sym) {
     var stage = $(sym.getComposition().getStage().ele);
     var identify = stage.prop("ed_identify");
-    
+
     parent.$(parent.document).trigger({
         type: "EDGE_Plantilla_submitApplied",
         interactionType: tipo,
@@ -52,3 +52,8 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
     //EDGE_Plantilla.debug ? console.log(temp, arrSymSearch, boolJQUERY) : false;
     return temp;
 }
+
+$("body").on("EDGE_Recurso_Submit", function (evt) {
+    console.log("SUBMIT OBLIGADO");
+    checkAnswersPickMany(evt.sym);
+});

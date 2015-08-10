@@ -287,5 +287,3 @@ function nombreANumero(strNombre) {
         return "";
     }
 }
-
-        

@@ -1,5 +1,5 @@
 {
-    "segundos": 60,
+    "segundos": 12,
     "alertas": [10],
     "sym": ["TIMER_CONTAINER"]
 }

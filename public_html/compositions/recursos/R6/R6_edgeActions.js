@@ -76,7 +76,7 @@
                 sym: sym
             });
 
-            enviarEventoActividadTerminada(sym);
+            //enviarEventoActividadTerminada(sym);
 
         });
         //Edge binding end

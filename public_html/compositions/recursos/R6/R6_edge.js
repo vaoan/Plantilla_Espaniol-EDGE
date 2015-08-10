@@ -23,8 +23,7 @@
             js+"main.js",
             js+"timerUtilities.js",
             js+"actividades_result.js",
-            js+"r6.js",
-            js+"interactionUtilities.js"
+            js+"r6.js"
         ],
         symbols = {
             "stage": {

@@ -22,6 +22,7 @@
             js+"ion.sound-3.0.5/js/ion.sound.min.js",
             js+"plantilla/actividades_result.js",
             js+"plantilla/utilities.js",
+            js+"plantilla/plantilla.js",
             js+"plantilla/utility.js",
             js+"plantilla/main.js",
             js+"EdgeCommons.js"
