@@ -137,7 +137,8 @@ function handle_style_nav(boolShow) {
     var sym = EDGE_Plantilla.plantilla_sym;
 
     $.each(EDGE_Plantilla.button_nav, function (index, valor) {
-        $.each(valor, function (key, value) {
+        //$.each(valor, function (key, value) {
+        var value = valor.button;
             var sym_element;
             if (typeof value !== "string") {
                 sym_element = buscar_sym(sym, value, true);
@@ -151,7 +152,7 @@ function handle_style_nav(boolShow) {
             } else {
                 sym_element.hide();
             }
-        });
+        //});
     });
 
     $.each(EDGE_Plantilla.basic_contenedor_name, function (key, value) {
