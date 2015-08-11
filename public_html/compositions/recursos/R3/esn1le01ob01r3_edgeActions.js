@@ -27,7 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         inicializar(sym); //Esto es solo para PRUEBAS, BORRAR AL ENTREGAR A INTEGRACIÓN
+         //inicializar(sym); //Esto es solo para PRUEBAS, BORRAR AL ENTREGAR A INTEGRACIÓN
 
       });
       //Edge binding end
@@ -211,18 +211,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    //=========================================================
    
-   //Edge symbol: 'DROP_1'
-   (function(symbolName) {   
-   
-   })("DROP_1");
-   //Edge symbol end:'DROP_1'
-
-   //=========================================================
-   
    //Edge symbol: 'DROP_2'
    (function(symbolName) {   
    
    })("DROP_2");
    //Edge symbol end:'DROP_2'
+
+   //=========================================================
+   
+   //Edge symbol: 'DROP_1'
+   (function(symbolName) {   
+   
+   })("DROP_1");
+   //Edge symbol end:'DROP_1'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-6342212");

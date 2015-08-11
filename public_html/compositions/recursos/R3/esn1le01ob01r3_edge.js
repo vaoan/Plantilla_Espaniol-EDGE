@@ -36,50 +36,50 @@
                         {
                             id: 'Group2',
                             type: 'group',
-                            rect: ['100px', '424px', '377', '283', 'auto', 'auto'],
+                            rect: ['960px', '392px', '829', '309', 'auto', 'auto'],
                             c: [
                             {
-                                id: 'DROP_1',
-                                symbolName: 'DROP_1',
-                                type: 'rect',
-                                rect: ['0px', '0px', '377', '246', 'auto', 'auto']
-                            },
-                            {
-                                id: 'Text3',
+                                id: 'Text3Copy',
                                 type: 'text',
-                                rect: ['139px', '244px', 'auto', 'auto', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-size: 29px;\">Vocales</span></p>",
+                                rect: ['331px', '270px', 'auto', 'auto', 'auto', 'auto'],
+                                text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-size: 29px;\">Consonantes</span></p>",
                                 align: "left",
                                 font: ['source-sans-pro, sans-serif', [20, "px"], "rgba(0,0,0,1.00)", "700", "none", "normal", "break-word", "nowrap"],
                                 textStyle: ["", "", "", "", "none"]
+                            },
+                            {
+                                id: 'DROP_2',
+                                symbolName: 'DROP_2',
+                                type: 'rect',
+                                rect: ['0px', '0px', '829', '261', 'auto', 'auto']
                             }]
                         },
                         {
                             id: 'Group',
                             type: 'group',
-                            rect: ['1312px', '408px', '382', '281', 'auto', 'auto'],
+                            rect: ['34px', '392px', '829', '309', 'auto', 'auto'],
                             c: [
                             {
-                                id: 'DROP_2',
-                                symbolName: 'DROP_2',
-                                type: 'rect',
-                                rect: ['0px', '0px', '382', '242', 'auto', 'auto']
-                            },
-                            {
-                                id: 'Text3Copy',
+                                id: 'Text3',
                                 type: 'text',
-                                rect: ['108px', '242px', 'auto', 'auto', 'auto', 'auto'],
-                                text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-size: 29px;\">Consonantes</span></p>",
+                                rect: ['366px', '270px', 'auto', 'auto', 'auto', 'auto'],
+                                text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-size: 29px;\">Vocales</span></p>",
                                 align: "left",
                                 font: ['source-sans-pro, sans-serif', [20, "px"], "rgba(0,0,0,1.00)", "700", "none", "normal", "break-word", "nowrap"],
                                 textStyle: ["", "", "", "", "none"]
+                            },
+                            {
+                                id: 'DROP_1',
+                                symbolName: 'DROP_1',
+                                type: 'rect',
+                                rect: ['0px', '0px', '829', '261', 'auto', 'auto']
                             }]
                         },
                         {
                             id: 'Submit',
                             symbolName: 'Submit',
                             type: 'rect',
-                            rect: ['1618px', '722px', '165', '38', 'auto', 'auto'],
+                            rect: ['1602px', '707px', '165', '38', 'auto', 'auto'],
                             clip: 'rect(0px 193.8662109375px 38px -28.8662109375px)',
                             cursor: 'pointer'
                         },
@@ -120,79 +120,79 @@
                             id: 'DRAG_1',
                             symbolName: 'DRAG_1',
                             type: 'rect',
-                            rect: ['846px', '281px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1097px', '253px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_10',
                             symbolName: 'DRAG_10',
                             type: 'rect',
-                            rect: ['1456px', '271px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1638px', '270px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_11',
                             symbolName: 'DRAG_11',
                             type: 'rect',
-                            rect: ['904px', '549px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1643px', '165px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_12',
                             symbolName: 'DRAG_12',
                             type: 'rect',
-                            rect: ['1056px', '442px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['50px', '152px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_13',
                             symbolName: 'DRAG_13',
                             type: 'rect',
-                            rect: ['752px', '439px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['59px', '256px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_14',
                             symbolName: 'DRAG_14',
                             type: 'rect',
-                            rect: ['1117px', '281px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1472px', '270px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_15',
                             symbolName: 'DRAG_15',
                             type: 'rect',
-                            rect: ['627px', '291px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1006px', '160px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_16',
                             symbolName: 'DRAG_16',
                             type: 'rect',
-                            rect: ['449px', '278px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['879px', '256px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_2',
                             symbolName: 'DRAG_2',
                             type: 'rect',
-                            rect: ['256px', '291px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['249px', '270px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_3',
                             symbolName: 'DRAG_3',
                             type: 'rect',
-                            rect: ['1285px', '181px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1499px', '165px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_4',
                             symbolName: 'DRAG_4',
                             type: 'rect',
-                            rect: ['1107px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1314px', '241px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_5',
                             symbolName: 'DRAG_5',
                             type: 'rect',
-                            rect: ['949px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1197px', '160px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_6',
                             symbolName: 'DRAG_6',
                             type: 'rect',
-                            rect: ['765px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['769px', '181px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_7',
@@ -204,13 +204,13 @@
                             id: 'DRAG_8',
                             symbolName: 'DRAG_8',
                             type: 'rect',
-                            rect: ['440px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['443px', '152px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'DRAG_9',
                             symbolName: 'DRAG_9',
                             type: 'rect',
-                            rect: ['278px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['226px', '151px', 'undefined', 'undefined', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -226,7 +226,26 @@
                     duration: 0,
                     autoPlay: true,
                     data: [
-
+                        [
+                            "eid352",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            '1602px',
+                            '1602px'
+                        ],
+                        [
+                            "eid351",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            '707px',
+                            '707px'
+                        ]
                     ]
                 }
             },
@@ -240,9 +259,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'c',
                             type: 'image',
+                            id: 'c',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/c.png', '0px', '0px']
                         }
                     ],
@@ -278,12 +297,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'TextCopy3',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -311,20 +330,20 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
                             fill: ['rgba(193,193,193,1.00)']
                         },
                         {
-                            type: 'text',
                             rect: ['22px', '7px', '154px', '38px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
                             align: 'center',
-                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal']
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -341,26 +360,6 @@
                         "10": 500
                     },
                     data: [
-                        [
-                            "eid32",
-                            "background-color",
-                            0,
-                            500,
-                            "linear",
-                            "${Rectangle2}",
-                            'rgba(193,193,193,1.00)',
-                            'rgba(255,0,0,1.00)'
-                        ],
-                        [
-                            "eid34",
-                            "background-color",
-                            500,
-                            500,
-                            "linear",
-                            "${Rectangle2}",
-                            'rgba(255,0,0,1)',
-                            'rgba(193,193,193,1.00)'
-                        ],
                         [
                             "eid41",
                             "color",
@@ -380,6 +379,26 @@
                             "${Text2}",
                             'rgba(255,255,255,1.00)',
                             'rgba(0,0,0,1)'
+                        ],
+                        [
+                            "eid32",
+                            "background-color",
+                            0,
+                            500,
+                            "linear",
+                            "${Rectangle2}",
+                            'rgba(193,193,193,1.00)',
+                            'rgba(255,0,0,1.00)'
+                        ],
+                        [
+                            "eid34",
+                            "background-color",
+                            500,
+                            500,
+                            "linear",
+                            "${Rectangle2}",
+                            'rgba(255,0,0,1)',
+                            'rgba(193,193,193,1.00)'
                         ]
                     ]
                 }
@@ -402,12 +421,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -443,12 +462,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         },
                         {
@@ -482,9 +501,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'a2',
                             type: 'image',
+                            id: 'a2',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/a2.png', '0px', '0px']
                         }
                     ],
@@ -512,9 +531,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'd',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'd',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/d.png', '0px', '0px']
                         }
                     ],
@@ -542,9 +561,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'e',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'e',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/e.png', '0px', '0px']
                         }
                     ],
@@ -572,9 +591,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'f',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'f',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/f.png', '0px', '0px']
                         }
                     ],
@@ -602,9 +621,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'i',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'i',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/i.png', '0px', '0px']
                         }
                     ],
@@ -632,9 +651,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'h',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'h',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/h.png', '0px', '0px']
                         }
                     ],
@@ -662,9 +681,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'l',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'l',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/l.png', '0px', '0px']
                         }
                     ],
@@ -692,9 +711,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'Image',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'Image',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/%C3%B1.png', '0px', '0px']
                         }
                     ],
@@ -722,9 +741,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'o',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'o',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/o.png', '0px', '0px']
                         }
                     ],
@@ -752,9 +771,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'p',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'p',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/p.png', '0px', '0px']
                         }
                     ],
@@ -782,9 +801,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'r',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'r',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/r.png', '0px', '0px']
                         }
                     ],
@@ -812,9 +831,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'v',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'v',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/v.png', '0px', '0px']
                         }
                     ],
@@ -842,9 +861,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'u',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'u',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/u.png', '0px', '0px']
                         }
                     ],
@@ -872,9 +891,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'm',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'm',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/m.png', '0px', '0px']
                         }
                     ],
@@ -902,9 +921,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'z',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'z',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/z.png', '0px', '0px']
                         }
                     ],
@@ -922,7 +941,7 @@
                     ]
                 }
             },
-            "DROP_1": {
+            "DROP_2": {
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
@@ -932,11 +951,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-3px', '2px', '366px', '226px', 'auto', 'auto'],
+                            rect: ['0px', '0px', '813px', '245px', 'auto', 'auto'],
                             borderRadius: ['10px', '10px', '10px', '10px'],
-                            transform: [[], [], [], ['0.98629', '1.01475']],
-                            id: 'RoundRect2',
-                            stroke: [8, 'rgba(84,53,118,1.00)', 'solid'],
+                            id: 'RoundRectCopy',
+                            stroke: [8, 'rgb(84, 53, 118)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.498)']
                         }
@@ -944,7 +962,7 @@
                     style: {
                         '${symbolSelector}': {
                             isStage: 'true',
-                            rect: [undefined, undefined, '377px', '246px']
+                            rect: [undefined, undefined, '829px', '261px']
                         }
                     }
                 },
@@ -956,7 +974,7 @@
                     ]
                 }
             },
-            "DROP_2": {
+            "DROP_1": {
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
@@ -966,10 +984,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '366px', '226px', 'auto', 'auto'],
+                            rect: ['0px', '0px', '813px', '245px', 'auto', 'auto'],
                             borderRadius: ['10px', '10px', '10px', '10px'],
-                            id: 'RoundRect2Copy',
-                            stroke: [8, 'rgba(84,53,118,1.00)', 'solid'],
+                            id: 'RoundRectCopy2',
+                            stroke: [8, 'rgb(84, 53, 118)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.498)']
                         }
@@ -977,7 +995,7 @@
                     style: {
                         '${symbolSelector}': {
                             isStage: 'true',
-                            rect: [undefined, undefined, '382px', '242px']
+                            rect: [undefined, undefined, '829px', '261px']
                         }
                     }
                 },
