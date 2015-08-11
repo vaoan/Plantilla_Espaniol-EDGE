@@ -78,7 +78,7 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 });
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
-    console.log("CONSOLASO");
+    inicializarDragAndDrop(data.sym);
     var stage = $(data.sym.getComposition().getStage().ele);
     aplicarCambiosPreviosDragAndDrop(data.previous_data, data.sym);
 
@@ -144,7 +144,7 @@ function inicializarDragAndDrop(sym) {
         }
 
         stage.prop("usa_timer", typeof startTimer == 'function');
-        enviarEventoActividadTerminada(sym);
+        //enviarEventoActividadTerminada(sym);
     });
 }
 
@@ -623,3 +623,6 @@ function aplicarCambiosPreviosDragAndDrop(dataObj, sym) {
     });
 }
 
+function inicializar(sym){
+    inicializarDragAndDrop(sym);
+}
