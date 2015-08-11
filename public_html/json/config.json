@@ -40,8 +40,8 @@
         "4": {
             "type": "actividad",
             "recurso": "4",
-            "actividad": "pick_many",
-            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "actividad": "drag_drop",
+            "url": "recursos/R4/drag_drop2.html",
             "interaction": {
                 "ALL": true
             },
@@ -71,13 +71,9 @@
             "subtitulo": "las letras"
         },
         "7": {
-            "type": "actividad",
+            "type": "recurso",
             "recurso": "7",
-            "actividad": "R6",
-            "url": "recursos/R6/R6.html",
-            "interaction": {
-                "ALL": false
-            },
+            "url": "recursos/R7/R7.html",
             "titulo": "Aprendamos en papel",
             "subtitulo": "las letras"
         },
@@ -140,7 +136,7 @@
             }
         },
         "creditos": {
-            "url": "elementos_plantilla/popup_creditos/popup_creditos.html",
+            "url": "elementos_plantilla/Creditos/Creditos.html",
             "type": "popup_full",
             "symbols": {
             }
@@ -152,7 +148,7 @@
             }
         },
         "ayudas": {
-            "url": "elementos_plantilla/Menuayuda/Menuayuda.html",
+            "url": "elementos_plantilla/Ayuda/Ayuda.html",
             "type": "popup_full",
             "symbols": {
             }

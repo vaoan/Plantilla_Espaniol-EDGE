@@ -1561,3 +1561,25 @@
 [0806/164001:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
     at eval (eval at <anonymous> (about:blank:0:47), <anonymous>:1:7)
     at about:blank:0:49", source:  (1)
+[0811/085210:ERROR:gl_surface_egl.cc(133)] eglInitialize failed with error UNKNOWN
+[0811/085210:ERROR:gl_surface_win.cc(97)] GLSurfaceEGL::InitializeOneOff failed.
+[0811/085222:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0811/085222:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0811/085222:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0811/085222:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0811/085223:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0811/085223:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0811/085223:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0811/085224:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot call method 'appendChild' of undefined", source: v8/appCss (1)
+[0811/085224:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot call method 'appendChild' of undefined", source: v8/appCss (1)
+[0811/085225:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0811/085225:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/hangarita/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/elementos_plantilla/Accesibilidad/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0811/085228:ERROR:ipc_channel_win.cc(132)] pipe error: 109

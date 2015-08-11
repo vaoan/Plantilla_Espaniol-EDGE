@@ -31,39 +31,39 @@ EDGE_Plantilla = {
     },
     button_nav: {
         R1: {
-            "button": ["btnR_1"],
+            "button": ["btnr_1"],
             "image": ["rec_1"]
         },
         R2: {
-            "button": ["btnR_2"],
+            "button": ["btnr_2"],
             "image": ["rec_2"]
         },
         R3: {
-            "button": ["btnR_3"],
+            "button": ["btnr_3"],
             "image": ["rec_3"]
         },
         R4: {
-            "button": ["btnR_4"],
+            "button": ["btnr_4"],
             "image": ["rec_4"]
         },
         R5: {
-            "button": ["btnR_5"],
+            "button": ["btnr_5"],
             "image": ["rec_5"]
         },
         R6: {
-            "button": ["btnR_6"],
+            "button": ["btnr_6"],
             "image": ["rec_6"]
         },
         R7: {
-            "button": ["btnR_7"],
+            "button": ["btnr_7"],
             "image": ["rec_7"]
         },
         learning: {
-            "button": ["btn_puntoApren"],
+            "button": ["btn_PA"],
             "image": ["punto_A"]
         },
         vocabulario: {
-            "button": ["btn_vocabulario2"],
+            "button": ["btn_VC"],
             "image": ["vocabulario"]
         }
     },

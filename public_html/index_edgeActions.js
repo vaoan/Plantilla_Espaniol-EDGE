@@ -33,79 +33,27 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_7}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         cambiarColorBordes(sym, 7);
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-         
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_7}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_7").play("b");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_7}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_7").play("a");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_6}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_6").play("a");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_5}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_5").play("a");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_4}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_4").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_3}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_3").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_2}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_2").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_1}", "mouseout", function(sym, e) {
-         sym.getSymbol("rec_1").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btn_vocabulario2}", "mouseout", function(sym, e) {
-         sym.getSymbol("vocabulario").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btn_puntoApren}", "mouseout", function(sym, e) {
-         sym.getSymbol("punto_A").play("a");
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${btn_accesibilidad}", "mouseout", function(sym, e) {
          sym.getSymbol("Tool_accesibilidad").play("a");
@@ -137,53 +85,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${btn_puntoApren}", "mouseover", function(sym, e) {
-         sym.getSymbol("punto_A").play("b");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btn_vocabulario2}", "mouseover", function(sym, e) {
-         sym.getSymbol("vocabulario").play("b");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_1}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_1").play("b");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_2}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_2").play("b");
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_3}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_3").play("b");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_4}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_4").play("b");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_5}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_5").play("b");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_6}", "mouseover", function(sym, e) {
-         sym.getSymbol("rec_6").play("b");
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${btn_accesibilidad}", "mouseover", function(sym, e) {
          sym.getSymbol("Tool_accesibilidad").play("b");
@@ -215,85 +131,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_6}", "click", function(sym, e) {
-         cambiarColorBordes(sym, 6);
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-         
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_5}", "click", function(sym, e) {
-         cambiarColorBordes(sym, 5);
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-         
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${btnR_4}", "click", function(sym, e) {
-         cambiarColorBordes(sym, 4);
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-         
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_3}", "click", function(sym, e) {
-         cambiarColorBordes(sym, 3);
-         
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_2}", "click", function(sym, e) {
-         cambiarColorBordes(sym, 2);
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnR_1}", "click", function(sym, e) {
-         cambiarColorBordes(sym, 1);
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-         
-         
-         
-
-      });
-      //Edge binding end
+      
 
       
 
@@ -363,27 +211,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${btn_puntoApren}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btn_vocabulario2}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         $("body").trigger({
-                         type: "EDGE_Self_Plantilla_ClickNav",
-                         sym: sym,
-                         evt: e
-                     });
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          $("body").trigger({
@@ -400,21 +230,47 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          	sym.$("btn_audio").hide();
          	sym.$("btn_info").hide();
          	sym.$("btn_accesibilidad").hide();
+         	sym.$("Tool_accesibilidad").hide();
+         	sym.$("Tool_info").hide();
+         	sym.$("Tool_full").hide();
+         	sym.$("Tool_ayuda").hide();
+         	sym.$("Tool_audio").hide();
+         	sym.$("Tool_creditos").hide();
+         	sym.$("punto_A").hide();
+         	sym.$("vocabulario").hide();
+         
+         	sym.$("rec_1").hide();
+         	sym.$("rec_2").hide();
+         	sym.$("rec_3").hide();
+         	sym.$("rec_4").hide();
+         	sym.$("rec_5").hide();
+         	sym.$("rec_6").hide();
+         	sym.$("rec_7").hide();
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btn_menugrafico}", "click", function(sym, e) {
          // muestra/oculta menu grafico
+         
          if (sym.$("menu_grafico").is(":visible")) {
+         
          	sym.$("menu_grafico").hide();
          	sym.$("btn_full").hide();
          	sym.$("btn_creditos").hide();
          	sym.$("btn_ayuda").hide();
          	sym.$("btn_audio").hide();
          	sym.$("btn_info").hide();
-         	sym.$("btn_accesibilidad").hide();
-         } else {
+         	sym.$("btn_accesibilidad").hide()
+         	sym.$("Tool_accesibilidad").hide();
+         	sym.$("Tool_info").hide();
+         	sym.$("Tool_full").hide();
+         	sym.$("Tool_ayuda").hide();
+         	sym.$("Tool_audio").hide();
+         	sym.$("Tool_creditos").hide();
+         
+         	} else {
+         
          	sym.$("menu_grafico").show();
          	sym.$("btn_full").show();
          	sym.$("btn_creditos").show();
@@ -422,8 +278,260 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          	sym.$("btn_audio").show();
          	sym.$("btn_info").show();
          	sym.$("btn_accesibilidad").show();
+         	sym.$("Tool_accesibilidad").show();
+         	sym.$("Tool_info").show();
+         	sym.$("Tool_full").show();
+         	sym.$("Tool_ayuda").show();
+         	sym.$("Tool_audio").show();
+         	sym.$("Tool_creditos").show();
          }
          
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_PA}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_PA}", "mouseover", function(sym, e) {
+         sym.$("punto_A").show();
+         sym.getSymbol("punto_A").play("b");
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_PA}", "mouseout", function(sym, e) {
+         sym.$("punto_A").hide();
+         sym.getSymbol("punto_A").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_VC}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_VC}", "mouseover", function(sym, e) {
+         sym.$("vocabulario").show();
+         sym.getSymbol("vocabulario").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_VC}", "mouseout", function(sym, e) {
+         sym.$("vocabulario").hide();
+         sym.getSymbol("vocabulario").play("a");
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_1}", "click", function(sym, e) {
+         cambiarColorBordes(sym, 1);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_2}", "click", function(sym, e) {
+         cambiarColorBordes(sym, 2);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_3}", "click", function(sym, e) {
+         cambiarColorBordes(sym, 3);
+         
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_4}", "click", function(sym, e) {
+         cambiarColorBordes(sym, 4);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_5}", "click", function(sym, e) {
+         cambiarColorBordes(sym, 5);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_6}", "click", function(sym, e) {
+         cambiarColorBordes(sym, 6);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_7}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         cambiarColorBordes(sym, 7);
+         $("body").trigger({
+                         type: "EDGE_Self_Plantilla_ClickNav",
+                         sym: sym,
+                         evt: e
+                     });
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_1}", "mouseout", function(sym, e) {
+         sym.$("rec_1").hide();
+         sym.getSymbol("rec_1").play("a");
+         sym.getSymbol("btnr_1").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_2}", "mouseout", function(sym, e) {
+         sym.$("rec_2").hide();
+         sym.getSymbol("rec_2").play("a");
+         sym.getSymbol("btnr_2").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_3}", "mouseout", function(sym, e) {
+         sym.$("rec_3").hide();
+         sym.getSymbol("rec_3").play("a");
+         sym.getSymbol("btnr_3").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_4}", "mouseout", function(sym, e) {
+         sym.$("rec_4").hide();
+         sym.getSymbol("rec_4").play("a");
+         sym.getSymbol("btnr_4").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_5}", "mouseout", function(sym, e) {
+         sym.$("rec_5").hide();
+         sym.getSymbol("rec_5").play("a");
+         sym.getSymbol("btnr_5").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_6}", "mouseout", function(sym, e) {
+         sym.$("rec_6").hide();
+         sym.getSymbol("rec_6").play("a");
+         sym.getSymbol("btnr_6").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_7}", "mouseout", function(sym, e) {
+         sym.$("rec_7").hide();
+         sym.getSymbol("rec_7").play("a");
+         sym.getSymbol("btnr_7").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_7}", "mouseover", function(sym, e) {
+         sym.$("rec_7").show();
+         sym.getSymbol("rec_7").play("b");
+         sym.getSymbol("btnr_7").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_6}", "mouseover", function(sym, e) {
+         sym.$("rec_6").show();
+         sym.getSymbol("rec_6").play("b");
+         sym.getSymbol("btnr_6").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_5}", "mouseover", function(sym, e) {
+         sym.$("rec_5").show();
+         sym.getSymbol("rec_5").play("b");
+         sym.getSymbol("btnr_5").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_4}", "mouseover", function(sym, e) {
+         sym.$("rec_4").show();
+         sym.getSymbol("rec_4").play("b");
+         sym.getSymbol("btnr_4").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_3}", "mouseover", function(sym, e) {
+         sym.$("rec_3").show();
+         sym.getSymbol("rec_3").play("b");
+         sym.getSymbol("btnr_3").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_2}", "mouseover", function(sym, e) {
+         sym.$("rec_2").show();
+         sym.getSymbol("rec_2").play("b");
+         sym.getSymbol("btnr_2").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnr_1}", "mouseover", function(sym, e) {
+         sym.$("rec_1").show();
+         sym.getSymbol("rec_1").play("b");
+         sym.getSymbol("btnr_1").play("b");
 
       });
       //Edge binding end
@@ -458,14 +566,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("btn_audio");
    //Edge symbol end:'btn_audio'
-
-   //=========================================================
-   
-   //Edge symbol: 'btnR_7'
-   (function(symbolName) {   
-   
-   })("btnR_7");
-   //Edge symbol end:'btnR_7'
 
    //=========================================================
    
@@ -632,6 +732,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol: 'btnR_6'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
       })("btnR_6");
    //Edge symbol end:'btnR_6'
 
@@ -817,22 +929,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    //=========================================================
    
-   //Edge symbol: 'btnR_8'
-   (function(symbolName) {   
-   
-         })("btn_vocabulario");
-   //Edge symbol end:'btn_vocabulario'
-
-   //=========================================================
-   
-   //Edge symbol: 'btn_vocabulario_1'
-   (function(symbolName) {   
-   
-         })("btn_puntoApren");
-   //Edge symbol end:'btn_puntoApren'
-
-   //=========================================================
-   
    //Edge symbol: 'btnR7'
    (function(symbolName) {   
    
@@ -914,5 +1010,161 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("titulo");
    //Edge symbol end:'titulo'
+
+   //=========================================================
+   
+   //Edge symbol: 'btn_PA'
+   (function(symbolName) {   
+   
+   })("btn_PA");
+   //Edge symbol end:'btn_PA'
+
+   //=========================================================
+   
+   //Edge symbol: 'btn_PA_1'
+   (function(symbolName) {   
+   
+   })("btn_VC");
+   //Edge symbol end:'btn_VC'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnr_6'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("btnr_6");
+   //Edge symbol end:'btnr_6'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnr_5'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("btnr_5");
+   //Edge symbol end:'btnr_5'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnr_4'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("btnr_4");
+   //Edge symbol end:'btnr_4'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnr_3'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("btnr_3");
+   //Edge symbol end:'btnr_3'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnr_2'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("btnr_2");
+   //Edge symbol end:'btnr_2'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnr_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("btnr_1");
+   //Edge symbol end:'btnr_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'btnR_8'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+         //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+         //Edge binding end
+
+      })("btnr_7");
+   //Edge symbol end:'btnr_7'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");
