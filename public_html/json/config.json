@@ -7,7 +7,7 @@
         "1": {
             "type": "portada",
             "recurso": "1",
-            "url": "recursos/R1/R1.html",
+            "url": "recursos/R1/esn1le01ob01r1.html",
             "al_cerrar": {
                 "cargar": "2",
                 "click": "btnR_2"
@@ -16,13 +16,9 @@
             "subtitulo": "las letras"
         },
         "2": {
-            "type": "actividad",
+            "type": "recurso",
             "recurso": "2",
-            "actividad": "drag_drop",
-            "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
-            "interaction": {
-                "ALL": true
-            },
+            "url": "recursos/R2/esn1le01ob01r2.html",
             "titulo": "Exploremos",
             "subtitulo": "las letras"
         },
@@ -41,7 +37,7 @@
             "type": "actividad",
             "recurso": "4",
             "actividad": "drag_drop",
-            "url": "recursos/R4/drag_drop2.html",
+            "url": "recursos/R4/le1obj1r4.html",
             "interaction": {
                 "ALL": true
             },
@@ -52,7 +48,7 @@
             "type": "actividad",
             "recurso": "5",
             "actividad": "filling_blanks",
-            "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
+            "url": "recursos/R5/not_yet.edistribution",
             "interaction": {
                 "ALL": true
             },
@@ -63,7 +59,7 @@
             "type": "actividad",
             "recurso": "6",
             "actividad": "filling_blanks",
-            "url": "actividades/actividad-filling_words-master/actividad-filling_words.html",
+            "url": "recursos/R6_PRE2/esn1le01ob01r6pre2.html",
             "interaction": {
                 "ALL": false
             },
@@ -76,23 +72,6 @@
             "url": "recursos/R7/R7.html",
             "titulo": "Aprendamos en papel",
             "subtitulo": "las letras"
-        },
-        "muy_bien": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
-            "type": "popup_mini",
-            "symbols": {
-                "titulo": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "titulo"
-                ],
-                "mensaje": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "recuad_texto",
-                    "txt_mensaje"
-                ]
-            }
         },
         "muy_bien": {
             "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
@@ -136,22 +115,28 @@
             }
         },
         "creditos": {
-            "url": "elementos_plantilla/Creditos/Creditos.html",
+            "url": "elementos_plantilla/creditos/creditos.html",
             "type": "popup_full",
             "symbols": {
             }
         },
         "info": {
-            "url": "elementos_plantilla/Informacion/Informacion.html",
+            "url": "elementos_plantilla/Información/Informacion.html",
             "type": "popup_full",
             "symbols": {
             }
         },
         "ayudas": {
-            "url": "elementos_plantilla/Ayuda/Ayuda.html",
+            "url": "elementos_plantilla/ayuda/ayuda.html",
             "type": "popup_full",
             "symbols": {
             }
-        }
+        },
+        "accesibilidad": {
+            "url": "elementos_plantilla/Accesibilidad/Accesibilidad.html",
+            "type": "popup_full",
+            "symbols": {
+            }
+        }        
     }
 }

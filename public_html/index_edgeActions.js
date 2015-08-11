@@ -536,6 +536,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${overlay}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         $(document).trigger({
+                                  type: 'EDGE_Plantilla_ClosePopup',
+                                  sym: sym,
+                                  evt: e
+                              });
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 

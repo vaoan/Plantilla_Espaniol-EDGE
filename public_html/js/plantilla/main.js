@@ -379,7 +379,7 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             mostrar_pagina("info");
             break;
         case "Stage_" + EDGE_Plantilla.button_menutools.accesibilidad:
-            mostrar_pagina("muy_bien", {mensaje: "¡Esto está BIEN!", titulo: "Excelente"});
+            mostrar_pagina("accesibilidad");
             break;
     }
 
