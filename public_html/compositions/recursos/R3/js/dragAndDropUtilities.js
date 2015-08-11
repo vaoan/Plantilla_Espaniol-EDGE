@@ -41,7 +41,6 @@
 //Evento que se dispara después de que el controlador recibe y transforma los resultados de una interacción.
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
-    console.log("CONSOLASO");
     var stage = $(data.sym.getComposition().getStage().ele);
 
     if (data.show_answers) {
@@ -104,11 +103,14 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 //Inicializa una actividad drag and drop
 
 function inicializarDragAndDrop(sym) {
-
     var stage = $(sym.getComposition().getStage().ele);
     stage.prop("interaction_type", "matching");
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
+
+    $.ajaxSetup({
+        async: false
+    });
 
     $.getJSON("config.json", function (data) {
         $.each(data, function (key, val) {
@@ -170,19 +172,19 @@ function inicializarDragAndDropUnoaUno(sym)
         sym.$('DRAG_' + i).prop("posicion_inicial", sym.$('DRAG_' + i).position());
         sym.$('DRAG_' + i).draggable({
             stop: function (event, ui) {
-                    var returnToOrigin = true;
-                    for(var j=1; j<=CANTIDAD_DROPS; j++){
-                        var dropObj = sym.$("DROP_"+j);
-                        if(dropObj.prop("current_drag")!== null && dropObj.prop("current_drag").prop("nombre") == $(this).prop("nombre")){
-                            returnToOrigin = false;
-                            break;
-                        }
-                    } 
-                    
-                    if(returnToOrigin){
-                        var position = $(this).prop("posicion_inicial");
-                        moverDrag($(this), position);
+                var returnToOrigin = true;
+                for (var j = 1; j <= CANTIDAD_DROPS; j++) {
+                    var dropObj = sym.$("DROP_" + j);
+                    if (dropObj.prop("current_drag") !== null && dropObj.prop("current_drag").prop("nombre") == $(this).prop("nombre")) {
+                        returnToOrigin = false;
+                        break;
                     }
+                }
+
+                if (returnToOrigin) {
+                    var position = $(this).prop("posicion_inicial");
+                    moverDrag($(this), position);
+                }
             }
         });
     }
@@ -264,19 +266,19 @@ function inicializarDragAndDropUnoaMuchos(sym)
         sym.$('DRAG_' + i).prop("posicion_inicial", sym.$('DRAG_' + i).position());
         sym.$('DRAG_' + i).draggable({
             stop: function (event, ui) {
-                    var returnToOrigin = true;
-                    for(var j=1; j<=CANTIDAD_DROPS; j++){
-                        var dropObj = sym.$("DROP_"+j);
-                        if(dropObj.prop("current_drags")!== null && dropObj.prop("current_drags").hasOwnProperty($(this).prop("nombre"))){
-                            returnToOrigin = false;
-                            break;
-                        }
-                    } 
-                    
-                    if(returnToOrigin){
-                        var position = $(this).prop("posicion_inicial");
-                        moverDrag($(this), position);
+                var returnToOrigin = true;
+                for (var j = 1; j <= CANTIDAD_DROPS; j++) {
+                    var dropObj = sym.$("DROP_" + j);
+                    if (dropObj.prop("current_drags") !== null && dropObj.prop("current_drags").hasOwnProperty($(this).prop("nombre"))) {
+                        returnToOrigin = false;
+                        break;
                     }
+                }
+
+                if (returnToOrigin) {
+                    var position = $(this).prop("posicion_inicial");
+                    moverDrag($(this), position);
+                }
             }
         });
     }
@@ -415,11 +417,14 @@ function mostrarRespuestasDragAndDropUnoAMuchos(sym) {
     var stage = $(sym.getComposition().getStage().ele);
     var dropsObj = stage.prop("drops");
 
+    //console.log(dropsObj);
+
     $.each(dropsObj, function (key, val) {
         var arrayDrags = [];
         $.each(val.accepted, function (keys, values) {
             arrayDrags.push(sym.$('DRAG_' + values));
         });
+        //console.log(arrayDrags);
         ubicarDragsEnDrop(arrayDrags, sym.$('DROP_' + key));
     });
 }
@@ -506,7 +511,7 @@ function moverDrag(dragObj, position) {
 
 function ubicarDragEnCentroDeDrop(drag, drop) {
 
-    var dropPosition = drop.position();
+    var dropPosition = drop.offset();
 
     var dragWidth = drag.width();
     var dragHeight = drag.height();
@@ -515,6 +520,7 @@ function ubicarDragEnCentroDeDrop(drag, drop) {
     var dropHeight = drop.height();
 
     var newposition = {top: ((dropPosition.top + (dropHeight / 2)) - (dragHeight / 2)), left: ((dropPosition.left + (dropWidth / 2)) - (dragWidth / 2))};
+
     moverDrag(drag, newposition);
 
 }
@@ -524,24 +530,27 @@ function ubicarDragEnCentroDeDrop(drag, drop) {
 //Ubica un drag en el centro de un drop pasados como parámetros.
 
 function ubicarDragsEnDrop(drags, drop) {
-    var dropPosition = drop.position();
+    var dropPosition = drop.offset();
     var dropWidth = drop.width();
     var dropHeight = drop.height();
 
     var currentTop = dropPosition.top;
     var currentLeft = dropPosition.left;
 
-    for (var i = 0; i < drags.length; i++) {
-        if ((currentLeft + drags[i].width()) > (dropPosition.left + dropWidth))
+    //for (var i = 0; i < drags.length; i++) {
+    $.each(drags, function (key, value) {
+        if ((currentLeft + $(value[0]).width()) > (dropPosition.left + dropWidth))
         {
-            currentTop += drags[i].height;
+            currentTop += $(value[0]).height();
             currentLeft = dropPosition.left;
-        } else {
-            var newposition = {top: currentTop, left: currentLeft};
-            moverDrag(drags[i], newposition);
-            currentLeft += drags[i].width();
         }
-    }
+
+        var newposition = {top: currentTop, left: currentLeft};
+        moverDrag(value, newposition);
+        currentLeft += $(value[0]).width();
+    });
+
+    //}
 }
 
 //***********************************************************************
@@ -623,6 +632,6 @@ function aplicarCambiosPreviosDragAndDrop(dataObj, sym) {
     });
 }
 
-function inicializar(sym){
+function inicializar(sym) {
     inicializarDragAndDrop(sym);
 }
