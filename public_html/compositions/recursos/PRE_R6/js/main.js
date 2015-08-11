@@ -177,7 +177,7 @@ function mostrar_pagina(strPagina, objRetro) {
         return false;
     }
     var pagina = EDGE_Plantilla.config.paginas[strPagina];
-    EDGE_Plantilla.debug ? console.log(pagina) : false;
+    EDGE_Plantilla.debug ? console.log("MOSTRANDO PAGINA", pagina) : false;
 
     if (!isEmpty(pagina.symbols)) {
         if (!isEmpty(objRetro)) {
@@ -241,7 +241,12 @@ function mostrar_pagina(strPagina, objRetro) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
         $(stage.ele).prop("ed_identify", pagina);
-        //console.log(stage);
+        var objEvt = {
+            type: "EDGE_Recurso_promiseCreated",
+            sym: stage
+        };
+        $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {
             $.each(objRetro, function (index, value) {
                 var arrSymSearch = pagina.symbols[index];

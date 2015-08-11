@@ -35,7 +35,7 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
 function filling_blanks_santiago_created(evt) {
     var objEvt = {
         type: "EDGE_Recurso_sendPreviousData",
-        previous_data: read_interactions(evt.identify),
+        previous_data: read_interactions(evt),
         sym: evt.sym,
         block: false,
         attempts: 0
@@ -57,7 +57,7 @@ function drag_drop_toscano_created(evt) {
     var objEvt = {
         type: "EDGE_Recurso_sendPreviousData",
         block: false,
-        previous_data: read_interactions(evt.identify),
+        previous_data: read_interactions(evt),
         attempts: 0,
         sym: evt.sym
     };

@@ -1,14 +1,14 @@
-function enviarEventoActividadTerminada(sym) {
-    var stage = $(sym.getComposition().getStage().ele);
+$("body").on("EDGE_Recurso_promiseCreated", function(evt){
+    var stage = $(evt.sym.getComposition().getStage().ele);
     var objEvt = {
         type: "EDGE_Plantilla_creationComplete",
-        sym: sym,
+        sym: evt.sym,
         identify: stage.prop("ed_identify")
     };
     
     console.log("INTERACTION UTILITIES CREATED", objEvt, stage);
     parent.$(parent.document).trigger(objEvt);
-}
+});
 
 function enviarEventoInteraccion(tipo, pregunta, respuesta, resultado, intentos_previos, limite_intentos, timerObj, sym) {
     var stage = $(sym.getComposition().getStage().ele);
@@ -54,5 +54,19 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
 }
 
 $("body").on("EDGE_Recurso_Submit", function (evt) {
-    checkAnswersDragAndDrop(evt.sym);
+    var stage = $(evt.sym.getComposition().getStage().ele);
+    var pagina = stage.prop("ed_identify");
+    
+    switch(pagina.actividades){
+        case "drag_drop_many":
+        case "drag_drop":
+            checkAnswersDragAndDrop(evt.sym);
+            break;
+        case "pick_many":
+            checkAnswersPickMany(evt.sym);
+            break;
+        default:
+            console.error("INTERACCION IRRECONOCIBLE", pagina);
+            break;
+    }
 });

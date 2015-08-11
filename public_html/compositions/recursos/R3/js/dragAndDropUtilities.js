@@ -41,6 +41,7 @@
 //Evento que se dispara después de que el controlador recibe y transforma los resultados de una interacción.
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
+    console.log("CONSOLASO");
     var stage = $(data.sym.getComposition().getStage().ele);
 
     if (data.show_answers) {
@@ -77,6 +78,7 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 });
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
+    console.log("CONSOLASO");
     var stage = $(data.sym.getComposition().getStage().ele);
     aplicarCambiosPreviosDragAndDrop(data.previous_data, data.sym);
 

@@ -44,7 +44,7 @@
                             id: 'DROP_2',
                             symbolName: 'DROP_2',
                             type: 'rect',
-                            rect: ['143px', '408px', '270', '138', 'auto', 'auto'],
+                            rect: ['142px', '408px', '270', '138', 'auto', 'auto'],
                             clip: 'rect(0px 384.28515625px 284.428466796875px 0px)'
                         },
                         {
@@ -199,16 +199,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid337",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${DROP_2}",
-                            '143px',
-                            '143px'
-                        ],
-                        [
                             "eid342",
                             "top",
                             0,
@@ -219,16 +209,6 @@
                             '408px'
                         ],
                         [
-                            "eid339",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${DROP_1}",
-                            '1288px',
-                            '1288px'
-                        ],
-                        [
                             "eid341",
                             "top",
                             0,
@@ -237,6 +217,26 @@
                             "${DROP_2}",
                             '408px',
                             '408px'
+                        ],
+                        [
+                            "eid350",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${DROP_2}",
+                            '142px',
+                            '142px'
+                        ],
+                        [
+                            "eid339",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${DROP_1}",
+                            '1288px',
+                            '1288px'
                         ]
                     ]
                 }
@@ -259,13 +259,13 @@
                             fill: ['rgba(255,255,255,0.498)']
                         },
                         {
-                            rect: ['128px', '242px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            align: 'left',
+                            type: 'text',
+                            textStyle: ['', '', '', '', 'none'],
                             id: 'Text3',
                             text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-size: 29px;\">Consonantes</span></p>',
-                            textStyle: ['', '', '', '', 'none'],
-                            type: 'text'
+                            align: 'left',
+                            rect: ['128px', '242px', 'auto', 'auto', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -292,22 +292,22 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.98629', '1.01475']],
-                            borderRadius: ['10px', '10px', '10px', '10px'],
                             rect: ['0px', '0px', '366px', '226px', 'auto', 'auto'],
+                            borderRadius: ['10px', '10px', '10px', '10px'],
+                            transform: [[], [], [], ['0.98629', '1.01475']],
                             id: 'RoundRect2',
                             stroke: [8, 'rgba(84,53,118,1.00)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.498)']
                         },
                         {
-                            rect: ['142px', '242px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            align: 'left',
+                            type: 'text',
+                            textStyle: ['', '', '', '', 'none'],
                             id: 'Text3',
                             text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-size: 29px;\">Vocales</span></p>',
-                            textStyle: ['', '', '', '', 'none'],
-                            type: 'text'
+                            align: 'left',
+                            rect: ['142px', '242px', 'auto', 'auto', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -334,9 +334,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'c',
                             type: 'image',
+                            id: 'c',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/c.png', '0px', '0px']
                         }
                     ],
@@ -372,12 +372,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'TextCopy3',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -405,20 +405,20 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
                             fill: ['rgba(193,193,193,1.00)']
                         },
                         {
-                            rect: ['22px', '7px', '154px', '38px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
-                            id: 'Text2',
-                            textStyle: ['', '', '', '', 'none'],
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'Text2',
+                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            textStyle: ['', '', '', '', 'none'],
+                            rect: ['22px', '7px', '154px', '38px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -435,26 +435,6 @@
                         "10": 500
                     },
                     data: [
-                        [
-                            "eid32",
-                            "background-color",
-                            0,
-                            500,
-                            "linear",
-                            "${Rectangle2}",
-                            'rgba(193,193,193,1.00)',
-                            'rgba(255,0,0,1.00)'
-                        ],
-                        [
-                            "eid34",
-                            "background-color",
-                            500,
-                            500,
-                            "linear",
-                            "${Rectangle2}",
-                            'rgba(255,0,0,1)',
-                            'rgba(193,193,193,1.00)'
-                        ],
                         [
                             "eid41",
                             "color",
@@ -474,6 +454,26 @@
                             "${Text2}",
                             'rgba(255,255,255,1.00)',
                             'rgba(0,0,0,1)'
+                        ],
+                        [
+                            "eid32",
+                            "background-color",
+                            0,
+                            500,
+                            "linear",
+                            "${Rectangle2}",
+                            'rgba(193,193,193,1.00)',
+                            'rgba(255,0,0,1.00)'
+                        ],
+                        [
+                            "eid34",
+                            "background-color",
+                            500,
+                            500,
+                            "linear",
+                            "${Rectangle2}",
+                            'rgba(255,0,0,1)',
+                            'rgba(193,193,193,1.00)'
                         ]
                     ]
                 }
@@ -496,12 +496,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -537,12 +537,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
@@ -576,9 +576,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'a2',
                             type: 'image',
+                            id: 'a2',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/a2.png', '0px', '0px']
                         }
                     ],
@@ -606,9 +606,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'd',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'd',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/d.png', '0px', '0px']
                         }
                     ],
@@ -636,9 +636,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'e',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'e',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/e.png', '0px', '0px']
                         }
                     ],
@@ -666,9 +666,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'f',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'f',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/f.png', '0px', '0px']
                         }
                     ],
@@ -696,9 +696,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'i',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'i',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/i.png', '0px', '0px']
                         }
                     ],
@@ -726,9 +726,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'h',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'h',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/h.png', '0px', '0px']
                         }
                     ],
@@ -756,9 +756,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'l',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'l',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/l.png', '0px', '0px']
                         }
                     ],
@@ -786,9 +786,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'Image',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'Image',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/%C3%B1.png', '0px', '0px']
                         }
                     ],
@@ -816,9 +816,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'o',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'o',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/o.png', '0px', '0px']
                         }
                     ],
@@ -846,9 +846,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'p',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'p',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/p.png', '0px', '0px']
                         }
                     ],
@@ -876,9 +876,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'r',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'r',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/r.png', '0px', '0px']
                         }
                     ],
@@ -906,9 +906,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'v',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'v',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/v.png', '0px', '0px']
                         }
                     ],
@@ -936,9 +936,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'u',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'u',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/u.png', '0px', '0px']
                         }
                     ],
@@ -966,9 +966,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'm',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'm',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/m.png', '0px', '0px']
                         }
                     ],
@@ -996,9 +996,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'z',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'z',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/z.png', '0px', '0px']
                         }
                     ],

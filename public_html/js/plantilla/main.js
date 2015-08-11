@@ -240,7 +240,16 @@ function mostrar_pagina(strPagina, objRetro) {
     promise.done(function (comp) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
-        $(stage.ele).prop("ed_identify", pagina);
+
+        if (!isEmpty(pagina.actividad)){
+            $(stage.ele).prop("ed_identify", pagina);
+            var objEvt = {
+                type: "EDGE_Recurso_promiseCreated",
+                sym: stage
+            };
+            $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        }
+
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {
             $.each(objRetro, function (index, value) {
