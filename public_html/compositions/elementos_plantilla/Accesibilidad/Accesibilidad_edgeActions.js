@@ -17,7 +17,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          // introducir aquí código para clic de ratón
          // Ir a una nueva dirección URL en una nueva ventana
          // (sustituya "_blank" por el atributo de destino correspondiente)
-         window.open("http://www.adobe.com", "_blank");
+         window.open("../../../media/pdf/accessibility.pdf", "_blank");
          
 
       });

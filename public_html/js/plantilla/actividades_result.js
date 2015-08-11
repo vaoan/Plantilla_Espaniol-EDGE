@@ -156,6 +156,9 @@ function filling_blanks_santiago_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if(!attemps.block){
+            strRetro = "nuevo_intento";
+        }
     }
 
     retroalimentacion(strRetro);
@@ -207,6 +210,9 @@ function drag_drop_toscano_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if(!attemps.block){
+            strRetro = "nuevo_intento";
+        }
     }
 
 
@@ -259,6 +265,9 @@ function pick_many_toscano_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if(!attemps.block){
+            strRetro = "nuevo_intento";
+        }
     }
 
     retroalimentacion(strRetro);
@@ -295,6 +304,21 @@ function check_answers(evt) {
 
 function retroalimentacion(strRetroalimentacion, objTextInject) {
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
+    
+    switch(strRetroalimentacion){
+        case "coorect":
+            mostrar_pagina("correcto");
+            break;
+        case "incorrect":
+            mostrar_pagina("incorrecto");
+            break;
+        case "nuevo_intento":
+            mostrar_pagina("nuevointento");
+            break;
+        case "complete_all":
+            mostrar_pagina("incompleto");
+            break;
+    }
 }
 
 function send_interactions(pagina, objEvt, results) {

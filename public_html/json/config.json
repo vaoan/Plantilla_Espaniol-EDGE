@@ -73,43 +73,32 @@
             "titulo": "Aprendamos en papel",
             "subtitulo": "las letras"
         },
-        "muy_bien": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",
-            "type": "popup_mini",
-            "symbols": {
-                "titulo": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "titulo"
-                ],
-                "mensaje": [
-                    "muybien_cont",
-                    "trans_popup",
-                    "recuad_texto",
-                    "txt_mensaje"
-                ]
-            }
-        },
-        "perfect": {
-            "url": "14_retroal_edge/pop_up_Actividades/perfect/perfect.html",
+        "incompleto": {
+            "url": "elementos_plantilla/completar/completar.html",
             "type": "popup_mini",
             "symbols": {
             }
         },
-        "bronce": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_lupa-bronce/lup_bronceEdge/lupaBronce_edge.html",
+        "correcto": {
+            "url": "elementos_plantilla/correcto/correcto.html",
             "type": "popup_mini",
             "symbols": {
             }
         },
-        "plata": {
-            "url": "14_retroal_edge/pop_up_Actividades/edge_med-plata/med_plataEdge/med-plata_edge.html",
+        "incorrecto": {
+            "url": "elementos_plantilla/incorrecto/incorrecto.html",
             "type": "popup_mini",
             "symbols": {
             }
         },
-        "med_estrella": {
-            "url": "14_retroal_edge/pop_up_Actividades/retroal_medEstrella/retroal_medEstrella.html",
+        "nuevointento": {
+            "url": "elementos_plantilla/nuevointento/nuevointento.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "tiempo": {
+            "url": "elementos_plantilla/tiempo/tiempo.html",
             "type": "popup_mini",
             "symbols": {
             }
