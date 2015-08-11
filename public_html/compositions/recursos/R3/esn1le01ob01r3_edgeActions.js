@@ -224,12 +224,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       })("DRAG_16");
    //Edge symbol end:'DRAG_16'
 
-   //=========================================================
-   
-   //Edge symbol: 'DRAG_17'
-   (function(symbolName) {   
-   
-   })("DRAG_17");
-   //Edge symbol end:'DRAG_17'
-
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-6342212");

@@ -1,46 +1,41 @@
 {
     "default": {
         "url_pages": "compositions/",
-        "default_page": "1"
+        "default_page": ["1"]
     },
     "paginas": {
-        "portada": {
-            "type": "portada",
-            "recurso": "1",
-            "url": "elementos_plantilla/PORTADA/portada_edge/portada.html"
-        },
         "1": {
             "type": "portada",
             "recurso": "1",
             "url": "recursos/R1/R1.html",
             "al_cerrar": {
-                "cargar" : "2",
-                "click" : "btnR_2"
+                "cargar": "2",
+                "click": "btnR_2"
             },
-			"titulo": "Empecemos",
-			"subtitulo": "las letras"
+            "titulo": "Empecemos",
+            "subtitulo": "las letras"
         },
         "2": {
             "type": "actividad",
-            "recurso": "3",
+            "recurso": "2",
             "actividad": "drag_drop",
             "url": "actividades/EDGE_DragAndDrop1To1-master/drag_drop2.html",
             "interaction": {
                 "ALL": true
             },
-			"titulo": "Exploremos",
-			"subtitulo": "las letras"
+            "titulo": "Exploremos",
+            "subtitulo": "las letras"
         },
         "3": {
             "type": "actividad",
             "recurso": "3",
             "actividad": "drag_drop_many",
-            "url": "actividades/EDGE_DragAndDrop1ToMany-master/drag_drop2.html",
+            "url": "recursos/R3/esn1le01ob01r3.html",
             "interaction": {
                 "ALL": true
             },
-			"titulo": "Practiquemos",
-			"subtitulo": "las letras"
+            "titulo": "Practiquemos",
+            "subtitulo": "las letras"
         },
         "4": {
             "type": "actividad",
@@ -50,8 +45,8 @@
             "interaction": {
                 "ALL": true
             },
-			"titulo": "Practiquemos",
-			"subtitulo": "las letras"
+            "titulo": "Practiquemos",
+            "subtitulo": "las letras"
         },
         "5": {
             "type": "actividad",
@@ -61,8 +56,8 @@
             "interaction": {
                 "ALL": true
             },
-			"titulo": "Practiquemos",
-			"subtitulo": "las letras"
+            "titulo": "Practiquemos",
+            "subtitulo": "las letras"
         },
         "6": {
             "type": "actividad",
@@ -72,8 +67,8 @@
             "interaction": {
                 "ALL": false
             },
-			"titulo": "Evaluemos",
-			"subtitulo": "las letras"
+            "titulo": "Evaluemos",
+            "subtitulo": "las letras"
         },
         "7": {
             "type": "actividad",
@@ -83,8 +78,8 @@
             "interaction": {
                 "ALL": false
             },
-			"titulo": "Aprendamos en papel",
-			"subtitulo": "las letras"
+            "titulo": "Aprendamos en papel",
+            "subtitulo": "las letras"
         },
         "muy_bien": {
             "url": "14_retroal_edge/pop_up_Actividades/edge_muyBien/muyBien_edge/muyBien_edge.html",

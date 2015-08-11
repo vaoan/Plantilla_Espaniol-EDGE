@@ -1,11 +1,17 @@
 function enviarEventoActividadTerminada(sym) {
-    parent.$(parent.document).trigger({
+    var stage = $(sym.getComposition().getStage().ele);
+    var objEvt = {
         type: "EDGE_Plantilla_creationComplete",
-        sym: sym
-    });
+        sym: sym,
+        identify: stage.prop("ed_identify")
+    };
+    
+    console.log("INTERACTION UTILITIES CREATED", objEvt, stage);
+    parent.$(parent.document).trigger(objEvt);
 }
 
 function enviarEventoInteraccion(tipo, pregunta, respuesta, resultado, intentos_previos, limite_intentos, timerObj, sym) {
+    var stage = $(sym.getComposition().getStage().ele);
     parent.$(parent.document).trigger({
         type: "EDGE_Plantilla_submitApplied",
         interactionType: tipo,
@@ -15,7 +21,8 @@ function enviarEventoInteraccion(tipo, pregunta, respuesta, resultado, intentos_
         attempts: intentos_previos,
         attempts_limit: limite_intentos,
         timer: timerObj,
-        sym: sym
+        sym: sym,
+        identify: stage.prop("ed_identify")
     });
 }
 
@@ -47,6 +54,5 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
 }
 
 $("body").on("EDGE_Recurso_Submit", function (evt) {
-    console.log("SUBMIT OBLIGADO");
-    //checkAnswersPickMany(evt.sym);
+    checkAnswersDragAndDrop(evt.sym);
 });

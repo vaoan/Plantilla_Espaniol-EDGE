@@ -1,7 +1,10 @@
 function enviarEventoActividadTerminada(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var identify = stage.prop("ed_identify");
     parent.$(parent.document).trigger({
         type: "EDGE_Plantilla_creationComplete",
-        sym: sym
+        sym: sym,
+        identify: identify
     });
 }
 

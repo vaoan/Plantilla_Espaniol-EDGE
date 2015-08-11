@@ -1,39 +1,43 @@
-[0806/234933:ERROR:gpu_info_collector_win.cc(102)] Can't retrieve a valid WinSAT assessment.
-[0806/234944:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0806/234944:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0806/234944:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0806/234944:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0806/234945:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/234945:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/234945:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/234946:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
-[0806/234946:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
-[0806/234954:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/234954:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/234954:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235448:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235448:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235448:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235448:INFO:CONSOLE(0)] "Uncaught TypeError: Cannot read property 'nodeType' of undefined,0", source: about:docKey-19618 (0)
-[0806/235448:INFO:CONSOLE(0)] "Uncaught TypeError: Cannot read property 'nodeType' of undefined", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/heine/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/plantilla/R1/edge_includes/jquery-2.0.3.min.js (0)
-[0806/235648:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235648:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235648:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0806/235916:INFO:CONSOLE(0)] "Uncaught TypeError: Cannot read property 'nodeType' of undefined,0", source: about:docKey-26786 (0)
-[0806/235916:INFO:CONSOLE(0)] "Uncaught TypeError: Cannot read property 'nodeType' of undefined", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/heine/Documents/NetBeansProjects/Plantilla_Espaniol-EDGE/public_html/compositions/plantilla/R1/edge_includes/jquery-2.0.3.min.js (0)
-[0807/031226:ERROR:gpu_info_collector_win.cc(102)] Can't retrieve a valid WinSAT assessment.
-[0807/031237:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0807/031237:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0807/031238:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0807/031238:ERROR:renderer_main.cc(226)] Running without renderer sandbox
-[0807/031238:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031238:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031238:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031240:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
-[0807/031240:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
-[0807/031248:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031248:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031248:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031334:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031334:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
-[0807/031334:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193752:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193757:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193757:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193757:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193803:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193803:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193803:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193807:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0810/193807:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0810/193812:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193812:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193812:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193824:ERROR:ipc_channel_win.cc(132)] pipe error: 109
+[0810/193846:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193846:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193847:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193847:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193847:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193847:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193847:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193848:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot call method 'appendChild' of undefined", source: v8/appCss (1)
+[0810/193848:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot call method 'appendChild' of undefined", source: v8/appCss (1)
+[0810/193848:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot call method 'appendChild' of undefined", source: v8/appCss (1)
+[0810/193848:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0810/193848:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0810/193856:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193856:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193856:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193901:ERROR:ipc_channel_win.cc(132)] pipe error: 109
+[0810/193901:ERROR:ipc_channel_win.cc(132)] pipe error: 109
+[0810/193901:ERROR:ipc_channel_win.cc(132)] pipe error: 109
+[0810/193930:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193930:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193930:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193930:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0810/193931:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193931:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193931:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193932:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0810/193932:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0810/193940:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193940:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0810/193940:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2

@@ -15,107 +15,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
       
 
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-      });
-      //Edge binding end
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      Symbol.bindElementAction(compId, symbolName, "${btn_empezar}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${btnr1_exploremos}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          parent.$(parent.document).trigger({
-                         type: 'EDGE_Plantilla_ClosePortada',
-                         sym: sym,
-                         evt: e
-                     });
+                                  type: 'EDGE_Plantilla_ClosePortada',
+                                  sym: sym,
+                                  evt: e
+                              });
 
       });
       //Edge binding end
@@ -125,18 +31,32 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    //=========================================================
    
-   //Edge symbol: 'btn_empezar'
+   //Edge symbol: 'funcioncomunicativa'
    (function(symbolName) {   
    
-   })("btn_empezar");
-   //Edge symbol end:'btn_empezar'
+   })("funcioncomunicativa");
+   //Edge symbol end:'funcioncomunicativa'
 
    //=========================================================
    
-   //Edge symbol: 'Precargador'
+   //Edge symbol: 'funcioncomunicativa_1'
    (function(symbolName) {   
    
-   })("Precargador");
-   //Edge symbol end:'Precargador'
+   })("discuta");
+   //Edge symbol end:'discuta'
 
-})(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");
+   //=========================================================
+   
+   //Edge symbol: 'btnr1_exploremos'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
+   })("btnr1_exploremos");
+   //Edge symbol end:'btnr1_exploremos'
+
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-16656972");
