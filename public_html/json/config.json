@@ -10,7 +10,7 @@
             "url": "recursos/R1/esn1le01ob01r1.html",
             "al_cerrar": {
                 "cargar": "2",
-                "click": "btnR_2"
+                "cambia_color": "2"
             },
             "titulo": "Empecemos",
             "subtitulo": "las letras"
@@ -58,10 +58,10 @@
         "6": {
             "type": "actividad",
             "recurso": "6",
-            "actividad": "filling_blanks",
+            "actividad": "pick_many",
             "url": "recursos/R6_PRE2/esn1le01ob01r6pre2.html",
             "interaction": {
-                "ALL": false
+                "ALL": true
             },
             "titulo": "Evaluemos",
             "subtitulo": "las letras"

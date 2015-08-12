@@ -14,10 +14,12 @@
 
         Symbol.bindElementAction(compId, symbolName, "${btnr1_exploremos}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
+            var stage = $(sym.getComposition().getStage().ele);
             parent.$(parent.document).trigger({
                 type: 'EDGE_Plantilla_ClosePortada',
                 sym: sym,
-                evt: e
+                evt: e,
+                identify: stage.prop("ed_identify")
             });
 
         });

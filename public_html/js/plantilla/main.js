@@ -19,6 +19,7 @@ EDGE_Plantilla = {
         "contenedor": ["contenedor_home"],
         "base_contenedor": ["back_contenedor_home"]
     },
+    title: ["titulo"],
     basic_contenedor_popup: ["overlay", "container_overlay"],
     basic_contenedor_portada: ["contenedor_portada"],
     button_menutools: {
@@ -139,19 +140,19 @@ function handle_style_nav(boolShow) {
     $.each(EDGE_Plantilla.button_nav, function (index, valor) {
         //$.each(valor, function (key, value) {
         var value = valor.button;
-            var sym_element;
-            if (typeof value !== "string") {
-                sym_element = buscar_sym(sym, value, true);
-            } else {
-                sym_element = sym.$(value);
-            }
-            //console.log("STYLE NAV", sym_element, boolShow);
+        var sym_element;
+        if (typeof value !== "string") {
+            sym_element = buscar_sym(sym, value, true);
+        } else {
+            sym_element = sym.$(value);
+        }
+        //console.log("STYLE NAV", sym_element, boolShow);
 
-            if (boolShow) {
-                sym_element.show();
-            } else {
-                sym_element.hide();
-            }
+        if (boolShow) {
+            sym_element.show();
+        } else {
+            sym_element.hide();
+        }
         //});
     });
 
@@ -193,6 +194,14 @@ function mostrar_pagina(strPagina, objRetro) {
     }
 
     EDGE_Plantilla.debug ? console.log("START DETECTING", EDGE_Plantilla) : false;
+
+    if (!isEmpty(pagina.titulo)) {
+        var sym_titled = buscar_sym(sym, EDGE_Plantilla.title, true);
+        sym_titled.find("span").first().text(pagina.titulo);
+        if (!isEmpty(pagina.subtitulo)) {
+            sym_titled.find("span").last().text(pagina.subtitulo);
+        }
+    }
 
     switch (pagina.type) {
         case "portada":
@@ -241,9 +250,9 @@ function mostrar_pagina(strPagina, objRetro) {
     promise.done(function (comp) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
+        $(stage.ele).prop("ed_identify", pagina);
 
-        if (!isEmpty(pagina.actividad)){
-            $(stage.ele).prop("ed_identify", pagina);
+        if (!isEmpty(pagina.actividad)) {
             var objEvt = {
                 type: "EDGE_Recurso_promiseCreated",
                 sym: stage
@@ -339,18 +348,21 @@ $(document).on("EDGE_Plantilla_ClosePopup", function (evt) {
 });
 
 $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
-    var pagina = EDGE_Plantilla.portada_on_show;
+    var pagina = evt.identify;
     play_buttons();
     handle_portada(false);
     handle_style_nav(true);
-    EDGE_Plantilla.debug ? console.log("close") : false;
+    EDGE_Plantilla.debug ? console.log("close", pagina) : false;
     EDGE_Plantilla.popup_on_show = null;
 
     if (!isEmpty(pagina.al_cerrar)) {
         !isEmpty(pagina.al_cerrar.cargar) ?
                 mostrar_pagina(pagina.al_cerrar.cargar) : false;
-        !isEmpty(pagina.al_cerrar.click) ?
-                console.log(evt.sym.$(pagina.al_cerrar.click)) : false;
+                
+        !isEmpty(pagina.al_cerrar.cambia_color) ?
+                cambiarColorBordes(EDGE_Plantilla.plantilla_sym, pagina.al_cerrar.cambia_color) : false;
+                
+                
     }
 
     //console.log("MOSTRAR CLICK ",evt.sym.getSymbol(EDGE_Plantilla.button_nav.R2));

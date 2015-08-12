@@ -373,6 +373,7 @@ function attemps_answer(evt) {
 
 //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
 function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
+    EDGE_Plantilla.debug ? console.log("Trying to upload interactions", json_data, pagina) : false;
     var pagina = evt.identify;
     if (isEmpty(pagina.recurso)) {
         console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
@@ -383,7 +384,7 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
 
     var id_interaction = pagina.recurso + "000";
     var interactions = {};
-    EDGE_Plantilla.debug ? console.log("Trying to upload interactions", json_data, pagina) : false;
+    
 
     if (!isEmpty(pagina.interaction)) {
         if (pagina.interaction.ALL) {
