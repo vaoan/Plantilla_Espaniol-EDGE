@@ -7,9 +7,25 @@
 
 
 
-/************************** Eventos de prueba *****************************/
+/************************** Eventos de inicializado *****************************/
 
+$("body").on("EDGE_Recurso_promiseCreated", function (evt) {
+    inicializar(evt.sym);
+});
 
+function inicializar(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var objEvt = {
+        type: "EDGE_Plantilla_creationComplete",
+        sym: sym,
+        identify: stage.prop("ed_identify")
+    };
+
+    inicializarTimer(sym);
+
+    console.log("INTERACTION UTILITIES CREATED", objEvt, stage);
+    parent.$(parent.document).trigger(objEvt);
+}
 
 /******************** Eventos de respuesta PLANTILLA **********************/
 
@@ -27,21 +43,6 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
 
 $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
     startTimer(evt.sym);
-});
-
-$("body").on("EDGE_Container_loaded", function (evt) {
-    var stage = $(evt.sym.getComposition().getStage().ele);
-    var identify = stage.prop("ed_identify");
-
-    inicializarTimer(evt.sym);
-
-    var objEvt = {
-        type: "EDGE_Plantilla_creationComplete",
-        sym: evt.sym,
-        identify: identify
-    };
-
-    send_interactions(identify, objEvt, "created");
 });
 
 /********************* Eventos de ENVIO a la PLANTILLA ********************/
@@ -99,11 +100,11 @@ function check_every_answer() {
                 }
             });
         }
-        
-        if(isEmpty(page_respuestas)){
+
+        if (isEmpty(page_respuestas)) {
             page_respuestas[pagina.recurso + "0000"] = "incorrect";
         }
-        
+
         respuestas = merge_options(respuestas, page_respuestas);
     });
 

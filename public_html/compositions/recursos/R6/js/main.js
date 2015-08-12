@@ -19,6 +19,7 @@ EDGE_Plantilla = {
         "contenedor": ["contenedor_home"],
         "base_contenedor": ["back_contenedor_home"]
     },
+    title: ["titulo"],
     basic_contenedor_popup: ["overlay", "container_overlay"],
     basic_contenedor_portada: ["contenedor_portada"],
     button_menutools: {
@@ -31,39 +32,39 @@ EDGE_Plantilla = {
     },
     button_nav: {
         R1: {
-            "button": ["btnR_1"],
+            "button": ["btnr_1"],
             "image": ["rec_1"]
         },
         R2: {
-            "button": ["btnR_2"],
+            "button": ["btnr_2"],
             "image": ["rec_2"]
         },
         R3: {
-            "button": ["btnR_3"],
+            "button": ["btnr_3"],
             "image": ["rec_3"]
         },
         R4: {
-            "button": ["btnR_4"],
+            "button": ["btnr_4"],
             "image": ["rec_4"]
         },
         R5: {
-            "button": ["btnR_5"],
+            "button": ["btnr_5"],
             "image": ["rec_5"]
         },
         R6: {
-            "button": ["btnR_6"],
+            "button": ["btnr_6"],
             "image": ["rec_6"]
         },
         R7: {
-            "button": ["btnR_7"],
+            "button": ["btnr_7"],
             "image": ["rec_7"]
         },
         learning: {
-            "button": ["btn_puntoApren"],
+            "button": ["btn_PA"],
             "image": ["punto_A"]
         },
         vocabulario: {
-            "button": ["btn_vocabulario2"],
+            "button": ["btn_VC"],
             "image": ["vocabulario"]
         }
     },
@@ -137,21 +138,22 @@ function handle_style_nav(boolShow) {
     var sym = EDGE_Plantilla.plantilla_sym;
 
     $.each(EDGE_Plantilla.button_nav, function (index, valor) {
-        $.each(valor, function (key, value) {
-            var sym_element;
-            if (typeof value !== "string") {
-                sym_element = buscar_sym(sym, value, true);
-            } else {
-                sym_element = sym.$(value);
-            }
-            //console.log("STYLE NAV", sym_element, boolShow);
+        //$.each(valor, function (key, value) {
+        var value = valor.button;
+        var sym_element;
+        if (typeof value !== "string") {
+            sym_element = buscar_sym(sym, value, true);
+        } else {
+            sym_element = sym.$(value);
+        }
+        //console.log("STYLE NAV", sym_element, boolShow);
 
-            if (boolShow) {
-                sym_element.show();
-            } else {
-                sym_element.hide();
-            }
-        });
+        if (boolShow) {
+            sym_element.show();
+        } else {
+            sym_element.hide();
+        }
+        //});
     });
 
     $.each(EDGE_Plantilla.basic_contenedor_name, function (key, value) {
@@ -192,6 +194,14 @@ function mostrar_pagina(strPagina, objRetro) {
     }
 
     EDGE_Plantilla.debug ? console.log("START DETECTING", EDGE_Plantilla) : false;
+
+    if (!isEmpty(pagina.titulo)) {
+        var sym_titled = buscar_sym(sym, EDGE_Plantilla.title, true);
+        sym_titled.find("span").first().text(pagina.titulo);
+        if (!isEmpty(pagina.subtitulo)) {
+            sym_titled.find("span").last().text(pagina.subtitulo);
+        }
+    }
 
     switch (pagina.type) {
         case "portada":
@@ -241,11 +251,15 @@ function mostrar_pagina(strPagina, objRetro) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
         $(stage.ele).prop("ed_identify", pagina);
-        var objEvt = {
-            type: "EDGE_Recurso_promiseCreated",
-            sym: stage
-        };
-        $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+
+        if (!isEmpty(pagina.actividad)) {
+            var objEvt = {
+                type: "EDGE_Recurso_promiseCreated",
+                sym: stage
+            };
+            $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        }
+
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {
             $.each(objRetro, function (index, value) {
@@ -334,18 +348,21 @@ $(document).on("EDGE_Plantilla_ClosePopup", function (evt) {
 });
 
 $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
-    var pagina = EDGE_Plantilla.portada_on_show;
+    var pagina = evt.identify;
     play_buttons();
     handle_portada(false);
     handle_style_nav(true);
-    EDGE_Plantilla.debug ? console.log("close") : false;
+    EDGE_Plantilla.debug ? console.log("close", pagina) : false;
     EDGE_Plantilla.popup_on_show = null;
 
     if (!isEmpty(pagina.al_cerrar)) {
         !isEmpty(pagina.al_cerrar.cargar) ?
                 mostrar_pagina(pagina.al_cerrar.cargar) : false;
-        !isEmpty(pagina.al_cerrar.click) ?
-                console.log(evt.sym.$(pagina.al_cerrar.click)) : false;
+                
+        !isEmpty(pagina.al_cerrar.cambia_color) ?
+                cambiarColorBordes(EDGE_Plantilla.plantilla_sym, pagina.al_cerrar.cambia_color) : false;
+                
+                
     }
 
     //console.log("MOSTRAR CLICK ",evt.sym.getSymbol(EDGE_Plantilla.button_nav.R2));
@@ -374,7 +391,7 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             mostrar_pagina("info");
             break;
         case "Stage_" + EDGE_Plantilla.button_menutools.accesibilidad:
-            mostrar_pagina("muy_bien", {mensaje: "¡Esto está BIEN!", titulo: "Excelente"});
+            mostrar_pagina("accesibilidad");
             break;
     }
 

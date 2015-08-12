@@ -69,6 +69,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${r6_evaluemos}", "click", function(sym, e) {
          sym.play();
+         
+         startTimer(sym);
+         
+      });
+      //Edge binding end
+
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
+         // Insertar código para ejecutarse cuando el símbolo se crea aquí
+         inicializarTimer(sym); //evento de prueba
 
       });
       //Edge binding end
@@ -175,5 +184,27 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    })("r6_enviar");
    //Edge symbol end:'r6_enviar'
+
+   //=========================================================
+   
+   //Edge symbol: 'TIMER_CONTAINER'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("TIMER_CONTAINER");
+   //Edge symbol end:'TIMER_CONTAINER'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

@@ -156,6 +156,9 @@ function filling_blanks_santiago_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if(!attemps.block){
+            strRetro = "nuevo_intento";
+        }
     }
 
     retroalimentacion(strRetro);
@@ -207,6 +210,9 @@ function drag_drop_toscano_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if(!attemps.block){
+            strRetro = "nuevo_intento";
+        }
     }
 
 
@@ -259,6 +265,9 @@ function pick_many_toscano_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if(!attemps.block){
+            strRetro = "nuevo_intento";
+        }
     }
 
     retroalimentacion(strRetro);
@@ -295,6 +304,21 @@ function check_answers(evt) {
 
 function retroalimentacion(strRetroalimentacion, objTextInject) {
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
+    
+    switch(strRetroalimentacion){
+        case "coorect":
+            mostrar_pagina("correcto");
+            break;
+        case "incorrect":
+            mostrar_pagina("incorrecto");
+            break;
+        case "nuevo_intento":
+            mostrar_pagina("nuevointento");
+            break;
+        case "complete_all":
+            mostrar_pagina("incompleto");
+            break;
+    }
 }
 
 function send_interactions(pagina, objEvt, results) {
@@ -329,7 +353,7 @@ function send_interactions(pagina, objEvt, results) {
 function attemps_answer(evt) {
     var this_block = false;
     var this_show_answers = false;
-    var intentos = evt.attempts;// + 1;
+    var intentos = evt.attempts + 1;
     var objAttemps = {};
 
     if (intentos >= evt.attempts_limit) {
@@ -349,6 +373,7 @@ function attemps_answer(evt) {
 
 //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
 function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
+    EDGE_Plantilla.debug ? console.log("Trying to upload interactions", json_data, pagina) : false;
     var pagina = evt.identify;
     if (isEmpty(pagina.recurso)) {
         console.error("DESEA GUARDAR UNA INTERACIÖN SIN UN RECURSO ASOCIADO...", pagina);
@@ -359,7 +384,7 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
 
     var id_interaction = pagina.recurso + "000";
     var interactions = {};
-    EDGE_Plantilla.debug ? console.log("Trying to upload interactions", json_data, pagina) : false;
+    
 
     if (!isEmpty(pagina.interaction)) {
         if (pagina.interaction.ALL) {

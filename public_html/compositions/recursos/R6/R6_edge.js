@@ -8,7 +8,7 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src="http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -104,12 +104,19 @@
                             display: 'none',
                             type: 'rect',
                             rect: ['1664', '704', '50', '51', 'auto', 'auto']
+                        },
+                        {
+                            id: 'TIMER_CONTAINER',
+                            symbolName: 'TIMER_CONTAINER',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['1569', '29', '197', '75', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: [undefined, undefined, '1830px', '780px'],
+                            rect: ['null', 'null', '1830px', '780px', 'auto', 'auto'],
                             overflow: 'hidden',
                             fill: ["rgba(255,255,255,1)"]
                         }
@@ -230,34 +237,14 @@
                             '-1840px'
                         ],
                         [
-                            "eid80",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid81",
+                            "eid83",
                             "display",
                             450,
                             0,
                             "linear",
-                            "${r6_enviar}",
+                            "${TIMER_CONTAINER}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid82",
-                            "display",
-                            2605,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'block',
-                            'none'
                         ],
                         [
                             "eid66",
@@ -298,6 +285,36 @@
                             "${R6_portada}",
                             '0px',
                             '-1830px'
+                        ],
+                        [
+                            "eid80",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid81",
+                            "display",
+                            450,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid82",
+                            "display",
+                            2605,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid56",
@@ -372,23 +389,22 @@
                 content: {
                     dom: [
                         {
-                            id: 'IMG_R6',
                             type: 'image',
+                            id: 'IMG_R6',
                             rect: ['169px', '59px', '402px', '543px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R6.png', '0px', '0px']
                         },
                         {
-                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Aqui van las instrucciones&nbsp;</p>',
-                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text'
+                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -419,8 +435,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -451,8 +466,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -483,8 +497,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -515,8 +528,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -547,8 +559,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -579,8 +590,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -611,8 +621,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '50px', '51px']
+                            rect: [null, null, '50px', '51px']
                         }
                     }
                 },
@@ -643,8 +652,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '50px', '51px']
+                            rect: [null, null, '50px', '51px']
                         }
                     }
                 },
@@ -676,8 +684,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '566px', '123px']
+                            rect: [null, null, '566px', '123px']
                         }
                     }
                 },
@@ -699,27 +706,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '165px', '38px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '165px', '38px', 'auto', 'auto'],
+                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '165px', '38px']
+                            rect: [null, null, '165px', '38px']
                         }
                     }
                 },
@@ -750,6 +756,58 @@
                             "${Text}",
                             'rgba(0,0,0,0.49)',
                             'rgba(0,0,0,0.65098)'
+                        ]
+                    ]
+                }
+            },
+            "TIMER_CONTAINER": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '197px', '75px', 'auto', 'auto'],
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(192,192,192,1)']
+                        },
+                        {
+                            rect: ['0px', '0px', '100%', '100%', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [67, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            id: 'Text',
+                            text: '<p style=\"margin: 0px;\">​Timer</p>',
+                            align: 'center',
+                            type: 'text'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '197px', '75px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 500,
+                    autoPlay: true,
+                    labels: {
+                        "10": 500
+                    },
+                    data: [
+                        [
+                            "eid85",
+                            "background-color",
+                            0,
+                            500,
+                            "linear",
+                            "${Rectangle}",
+                            'rgba(192,192,192,1)',
+                            'rgba(255,127,0,1.00)'
                         ]
                     ]
                 }
