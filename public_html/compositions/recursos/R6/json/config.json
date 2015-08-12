@@ -1,0 +1,47 @@
+{
+    "default": {
+        "url_pages": "compositions/",
+        "default_page": [
+            "1"
+        ],
+        "limit_attemps": 3
+    },
+    "paginas": {
+        "1": {
+            "type": "actividad",
+            "recurso": "3",
+            "actividad": "pick_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": [
+                "contenedor_1"
+            ]
+        },
+        "2": {
+            "type": "actividad",
+            "recurso": "4",
+            "actividad": "pick_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": [
+                "contenedor_2"
+            ]
+        },
+        "3": {
+            "type": "actividad",
+            "recurso": "5",
+            "actividad": "pick_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": [
+                "contenedor_3"
+            ]
+        }
+    }
+}

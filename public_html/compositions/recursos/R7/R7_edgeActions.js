@@ -14,7 +14,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
       
       Symbol.bindElementAction(compId, symbolName, "${descargable}", "click", function(sym, e) {
-         window.open("../../../media/pdf/aprendiendo en papel.pdf", "_blank");
+         window.open("../../../media/pdf/Aprendamos en papel.pdf", "_blank");
          
 
       });
