@@ -70,7 +70,7 @@
         Symbol.bindElementAction(compId, symbolName, "${r6_evaluemos}", "click", function (sym, e) {
             sym.play();
 
-            startTimer(sym);
+            //startTimer(sym);
 
         });
         //Edge binding end
@@ -90,7 +90,7 @@
         //Edge binding end
 
     })("stage");
-    //Edge symbol end:'stage'
+   //Edge symbol end:'stage'
 
     //=========================================================
 
@@ -98,7 +98,7 @@
     (function (symbolName) {
 
     })("R6_portada");
-    //Edge symbol end:'R6_portada'
+   //Edge symbol end:'R6_portada'
 
     //=========================================================
 
@@ -106,7 +106,7 @@
     (function (symbolName) {
 
     })("R6_1");
-    //Edge symbol end:'R6_1'
+   //Edge symbol end:'R6_1'
 
     //=========================================================
 
@@ -114,7 +114,7 @@
     (function (symbolName) {
 
     })("R6_2");
-    //Edge symbol end:'R6_2'
+   //Edge symbol end:'R6_2'
 
     //=========================================================
 
@@ -122,7 +122,7 @@
     (function (symbolName) {
 
     })("R6_3");
-    //Edge symbol end:'R6_3'
+   //Edge symbol end:'R6_3'
 
     //=========================================================
 
@@ -130,7 +130,7 @@
     (function (symbolName) {
 
     })("R6_4");
-    //Edge symbol end:'R6_4'
+   //Edge symbol end:'R6_4'
 
     //=========================================================
 
@@ -138,7 +138,7 @@
     (function (symbolName) {
 
     })("R6_5");
-    //Edge symbol end:'R6_5'
+   //Edge symbol end:'R6_5'
 
     //=========================================================
 
@@ -146,7 +146,7 @@
     (function (symbolName) {
 
     })("R6_final");
-    //Edge symbol end:'R6_final'
+   //Edge symbol end:'R6_final'
 
     //=========================================================
 
@@ -154,7 +154,7 @@
     (function (symbolName) {
 
     })("r6_atras");
-    //Edge symbol end:'r6_atras'
+   //Edge symbol end:'r6_atras'
 
     //=========================================================
 
@@ -162,7 +162,7 @@
     (function (symbolName) {
 
     })("r6_siguiente");
-    //Edge symbol end:'r6_siguiente'
+   //Edge symbol end:'r6_siguiente'
 
     //=========================================================
 
@@ -170,7 +170,7 @@
     (function (symbolName) {
 
     })("r6_evaluemos");
-    //Edge symbol end:'r6_evaluemos'
+   //Edge symbol end:'r6_evaluemos'
 
     //=========================================================
 
@@ -190,7 +190,7 @@
         //Edge binding end
 
     })("r6_enviar");
-    //Edge symbol end:'r6_enviar'
+   //Edge symbol end:'r6_enviar'
 
     //=========================================================
 
@@ -212,6 +212,6 @@
         //Edge binding end
 
     })("TIMER_CONTAINER");
-    //Edge symbol end:'TIMER_CONTAINER'
+   //Edge symbol end:'TIMER_CONTAINER'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

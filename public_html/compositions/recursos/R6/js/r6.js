@@ -14,7 +14,7 @@ $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
 });
 
 function inicializar(sym) {
-    inicializarTimer(sym);
+    //inicializarTimer(sym);
 
     console.log("INTERACTION UTILITIES CREATED");
     //parent.$(parent.document).trigger(objEvt);

@@ -23,7 +23,7 @@
             js+"main.js",
             js+"timerUtilities.js",
             js+"actividades_result.js",
-            //js+"r6.js"
+            js+"r6.js"
         ],
         symbols = {
             "stage": {
@@ -240,33 +240,43 @@
                             '-1840px'
                         ],
                         [
-                            "eid80",
+                            "eid57",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${r6_enviar}",
+                            "${r6_siguiente}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid81",
+                            "eid58",
                             "display",
                             450,
                             0,
                             "linear",
-                            "${r6_enviar}",
+                            "${r6_siguiente}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid82",
+                            "eid88",
+                            "display",
+                            2425,
+                            0,
+                            "linear",
+                            "${r6_siguiente}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid71",
                             "display",
                             2605,
                             0,
                             "linear",
-                            "${r6_enviar}",
-                            'block',
+                            "${r6_siguiente}",
+                            'none',
                             'none'
                         ],
                         [
@@ -300,6 +310,36 @@
                             '-1830px'
                         ],
                         [
+                            "eid56",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_atras}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid87",
+                            "display",
+                            950,
+                            0,
+                            "linear",
+                            "${r6_atras}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid70",
+                            "display",
+                            2605,
+                            0,
+                            "linear",
+                            "${r6_atras}",
+                            'block',
+                            'none'
+                        ],
+                        [
                             "eid44",
                             "left",
                             500,
@@ -320,62 +360,32 @@
                             '-1840px'
                         ],
                         [
-                            "eid56",
+                            "eid80",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${r6_atras}",
+                            "${r6_enviar}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid60",
+                            "eid81",
                             "display",
                             450,
                             0,
                             "linear",
-                            "${r6_atras}",
+                            "${r6_enviar}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid70",
+                            "eid82",
                             "display",
                             2605,
                             0,
                             "linear",
-                            "${r6_atras}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid57",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid58",
-                            "display",
-                            450,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid71",
-                            "display",
-                            2605,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
+                            "${r6_enviar}",
                             'block',
                             'none'
                         ]
@@ -392,17 +402,17 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'IMG_R6',
                             rect: ['169px', '59px', '402px', '543px', 'auto', 'auto'],
+                            id: 'IMG_R6',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R6.png', '0px', '0px']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Aqui van las instrucciones&nbsp;</p>',
-                            type: 'text',
-                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto']
+                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -429,10 +439,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
@@ -460,10 +470,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(255,119,0,1.00)']
                         }
                     ],
@@ -491,10 +501,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(239,255,0,1.00)']
                         }
                     ],
@@ -522,10 +532,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,255,117,1.00)']
                         }
                     ],
@@ -553,10 +563,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,103,255,1.00)']
                         }
                     ],
@@ -584,10 +594,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(223,0,255,1.00)']
                         }
                     ],
@@ -615,10 +625,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
                             fill: ['rgba(110,45,45,1.00)']
                         }
                     ],
@@ -646,10 +656,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
                             fill: ['rgba(110,45,45,1.00)']
                         }
                     ],
@@ -717,12 +727,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
+                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto']
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],
@@ -773,19 +783,19 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '197px', '75px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '197px', '75px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'text',
                             rect: ['0px', '0px', '100%', '100%', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [67, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Timer</p>',
                             align: 'center',
-                            font: ['Arial, Helvetica, sans-serif', [67, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                            type: 'text'
                         }
                     ],
                     style: {

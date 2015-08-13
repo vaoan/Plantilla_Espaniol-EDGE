@@ -1,162 +1,163 @@
 /***********************
-* Acciones de composición de Adobe Edge Animate
-*
-* Editar este archivo con precaución, teniendo cuidado de conservar 
-* las firmas de función y los comentarios que comienzan con "Edge" para mantener la 
-* capacidad de interactuar con estas acciones en Adobe Edge Animate
-*
-***********************/
-(function($, Edge, compId){
-var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comunes para las clases de Edge
+ * Acciones de composición de Adobe Edge Animate
+ *
+ * Editar este archivo con precaución, teniendo cuidado de conservar 
+ * las firmas de función y los comentarios que comienzan con "Edge" para mantener la 
+ * capacidad de interactuar con estas acciones en Adobe Edge Animate
+ *
+ ***********************/
+(function ($, Edge, compId) {
+    var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comunes para las clases de Edge
 
-   //Edge symbol: 'stage'
-   (function(symbolName) {
-      
-      
-      Symbol.bindElementAction(compId, symbolName, "${descargable}", "click", function(sym, e) {
-         window.open("../../../media/pdf/Aprendamos en papel.pdf", "_blank");
-         
+    //Edge symbol: 'stage'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
 
-   })("stage");
-   //Edge symbol end:'stage'
+        Symbol.bindElementAction(compId, symbolName, "${descargable}", "click", function (sym, e) {
+            var stage = $(sym.getComposition().getStage().ele);
+            var identify = stage.prop("ed_identify");
+            window.open(identify.pdf, "_blank");
 
-   //=========================================================
-   
-   //Edge symbol: 'lectora'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+    })("stage");
+    //Edge symbol end:'stage'
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+    //=========================================================
 
-      });
-      //Edge binding end
+    //Edge symbol: 'lectora'
+    (function (symbolName) {
 
-   })("lectora");
-   //Edge symbol end:'lectora'
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            sym.stop();
 
-   //=========================================================
-   
-   //Edge symbol: 'auditiva'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
+            sym.stop();
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+    })("lectora");
+    //Edge symbol end:'lectora'
 
-   })("auditiva");
-   //Edge symbol end:'auditiva'
+    //=========================================================
 
-   //=========================================================
-   
-   //Edge symbol: 'escrita'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+    //Edge symbol: 'auditiva'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            sym.stop();
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
+            sym.stop();
 
-   })("escrita");
-   //Edge symbol end:'escrita'
+        });
+        //Edge binding end
 
-   //=========================================================
-   
-   //Edge symbol: 'oral'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+    })("auditiva");
+    //Edge symbol end:'auditiva'
 
-      });
-      //Edge binding end
+    //=========================================================
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+    //Edge symbol: 'escrita'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            sym.stop();
 
-   })("oral");
-   //Edge symbol end:'oral'
+        });
+        //Edge binding end
 
-   //=========================================================
-   
-   //Edge symbol: 'Skills'
-   (function(symbolName) {   
-   
-      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseover", function(sym, e) {
-         sym.getSymbol("lectora").play("b");
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseout", function(sym, e) {
-         sym.getSymbol("lectora").play("a");
+    })("escrita");
+    //Edge symbol end:'escrita'
 
-      });
-      //Edge binding end
+    //=========================================================
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseout", function(sym, e) {
-         sym.getSymbol("escrita").play("a");
+    //Edge symbol: 'oral'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            sym.stop();
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseover", function(sym, e) {
-         sym.getSymbol("escrita").play("b");
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
+            sym.stop();
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseout", function(sym, e) {
-         sym.getSymbol("auditiva").play("a");
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+    })("oral");
+    //Edge symbol end:'oral'
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseover", function(sym, e) {
-         sym.getSymbol("auditiva").play("b");
+    //=========================================================
 
-      });
-      //Edge binding end
+    //Edge symbol: 'Skills'
+    (function (symbolName) {
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseout", function(sym, e) {
-         sym.getSymbol("oral").play("a");
+        Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseover", function (sym, e) {
+            sym.getSymbol("lectora").play("b");
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseover", function(sym, e) {
-         sym.getSymbol("oral").play("b");
+        Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseout", function (sym, e) {
+            sym.getSymbol("lectora").play("a");
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-   })("Skills");
-   //Edge symbol end:'Skills'
+        Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseout", function (sym, e) {
+            sym.getSymbol("escrita").play("a");
+
+        });
+        //Edge binding end
+
+        Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseover", function (sym, e) {
+            sym.getSymbol("escrita").play("b");
+
+        });
+        //Edge binding end
+
+        Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseout", function (sym, e) {
+            sym.getSymbol("auditiva").play("a");
+
+        });
+        //Edge binding end
+
+        Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseover", function (sym, e) {
+            sym.getSymbol("auditiva").play("b");
+
+        });
+        //Edge binding end
+
+        Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseout", function (sym, e) {
+            sym.getSymbol("oral").play("a");
+
+        });
+        //Edge binding end
+
+        Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseover", function (sym, e) {
+            sym.getSymbol("oral").play("b");
+
+        });
+        //Edge binding end
+
+    })("Skills");
+    //Edge symbol end:'Skills'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-31713253");
