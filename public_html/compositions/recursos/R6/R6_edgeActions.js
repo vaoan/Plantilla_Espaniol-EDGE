@@ -67,13 +67,7 @@
         });
         //Edge binding end
 
-        Symbol.bindElementAction(compId, symbolName, "${r6_evaluemos}", "click", function (sym, e) {
-            sym.play();
-
-            //startTimer(sym);
-
-        });
-        //Edge binding end
+        
 
         Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function (sym, e) {
             // Insertar código para ejecutarse cuando el símbolo se crea aquí
@@ -88,6 +82,13 @@
 
         });
         //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_evaluemosCopy}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         sym.play();
+
+      });
+      //Edge binding end
 
     })("stage");
    //Edge symbol end:'stage'
@@ -191,5 +192,13 @@
 
     })("r6_enviar");
    //Edge symbol end:'r6_enviar'
+
+   //=========================================================
+   
+   //Edge symbol: 'btn_evaluemos'
+   (function(symbolName) {   
+   
+   })("btn_evaluemos");
+   //Edge symbol end:'btn_evaluemos'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

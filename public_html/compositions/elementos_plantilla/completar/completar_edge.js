@@ -73,16 +73,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid6",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${cerrar_comple}",
-                            '189px',
-                            '189px'
-                        ],
-                        [
                             "eid5",
                             "left",
                             0,
@@ -91,6 +81,16 @@
                             "${cerrar_comple}",
                             '1077px',
                             '1077px'
+                        ],
+                        [
+                            "eid6",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${cerrar_comple}",
+                            '189px',
+                            '189px'
                         ]
                     ]
                 }
@@ -105,10 +105,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
                             rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
                             transform: [[], [], [], ['0.35', '0.35']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
