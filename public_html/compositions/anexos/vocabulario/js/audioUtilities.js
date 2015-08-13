@@ -1,6 +1,6 @@
 function reproducirAudio(sym, numeroAudio, cantidadDeAudios){
 	
-if (sym.getSymbol("audio_"+numeroAudio).$("vocabulario_audio_"+numeroAudio)[0].paused) {
+if (sym.getSymbol("audio_"+numeroAudio).$("audiomp3_"+numeroAudio)[0].paused) {
 	sym.getSymbol("audio_"+numeroAudio).play("play");
 
 	for(var i=1; i<=cantidadDeAudios; i++){

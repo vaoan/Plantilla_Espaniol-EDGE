@@ -20,16 +20,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
+      
+
+      
+
+      
+
+      Symbol.bindElementAction(compId, symbolName, "${SubmitCopy}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          checkAnswersDragAndDrop(sym);
 
       });
       //Edge binding end
-
-      
-
-      
 
    })("stage");
    //Edge symbol end:'stage'
@@ -303,5 +305,27 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("espacios_texto");
    //Edge symbol end:'espacios_texto'
+
+   //=========================================================
+   
+   //Edge symbol: 'Submit_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("Submit_1");
+   //Edge symbol end:'Submit_1'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-6342212");

@@ -98,8 +98,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
-         sym.$("vocabulario_audio_1")[0].pause();
-         sym.$("vocabulario_audio_1")[0].currentTime = 0;
+         sym.$("audiomp3_1")[0].pause();
+         sym.$("audiomp3_1")[0].currentTime = 0;
 
       });
       //Edge binding end
@@ -114,8 +114,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
-         sym.$("vocabulario_audio_2")[0].pause();
-         sym.$("vocabulario_audio_2")[0].currentTime = 0;
+         sym.$("audiomp3_2")[0].pause();
+         sym.$("audiomp3_2")[0].currentTime = 0;
 
       });
       //Edge binding end
@@ -136,8 +136,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
-         sym.$("vocabulario_audio_3")[0].pause();
-         sym.$("vocabulario_audio_3")[0].currentTime = 0;
+         sym.$("audiomp3_3")[0].pause();
+         sym.$("audiomp3_3")[0].currentTime = 0;
 
       });
       //Edge binding end
@@ -158,8 +158,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
-         sym.$("vocabulario_audio_4")[0].pause();
-         sym.$("vocabulario_audio_4")[0].currentTime = 0;
+         sym.$("audiomp3_4")[0].pause();
+         sym.$("audiomp3_4")[0].currentTime = 0;
 
       });
       //Edge binding end
@@ -180,8 +180,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
-         sym.$("vocabulario_audio_5")[0].pause();
-         sym.$("vocabulario_audio_5")[0].currentTime = 0;
+         sym.$("audiomp3_5")[0].pause();
+         sym.$("audiomp3_5")[0].currentTime = 0;
 
       });
       //Edge binding end
@@ -202,8 +202,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
-         sym.$("vocabulario_audio_6")[0].pause();
-         sym.$("vocabulario_audio_6")[0].currentTime = 0;
+         sym.$("audiomp3_6")[0].pause();
+         sym.$("audiomp3_6")[0].currentTime = 0;
 
       });
       //Edge binding end

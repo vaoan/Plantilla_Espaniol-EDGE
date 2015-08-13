@@ -3,7 +3,25 @@
 
 	"HTMLFileName":"incorrecto.html",
 	"expanded:images/cerrar.png":"nil",
-	"StageZoomFactor":"100",
+	"symbol_cerrar_inco":{
+		"element_${cerrar}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"}},
+	"expanded:images/correcto.png":"nil",
+	"expanded:images/incorrecto.png":"nil",
+	"symbol_Precargador":{
+		"dummyStageParentWidth":"400px",
+		"dummyStageParentHeight":"400px",
+		"defaultStageParentWidth":"400px",
+		"defaultStageParentHeight":"400px",
+		"element_${preloader4}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"}},
+	"expanded:images/preloader4.gif":"nil",
+	"pref__general__FilterNonAnimatedElements":"false",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"symbol_stage":{
 		"element_${Text}":{
 			"timelineColor2":"0x1aa38f",
@@ -13,7 +31,7 @@
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767"},
-		"dummyStageParentHeight":"400px",
+		"dummyStageParentHeight":"1080px",
 		"element_${incorrecto}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
@@ -23,12 +41,12 @@
 			"timelineColor3":"0x295a6d",
 			"animationEnabled":"false",
 			"timelineColor":"0x008dc8"},
-		"defaultStageParentHeight":"400px",
+		"defaultStageParentHeight":"1080px",
 		"element_${Stage}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
 			"timelineColor":"0xeedf79"},
-		"defaultStageParentWidth":"400px",
+		"defaultStageParentWidth":"1920px",
 		"element_${cerrar_inco}":{
 			"timelineColor2":"0x1095d2",
 			"timelineColor3":"0x29647e",
@@ -39,21 +57,14 @@
 			"timelineColor3":"0x456a55",
 			"animationEnabled":"false",
 			"timelineColor":"0x50bd82"},
-		"dummyStageParentWidth":"400px"},
-	"symbol_cerrar_inco":{
-		"element_${cerrar}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"}},
+		"dummyStageParentWidth":"1920px"},
+	"TransitionIdCounter":"3",
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"pixelsPerMs":"0.2",
-	"expanded:images/correcto.png":"nil",
-	"expanded:images/incorrecto.png":"nil",
 	"usedBOM":"false",
-	"nextElementColorIndex":"9",
+	"nextElementColorIndex":"10",
 	"stage-Default Timeline_playhead_ms":"0",
-	"pref__general__FilterNonAnimatedElements":"false",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -74,4 +85,5 @@
 \
    }}\
 }",
-	"pref__general__AutoKeyframePropertiesArmed":"false"}
+	"Precargador-Default Timeline_playhead_ms":"0",
+	"StageZoomFactor":"26"}

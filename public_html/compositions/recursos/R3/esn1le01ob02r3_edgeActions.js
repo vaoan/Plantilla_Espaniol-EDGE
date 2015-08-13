@@ -31,20 +31,24 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${playaudi}", "click", function(sym, e) {
+      
+
+      
+
+      Symbol.bindElementAction(compId, symbolName, "${audio_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         // Reproducir una pista de audio 
-         sym.$("esn1le01ob02re3au01")[0].play();
-         
+         var numeroAudio = 1;
+         var cantidadDeAudios = 6;
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${playaudi2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${audio_2}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         // Reproducir una pista de audio 
-         sym.$("esn1le01ob02re3au02")[0].play();
-         
+         var numeroAudio = 2;
+         var cantidadDeAudios = 6;
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
 
       });
       //Edge binding end
@@ -345,5 +349,57 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("espacios_texto");
    //Edge symbol end:'espacios_texto'
+
+   //=========================================================
+   
+   //Edge symbol: 'audio_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+         sym.$("audiomp3_1")[0].pause();
+         sym.$("audiomp3_1")[0].currentTime = 0;
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1352, function(sym, e) {
+         sym.play("stop");
+
+      });
+      //Edge binding end
+
+   })("audio_1");
+   //Edge symbol end:'audio_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'audio_2'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+         sym.$("audiomp3_2")[0].pause();
+         sym.$("audiomp3_2")[0].currentTime = 0;
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1112, function(sym, e) {
+         sym.play("stop");
+
+      });
+      //Edge binding end
+
+   })("audio_2");
+   //Edge symbol end:'audio_2'
+
+   //=========================================================
+   
+   //Edge symbol: 'margen_inferior'
+   (function(symbolName) {   
+   
+   })("margen_inferior");
+   //Edge symbol end:'margen_inferior'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-6342212");

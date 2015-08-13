@@ -438,7 +438,6 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             mostrar_pagina("accesibilidad");
             break;
     }
-
     play_buttons(evt);
 });
 

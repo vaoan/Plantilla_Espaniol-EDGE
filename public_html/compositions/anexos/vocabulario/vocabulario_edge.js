@@ -23,7 +23,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -262,7 +262,7 @@
                     }
                 },
                 timeline: {
-                    duration: 2352.642,
+                    duration: 2353,
                     autoPlay: true,
                     data: [
 
@@ -279,17 +279,16 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
-                            transform: [[], [], [], ['0.5', '0.5']],
                             type: 'image',
+                            id: 'cerrar',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.5', '0.5']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '76px', '77px']
+                            rect: [null, null, '76px', '77px']
                         }
                     }
                 },
@@ -319,28 +318,28 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]]
                         },
                         {
-                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             id: 'play-03',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/play-03.png', '0px', '0px']
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
-                            fill: ['rgba(255,255,255,1)']
+                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/esn1le01ob05vo04anmado.wav'],
-                            id: 'vocabulario_audio_1',
+                            id: 'audiomp3_1',
                             rect: ['205', '432', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
@@ -348,8 +347,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '70px', '40px']
+                            rect: [null, null, '70px', '40px']
                         }
                     }
                 },
@@ -391,7 +389,7 @@
                             '1',
                             '0'
                         ],
-                            [ "eid92", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${vocabulario_audio_1}', [] ] ]
+                            [ "eid92", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
                     ]
                 }
             },
@@ -413,28 +411,28 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]]
                         },
                         {
-                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             id: 'play-03',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/play-03.png', '0px', '0px']
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
-                            fill: ['rgba(255,255,255,1)']
+                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/esn1le01ob05vo06genero.wav'],
-                            id: 'vocabulario_audio_2',
+                            id: 'audiomp3_2',
                             rect: ['-223', '240', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
@@ -442,8 +440,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '70px', '40px']
+                            rect: [null, null, '70px', '40px']
                         }
                     }
                 },
@@ -485,7 +482,7 @@
                             '1',
                             '0'
                         ],
-                            [ "eid93", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${vocabulario_audio_2}', [] ] ]
+                            [ "eid93", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_2}', [] ] ]
                     ]
                 }
             },
@@ -507,28 +504,28 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]]
                         },
                         {
-                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             id: 'play-03',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/play-03.png', '0px', '0px']
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
-                            fill: ['rgba(255,255,255,1)']
+                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/esn1le01ob05vo01articulo.wav'],
-                            id: 'vocabulario_audio_3',
+                            id: 'audiomp3_3',
                             rect: ['323', '97', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
@@ -536,8 +533,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '70px', '40px']
+                            rect: [null, null, '70px', '40px']
                         }
                     }
                 },
@@ -579,7 +575,7 @@
                             '1',
                             '0'
                         ],
-                            [ "eid94", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${vocabulario_audio_3}', [] ] ]
+                            [ "eid94", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_3}', [] ] ]
                     ]
                 }
             },
@@ -601,28 +597,28 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]]
                         },
                         {
-                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             id: 'play-03',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/play-03.png', '0px', '0px']
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
-                            fill: ['rgba(255,255,255,1)']
+                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/esn1le01ob05vo05morfologia.wav'],
-                            id: 'vocabulario_audio_4',
+                            id: 'audiomp3_4',
                             rect: ['-559', '215', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
@@ -630,8 +626,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '70px', '40px']
+                            rect: [null, null, '70px', '40px']
                         }
                     }
                 },
@@ -673,7 +668,7 @@
                             '1',
                             '0'
                         ],
-                            [ "eid95", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${vocabulario_audio_4}', [] ] ]
+                            [ "eid95", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_4}', [] ] ]
                     ]
                 }
             },
@@ -695,28 +690,28 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]]
                         },
                         {
-                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            rect: ['-51px', '-66px', '175px', '172px', 'auto', 'auto'],
                             id: 'play-03',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/play-03.png', '0px', '0px']
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
-                            fill: ['rgba(255,255,255,1)']
+                            rect: ['22px', '7px', '25px', '25px', 'auto', 'auto'],
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/esn1le01ob05vo03categoriagramatical.wav'],
-                            id: 'vocabulario_audio_5',
+                            id: 'audiomp3_5',
                             rect: ['121', '189', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
@@ -724,8 +719,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '70px', '40px']
+                            rect: [null, null, '70px', '40px']
                         }
                     }
                 },
@@ -767,7 +761,7 @@
                             '1',
                             '0'
                         ],
-                            [ "eid87", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${vocabulario_audio_5}', [] ] ]
+                            [ "eid87", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_5}', [] ] ]
                     ]
                 }
             },
@@ -810,7 +804,7 @@
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/esn1le01ob05vo02nombre.wav'],
-                            id: 'vocabulario_audio_6',
+                            id: 'audiomp3_6',
                             rect: ['-410', '-100', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
@@ -861,7 +855,7 @@
                             '1',
                             '0'
                         ],
-                            [ "eid96", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${vocabulario_audio_6}', [] ] ]
+                            [ "eid96", "trigger", 125, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_6}', [] ] ]
                     ]
                 }
             }

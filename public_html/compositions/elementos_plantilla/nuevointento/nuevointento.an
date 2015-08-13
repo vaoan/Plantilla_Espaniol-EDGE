@@ -2,8 +2,21 @@
 {
 
 	"HTMLFileName":"nuevointento.html",
+	"expanded:images/cerrar.png":"nil",
+	"expanded:images/correcto.png":"nil",
+	"expanded:images/incorrecto.png":"nil",
+	"symbol_Precargador":{
+		"dummyStageParentWidth":"400px",
+		"dummyStageParentHeight":"400px",
+		"defaultStageParentWidth":"400px",
+		"element_${preloader4}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"},
+		"defaultStageParentHeight":"400px"},
+	"expanded:images/preloader4.gif":"nil",
+	"pref__general__FilterNonAnimatedElements":"false",
 	"pref__general__AutoKeyframePropertiesArmed":"false",
-	"CompZoomFactor":"100",
 	"symbol_stage":{
 		"element_${Text}":{
 			"timelineColor2":"0x1aa38f",
@@ -29,18 +42,24 @@
 			"timelineColor3":"0x7b7652",
 			"timelineColor":"0xeedf79"},
 		"defaultStageParentWidth":"400px",
-		"dummyStageParentWidth":"400px",
+		"element_${cerrar_newintento}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"true",
+			"timelineColor":"0x00a9fa"},
 		"element_${correcto}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
 			"animationEnabled":"false",
 			"timelineColor":"0x50bd82"},
-		"element_${cerrar_newintento}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"animationEnabled":"true",
-			"timelineColor":"0x00a9fa"}},
-	"expanded:images/correcto.png":"nil",
+		"dummyStageParentWidth":"400px"},
+	"CompZoomFactor":"100",
+	"viewStartY":"0",
+	"pixelsPerMs":"0.2",
+	"StageZoomFactor":"100",
+	"usedBOM":"false",
+	"nextElementColorIndex":"10",
+	"stage-Default Timeline_playhead_ms":"0",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -54,22 +73,15 @@
    }},\
 \"Precargador\": {\
    \"timelines\": {\
-\
+      \"Default Timeline\": {\
+      }\
    }},\
 \"Nivel inferior\": {\
    \"timelines\": {\
 \
    }}\
 }",
-	"StageZoomFactor":"100",
-	"pixelsPerMs":"0.2",
-	"viewStartY":"0",
-	"expanded:images/incorrecto.png":"nil",
-	"usedBOM":"false",
-	"nextElementColorIndex":"9",
-	"stage-Default Timeline_playhead_ms":"0",
-	"pref__general__FilterNonAnimatedElements":"false",
-	"expanded:images/cerrar.png":"nil",
+	"Precargador-Default Timeline_playhead_ms":"0",
 	"symbol_cerrar_newintento":{
 		"element_${cerrar}":{
 			"timelineColor2":"0x168c84",

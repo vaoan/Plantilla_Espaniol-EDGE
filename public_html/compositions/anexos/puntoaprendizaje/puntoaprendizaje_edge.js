@@ -8,7 +8,7 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src="http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -22,7 +22,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -153,7 +153,7 @@
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: [undefined, undefined, '1920px', '1080px'],
+                            rect: ['null', 'null', '1920px', '1080px', 'auto', 'auto'],
                             overflow: 'hidden',
                             fill: ["rgba(255,126,126,0.00)"]
                         }
@@ -177,17 +177,16 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'cerrar',
                             type: 'image',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '76px', '77px']
+                            rect: [null, null, '76px', '77px']
                         }
                     }
                 },
