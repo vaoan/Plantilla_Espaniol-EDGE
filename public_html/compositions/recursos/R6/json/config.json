@@ -10,14 +10,12 @@
         "1": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "pick_many",
-            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "actividad": "select",
+            "url": "recursos/actividad-selecting_select/actividad-filling_selects.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": [
-                "contenedor_1"
-            ]
+            "sym": ["R6_1"]
         },
         "2": {
             "type": "actividad",
@@ -27,9 +25,7 @@
             "interaction": {
                 "ALL": true
             },
-            "sym": [
-                "contenedor_2"
-            ]
+            "sym": ["contenedor_2"]
         },
         "3": {
             "type": "actividad",
@@ -39,9 +35,7 @@
             "interaction": {
                 "ALL": true
             },
-            "sym": [
-                "contenedor_3"
-            ]
+            "sym": ["contenedor_3"]
         }
     }
 }

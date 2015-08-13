@@ -16,7 +16,7 @@
         resources = [
         ],
         scripts = [
-            js + "jquery-1.11.3.min.js"
+            js+"jquery-1.11.3.min.js"
         ],
         symbols = {
             "stage": {
@@ -101,41 +101,41 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
                             rect: ['0px', '0px', '650px', '49px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'cont_funcion',
                             stroke: [1, 'rgba(0, 0, 0, 0)', 'dashed'],
                             fill: ['rgba(51,26,63,1.00)'],
                             c: [
                             {
-                                type: 'rect',
+                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
                                 id: 'Rectangle',
                                 stroke: [1, 'rgba(0,0,0,0.00)', 'dashed'],
-                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
+                                type: 'rect',
                                 fill: ['rgba(178,163,196,1.00)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\"><span style=\"font-size: 32px;\">Función comunicativa:</span></p>',
-                                type: 'text',
-                                rect: ['39px', '6px', '366px', '38px', 'auto', 'auto']
+                                rect: ['39px', '6px', '366px', '38px', 'auto', 'auto'],
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal']
                             }]
                         },
                         {
-                            rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
-                            id: 'Vineta1_funcion_comunicativa',
                             type: 'image',
+                            id: 'Vineta1_funcion_comunicativa',
+                            rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            align: 'left',
+                            rect: ['40px', '57px', '612px', '106px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">Reconocer la grafía del español para dar ejemplos de léxico que se pueda asociar con cada letra.</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;</span></p>',
                             id: 'Texto_Funcion_Comunicativa',
                             textStyle: ['', '', '34px', '', 'none'],
-                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">Reconocer la grafía del español para dar ejemplos de léxico que se pueda asociar con cada letra.</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;</span></p>',
-                            rect: ['40px', '57px', '612px', '106px', 'auto', 'auto']
+                            align: 'left',
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -162,47 +162,47 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
                             rect: ['0px', '0px', '650px', '49px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'cont_funcion',
                             stroke: [1, 'rgba(0, 0, 0, 0)', 'dashed'],
                             fill: ['rgba(51,26,63,1.00)'],
                             c: [
                             {
-                                type: 'rect',
+                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
                                 id: 'Rectangle',
                                 stroke: [1, 'rgba(0,0,0,0.00)', 'dashed'],
-                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
+                                type: 'rect',
                                 fill: ['rgba(178,163,196,1.00)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\"><span style=\"font-size: 32px;\">Discuta con sus compañeros</span></p>',
-                                type: 'text',
-                                rect: ['39px', '6px', '584px', '38px', 'auto', 'auto']
+                                rect: ['39px', '6px', '584px', '38px', 'auto', 'auto'],
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal']
                             }]
                         },
                         {
-                            rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
+                            type: 'image',
                             id: 'Vineta1_funcion_comunicativa',
-                            type: 'image',
+                            rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px']
                         },
                         {
-                            rect: ['18px', '99px', '10px', '17px', 'auto', 'auto'],
+                            type: 'image',
                             id: 'Vineta2_funcion_comunicativa',
-                            type: 'image',
+                            rect: ['18px', '99px', '10px', '17px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            align: 'left',
+                            rect: ['40px', '57px', '612px', '106px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">¿Qué importancia tiene el abecedario para la comunicación?</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​¿Es importante saber sobre el abecedario para la lectura y la escritura?</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\">​</span></p>',
                             id: 'Texto_Funcion_Comunicativa',
                             textStyle: ['', '', '34px', '', 'none'],
-                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">¿Qué importancia tiene el abecedario para la comunicación?</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​¿Es importante saber sobre el abecedario para la lectura y la escritura?</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\">​</span></p>',
-                            rect: ['40px', '57px', '612px', '106px', 'auto', 'auto']
+                            align: 'left',
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -237,19 +237,19 @@
                             fill: ['rgba(255,255,255,0.749)', [270, [['rgba(49,28,69,1.00)', 0], ['rgba(56,32,79,1.00)', 21], ['rgba(40,22,56,1.00)', 63]]]]
                         },
                         {
-                            type: 'image',
-                            id: 'BTN_animado',
                             rect: ['0px', '0px', '95px', '95px', 'auto', 'auto'],
+                            id: 'BTN_animado',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/BTN_R1_Explore-29.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            textStyle: ['', '', '50px', '', 'none'],
-                            id: 'Text3',
-                            text: '<p style=\"margin: 0px;\">​Exploremos</p>',
+                            rect: ['163px', '23px', '198px', '50px', 'auto', 'auto'],
                             align: 'center',
-                            rect: ['163px', '23px', '198px', '50px', 'auto', 'auto']
+                            id: 'Text3',
+                            textStyle: ['', '', '50px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Exploremos</p>',
+                            font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -263,26 +263,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid35",
-                            "scaleY",
-                            0,
-                            1000,
-                            "linear",
-                            "${BTN_animado}",
-                            '1',
-                            '1.2'
-                        ],
-                        [
-                            "eid36",
-                            "scaleY",
-                            1000,
-                            1000,
-                            "linear",
-                            "${BTN_animado}",
-                            '1.2',
-                            '1'
-                        ],
-                        [
                             "eid33",
                             "scaleX",
                             0,
@@ -295,6 +275,26 @@
                         [
                             "eid34",
                             "scaleX",
+                            1000,
+                            1000,
+                            "linear",
+                            "${BTN_animado}",
+                            '1.2',
+                            '1'
+                        ],
+                        [
+                            "eid35",
+                            "scaleY",
+                            0,
+                            1000,
+                            "linear",
+                            "${BTN_animado}",
+                            '1',
+                            '1.2'
+                        ],
+                        [
+                            "eid36",
+                            "scaleY",
                             1000,
                             1000,
                             "linear",

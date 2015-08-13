@@ -77,8 +77,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         inicializarTimer(sym); //evento de prueba
+         //inicializarTimer(sym); //evento de prueba
 
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         
       });
       //Edge binding end
 

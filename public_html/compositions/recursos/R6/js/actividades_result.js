@@ -26,11 +26,30 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "filling_blanks":
             filling_blanks_santiago_created(evt);
             break;
+        case "select":
+            selecting_blanks_santiago_created(evt);
+            break;
         default:
             console.error("Creation inexistente", evt.identify);
             break;
     }
 });
+
+function selecting_blanks_santiago_created(evt) {
+    var objEvt = {
+        type: "EDGE_Recurso_sendPreviousData",
+        previous_data: read_interactions(evt),
+        sym: evt.sym,
+        block: false,
+        attempts: 0
+    };
+
+    objEvt = merge_options(objEvt, read_extra_data(evt));
+
+    //console.log(objEvt);
+
+    send_interactions(evt.identify, objEvt, "created");
+}
 
 function filling_blanks_santiago_created(evt) {
     var objEvt = {
@@ -110,11 +129,68 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "pick_many":
             pick_many_toscano_submit(evt);
             break;
+        case "select":
+            selecting_blanks_santiago_submit(evt);
+            break;
         case "filling_blanks":
             filling_blanks_santiago_submit(evt);
             break;
+        default:
+            console.error("Submit inexistente", evt.identify);
+            break;
     }
 });
+
+function selecting_blanks_santiago_submit(evt) {
+    var strRetro = null;
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
+
+    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+        delete evt.timer.time_out;
+        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+        var timer = {reset_timer: true};
+        objEvt = merge_options(objEvt, {timer: timer});
+    } else {
+        if (!check_answers(evt)) {
+            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+            evt.results = "neutral";
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+        }
+    }
+
+    if (evt.results === "correct") {
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+        objEvt = merge_options(objEvt, {
+            block: true,
+            show_answers: false,
+            attempts: evt.attempts
+        });
+        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+    } else if (evt.results === "incorrect") {
+        if (!isEmpty(evt.timer)) {
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        }
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+        var attemps = attemps_answer(evt);
+        objEvt = merge_options(objEvt, attemps);
+        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if (!attemps.block) {
+            strRetro = "nuevo_intento";
+        }
+    }
+
+    //retroalimentacion(strRetro);
+    save_extra_data(objEvt, evt);
+    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    send_interactions(evt.identify, objEvt, evt.results);
+}
 
 function filling_blanks_santiago_submit(evt) {
     var strRetro = null;
@@ -156,12 +232,12 @@ function filling_blanks_santiago_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
-        if(!attemps.block){
+        if (!attemps.block) {
             strRetro = "nuevo_intento";
         }
     }
 
-    retroalimentacion(strRetro);
+    //retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
     send_interactions(evt.identify, objEvt, evt.results);
@@ -210,13 +286,13 @@ function drag_drop_toscano_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
-        if(!attemps.block){
+        if (!attemps.block) {
             strRetro = "nuevo_intento";
         }
     }
 
 
-    retroalimentacion(strRetro);
+    //retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
 
@@ -265,12 +341,12 @@ function pick_many_toscano_submit(evt) {
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
         strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
-        if(!attemps.block){
+        if (!attemps.block) {
             strRetro = "nuevo_intento";
         }
     }
 
-    retroalimentacion(strRetro);
+    //retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
     send_interactions(evt.identify, objEvt, evt.results);
@@ -304,8 +380,8 @@ function check_answers(evt) {
 
 function retroalimentacion(strRetroalimentacion, objTextInject) {
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
-    
-    switch(strRetroalimentacion){
+
+    switch (strRetroalimentacion) {
         case "coorect":
             mostrar_pagina("correcto");
             break;
@@ -353,7 +429,7 @@ function send_interactions(pagina, objEvt, results) {
 function attemps_answer(evt) {
     var this_block = false;
     var this_show_answers = false;
-    var intentos = evt.attempts + 1;
+    var intentos = evt.attempts;// + 1;
     var objAttemps = {};
 
     if (intentos >= evt.attempts_limit) {
@@ -384,7 +460,7 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
 
     var id_interaction = pagina.recurso + "000";
     var interactions = {};
-    
+
 
     if (!isEmpty(pagina.interaction)) {
         if (pagina.interaction.ALL) {
@@ -392,8 +468,8 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
             if (typeof estado_answers !== "string") {
                 estado = estado_answers ? "correct" : "incorrect";
             }
-            
-            if(estado_answers === "neutral"){
+
+            if (estado_answers === "neutral") {
                 return;
             }
 
@@ -408,10 +484,10 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                 var estado;
                 if (typeof estado_answers !== "string") {
                     estado = estado_answers[key] ? "correct" : "incorrect";
-                }else{
+                } else {
                     estado = estado_answers[key];
                 }
-                if(estado === "neutral"){
+                if (estado === "neutral") {
                     return true;
                 }
                 //console.log("upload interactions", key);

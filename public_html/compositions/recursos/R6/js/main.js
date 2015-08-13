@@ -326,6 +326,8 @@ $("body").on("EDGE_Container_loaded", function (evt) {
     EDGE_Plantilla.config.default.url_pages =
             url.substring(0, url.lastIndexOf('/'))
             + "/" + EDGE_Plantilla.config.default.url_pages;
+    
+    console.log("Paginas a cargar... ",EDGE_Plantilla.config.default.default_page);
 
     if (typeof EDGE_Plantilla.config.default.default_page === "string") {
         mostrar_pagina(EDGE_Plantilla.config.default.default_page);

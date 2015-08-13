@@ -14,17 +14,17 @@ $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
 });
 
 function inicializar(sym) {
-    var stage = $(sym.getComposition().getStage().ele);
-    var objEvt = {
-        type: "EDGE_Plantilla_creationComplete",
-        sym: sym,
-        identify: stage.prop("ed_identify")
-    };
-
     inicializarTimer(sym);
 
-    console.log("INTERACTION UTILITIES CREATED", objEvt, stage);
-    parent.$(parent.document).trigger(objEvt);
+    console.log("INTERACTION UTILITIES CREATED");
+    //parent.$(parent.document).trigger(objEvt);
+    
+    objEvt = {
+        type: "EDGE_Container_loaded",
+        sym: sym
+    };
+    
+    $("body").trigger(objEvt);
 }
 
 /******************** Eventos de respuesta PLANTILLA **********************/

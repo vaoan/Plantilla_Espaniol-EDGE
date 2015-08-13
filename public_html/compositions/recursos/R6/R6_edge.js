@@ -90,20 +90,23 @@
                             symbolName: 'r6_enviar',
                             display: 'none',
                             type: 'rect',
-                            rect: ['1467', '710', '165', '38', 'auto', 'auto']
+                            rect: ['1467', '710', '165', '38', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'r6_siguiente',
                             symbolName: 'r6_siguiente',
                             type: 'rect',
-                            rect: ['1754', '704', '50', '51', 'auto', 'auto']
+                            rect: ['1754', '704', '50', '51', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'r6_atras',
                             symbolName: 'r6_atras',
                             display: 'none',
                             type: 'rect',
-                            rect: ['1664', '704', '50', '51', 'auto', 'auto']
+                            rect: ['1664', '704', '50', '51', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'TIMER_CONTAINER',
@@ -237,56 +240,6 @@
                             '-1840px'
                         ],
                         [
-                            "eid83",
-                            "display",
-                            450,
-                            0,
-                            "linear",
-                            "${TIMER_CONTAINER}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid66",
-                            "opacity",
-                            0,
-                            450,
-                            "linear",
-                            "${r6_evaluemos}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid44",
-                            "left",
-                            500,
-                            500,
-                            "linear",
-                            "${R6_2}",
-                            '1840px',
-                            '0px'
-                        ],
-                        [
-                            "eid54",
-                            "left",
-                            1000,
-                            500,
-                            "linear",
-                            "${R6_2}",
-                            '0px',
-                            '-1840px'
-                        ],
-                        [
-                            "eid23",
-                            "left",
-                            0,
-                            500,
-                            "linear",
-                            "${R6_portada}",
-                            '0px',
-                            '-1830px'
-                        ],
-                        [
                             "eid80",
                             "display",
                             0,
@@ -315,6 +268,56 @@
                             "${r6_enviar}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid66",
+                            "opacity",
+                            0,
+                            450,
+                            "linear",
+                            "${r6_evaluemos}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid83",
+                            "display",
+                            450,
+                            0,
+                            "linear",
+                            "${TIMER_CONTAINER}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid23",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${R6_portada}",
+                            '0px',
+                            '-1830px'
+                        ],
+                        [
+                            "eid44",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${R6_2}",
+                            '1840px',
+                            '0px'
+                        ],
+                        [
+                            "eid54",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${R6_2}",
+                            '0px',
+                            '-1840px'
                         ],
                         [
                             "eid56",
@@ -395,11 +398,11 @@
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R6.png', '0px', '0px']
                         },
                         {
-                            type: 'text',
+                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Aqui van las instrucciones&nbsp;</p>',
-                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap']
+                            type: 'text',
+                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -714,12 +717,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -777,18 +780,17 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['0px', '0px', '100%', '100%', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [67, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Timer</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['Arial, Helvetica, sans-serif', [67, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '197px', '75px']
+                            rect: [null, null, '197px', '75px']
                         }
                     }
                 },

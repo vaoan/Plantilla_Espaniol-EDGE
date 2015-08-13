@@ -26,7 +26,7 @@
         //Edge binding end
 
     })("stage");
-    //Edge symbol end:'stage'
+   //Edge symbol end:'stage'
 
     //=========================================================
 
@@ -34,7 +34,7 @@
     (function (symbolName) {
 
     })("funcioncomunicativa");
-    //Edge symbol end:'funcioncomunicativa'
+   //Edge symbol end:'funcioncomunicativa'
 
     //=========================================================
 
@@ -42,7 +42,7 @@
     (function (symbolName) {
 
     })("discuta");
-    //Edge symbol end:'discuta'
+   //Edge symbol end:'discuta'
 
     //=========================================================
 
@@ -56,6 +56,6 @@
         //Edge binding end
 
     })("btnr1_exploremos");
-    //Edge symbol end:'btnr1_exploremos'
+   //Edge symbol end:'btnr1_exploremos'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-16656972");

@@ -58,8 +58,8 @@
         "6": {
             "type": "actividad",
             "recurso": "6",
-            "actividad": "pick_many",
-            "url": "recursos/R6_PRE2/esn1le01ob01r6pre2.html",
+            "actividad": "R6",
+            "url": "recursos/R6/R6.html",
             "interaction": {
                 "ALL": true
             },

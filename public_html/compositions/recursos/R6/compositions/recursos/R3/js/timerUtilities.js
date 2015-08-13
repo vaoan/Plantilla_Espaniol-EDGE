@@ -146,19 +146,3 @@ function secondsToClockFormat(sec_num) {
 
 //***********************************************************************************
 
-$("body").on("TimeOut", function (data) {
-    var stage = $(data.sym.getComposition().getStage().ele);
-
-    var timer = {};
-    var timerObj = buscar_sym(data.sym, stage.prop("timer"), true);
-    timer.remaining_time = 0;
-    timer.time_out = true;
-    timer.current_state = timerObj.prop("alertState");
-    
-    $("body").trigger({
-        type: "EDGE_Actividad_Submit",
-        sym: data.sym,
-        timer: timer
-    });
-    //enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), "", "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, data.sym);
-});

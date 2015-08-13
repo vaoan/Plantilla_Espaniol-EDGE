@@ -558,8 +558,6 @@
                     sym: pagina.stage
                 };
                 
-                console.log(objEvt);
-                
                 var sym_content = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor, true);
                 $("iframe", sym_content)[0].contentWindow.$('body').trigger(objEvt);
             }
