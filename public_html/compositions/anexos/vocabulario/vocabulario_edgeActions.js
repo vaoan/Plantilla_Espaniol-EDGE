@@ -90,7 +90,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol: 'audio_1'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1087, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1832, function(sym, e) {
          sym.play("stop");
 
       });
@@ -120,7 +120,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 699, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2072, function(sym, e) {
          sym.play("stop");
 
       });
@@ -142,7 +142,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1087, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
          sym.play("stop");
 
       });
@@ -164,7 +164,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1425, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
          sym.play("stop");
 
       });
@@ -186,7 +186,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2353, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1408, function(sym, e) {
          sym.play("stop");
 
       });
@@ -208,7 +208,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1002, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
          sym.play("stop");
 
       });
