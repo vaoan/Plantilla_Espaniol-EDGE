@@ -107,13 +107,6 @@
                             type: 'rect',
                             rect: ['1664', '704', '50', '51', 'auto', 'auto'],
                             cursor: 'pointer'
-                        },
-                        {
-                            id: 'TIMER_CONTAINER',
-                            symbolName: 'TIMER_CONTAINER',
-                            display: 'none',
-                            type: 'rect',
-                            rect: ['1569', '29', '197', '75', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -121,13 +114,20 @@
                             isStage: true,
                             rect: ['null', 'null', '1830px', '780px', 'auto', 'auto'],
                             overflow: 'hidden',
-                            fill: ["rgba(255,255,255,1)"]
+                            fill: ["rgba(255,255,255,0.00)"]
                         }
                     }
                 },
                 timeline: {
                     duration: 3000,
                     autoPlay: true,
+                    labels: {
+                        "slide_1": 500,
+                        "slide_2": 1000,
+                        "slide_3": 1500,
+                        "slide_4": 2000,
+                        "slide_5": 2500
+                    },
                     data: [
                         [
                             "eid69",
@@ -178,6 +178,36 @@
                             "${R6_1}",
                             '0px',
                             '-1840px'
+                        ],
+                        [
+                            "eid57",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_siguiente}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid58",
+                            "display",
+                            450,
+                            0,
+                            "linear",
+                            "${r6_siguiente}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid88",
+                            "display",
+                            2065,
+                            0,
+                            "linear",
+                            "${r6_siguiente}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid43",
@@ -240,46 +270,6 @@
                             '-1840px'
                         ],
                         [
-                            "eid57",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid58",
-                            "display",
-                            450,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid88",
-                            "display",
-                            2425,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid71",
-                            "display",
-                            2605,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'none',
-                            'none'
-                        ],
-                        [
                             "eid66",
                             "opacity",
                             0,
@@ -288,16 +278,6 @@
                             "${r6_evaluemos}",
                             '1',
                             '0'
-                        ],
-                        [
-                            "eid83",
-                            "display",
-                            450,
-                            0,
-                            "linear",
-                            "${TIMER_CONTAINER}",
-                            'none',
-                            'block'
                         ],
                         [
                             "eid23",
@@ -332,7 +312,7 @@
                         [
                             "eid70",
                             "display",
-                            2605,
+                            2550,
                             0,
                             "linear",
                             "${r6_atras}",
@@ -402,22 +382,23 @@
                 content: {
                     dom: [
                         {
-                            rect: ['169px', '59px', '402px', '543px', 'auto', 'auto'],
                             id: 'IMG_R6',
                             type: 'image',
+                            rect: ['169px', '59px', '402px', '543px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R6.png', '0px', '0px']
                         },
                         {
-                            type: 'text',
+                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Aqui van las instrucciones&nbsp;</p>',
-                            rect: ['857', '189', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap']
+                            font: ['Arial, Helvetica, sans-serif', [75, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '1830px', '780px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1830px', '780px']
                         }
                     }
                 },
@@ -439,16 +420,17 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '1830px', '780px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1830px', '780px']
                         }
                     }
                 },
@@ -470,16 +452,17 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,119,0,1.00)']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '1830px', '780px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1830px', '780px']
                         }
                     }
                 },
@@ -501,16 +484,17 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(239,255,0,1.00)']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '1830px', '780px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1830px', '780px']
                         }
                     }
                 },
@@ -769,57 +753,6 @@
                             "${Text}",
                             'rgba(0,0,0,0.49)',
                             'rgba(0,0,0,0.65098)'
-                        ]
-                    ]
-                }
-            },
-            "TIMER_CONTAINER": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            type: 'rect',
-                            id: 'Rectangle',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '197px', '75px', 'auto', 'auto'],
-                            fill: ['rgba(192,192,192,1)']
-                        },
-                        {
-                            rect: ['0px', '0px', '100%', '100%', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [67, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'Text',
-                            text: '<p style=\"margin: 0px;\">​Timer</p>',
-                            align: 'center',
-                            type: 'text'
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '197px', '75px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 500,
-                    autoPlay: true,
-                    labels: {
-                        "10": 500
-                    },
-                    data: [
-                        [
-                            "eid85",
-                            "background-color",
-                            0,
-                            500,
-                            "linear",
-                            "${Rectangle}",
-                            'rgba(192,192,192,1)',
-                            'rgba(255,127,0,1.00)'
                         ]
                     ]
                 }

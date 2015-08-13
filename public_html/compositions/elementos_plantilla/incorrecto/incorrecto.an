@@ -3,7 +3,7 @@
 
 	"HTMLFileName":"incorrecto.html",
 	"expanded:images/cerrar.png":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"StageZoomFactor":"100",
 	"symbol_stage":{
 		"element_${Text}":{
 			"timelineColor2":"0x1aa38f",
@@ -48,6 +48,12 @@
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"pixelsPerMs":"0.2",
+	"expanded:images/correcto.png":"nil",
+	"expanded:images/incorrecto.png":"nil",
+	"usedBOM":"false",
+	"nextElementColorIndex":"9",
+	"stage-Default Timeline_playhead_ms":"0",
+	"pref__general__FilterNonAnimatedElements":"false",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -68,10 +74,4 @@
 \
    }}\
 }",
-	"expanded:images/incorrecto.png":"nil",
-	"usedBOM":"false",
-	"nextElementColorIndex":"9",
-	"stage-Default Timeline_playhead_ms":"0",
-	"pref__general__FilterNonAnimatedElements":"false",
-	"expanded:images/correcto.png":"nil",
-	"StageZoomFactor":"100"}
+	"pref__general__AutoKeyframePropertiesArmed":"false"}

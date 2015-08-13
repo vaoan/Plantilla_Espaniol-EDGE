@@ -22,7 +22,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -102,9 +102,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'Btn_cerrar',
                             rect: ['7px', '5px', '37', '40', 'auto', 'auto'],
+                            id: 'Btn_cerrar',
+                            type: 'group',
                             c: [
                             {
                                 id: 'btn_cerrar',
@@ -113,16 +113,16 @@
                                 fill: ['rgba(0,0,0,0)', 'images/btn_cerrar.png', '0px', '0px']
                             },
                             {
-                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 transform: [[], ['-42'], [], ['1.03', '0.95']],
+                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 id: 'Rectangle2',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(255,255,255,1.00)']
                             },
                             {
-                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 transform: [[], ['-138'], [], ['1.03', '0.95']],
+                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 id: 'Rectangle2Copy',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
@@ -154,10 +154,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
                             rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],

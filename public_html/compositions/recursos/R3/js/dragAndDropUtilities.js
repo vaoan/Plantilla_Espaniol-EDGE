@@ -237,10 +237,9 @@ function inicializarDragAndDropUnoaUno(sym)
             out: function (event, ui) {
                 var dropObj = $(this);
                 var dragObj = $(ui.draggable);
-                if(!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre")){
+                if(!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre"))
                 dropObj.prop("current_drag", null);
                 dropObj.prop("correct", false);
-            }
             }
         });
     }

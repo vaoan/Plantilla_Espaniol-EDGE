@@ -7,7 +7,7 @@
         "1": {
             "type": "portada",
             "recurso": "1",
-            "url": "recursos/R1/esn1le01ob01r1.html",
+            "url": "recursos/R1/esn1le01ob02r1.html",
             "al_cerrar": {
                 "cargar": "2",
                 "cambia_color": "2"
@@ -18,15 +18,15 @@
         "2": {
             "type": "recurso",
             "recurso": "2",
-            "url": "recursos/R2/esn1le01ob01r2.html",
+            "url": "recursos/R2/esn1le01ob02r2.html",
             "titulo": "Exploremos",
             "subtitulo": "las letras"
         },
         "3": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "drag_drop_many",
-            "url": "recursos/R3/esn1le01ob01r3.html",
+            "actividad": "drag_drop",
+            "url": "recursos/R3/esn1le01ob02r3.html",
             "interaction": {
                 "ALL": true
             },
@@ -73,6 +73,18 @@
             "pdf":"../../../media/pdf/esn1le01ob02guion.pdf",
             "titulo": "Aprendamos en papel",
             "subtitulo": "las letras"
+        },
+        "vocabulario": {
+            "url": "anexos/vocabulario/vocabulario.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "learning": {
+            "url": "anexos/puntoaprendizaje/puntoaprendizaje.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
         },
         "incompleto": {
             "url": "elementos_plantilla/completar/completar.html",
