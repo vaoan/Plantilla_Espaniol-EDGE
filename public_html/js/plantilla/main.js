@@ -318,6 +318,14 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
     return temp;
 }
 
+function inicializarPlantilla(sym){
+    var objEvt = {
+        type: "EDGE_Container_loaded",
+        sym: sym
+    };
+    $("body").trigger();
+}
+
 $("body").on("EDGE_Container_loaded", function (evt) {
     EDGE_Plantilla.plantilla_sym = evt.sym;
     EDGE_Plantilla.config = getRemote().responseJSON;

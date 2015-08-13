@@ -186,7 +186,7 @@ function selecting_blanks_santiago_submit(evt) {
         }
     }
 
-    //retroalimentacion(strRetro);
+    retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
     send_interactions(evt.identify, objEvt, evt.results);
@@ -237,7 +237,7 @@ function filling_blanks_santiago_submit(evt) {
         }
     }
 
-    //retroalimentacion(strRetro);
+    retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
     send_interactions(evt.identify, objEvt, evt.results);
@@ -292,7 +292,7 @@ function drag_drop_toscano_submit(evt) {
     }
 
 
-    //retroalimentacion(strRetro);
+    retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
 
@@ -346,9 +346,9 @@ function pick_many_toscano_submit(evt) {
         }
     }
 
-    //retroalimentacion(strRetro);
-    save_extra_data(objEvt, evt);
+    retroalimentacion(strRetro);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
+    save_extra_data(objEvt, evt);
     send_interactions(evt.identify, objEvt, evt.results);
 }
 //</editor-fold>
@@ -382,7 +382,7 @@ function retroalimentacion(strRetroalimentacion, objTextInject) {
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
 
     switch (strRetroalimentacion) {
-        case "coorect":
+        case "correct":
             mostrar_pagina("correcto");
             break;
         case "incorrect":

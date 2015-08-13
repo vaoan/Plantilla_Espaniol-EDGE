@@ -47,8 +47,8 @@
         "5": {
             "type": "actividad",
             "recurso": "5",
-            "actividad": "filling_blanks",
-            "url": "recursos/R5/not_yet.edistribution",
+            "actividad": "pick_many",
+            "url": "recursos/R6_PRE2/esn1le01ob01r6pre2.html",
             "interaction": {
                 "ALL": true
             },

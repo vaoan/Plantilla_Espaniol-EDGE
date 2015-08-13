@@ -1,216 +1,217 @@
 /***********************
-* Acciones de composición de Adobe Edge Animate
-*
-* Editar este archivo con precaución, teniendo cuidado de conservar 
-* las firmas de función y los comentarios que comienzan con "Edge" para mantener la 
-* capacidad de interactuar con estas acciones en Adobe Edge Animate
-*
-***********************/
-(function($, Edge, compId){
-var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comunes para las clases de Edge
+ * Acciones de composición de Adobe Edge Animate
+ *
+ * Editar este archivo con precaución, teniendo cuidado de conservar 
+ * las firmas de función y los comentarios que comienzan con "Edge" para mantener la 
+ * capacidad de interactuar con estas acciones en Adobe Edge Animate
+ *
+ ***********************/
+(function ($, Edge, compId) {
+    var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comunes para las clases de Edge
 
-   //Edge symbol: 'stage'
-   (function(symbolName) {
-      
-      
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+    //Edge symbol: 'stage'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         sym.stop();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
-         sym.stop();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
-         sym.stop();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
-         sym.stop();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
-         sym.stop();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${r6_atras}", "click", function(sym, e) {
-         sym.playReverse();
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function (sym, e) {
+            sym.stop();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${r6_siguiente}", "click", function(sym, e) {
-         sym.play();
+        Symbol.bindElementAction(compId, symbolName, "${r6_atras}", "click", function (sym, e) {
+            sym.playReverse();
 
-      });
-      //Edge binding end
+        });
+        //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${r6_evaluemos}", "click", function(sym, e) {
-         sym.play();
-         
-         startTimer(sym);
-         
-      });
-      //Edge binding end
+        Symbol.bindElementAction(compId, symbolName, "${r6_siguiente}", "click", function (sym, e) {
+            sym.play();
 
-      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         //inicializarTimer(sym); //evento de prueba
+        });
+        //Edge binding end
 
-      });
-      //Edge binding end
+        Symbol.bindElementAction(compId, symbolName, "${r6_evaluemos}", "click", function (sym, e) {
+            sym.play();
 
-      Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         
-      });
-      //Edge binding end
+            startTimer(sym);
 
-   })("stage");
-   //Edge symbol end:'stage'
+        });
+        //Edge binding end
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_portada'
-   (function(symbolName) {   
-   
-   })("R6_portada");
-   //Edge symbol end:'R6_portada'
+        Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function (sym, e) {
+            // Insertar código para ejecutarse cuando el símbolo se crea aquí
+            //inicializarPlantilla(sym);
+            //inicializarTimer(sym); //eventos de prueba
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_portada_1'
-   (function(symbolName) {   
-   
-   })("R6_1");
-   //Edge symbol end:'R6_1'
+        });
+        //Edge binding end
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_2'
-   (function(symbolName) {   
-   
-   })("R6_2");
-   //Edge symbol end:'R6_2'
+        Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function (sym, e) {
+            // introducir aquí código para clic de ratón
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_3'
-   (function(symbolName) {   
-   
-   })("R6_3");
-   //Edge symbol end:'R6_3'
+        });
+        //Edge binding end
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_4'
-   (function(symbolName) {   
-   
-   })("R6_4");
-   //Edge symbol end:'R6_4'
+    })("stage");
+    //Edge symbol end:'stage'
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_5'
-   (function(symbolName) {   
-   
-   })("R6_5");
-   //Edge symbol end:'R6_5'
+    //=========================================================
 
-   //=========================================================
-   
-   //Edge symbol: 'R6_6'
-   (function(symbolName) {   
-   
-   })("R6_final");
-   //Edge symbol end:'R6_final'
+    //Edge symbol: 'R6_portada'
+    (function (symbolName) {
 
-   //=========================================================
-   
-   //Edge symbol: 'r6_atras'
-   (function(symbolName) {   
-   
-   })("r6_atras");
-   //Edge symbol end:'r6_atras'
+    })("R6_portada");
+    //Edge symbol end:'R6_portada'
 
-   //=========================================================
-   
-   //Edge symbol: 'r6_siguiente'
-   (function(symbolName) {   
-   
-   })("r6_siguiente");
-   //Edge symbol end:'r6_siguiente'
+    //=========================================================
 
-   //=========================================================
-   
-   //Edge symbol: 'r6_evaluemos'
-   (function(symbolName) {   
-   
-   })("r6_evaluemos");
-   //Edge symbol end:'r6_evaluemos'
+    //Edge symbol: 'R6_portada_1'
+    (function (symbolName) {
 
-   //=========================================================
-   
-   //Edge symbol: 'r6_enviar'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
-         sym.stop();
+    })("R6_1");
+    //Edge symbol end:'R6_1'
 
-      });
-      //Edge binding end
+    //=========================================================
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+    //Edge symbol: 'R6_2'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
+    })("R6_2");
+    //Edge symbol end:'R6_2'
 
-   })("r6_enviar");
-   //Edge symbol end:'r6_enviar'
+    //=========================================================
 
-   //=========================================================
-   
-   //Edge symbol: 'TIMER_CONTAINER'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         // introducir código aquí
-         sym.stop();
+    //Edge symbol: 'R6_3'
+    (function (symbolName) {
 
-      });
-      //Edge binding end
+    })("R6_3");
+    //Edge symbol end:'R6_3'
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         // introducir código aquí
-         sym.stop();
+    //=========================================================
 
-      });
-      //Edge binding end
+    //Edge symbol: 'R6_4'
+    (function (symbolName) {
 
-   })("TIMER_CONTAINER");
-   //Edge symbol end:'TIMER_CONTAINER'
+    })("R6_4");
+    //Edge symbol end:'R6_4'
+
+    //=========================================================
+
+    //Edge symbol: 'R6_5'
+    (function (symbolName) {
+
+    })("R6_5");
+    //Edge symbol end:'R6_5'
+
+    //=========================================================
+
+    //Edge symbol: 'R6_6'
+    (function (symbolName) {
+
+    })("R6_final");
+    //Edge symbol end:'R6_final'
+
+    //=========================================================
+
+    //Edge symbol: 'r6_atras'
+    (function (symbolName) {
+
+    })("r6_atras");
+    //Edge symbol end:'r6_atras'
+
+    //=========================================================
+
+    //Edge symbol: 'r6_siguiente'
+    (function (symbolName) {
+
+    })("r6_siguiente");
+    //Edge symbol end:'r6_siguiente'
+
+    //=========================================================
+
+    //Edge symbol: 'r6_evaluemos'
+    (function (symbolName) {
+
+    })("r6_evaluemos");
+    //Edge symbol end:'r6_evaluemos'
+
+    //=========================================================
+
+    //Edge symbol: 'r6_enviar'
+    (function (symbolName) {
+
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function (sym, e) {
+            sym.stop();
+
+        });
+        //Edge binding end
+
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            sym.stop();
+
+        });
+        //Edge binding end
+
+    })("r6_enviar");
+    //Edge symbol end:'r6_enviar'
+
+    //=========================================================
+
+    //Edge symbol: 'TIMER_CONTAINER'
+    (function (symbolName) {
+
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
+            // introducir código aquí
+            sym.stop();
+
+        });
+        //Edge binding end
+
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
+            // introducir código aquí
+            sym.stop();
+
+        });
+        //Edge binding end
+
+    })("TIMER_CONTAINER");
+    //Edge symbol end:'TIMER_CONTAINER'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");
