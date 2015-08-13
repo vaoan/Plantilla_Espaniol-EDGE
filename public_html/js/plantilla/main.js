@@ -7,6 +7,7 @@
 
 //<editor-fold defaultstate="collapsed" desc="Global values">
 EDGE_Plantilla = {
+    element_on_show: null,
     allow_popups: true,
     play_general_sound: true,
     plantilla_sym: null,
@@ -250,7 +251,7 @@ function mostrar_pagina(strPagina, objRetro) {
     promise.done(function (comp) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
-        $(stage.ele).prop("ed_identify", pagina);
+        $(stage.ele).prop("ed_identify", EDGE_Plantilla.config.paginas[strPagina]);
 
         if (!isEmpty(pagina.actividad)) {
             var objEvt = {

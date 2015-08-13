@@ -11,6 +11,7 @@
  */
 $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
     //var temp_pagina = evt.identify;
+    EDGE_Plantilla.element_on_show = evt.identify;
     EDGE_Plantilla.debug ? console.log(evt) : false;
 
     switch (evt.identify.actividad) {
