@@ -2,16 +2,16 @@
     "default": {
         "url_pages": "compositions/",
         "default_page": [
-            "2"
+            "1","2","3","4","5"
         ],
-        "limit_attemps": 3
+        "limit_attemps": 2
     },
     "paginas": {
         "1": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "select",
-            "url": "recursos/actividad-selecting_select/actividad-filling_selects.html",
+            "actividad": "drag_drop",
+            "url": "recursos/R6_PRE1/esn1le01ob02r6pre1.html",
             "interaction": {
                 "ALL": true
             },
@@ -36,6 +36,26 @@
                 "ALL": true
             },
             "sym": ["R6_3"]
+        },
+        "4": {
+            "type": "actividad",
+            "recurso": "5",
+            "actividad": "pick_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_4"]
+        },
+        "5": {
+            "type": "actividad",
+            "recurso": "5",
+            "actividad": "pick_many",
+            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_5"]
         }
     }
 }

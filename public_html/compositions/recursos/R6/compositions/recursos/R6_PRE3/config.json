@@ -1,0 +1,32 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Escuche cada audio y seleccione la letra con la cual incia la palabra.",
+    "picks": {
+        "1": {
+            "descripcion": "vocal uno",
+            "esRespuesta": false
+        },
+        "2": {
+            "descripcion": "consonante uno",
+            "esRespuesta": true
+        },
+        "3": {
+            "descripcion": "vocal dos",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "consonante dos",
+            "esRespuesta": true
+        }
+        ,
+        "5": {
+            "descripcion": "vocal tres",
+            "esRespuesta": true
+        }
+        ,
+        "6": {
+            "descripcion": "consonante tres",
+            "esRespuesta": false
+        }
+    }
+}
