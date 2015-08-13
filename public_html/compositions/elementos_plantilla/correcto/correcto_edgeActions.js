@@ -34,4 +34,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    })("cerrar_corr");
    //Edge symbol end:'cerrar_corr'
 
+   //=========================================================
+   
+   //Edge symbol: 'Precargador'
+   (function(symbolName) {   
+   
+   })("Precargador");
+   //Edge symbol end:'Precargador'
+
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-25249914");

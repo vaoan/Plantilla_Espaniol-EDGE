@@ -105,10 +105,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
                             rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
                             transform: [[], [], [], ['0.35', '0.35']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
@@ -136,10 +136,10 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.35', '0.35']],
-                            id: 'cerrar',
                             type: 'image',
+                            id: 'cerrar',
                             rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.35', '0.35']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar2.png', '0px', '0px']
                         }
                     ],

@@ -132,22 +132,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    //=========================================================
    
-   //Edge symbol: 'DROP_1'
-   (function(symbolName) {   
-   
-   })("DROP_1");
-   //Edge symbol end:'DROP_1'
-
-   //=========================================================
-   
-   //Edge symbol: 'DROP_2'
-   (function(symbolName) {   
-   
-   })("DROP_2");
-   //Edge symbol end:'DROP_2'
-
-   //=========================================================
-   
    //Edge symbol: 'oral'
    (function(symbolName) {   
    
@@ -327,5 +311,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    })("Submit_1");
    //Edge symbol end:'Submit_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'DROP_1'
+   (function(symbolName) {   
+   
+   })("DROP_1");
+   //Edge symbol end:'DROP_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'DROP_2'
+   (function(symbolName) {   
+   
+   })("DROP_2");
+   //Edge symbol end:'DROP_2'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-6342212");
