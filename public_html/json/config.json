@@ -37,7 +37,7 @@
             "type": "actividad",
             "recurso": "4",
             "actividad": "drag_drop",
-            "url": "recursos/R4/le1obj1r4.html",
+            "url": "recursos/R4/esn1le01ob02r4.html",
             "interaction": {
                 "ALL": true
             },
@@ -69,7 +69,7 @@
         "7": {
             "type": "recurso",
             "recurso": "7",
-            "url": "recursos/R7/R7.html",
+            "url": "recursos/R7/esn1le01ob02r7.html",
             "pdf":"../../../media/pdf/esn1le01ob02guion.pdf",
             "titulo": "Aprendamos en papel",
             "subtitulo": "las letras"
