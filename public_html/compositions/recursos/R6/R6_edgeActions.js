@@ -79,16 +79,9 @@
 
         Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
-
+            
         });
         //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btn_evaluemosCopy}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         sym.play();
-
-      });
-      //Edge binding end
 
     })("stage");
    //Edge symbol end:'stage'
@@ -97,6 +90,14 @@
 
     //Edge symbol: 'R6_portada'
     (function (symbolName) {
+
+      Symbol.bindElementAction(compId, symbolName, "${btn_evaluemosCopy2}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         
+         sym.getComposition().getStage().play();
+
+      });
+      //Edge binding end
 
     })("R6_portada");
    //Edge symbol end:'R6_portada'

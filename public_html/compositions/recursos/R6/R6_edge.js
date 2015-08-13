@@ -99,13 +99,6 @@
                             type: 'rect',
                             rect: ['1664', '704', '50', '51', 'auto', 'auto'],
                             cursor: 'pointer'
-                        },
-                        {
-                            id: 'btn_evaluemosCopy',
-                            symbolName: 'btn_evaluemos',
-                            type: 'rect',
-                            rect: ['1054', '419px', '335', '49', 'auto', 'auto'],
-                            cursor: 'pointer'
                         }
                     ],
                     style: {
@@ -269,56 +262,6 @@
                             '-1830px'
                         ],
                         [
-                            "eid80",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid81",
-                            "display",
-                            450,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid82",
-                            "display",
-                            2605,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid44",
-                            "left",
-                            500,
-                            500,
-                            "linear",
-                            "${R6_2}",
-                            '1840px',
-                            '0px'
-                        ],
-                        [
-                            "eid54",
-                            "left",
-                            1000,
-                            500,
-                            "linear",
-                            "${R6_2}",
-                            '0px',
-                            '-1840px'
-                        ],
-                        [
                             "eid57",
                             "display",
                             0,
@@ -345,6 +288,56 @@
                             0,
                             "linear",
                             "${r6_siguiente}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid44",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${R6_2}",
+                            '1840px',
+                            '0px'
+                        ],
+                        [
+                            "eid54",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${R6_2}",
+                            '0px',
+                            '-1840px'
+                        ],
+                        [
+                            "eid80",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid81",
+                            "display",
+                            450,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid82",
+                            "display",
+                            2605,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
                             'block',
                             'none'
                         ]
@@ -374,6 +367,13 @@
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700;\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700;\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif;\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800;\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif;\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
                             font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             type: 'text'
+                        },
+                        {
+                            type: 'rect',
+                            id: 'btn_evaluemosCopy2',
+                            symbolName: 'btn_evaluemos',
+                            cursor: 'pointer',
+                            rect: ['1054', '419px', '335', '49', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -401,10 +401,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
@@ -432,10 +432,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,119,0,1.00)']
                         }
                     ],
@@ -463,10 +463,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(239,255,0,1.00)']
                         }
                     ],
@@ -494,10 +494,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,255,117,1.00)']
                         }
                     ],
@@ -525,10 +525,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,103,255,1.00)']
                         }
                     ],
@@ -556,10 +556,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(223,0,255,1.00)']
                         }
                     ],
@@ -587,10 +587,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
                             fill: ['rgba(110,45,45,1.00)']
                         }
                     ],
@@ -618,10 +618,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '50px', '51px', 'auto', 'auto'],
                             fill: ['rgba(110,45,45,1.00)']
                         }
                     ],
@@ -689,12 +689,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -745,33 +745,32 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '336px', '49px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '336px', '49px', 'auto', 'auto'],
+                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
+                            rect: ['231px', '14px', '25px', '25px', 'auto', 'auto'],
                             id: 'signo_mas_que_1_Blancofw',
                             type: 'image',
-                            rect: ['231px', '14px', '25px', '25px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/signo%20mas%20que%201%20Blanco.fw.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '335px', '49px']
+                            rect: [null, null, '335px', '49px']
                         }
                     }
                 },
