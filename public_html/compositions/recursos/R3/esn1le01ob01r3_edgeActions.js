@@ -27,7 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         //inicializar(sym); //Esto es solo para PRUEBAS, BORRAR AL ENTREGAR A INTEGRACIÓN
+         inicializar(sym); //Esto es solo para PRUEBAS, BORRAR AL ENTREGAR A INTEGRACIÓN
 
       });
       //Edge binding end

@@ -1,6 +1,6 @@
 //********************************************************** EVENT LISTENERS START***************************************************************************
 
-//test de función controlador
+//test de funciÃ³n controlador
 /*
  parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
  $("body").trigger({
@@ -38,7 +38,7 @@
 
 //***********************************************************************
 
-//Evento que se dispara después de que el controlador recibe y transforma los resultados de una interacción.
+//Evento que se dispara despuÃ©s de que el controlador recibe y transforma los resultados de una interacciÃ³n.
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
@@ -152,7 +152,7 @@ function inicializarDragAndDrop(sym) {
 
 //***********************************************************************
 
-//función inicializadora de Drag And Drop Uno a Uno	
+//funciÃ³n inicializadora de Drag And Drop Uno a Uno	
 
 function inicializarDragAndDropUnoaUno(sym)
 {
@@ -204,12 +204,11 @@ function inicializarDragAndDropUnoaUno(sym)
             //Cuando un drag es ubicado sobre los drops
 
             drop: function (event, ui) {
-
                 var dropObj = $(this);
                 var dropObjName = dropObj.prop("nombre");
                 var dragObj = dropObj.prop("current_drag");
 
-                //actualiza propiedad current_drag del objeto drop con el nuevo elemento drag soltado sobre él
+                //actualiza propiedad current_drag del objeto drop con el nuevo elemento drag soltado sobre Ã©l
 
                 if (dragObj == null)
                 {
@@ -232,13 +231,16 @@ function inicializarDragAndDropUnoaUno(sym)
                 else {
                     dropObj.prop("correct", false);
                 }
+
             },
             //Cuando un drag es retirado del elemento drop.
             out: function (event, ui) {
                 var dropObj = $(this);
                 var dragObj = $(ui.draggable);
-                dropObj.prop("current_drag", null);
-                dropObj.prop("correct", false);
+                if (!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre")){
+                    dropObj.prop("current_drag", null);
+                    dropObj.prop("correct", false);
+                }
             }
         });
     }
@@ -246,7 +248,7 @@ function inicializarDragAndDropUnoaUno(sym)
 
 //***********************************************************************
 
-//función inicializadora de Drag And Drop Uno a Uno	
+//funciÃ³n inicializadora de Drag And Drop Uno a Uno	
 
 function inicializarDragAndDropUnoaMuchos(sym)
 {
@@ -339,7 +341,7 @@ function inicializarDragAndDropUnoaMuchos(sym)
 
 //***********************************************************************
 
-//revisa la propiedad correct de todos los drops para verificar si la respuesta es correcta y ejecuta una acción
+//revisa la propiedad correct de todos los drops para verificar si la respuesta es correcta y ejecuta una acciÃ³n
 function checkAnswersDragAndDrop(sym) {
 
     var stage = $(sym.getComposition().getStage().ele);
@@ -459,7 +461,6 @@ function getRespuestaDragAndDropUnoAUno(sym) {
     var CANTIDAD_DROPS = stage.prop("cantidad_drops");
 
     for (var i = 1; i <= CANTIDAD_DROPS; i++) {
-
         var dropDesc = sym.$('DROP_' + i).prop("descripcion");
         var curDrag = sym.$('DROP_' + i).prop("current_drag");
         if (curDrag !== null) {
@@ -507,7 +508,7 @@ function moverDrag(dragObj, position) {
 
 //***********************************************************************
 
-//Ubica un drag en el centro de un drop pasados como parámetros.
+//Ubica un drag en el centro de un drop pasados como parÃ¡metros.
 
 function ubicarDragEnCentroDeDrop(drag, drop) {
 
@@ -527,7 +528,7 @@ function ubicarDragEnCentroDeDrop(drag, drop) {
 
 //***********************************************************************
 
-//Ubica un drag en el centro de un drop pasados como parámetros.
+//Ubica un drag en el centro de un drop pasados como parÃ¡metros.
 
 function ubicarDragsEnDrop(drags, drop) {
     var dropPosition = drop.offset();
@@ -555,7 +556,7 @@ function ubicarDragsEnDrop(drags, drop) {
 
 //***********************************************************************
 
-//retorna la parte numérica del nombre de un elemento
+//retorna la parte numÃ©rica del nombre de un elemento
 // ej: DROP_1 -> 1
 
 function nombreANumero(strNombre) {

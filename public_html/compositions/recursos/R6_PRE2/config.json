@@ -1,0 +1,32 @@
+{
+    "num_intentos": 2,
+    "pregunta":"¿Cuál de las siguientes imágenes empieza con la letra m?",
+    "picks": {
+        "1": {
+            "descripcion": "faro",
+            "esRespuesta": false
+        },
+        "2": {
+            "descripcion": "mesa",
+            "esRespuesta": true
+        },
+        "3": {
+            "descripcion": "uva",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "árbol",
+            "esRespuesta": false
+        }
+        ,
+        "5": {
+            "descripcion": "dedo",
+            "esRespuesta": false
+        }
+        ,
+        "6": {
+            "descripcion": "burro",
+            "esRespuesta": false
+        }
+    }
+}

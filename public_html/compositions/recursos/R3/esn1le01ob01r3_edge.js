@@ -16,7 +16,7 @@
         resources = [
         ],
         scripts = [
-            js+"jquery-1.11.3.min.js",
+            js+"jquery-1.10.2.js",
             js+"jquery-ui-1.10.4.custom.js",
             js+"jquery-ui-1.10.4.custom.min.js",
             js+"dragAndDropUtilities.js",
@@ -86,19 +86,19 @@
                         {
                             id: 'Text2',
                             type: 'text',
-                            rect: ['44px', '57px', '1763px', '30px', 'auto', 'auto'],
+                            rect: ['44px', '88px', '1763px', '30px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​En español las vocales son: a, e, i, o, u. Las demás letras del abecedario son consonantes.</p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [20, "px"], "rgba(0,0,0,1)", "700", "none", "normal", "break-word", "normal"],
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "700", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
                         },
                         {
                             id: 'Text2Copy',
                             type: 'text',
-                            rect: ['44px', '84px', '1763px', '30px', 'auto', 'auto'],
+                            rect: ['44px', '120px', '1763px', '30px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Instrucción: seleccione y arrastre cada una de las letras al espacio según corresponda. Tiene dos intentos para esta actividad.</p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [20, "px"], "rgba(0,0,0,1)", "400", "none", "italic", "break-word", "normal"],
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "400", "none", "italic", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
                         },
                         {
@@ -107,110 +107,126 @@
                             rect: ['44px', '30px', '1763px', '30px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Todas las lenguas tienen un sistema con el que representan los sonidos en la escritura, en español se usa el abecedario. Cada una de las letras representa uno o más sonidos del español.&nbsp;</p><p style=\"margin: 0px;\">​</p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [20, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
-                            textStyle: ["", "", "", "", "none"]
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            textStyle: ["", "", "30px", "", "none"]
                         },
                         {
                             id: 'signo_mas_que_1_VIOLETA',
                             type: 'image',
-                            rect: ['16px', '63px', '18px', '18px', 'auto', 'auto'],
+                            rect: ['16px', '97px', '18px', '18px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"signo%20mas%20que%201%20VIOLETA.png",'0px','0px']
                         },
                         {
                             id: 'DRAG_1',
                             symbolName: 'DRAG_1',
                             type: 'rect',
-                            rect: ['1097px', '253px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['950px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_10',
                             symbolName: 'DRAG_10',
                             type: 'rect',
-                            rect: ['1638px', '270px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1445px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_11',
                             symbolName: 'DRAG_11',
                             type: 'rect',
-                            rect: ['1643px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1445px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_12',
                             symbolName: 'DRAG_12',
                             type: 'rect',
-                            rect: ['50px', '152px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['290px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_13',
                             symbolName: 'DRAG_13',
                             type: 'rect',
-                            rect: ['59px', '256px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['290px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_14',
                             symbolName: 'DRAG_14',
                             type: 'rect',
-                            rect: ['1472px', '270px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1280px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_15',
                             symbolName: 'DRAG_15',
                             type: 'rect',
-                            rect: ['1006px', '160px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['950px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_16',
                             symbolName: 'DRAG_16',
                             type: 'rect',
-                            rect: ['879px', '256px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['785px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_2',
                             symbolName: 'DRAG_2',
                             type: 'rect',
-                            rect: ['249px', '270px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['455px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_3',
                             symbolName: 'DRAG_3',
                             type: 'rect',
-                            rect: ['1499px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1280px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_4',
                             symbolName: 'DRAG_4',
                             type: 'rect',
-                            rect: ['1314px', '241px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1115px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_5',
                             symbolName: 'DRAG_5',
                             type: 'rect',
-                            rect: ['1197px', '160px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1115px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_6',
                             symbolName: 'DRAG_6',
                             type: 'rect',
-                            rect: ['769px', '181px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['785px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_7',
                             symbolName: 'DRAG_7',
                             type: 'rect',
-                            rect: ['598px', '165px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['620px', '278px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_8',
                             symbolName: 'DRAG_8',
                             type: 'rect',
-                            rect: ['443px', '152px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['620px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'DRAG_9',
                             symbolName: 'DRAG_9',
                             type: 'rect',
-                            rect: ['226px', '151px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['455px', '166px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         }
                     ],
                     style: {
@@ -259,9 +275,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'c',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'c',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/c.png', '0px', '0px']
                         }
                     ],
@@ -330,19 +346,19 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(193,193,193,1.00)']
                         },
                         {
                             rect: ['22px', '7px', '154px', '38px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            align: 'center',
-                            id: 'Text2',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            align: 'center',
                             type: 'text'
                         }
                     ],
@@ -360,26 +376,6 @@
                         "10": 500
                     },
                     data: [
-                        [
-                            "eid41",
-                            "color",
-                            0,
-                            500,
-                            "linear",
-                            "${Text2}",
-                            'rgba(0,0,0,1)',
-                            'rgba(255,255,255,1.00)'
-                        ],
-                        [
-                            "eid42",
-                            "color",
-                            500,
-                            500,
-                            "linear",
-                            "${Text2}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(0,0,0,1)'
-                        ],
                         [
                             "eid32",
                             "background-color",
@@ -399,6 +395,26 @@
                             "${Rectangle2}",
                             'rgba(255,0,0,1)',
                             'rgba(193,193,193,1.00)'
+                        ],
+                        [
+                            "eid41",
+                            "color",
+                            0,
+                            500,
+                            "linear",
+                            "${Text2}",
+                            'rgba(0,0,0,1)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
+                            "eid42",
+                            "color",
+                            500,
+                            500,
+                            "linear",
+                            "${Text2}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(0,0,0,1)'
                         ]
                     ]
                 }
@@ -501,9 +517,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'a2',
                             rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
+                            id: 'a2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/a2.png', '0px', '0px']
                         }
                     ],
@@ -531,9 +547,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'd',
                             type: 'image',
+                            id: 'd',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/d.png', '0px', '0px']
                         }
                     ],
@@ -561,9 +577,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'e',
                             type: 'image',
+                            id: 'e',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/e.png', '0px', '0px']
                         }
                     ],
@@ -591,9 +607,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'f',
                             type: 'image',
+                            id: 'f',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/f.png', '0px', '0px']
                         }
                     ],
@@ -621,9 +637,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'i',
                             type: 'image',
+                            id: 'i',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/i.png', '0px', '0px']
                         }
                     ],
@@ -651,9 +667,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'h',
                             type: 'image',
+                            id: 'h',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/h.png', '0px', '0px']
                         }
                     ],
@@ -681,9 +697,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'l',
                             type: 'image',
+                            id: 'l',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/l.png', '0px', '0px']
                         }
                     ],
@@ -711,9 +727,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'Image',
                             type: 'image',
+                            id: 'Image',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/%C3%B1.png', '0px', '0px']
                         }
                     ],
@@ -741,9 +757,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'o',
                             type: 'image',
+                            id: 'o',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/o.png', '0px', '0px']
                         }
                     ],
@@ -771,9 +787,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'p',
                             type: 'image',
+                            id: 'p',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/p.png', '0px', '0px']
                         }
                     ],
@@ -801,9 +817,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'r',
                             type: 'image',
+                            id: 'r',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/r.png', '0px', '0px']
                         }
                     ],
@@ -831,9 +847,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'v',
                             type: 'image',
+                            id: 'v',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/v.png', '0px', '0px']
                         }
                     ],
@@ -861,9 +877,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'u',
                             type: 'image',
+                            id: 'u',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/u.png', '0px', '0px']
                         }
                     ],
@@ -891,9 +907,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'm',
                             type: 'image',
+                            id: 'm',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/m.png', '0px', '0px']
                         }
                     ],
@@ -921,9 +937,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
-                            id: 'z',
                             type: 'image',
+                            id: 'z',
+                            rect: ['0px', '0px', '94px', '96px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/z.png', '0px', '0px']
                         }
                     ],
@@ -961,8 +977,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '829px', '261px']
+                            rect: [null, null, '829px', '261px']
                         }
                     }
                 },
@@ -994,8 +1009,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '829px', '261px']
+                            rect: [null, null, '829px', '261px']
                         }
                     }
                 },

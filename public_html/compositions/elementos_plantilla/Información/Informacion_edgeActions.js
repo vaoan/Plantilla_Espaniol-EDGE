@@ -13,6 +13,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    (function(symbolName) {
       
       
+      Symbol.bindElementAction(compId, symbolName, "${cerrar_info}", "click", function(sym, e) {
+         parent.$(parent.document).trigger({
+                                 type: 'EDGE_Plantilla_ClosePopup',
+                                 sym: sym,
+                                 evt: e
+                             });
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
@@ -23,5 +33,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("btn_cerrar_creditos");
    //Edge symbol end:'btn_cerrar_creditos'
+
+   //=========================================================
+   
+   //Edge symbol: 'cerrar_info'
+   (function(symbolName) {   
+   
+   })("cerrar_info");
+   //Edge symbol end:'cerrar_info'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-13904317");

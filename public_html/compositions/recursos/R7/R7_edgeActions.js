@@ -14,10 +14,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
       
       Symbol.bindElementAction(compId, symbolName, "${descargable}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         // Ir a una nueva dirección URL en una nueva ventana
-         // (sustituya "_blank" por el atributo de destino correspondiente)
-         window.open("http://www.adobe.com", "_blank");
+         window.open("../../../media/pdf/Aprendamos en papel.pdf", "_blank");
          
 
       });
@@ -25,62 +22,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    })("stage");
    //Edge symbol end:'stage'
-
-   //=========================================================
-   
-   //Edge symbol: 'skills'
-   (function(symbolName) {   
-   
-      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseover", function(sym, e) {
-         sym.getSymbol("lectora").play("b");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseout", function(sym, e) {
-         sym.getSymbol("lectora").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseout", function(sym, e) {
-         sym.getSymbol("escrita").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseout", function(sym, e) {
-         sym.getSymbol("auditiva").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseout", function(sym, e) {
-         sym.getSymbol("oral").play("a");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseover", function(sym, e) {
-         sym.getSymbol("escrita").play("b");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseover", function(sym, e) {
-         sym.getSymbol("auditiva").play("b");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseover", function(sym, e) {
-         sym.getSymbol("oral").play("b");
-
-      });
-      //Edge binding end
-
-   })("skills");
-   //Edge symbol end:'skills'
 
    //=========================================================
    
@@ -161,5 +102,61 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    })("oral");
    //Edge symbol end:'oral'
+
+   //=========================================================
+   
+   //Edge symbol: 'Skills'
+   (function(symbolName) {   
+   
+      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseover", function(sym, e) {
+         sym.getSymbol("lectora").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseout", function(sym, e) {
+         sym.getSymbol("lectora").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseout", function(sym, e) {
+         sym.getSymbol("escrita").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseover", function(sym, e) {
+         sym.getSymbol("escrita").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseout", function(sym, e) {
+         sym.getSymbol("auditiva").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseover", function(sym, e) {
+         sym.getSymbol("auditiva").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseout", function(sym, e) {
+         sym.getSymbol("oral").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseover", function(sym, e) {
+         sym.getSymbol("oral").play("b");
+
+      });
+      //Edge binding end
+
+   })("Skills");
+   //Edge symbol end:'Skills'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-31713253");

@@ -17,8 +17,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          // introducir aquí código para clic de ratón
          // Ir a una nueva dirección URL en una nueva ventana
          // (sustituya "_blank" por el atributo de destino correspondiente)
-         window.open("http://www.adobe.com", "_blank");
+         window.open("../../../media/pdf/accessibility.pdf", "_blank");
          
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${cerrar_acce}", "click", function(sym, e) {
+         parent.$(parent.document).trigger({
+                                 type: 'EDGE_Plantilla_ClosePopup',
+                                 sym: sym,
+                                 evt: e
+                             });
 
       });
       //Edge binding end
@@ -33,5 +43,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("btn_cerrar_creditos");
    //Edge symbol end:'btn_cerrar_creditos'
+
+   //=========================================================
+   
+   //Edge symbol: 'cerrar_acce'
+   (function(symbolName) {   
+   
+   })("cerrar_acce");
+   //Edge symbol end:'cerrar_acce'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-13904317");
