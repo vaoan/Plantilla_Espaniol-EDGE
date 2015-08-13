@@ -29,80 +29,40 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "select":
             selecting_blanks_santiago_created(evt);
             break;
-        case "sopa_letras":
-            sopa_letras_toscano_created(evt);
-            break;
         default:
             console.error("Creation inexistente", evt.identify);
             break;
     }
 });
 
-function sopa_letras_toscano_created(evt) {
-    EDGE_Plantilla.debug ? console.log(evt) : false;
-    //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
-
-    // previous_data debe ser interpretado del scorm
-
-    var objEvt = {
-        type: "EDGE_Recurso_sendPreviousData",
-        block: false,
-        previous_data: read_interactions(evt),
-        attempts: 0,
-        sym: evt.sym
-    };
-
-    objEvt = merge_options(objEvt, read_extra_data(evt));
-
-    if (objEvt.block) {
-        objEvt.show_answers = true;
-    }
-
-    send_interactions(evt.identify, objEvt, "created");
-}
-
 function selecting_blanks_santiago_created(evt) {
-    EDGE_Plantilla.debug ? console.log(evt) : false;
-    //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
-
-    // previous_data debe ser interpretado del scorm
-
     var objEvt = {
         type: "EDGE_Recurso_sendPreviousData",
-        block: false,
         previous_data: read_interactions(evt),
-        attempts: 0,
-        sym: evt.sym
+        sym: evt.sym,
+        block: false,
+        attempts: 0
     };
 
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
-    if (objEvt.block) {
-        objEvt.show_answers = true;
-    }
+    //console.log(objEvt);
 
     send_interactions(evt.identify, objEvt, "created");
 }
 
 function filling_blanks_santiago_created(evt) {
-    EDGE_Plantilla.debug ? console.log(evt) : false;
-    //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
-
-    // previous_data debe ser interpretado del scorm
-
     var objEvt = {
         type: "EDGE_Recurso_sendPreviousData",
-        block: false,
         previous_data: read_interactions(evt),
-        attempts: 0,
-        sym: evt.sym
+        sym: evt.sym,
+        block: false,
+        attempts: 0
     };
 
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
-    if (objEvt.block) {
-        objEvt.show_answers = true;
-    }
+    //console.log(objEvt);
 
     send_interactions(evt.identify, objEvt, "created");
 }
@@ -171,9 +131,6 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
             break;
         case "select":
             selecting_blanks_santiago_submit(evt);
-            break;
-        case "sopa_letras":
-            sopa_letras_toscano_submit(evt);
             break;
         case "filling_blanks":
             filling_blanks_santiago_submit(evt);
@@ -284,10 +241,6 @@ function filling_blanks_santiago_submit(evt) {
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
     send_interactions(evt.identify, objEvt, evt.results);
-}
-
-function sopa_letras_toscano_submit(evt){
-    console.warn("AUN NO HAY DATOS DE ESTA ACTIVIDAD... DESARROLLO DEBE IMPLEMENTAR ESTO");
 }
 
 function drag_drop_toscano_submit(evt) {
@@ -476,7 +429,8 @@ function send_interactions(pagina, objEvt, results) {
 function attemps_answer(evt) {
     var this_block = false;
     var this_show_answers = false;
-    var intentos = evt.attempts;// + 1;
+    var intentos = evt.attempts + EDGE_Plantilla.attemps_increasment;
+    
     var objAttemps = {};
 
     if (intentos >= evt.attempts_limit) {

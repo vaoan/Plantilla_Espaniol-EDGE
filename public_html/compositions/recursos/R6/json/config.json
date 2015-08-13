@@ -2,7 +2,7 @@
     "default": {
         "url_pages": "compositions/",
         "default_page": [
-            "1"
+            "2"
         ],
         "limit_attemps": 3
     },
@@ -21,7 +21,7 @@
             "type": "actividad",
             "recurso": "4",
             "actividad": "pick_many",
-            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "url": "recursos/R6_PRE2/esn1le01ob01r6pre2.html",
             "interaction": {
                 "ALL": true
             },

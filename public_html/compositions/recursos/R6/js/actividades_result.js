@@ -429,7 +429,8 @@ function send_interactions(pagina, objEvt, results) {
 function attemps_answer(evt) {
     var this_block = false;
     var this_show_answers = false;
-    var intentos = evt.attempts;// + 1;
+    var intentos = evt.attempts + EDGE_Plantilla.attemps_increasment;
+    
     var objAttemps = {};
 
     if (intentos >= evt.attempts_limit) {

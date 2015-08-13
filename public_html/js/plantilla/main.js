@@ -7,7 +7,7 @@
 
 //<editor-fold defaultstate="collapsed" desc="Global values">
 EDGE_Plantilla = {
-    element_on_show: null,
+    attemps_increasment: 1,
     allow_popups: true,
     play_general_sound: true,
     plantilla_sym: null,
@@ -251,7 +251,7 @@ function mostrar_pagina(strPagina, objRetro) {
     promise.done(function (comp) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
-        $(stage.ele).prop("ed_identify", EDGE_Plantilla.config.paginas[strPagina]);
+        $(stage.ele).prop("ed_identify", pagina);
 
         if (!isEmpty(pagina.actividad)) {
             var objEvt = {
@@ -327,6 +327,8 @@ $("body").on("EDGE_Container_loaded", function (evt) {
     EDGE_Plantilla.config.default.url_pages =
             url.substring(0, url.lastIndexOf('/'))
             + "/" + EDGE_Plantilla.config.default.url_pages;
+    
+    console.log("Paginas a cargar... ",EDGE_Plantilla.config.default.default_page);
 
     if (typeof EDGE_Plantilla.config.default.default_page === "string") {
         mostrar_pagina(EDGE_Plantilla.config.default.default_page);
