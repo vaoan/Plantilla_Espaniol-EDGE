@@ -231,7 +231,7 @@ function R6_heiner_submit(evt) {
         }
     }
 
-    retroalimentacion(strRetro);
+    retroalimentacion(strRetro, "R6");
     save_extra_data(objEvt, evt);
     merge_temp_scorm(evt.answer);send_interactions(evt.identify, objEvt, evt.results);
 }
@@ -520,12 +520,16 @@ function check_answers(evt) {
     return true;
 }
 
-function retroalimentacion(strRetroalimentacion, objTextInject) {
+function retroalimentacion(strRetroalimentacion, type) {
     if(!EDGE_Plantilla.allow_popups){
         return;
     }
-    EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
-
+    EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, type) : false;
+    
+    if(type === "R6" && strRetroalimentacion !== "complete_all"){
+        return;
+    }
+    
     switch (strRetroalimentacion) {
         case "correct":
             mostrar_pagina("correcto");

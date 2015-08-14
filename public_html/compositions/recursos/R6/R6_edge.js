@@ -17,7 +17,6 @@
         ],
         scripts = [
             js+"jquery-1.10.2.js",
-            js+"ion.sound-3.0.5/js/ion.sound.min.js",
             js+"EdgeCommons.js",
             js+"utility.js",
             js+"main.js",

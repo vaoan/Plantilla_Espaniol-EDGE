@@ -13,15 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${icono_descargar}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         // Ir a una nueva dirección URL en una nueva ventana
-         // (sustituya "_blank" por el atributo de destino correspondiente)
-         window.open("../../../media/pdf/accessibility.pdf", "_blank");
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${cerrar_acce}", "click", function(sym, e) {
          parent.$(parent.document).trigger({
@@ -29,6 +21,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                                  sym: sym,
                                  evt: e
                              });
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${descargable2}", "click", function(sym, e) {
+         window.open("../../../media/pdf/accessibility.pdf", "_blank");
 
       });
       //Edge binding end

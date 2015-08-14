@@ -57,6 +57,16 @@
                             type: 'rect',
                             rect: ['1077px', '189px', 'undefined', 'undefined', 'auto', 'auto'],
                             cursor: 'pointer'
+                        },
+                        {
+                            id: 'attempt-fail',
+                            display: 'none',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['1473', '498', '320px', '45px', 'auto', 'auto'],
+                            autoplay: 'autoplay',
+                            source: [aud+"attempt-fail.mp3"],
+                            preload: 'metadata'
                         }
                     ],
                     style: {
@@ -73,16 +83,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid5",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${cerrar_comple}",
-                            '1077px',
-                            '1077px'
-                        ],
-                        [
                             "eid6",
                             "top",
                             0,
@@ -91,6 +91,16 @@
                             "${cerrar_comple}",
                             '189px',
                             '189px'
+                        ],
+                        [
+                            "eid5",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${cerrar_comple}",
+                            '1077px',
+                            '1077px'
                         ]
                     ]
                 }
@@ -105,10 +115,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
                             transform: [[], [], [], ['0.35', '0.35']],
+                            id: 'cerrar',
                             type: 'image',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],

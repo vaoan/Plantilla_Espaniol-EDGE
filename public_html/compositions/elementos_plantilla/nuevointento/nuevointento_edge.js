@@ -56,6 +56,16 @@
                             type: 'rect',
                             rect: ['1077px', '189px', '53', '54', 'auto', 'auto'],
                             cursor: 'pointer'
+                        },
+                        {
+                            id: 'attempt-fail',
+                            display: 'none',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['1578', '398', '320px', '45px', 'auto', 'auto'],
+                            autoplay: 'autoplay',
+                            source: [aud+"attempt-fail.mp3"],
+                            preload: 'metadata'
                         }
                     ],
                     style: {
@@ -104,10 +114,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
                             transform: [[], [], [], ['0.35', '0.35']],
+                            id: 'cerrar',
                             type: 'image',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],

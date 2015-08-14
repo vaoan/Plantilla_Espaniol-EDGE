@@ -16,13 +16,11 @@
    }},\
 \"Precargador\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
+\
    }},\
 \"Nivel inferior\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
+\
    }}\
 }",
 	"symbol_cerrar_corr":{
@@ -34,12 +32,12 @@
 		"defaultStageParentHeight":"1080px",
 		"dummyStageParentHeight":"400px",
 		"defaultStageParentWidth":"1920px",
+		"dummyStageParentWidth":"400px",
 		"element_${preloader4}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"animationEnabled":"false",
-			"timelineColor":"0x008dc8"},
-		"dummyStageParentWidth":"400px"},
+			"timelineColor":"0x008dc8"}},
 	"expanded:images/preloader4.gif":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
 	"symbol_Nivel inferior":{
@@ -63,6 +61,10 @@
 			"timelineColor3":"0x385063",
 			"animationEnabled":"true",
 			"timelineColor":"0x2f73ad"},
+		"element_${attempt-success}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"},
 		"element_${cerrar}":{
 			"timelineColor2":"0x1095d2",
 			"timelineColor3":"0x29647e",
@@ -83,10 +85,11 @@
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"37",
 	"pixelsPerMs":"0.2",
+	"mediagroup_media/attempt-success.mp3":"attempt-success",
+	"expanded:images/correcto.png":"nil",
 	"Nivel inferior-Default Timeline_playhead_ms":"0",
-	"usedBOM":"false",
-	"nextElementColorIndex":"9",
+	"nextElementColorIndex":"10",
 	"stage-Default Timeline_playhead_ms":"0",
 	"viewStartY":"0",
 	"Precargador-Default Timeline_playhead_ms":"0",
-	"expanded:images/correcto.png":"nil"}
+	"usedBOM":"false"}

@@ -75,25 +75,6 @@ EDGE_Plantilla = {
     }
 
 };
-ion.sound({
-    sounds: [
-        {
-            name: "snap"
-        },
-        {
-            name: "button_click",
-            volume: 0.2
-        },
-        {
-            name: "staple_gun",
-            volume: 0.3,
-            preload: false
-        }
-    ],
-    volume: 0.51,
-    path: "sounds/",
-    preload: true
-});
 //</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Handle windows">
