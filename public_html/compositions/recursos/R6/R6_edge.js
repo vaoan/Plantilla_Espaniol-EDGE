@@ -8,7 +8,7 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -35,6 +35,46 @@
                 resizeInstances: false,
                 content: {
                     dom: [
+                        {
+                            id: 'medidor_examen-01',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['637px', '253px', '555px', '274px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"medidor%20examen-01.png",'0px','0px']
+                        },
+                        {
+                            id: 'medidor',
+                            symbolName: 'medidor',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['716px', '506', '198', '27', 'auto', 'auto']
+                        },
+                        {
+                            id: 'Ellipse',
+                            display: 'none',
+                            type: 'ellipse',
+                            rect: ['857px', '462px', '115px', '115px', 'auto', 'auto'],
+                            borderRadius: ["50%", "50%", "50%", "50%"],
+                            fill: ["rgba(192,192,192,1)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'text_percent',
+                            symbolName: 'text_percent',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['869px', '503', '91', '33', 'auto', 'auto']
+                        },
+                        {
+                            id: 'Text3',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['808px', '47px', 'auto', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​Resultado</p>",
+                            align: "center",
+                            font: ['source-sans-pro, sans-serif', [46, "px"], "rgba(0,0,0,1)", "600", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
                         {
                             id: 'R6_portada',
                             symbolName: 'R6_portada',
@@ -107,12 +147,6 @@
                             fill: ["rgba(0,0,0,0)",im+"Nav_R6_5.png",'0px','0px']
                         },
                         {
-                            id: 'R6_final',
-                            symbolName: 'R6_final',
-                            type: 'rect',
-                            rect: ['1840px', '0px', 'undefined', 'undefined', 'auto', 'auto']
-                        },
-                        {
                             id: 'r6_enviar',
                             symbolName: 'r6_enviar',
                             display: 'none',
@@ -148,55 +182,36 @@
                     }
                 },
                 timeline: {
-                    duration: 3000,
+                    duration: 8000,
                     autoPlay: true,
                     labels: {
                         "slide_1": 500,
                         "slide_2": 1000,
                         "slide_3": 1500,
                         "slide_4": 2000,
-                        "slide_5": 2500
+                        "slide_5": 2500,
+                        "slide_final": 3000
                     },
                     data: [
                         [
-                            "eid98",
+                            "eid90",
                             "display",
-                            2455,
+                            450,
                             0,
                             "linear",
-                            "${Nav_R6_52}",
+                            "${Nav_R6_14}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid99",
+                            "eid91",
                             "display",
-                            2550,
+                            950,
                             0,
                             "linear",
-                            "${Nav_R6_52}",
+                            "${Nav_R6_14}",
                             'block',
                             'none'
-                        ],
-                        [
-                            "eid40",
-                            "left",
-                            2500,
-                            500,
-                            "linear",
-                            "${R6_final}",
-                            '1840px',
-                            '0px'
-                        ],
-                        [
-                            "eid50",
-                            "left",
-                            3000,
-                            0,
-                            "linear",
-                            "${R6_final}",
-                            '0px',
-                            '0px'
                         ],
                         [
                             "eid25",
@@ -219,54 +234,64 @@
                             '-1840px'
                         ],
                         [
-                            "eid94",
+                            "eid224",
                             "display",
-                            1460,
+                            0,
                             0,
                             "linear",
-                            "${Nav_R6_32}",
+                            "${Ellipse}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid229",
+                            "display",
+                            643,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid254",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${Ellipse}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid95",
-                            "display",
-                            1960,
-                            0,
-                            "linear",
-                            "${Nav_R6_32}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid57",
+                            "eid225",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${r6_siguiente}",
+                            "${text_percent}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid58",
+                            "eid230",
                             "display",
-                            450,
+                            643,
                             0,
                             "linear",
-                            "${r6_siguiente}",
+                            "${text_percent}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid253",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${text_percent}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid88",
-                            "display",
-                            2065,
-                            0,
-                            "linear",
-                            "${r6_siguiente}",
-                            'block',
-                            'none'
                         ],
                         [
                             "eid92",
@@ -287,46 +312,6 @@
                             "${Nav_R6_22}",
                             'block',
                             'none'
-                        ],
-                        [
-                            "eid42",
-                            "left",
-                            1500,
-                            500,
-                            "linear",
-                            "${R6_4}",
-                            '1840px',
-                            '0px'
-                        ],
-                        [
-                            "eid52",
-                            "left",
-                            2000,
-                            500,
-                            "linear",
-                            "${R6_4}",
-                            '0px',
-                            '-1840px'
-                        ],
-                        [
-                            "eid41",
-                            "left",
-                            2000,
-                            500,
-                            "linear",
-                            "${R6_5}",
-                            '1840px',
-                            '0px'
-                        ],
-                        [
-                            "eid51",
-                            "left",
-                            2500,
-                            500,
-                            "linear",
-                            "${R6_5}",
-                            '0px',
-                            '-1840px'
                         ],
                         [
                             "eid96",
@@ -369,6 +354,226 @@
                             '-1840px'
                         ],
                         [
+                            "eid80",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid81",
+                            "display",
+                            450,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid82",
+                            "display",
+                            2550,
+                            0,
+                            "linear",
+                            "${r6_enviar}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid98",
+                            "display",
+                            2455,
+                            0,
+                            "linear",
+                            "${Nav_R6_52}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid99",
+                            "display",
+                            2550,
+                            0,
+                            "linear",
+                            "${Nav_R6_52}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid94",
+                            "display",
+                            1460,
+                            0,
+                            "linear",
+                            "${Nav_R6_32}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid95",
+                            "display",
+                            1960,
+                            0,
+                            "linear",
+                            "${Nav_R6_32}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid226",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            643,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid252",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid43",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${R6_3}",
+                            '1840px',
+                            '0px'
+                        ],
+                        [
+                            "eid53",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${R6_3}",
+                            '0px',
+                            '-1840px'
+                        ],
+                        [
+                            "eid42",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${R6_4}",
+                            '1840px',
+                            '0px'
+                        ],
+                        [
+                            "eid52",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${R6_4}",
+                            '0px',
+                            '-1840px'
+                        ],
+                        [
+                            "eid41",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${R6_5}",
+                            '1840px',
+                            '0px'
+                        ],
+                        [
+                            "eid51",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${R6_5}",
+                            '0px',
+                            '-1840px'
+                        ],
+                        [
+                            "eid222",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${medidor_examen-01}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "display",
+                            643,
+                            0,
+                            "linear",
+                            "${medidor_examen-01}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid256",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${medidor_examen-01}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid223",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid228",
+                            "display",
+                            643,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid255",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            'none',
+                            'block'
+                        ],
+                        [
                             "eid56",
                             "display",
                             0,
@@ -409,72 +614,174 @@
                             '-1830px'
                         ],
                         [
-                            "eid43",
-                            "left",
-                            1000,
-                            500,
+                            "eid221",
+                            "rotateZ",
+                            3000,
+                            5000,
                             "linear",
-                            "${R6_3}",
-                            '1840px',
-                            '0px'
+                            "${medidor}",
+                            '0deg',
+                            '180deg'
                         ],
                         [
-                            "eid53",
-                            "left",
-                            1500,
-                            500,
+                            "eid219",
+                            "-webkit-transform-origin",
+                            3000,
+                            0,
                             "linear",
-                            "${R6_3}",
-                            '0px',
-                            '-1840px'
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid90",
+                            "eid267",
+                            "-moz-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid268",
+                            "-ms-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid269",
+                            "msTransformOrigin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid270",
+                            "-o-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid271",
+                            "transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid220",
+                            "-webkit-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid272",
+                            "-moz-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid273",
+                            "-ms-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid274",
+                            "msTransformOrigin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid275",
+                            "-o-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid276",
+                            "transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid57",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_siguiente}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid58",
                             "display",
                             450,
                             0,
                             "linear",
-                            "${Nav_R6_14}",
+                            "${r6_siguiente}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid91",
+                            "eid88",
                             "display",
-                            950,
+                            2065,
                             0,
                             "linear",
-                            "${Nav_R6_14}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid80",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid81",
-                            "display",
-                            450,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid82",
-                            "display",
-                            2550,
-                            0,
-                            "linear",
-                            "${r6_enviar}",
+                            "${r6_siguiente}",
                             'block',
                             'none'
                         ]
@@ -494,9 +801,9 @@
                             rect: ['37px', '29px', '563px', '749px', 'auto', 'auto'],
                             borderRadius: ['17px', '17px', '17px', '17px 17px'],
                             id: 'IMG_R6',
-                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)'],
+                            fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px'],
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px']
+                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)']
                         },
                         {
                             rect: ['632px', '32px', '1198px', '377px', 'auto', 'auto'],
@@ -515,8 +822,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '335px', '49px']
+                            rect: [null, null, '335px', '49px']
                         }
                     }
                 },
@@ -538,10 +844,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
@@ -569,10 +875,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,119,0,1.00)']
                         }
                     ],
@@ -600,10 +906,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(239,255,0,1.00)']
                         }
                     ],
@@ -631,10 +937,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(0,255,117,1.00)']
                         }
                     ],
@@ -662,10 +968,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(0,103,255,1.00)']
                         }
                     ],
@@ -692,22 +998,17 @@
                 resizeInstances: false,
                 content: {
                     dom: [
-                        {
-                            type: 'rect',
-                            id: 'Rectangle2',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
-                            fill: ['rgba(223,0,255,1.00)']
-                        }
+
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '1830px', '780px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '91px', '33px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 0,
+                    duration: 8000,
                     autoPlay: true,
                     data: [
 
@@ -727,8 +1028,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '50px', '51px']
+                            rect: [null, null, '50px', '51px']
                         }
                     }
                 },
@@ -753,8 +1053,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '50px', '51px']
+                            rect: [null, null, '50px', '51px']
                         }
                     }
                 },
@@ -889,15 +1188,79 @@
                             }]
                         },
                         {
-                            rect: ['231px', '14px', '25px', '25px', 'auto', 'auto'],
-                            id: 'signo_mas_que_1_Blancofw',
                             type: 'image',
+                            id: 'signo_mas_que_1_Blancofw',
+                            rect: ['231px', '14px', '25px', '25px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/signo%20mas%20que%201%20Blanco.fw.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
                             rect: [null, null, '335px', '49px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
+                    ]
+                }
+            },
+            "text_percent": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '91px', '33px', 'auto', 'auto'],
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal'],
+                            id: 'Text2',
+                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
+                            align: 'center',
+                            type: 'text'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '91px', '33px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
+                    ]
+                }
+            },
+            "medidor": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '198px', '27px', 'auto', 'auto'],
+                            id: 'medidor_examen-02Copy2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/medidor%20examen-02.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, '198px', '27px']
                         }
                     }
                 },

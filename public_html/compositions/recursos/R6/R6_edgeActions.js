@@ -49,11 +49,7 @@
         });
         //Edge binding end
 
-        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function (sym, e) {
-            sym.stop();
-
-        });
-        //Edge binding end
+        
 
         Symbol.bindElementAction(compId, symbolName, "${r6_atras}", "click", function (sym, e) {
             sym.playReverse();
@@ -82,6 +78,13 @@
             do_submit(sym);
         });
         //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
 
     })("stage");
    //Edge symbol end:'stage'
@@ -147,6 +150,11 @@
     //Edge symbol: 'R6_6'
     (function (symbolName) {
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         // introducir código aquí
+      });
+      //Edge binding end
+
     })("R6_final");
    //Edge symbol end:'R6_final'
 
@@ -201,5 +209,21 @@
    
    })("btn_evaluemos");
    //Edge symbol end:'btn_evaluemos'
+
+   //=========================================================
+   
+   //Edge symbol: 'text_percent'
+   (function(symbolName) {   
+   
+   })("text_percent");
+   //Edge symbol end:'text_percent'
+
+   //=========================================================
+   
+   //Edge symbol: 'medidor'
+   (function(symbolName) {   
+   
+   })("medidor");
+   //Edge symbol end:'medidor'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

@@ -190,7 +190,10 @@ function R6_heiner_submit(evt) {
         return false;
     }
 
-    var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: evt.sym
+    };
 
     if (!isEmpty(evt.timer) && evt.timer.time_out) {
         delete evt.timer.time_out;
