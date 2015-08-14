@@ -817,7 +817,7 @@ function save_extra_data(objData, evt) {
             console.log("READING extradata", objData) : false;
 
     var arrObjNeedKeys = [
-        "attempts", "block", "timer"
+        "attempts", "block", "timer", "response_pattern"
     ];
 
     var objTrueData = {};

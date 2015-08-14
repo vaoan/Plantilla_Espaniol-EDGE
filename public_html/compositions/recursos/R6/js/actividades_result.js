@@ -35,6 +35,12 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "R6":
             R6_heiner_created(evt);
             break;
+        case "R5_QQSM":
+            R6_heiner_created(evt);
+            break;
+        case "sopa_letras":
+            sopa_letras_toscano_created(evt);
+            break;
         default:
             console.error("Creation inexistente", evt.identify);
             break;
@@ -126,6 +132,29 @@ function drag_drop_toscano_created(evt) {
     send_interactions(evt.identify, objEvt, "created");
 }
 
+function drag_drop_toscano_created(evt) {
+    EDGE_Plantilla.debug ? console.log(evt) : false;
+    //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
+
+    // previous_data debe ser interpretado del scorm
+
+    var objEvt = {
+        type: "EDGE_Recurso_sendPreviousData",
+        block: false,
+        previous_data: read_interactions(evt),
+        attempts: 0,
+        sym: evt.sym
+    };
+
+    objEvt = merge_options(objEvt, read_extra_data(evt));
+
+    if (objEvt.block) {
+        objEvt.show_answers = true;
+    }
+
+    send_interactions(evt.identify, objEvt, "created");
+}
+
 function pick_many_toscano_created(evt) {
     EDGE_Plantilla.debug ? console.log(evt) : false;
     //EDGE_Plantilla.debug ? console.log($('iframe', sym_contenedor.ele)[0], sym_contenedor) : false;
@@ -176,6 +205,9 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
             break;
         case "R6":
             R6_heiner_submit(evt);
+            break;
+        case "sopa_letras":
+            sopa_letras_toscano_submit(evt);
             break;
         default:
             console.error("Submit inexistente", evt.identify);
@@ -493,6 +525,59 @@ function pick_many_toscano_submit(evt) {
     save_extra_data(objEvt, evt);
     send_interactions(evt.identify, objEvt, evt.results);
 }
+
+function sopa_letras_toscano_submit(evt) {
+    //var sym = EDGE_Plantilla.plantilla_sym;
+    //var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+    var strRetro = null;
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
+
+    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+        delete evt.timer.time_out;
+        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+        var timer = {reset_timer: true};
+        objEvt = merge_options(objEvt, {timer: timer});
+    } else {
+        if (!check_answers(evt)) {
+            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+            evt.results = "neutral";
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+        }
+    }
+
+    if (evt.results === "correct") {
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+        objEvt = merge_options(objEvt, {
+            block: true,
+            show_answers: false,
+            attempts: evt.attempts
+        });
+        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+    } else if (evt.results === "incorrect") {
+        if (!isEmpty(evt.timer)) {
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        }
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+        var attemps = attemps_answer(evt);
+        objEvt = merge_options(objEvt, attemps);
+        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if (!attemps.block) {
+            strRetro = "nuevo_intento";
+        }
+    }
+
+    retroalimentacion(strRetro);
+    upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
+    save_extra_data(objEvt, evt);
+    send_interactions(evt.identify, objEvt, evt.results);
+}
 //</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Check data Actividades">
@@ -732,7 +817,7 @@ function save_extra_data(objData, evt) {
             console.log("READING extradata", objData) : false;
 
     var arrObjNeedKeys = [
-        "attempts", "block", "timer"
+        "attempts", "block", "timer", "response_pattern"
     ];
 
     var objTrueData = {};
