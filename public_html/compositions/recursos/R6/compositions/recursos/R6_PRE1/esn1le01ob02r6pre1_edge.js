@@ -65,13 +65,6 @@
                             preload: 'auto'
                         },
                         {
-                            id: 'DRAG_1',
-                            symbolName: 'DRAG_1',
-                            type: 'rect',
-                            rect: ['790px', '381px', 'undefined', 'undefined', 'auto', 'auto'],
-                            cursor: 'pointer'
-                        },
-                        {
                             id: 'DRAG_2',
                             symbolName: 'DRAG_2',
                             type: 'rect',
@@ -90,6 +83,13 @@
                             symbolName: 'DRAG_4',
                             type: 'rect',
                             rect: ['1077px', '381px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
+                        },
+                        {
+                            id: 'DRAG_1',
+                            symbolName: 'DRAG_1',
+                            type: 'rect',
+                            rect: ['793px', '381px', 'undefined', 'undefined', 'auto', 'auto'],
                             cursor: 'pointer'
                         },
                         {
@@ -158,16 +158,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid368",
-                            "left",
-                            4750,
-                            0,
-                            "linear",
-                            "${audio_1}",
-                            '1239px',
-                            '1239px'
-                        ],
-                        [
                             "eid307",
                             "background-color",
                             0,
@@ -178,24 +168,14 @@
                             'rgba(255,255,255,0.00)'
                         ],
                         [
-                            "eid369",
-                            "top",
-                            4750,
+                            "eid133",
+                            "height",
+                            0,
                             0,
                             "linear",
-                            "${audio_1}",
-                            '168px',
-                            '168px'
-                        ],
-                        [
-                            "eid362",
-                            "left",
-                            4750,
-                            0,
-                            "linear",
-                            "${DRAG_1}",
-                            '790px',
-                            '790px'
+                            "${Stage}",
+                            '780px',
+                            '780px'
                         ],
                         [
                             "eid139",
@@ -218,24 +198,24 @@
                             '1830px'
                         ],
                         [
-                            "eid370",
+                            "eid368",
+                            "left",
+                            4750,
+                            0,
+                            "linear",
+                            "${audio_1}",
+                            '1239px',
+                            '1239px'
+                        ],
+                        [
+                            "eid369",
                             "top",
                             4750,
                             0,
                             "linear",
-                            "${DRAG_1}",
-                            '381px',
-                            '381px'
-                        ],
-                        [
-                            "eid133",
-                            "height",
-                            0,
-                            0,
-                            "linear",
-                            "${Stage}",
-                            '780px',
-                            '780px'
+                            "${audio_1}",
+                            '168px',
+                            '168px'
                         ]
                     ]
                 }
@@ -258,12 +238,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 id: 'TextCopy3',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -299,12 +279,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],
@@ -340,12 +320,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         },
                         {
@@ -483,14 +463,14 @@
                             '87px'
                         ],
                         [
-                            "eid313",
-                            "display",
+                            "eid330",
+                            "height",
                             2000,
                             0,
                             "linear",
                             "${R-Z_esn1le01ob01re4vd1}",
-                            'none',
-                            'block'
+                            '280px',
+                            '280px'
                         ],
                         [
                             "eid337",
@@ -503,34 +483,14 @@
                             '87px'
                         ],
                         [
-                            "eid310",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${A-I_esn1le01ob01re4vd1}",
-                            'block',
-                            'block'
-                        ],
-                        [
-                            "eid308",
-                            "display",
-                            1000,
-                            0,
-                            "linear",
-                            "${A-I_esn1le01ob01re4vd1}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid312",
+                            "eid313",
                             "display",
                             2000,
                             0,
                             "linear",
-                            "${A-I_esn1le01ob01re4vd1}",
+                            "${R-Z_esn1le01ob01re4vd1}",
                             'none',
-                            'none'
+                            'block'
                         ],
                         [
                             "eid314",
@@ -563,14 +523,34 @@
                             'none'
                         ],
                         [
-                            "eid330",
-                            "height",
+                            "eid310",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${A-I_esn1le01ob01re4vd1}",
+                            'block',
+                            'block'
+                        ],
+                        [
+                            "eid308",
+                            "display",
+                            1000,
+                            0,
+                            "linear",
+                            "${A-I_esn1le01ob01re4vd1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid312",
+                            "display",
                             2000,
                             0,
                             "linear",
-                            "${R-Z_esn1le01ob01re4vd1}",
-                            '280px',
-                            '280px'
+                            "${A-I_esn1le01ob01re4vd1}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid319",
@@ -661,13 +641,13 @@
                             fill: ['rgba(139,116,161,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['14px', '-14px', '66px', '38px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(245, 242, 242); font-style: normal; font-size: 45px;\">a</span></p>',
-                            id: 'Text12',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'Text12',
+                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(245, 242, 242); font-style: normal; font-size: 45px;\">a</span></p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -702,13 +682,13 @@
                             fill: ['rgba(139,116,161,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['22px', '-15px', '60px', '49px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-style: normal; color: rgb(249, 240, 240); font-size: 45px;\">o</span></p>',
-                            id: 'Text14',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'Text14',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-style: normal; color: rgb(249, 240, 240); font-size: 45px;\">o</span></p>',
                             align: 'left',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -782,13 +762,13 @@
                             fill: ['rgba(139,116,161,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['24px', '-14px', '45px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-style: normal; color: rgb(252, 244, 244); font-size: 45px;\">e</span></p>',
-                            id: 'Text15',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'Text15',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-style: normal; color: rgb(252, 244, 244); font-size: 45px;\">e</span></p>',
                             align: 'left',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -823,13 +803,13 @@
                             fill: ['rgba(139,116,161,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['28px', '-11px', '41px', '49px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-style: normal; color: rgb(243, 233, 233); font-size: 45px;\">i</span></p>',
-                            id: 'Text16',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'Text16',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-style: normal; color: rgb(243, 233, 233); font-size: 45px;\">i</span></p>',
                             align: 'left',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'italic', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -864,12 +844,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
+                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         },
                         {
@@ -935,6 +915,37 @@
                             '1'
                         ],
                             [ "eid358", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${r6_audio_1}', [] ] ]
+                    ]
+                }
+            },
+            "SIG_1": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            type: 'rect',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            rect: ['0px', '0px', '87px', '90px', 'auto', 'auto'],
+                            fill: ['rgba(192,192,192,0.00)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, '87px', '90px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: false,
+                    data: [
+
                     ]
                 }
             }

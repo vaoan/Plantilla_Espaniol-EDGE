@@ -26,6 +26,9 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "filling_blanks":
             filling_blanks_santiago_created(evt);
             break;
+        case "sortable":
+            sortable_santiago_created(evt);
+            break;
         case "select":
             selecting_blanks_santiago_created(evt);
             break;
@@ -63,6 +66,20 @@ function filling_blanks_santiago_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     //console.log(objEvt);
+
+    send_interactions(evt.identify, objEvt, "created");
+}
+
+function sortable_santiago_created(evt) {
+    var objEvt = {
+        type: "EDGE_Recurso_sendPreviousData",
+        previous_data: read_interactions(evt),
+        sym: evt.sym,
+        block: false,
+        attempts: 0
+    };
+
+    objEvt = merge_options(objEvt, read_extra_data(evt));
 
     send_interactions(evt.identify, objEvt, "created");
 }
@@ -135,6 +152,9 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "filling_blanks":
             filling_blanks_santiago_submit(evt);
             break;
+        case "sortable":
+            sortable_santiago_submit(evt);
+            break;
         default:
             console.error("Submit inexistente", evt.identify);
             break;
@@ -194,7 +214,6 @@ function selecting_blanks_santiago_submit(evt) {
 
 function filling_blanks_santiago_submit(evt) {
     var strRetro = null;
-
     if (evt.attempts >= evt.attempts_limit) {
         return false;
     }
@@ -214,6 +233,54 @@ function filling_blanks_santiago_submit(evt) {
         }
     }
 
+    if (evt.results === "correct") {
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+        objEvt = merge_options(objEvt, {
+            block: true,
+            show_answers: false,
+            attempts: evt.attempts
+        });
+        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+    } else if (evt.results === "incorrect") {
+        if (!isEmpty(evt.timer)) {
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        }
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+        var attemps = attemps_answer(evt);
+        objEvt = merge_options(objEvt, attemps);
+        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if (!attemps.block) {
+            strRetro = "nuevo_intento";
+        }
+    }
+
+    retroalimentacion(strRetro);
+    save_extra_data(objEvt, evt);
+    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    send_interactions(evt.identify, objEvt, evt.results);
+}
+
+function sortable_santiago_submit(evt) {
+
+    var strRetro = null;
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+    var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
+    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+        delete evt.timer.time_out;
+        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+        var timer = {reset_timer: true};
+        objEvt = merge_options(objEvt, {timer: timer});
+    } else {
+        if (!check_answers(evt)) {
+            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+            evt.results = "neutral";
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+        }
+    }
     if (evt.results === "correct") {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
         objEvt = merge_options(objEvt, {
@@ -379,6 +446,9 @@ function check_answers(evt) {
 }
 
 function retroalimentacion(strRetroalimentacion, objTextInject) {
+    if(!EDGE_Plantilla.allow_popups){
+        return;
+    }
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
 
     switch (strRetroalimentacion) {
@@ -397,7 +467,7 @@ function retroalimentacion(strRetroalimentacion, objTextInject) {
     }
 }
 
-function send_interactions(pagina, objEvt, results) {
+function send_interactions(pagina, objEvt, results, isSendToFather) {
     if (isEmpty(pagina)) {
         console.error("NOT SEND TO FATHER", objEvt);
         return false;
@@ -417,8 +487,14 @@ function send_interactions(pagina, objEvt, results) {
         case "correct":
         case "incorrect":
         case "created":
-            EDGE_Plantilla.debug ? console.log("EVENT TO SEND", objEvt, sym_contenedor) : false;
-            $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        case "neutral":
+            if (isSendToFather) {
+                EDGE_Plantilla.debug ? console.log("EVENT TO SEND FATHER", objEvt, sym_contenedor) : false;
+                parent.$(parent.document).trigger(objEvt);
+            } else {
+                EDGE_Plantilla.debug ? console.log("EVENT TO SEND CHILD", objEvt, sym_contenedor) : false;
+                $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+            }
             break;
         default :
             break;
@@ -430,7 +506,7 @@ function attemps_answer(evt) {
     var this_block = false;
     var this_show_answers = false;
     var intentos = evt.attempts + EDGE_Plantilla.attemps_increasment;
-    
+
     var objAttemps = {};
 
     if (intentos >= evt.attempts_limit) {
@@ -570,4 +646,3 @@ function read_extra_data(evt) {
     return extra_data;
 }
 //</editor-fold>
-

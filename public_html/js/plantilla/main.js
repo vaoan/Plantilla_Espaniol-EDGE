@@ -408,6 +408,12 @@ $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
 
 
     }
+    
+    $("html").css({
+        //overflow: "hidden",
+        //zoom: "1.5"
+        //"background": "rgba(0,0,0,0.5)"
+    });
 
     //console.log("MOSTRAR CLICK ",evt.sym.getSymbol(EDGE_Plantilla.button_nav.R2));
     //evt.sym.$(EDGE_Plantilla.button_nav.R2).click();

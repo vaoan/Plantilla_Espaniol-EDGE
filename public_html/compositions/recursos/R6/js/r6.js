@@ -18,12 +18,12 @@ function inicializar(sym) {
 
     console.log("INTERACTION UTILITIES CREATED");
     //parent.$(parent.document).trigger(objEvt);
-    
+
     objEvt = {
         type: "EDGE_Container_loaded",
         sym: sym
     };
-    
+
     $("body").trigger(objEvt);
 }
 
@@ -47,30 +47,42 @@ $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
 
 /********************* Eventos de ENVIO a la PLANTILLA ********************/
 
+function do_submit(sym) {
+    $("body").trigger({
+        type: "EDGE_Actividad_Submit",
+        sym: sym
+    });
+}
+
 $("body").on("EDGE_Actividad_Submit", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     var identify = stage.prop("ed_identify");
-    stopTimer(evt.sym);
+
+    if (!isEmpty(stage.prop("timer"))) {
+        stopTimer(evt.sym);
+    }
     var result = check_every_answer();
+
+    EDGE_Plantilla.debug ? console.log("SENDING R6", result, EDGE_Plantilla.temp_scorm) : false;
 
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",
         interactionType: "other",
         question: "R6",
         answer: EDGE_Plantilla.temp_scorm,
-        results: result,
+        results: result.respuestas,
         attempts: stage.prop("ed_attempts"),
         attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
-        timer: evt.timer,
+        //timer: evt.timer,
         sym: evt.sym,
         identify: identify
     };
 
     if (!isEmpty(evt.timer)) {
-
+        
     }
 
-    send_interactions(identify, objEvt, result);
+    send_interactions(identify, objEvt, result.respuesta, true);
 });
 
 function check_every_answer() {
@@ -95,20 +107,23 @@ function check_every_answer() {
                         page_respuestas[i] = "correct";
                     } else {
                         page_respuestas[i] = "incorrect";
-                        result = "incorrect";
+                        result = result === "neutral" ? result : "incorrect";
                     }
                 }
             });
         }
 
         if (isEmpty(page_respuestas)) {
-            page_respuestas[pagina.recurso + "0000"] = "incorrect";
+            page_respuestas[pagina.recurso + "0000"] = "neutral";
+            result = "neutral";
         }
 
         respuestas = merge_options(respuestas, page_respuestas);
     });
 
-    return respuestas;
+    var objResult = {respuesta: result, respuestas: respuestas};
+
+    return objResult;
 }
 
 function reload_pages() {

@@ -1,0 +1,539 @@
+[0806/140849:ERROR:gl_surface_egl.cc(133)] eglInitialize failed with error UNKNOWN
+[0806/140849:ERROR:gl_surface_win.cc(97)] GLSurfaceEGL::InitializeOneOff failed.
+[0806/140904:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/140904:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/140905:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/140905:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/140907:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/140907:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/140907:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/140912:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0806/140913:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0806/140916:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/140916:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/140916:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/141141:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/141141:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/141141:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/141144:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (about:blank:0:45), <anonymous>:1:7)
+    at about:blank:0:45", source:  (1)
+[0806/141147:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0806/141147:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:13)
+    at <anonymous>:0:59", source:  (1)
+[0806/141739:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/141739:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/141739:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0806/143405:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:61", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143405:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:61", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143409:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:61", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143409:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:61", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143704:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143704:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143934:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/143934:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/144003:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/144003:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/144029:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/144029:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153210:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0806/153217:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153219:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153219:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153219:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153324:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153324:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153339:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121108:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121108:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121108:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121109:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/121110:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot call method 'appendChild' of undefined", source: v8/appCss (1)
+[0812/121110:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0812/121118:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:INFO:CONSOLE(53)] "Edge.$$ - no current symbol for: body", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (53)
+[0812/121224:ERROR:ipc_channel_win.cc(132)] pipe error: 109
+[0812/121305:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121305:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121305:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121306:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/121307:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0812/121315:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/121400:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/121620:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/121650:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/121704:INFO:CONSOLE(161)] "RETURN EARLY _ no init", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js (161)
+[0812/121704:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:59", source:  (1)
+[0812/121739:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:59", source:  (1)
+[0812/121750:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:59", source:  (1)
+[0812/121803:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:59", source:  (1)
+[0812/121816:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:59", source:  (1)
+[0812/122146:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:59", source:  (1)
+[0812/122331:INFO:CONSOLE(0)] "Uncaught SyntaxError: Missing catch or finally after try,220", source: about:docKey-770 (0)
+[0812/122331:INFO:CONSOLE(220)] "Uncaught SyntaxError: Missing catch or finally after try", source:  (220)
+[0812/132010:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0812/132034:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0812/132300:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0812/132306:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0812/133414:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/133906:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0812/135849:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/154110:WARNING:dns_config_service_win.cc(653)] Failed to read DnsConfig.
+[0812/154110:WARNING:dns_config_service_win.cc(653)] Failed to read DnsConfig.
+[0812/154110:WARNING:dns_config_service_win.cc(653)] Failed to read DnsConfig.
+[0812/154110:WARNING:dns_config_service_win.cc(653)] Failed to read DnsConfig.
+[0812/154338:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/154338:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/154340:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/154340:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/154341:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/154341:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/154641:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0812/161647:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_ui_visibility' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:27)
+    at <anonymous>:0:63", source:  (1)
+[0812/162132:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/162144:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/an.canvas.overlay.min.js (48)
+[0812/162931:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:143)
+    at <anonymous>:0:63", source:  (1)
+[0812/162946:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163004:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163007:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163033:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163204:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163208:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163211:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163214:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163700:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163700:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163730:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/163751:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164431:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164455:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164458:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164501:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164505:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164508:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164536:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164536:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164542:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/164543:INFO:CONSOLE(1)] "TypeError: Cannot read property 'timeline' of null
+    at h (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:127:449)
+    at s (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:128:490)
+    at M.n.extend._getTimeline (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.6.0.0.min.js:139:194)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/dbejarano/Documents/Espa%C3%B1ol/Agosto%2012/objeto%202%20lec1%20r6/pregunta%203/edge_includes/edge.authoring.6.0.0.min.js:73:445)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:55)
+    at <anonymous>:0:63", source:  (1)
+[0812/165027:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (about:blank:0:49), <anonymous>:1:7)
+    at about:blank:0:49", source:  (1)
+[0812/180735:ERROR:gl_surface_egl.cc(133)] eglInitialize failed with error UNKNOWN
+[0812/180735:ERROR:gl_surface_win.cc(97)] GLSurfaceEGL::InitializeOneOff failed.
+[0812/180739:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/180739:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/180747:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/180747:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/180747:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/180748:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/180748:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/180749:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0812/181115:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/181115:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/181115:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/181127:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/181140:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/181325:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/181325:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0812/182327:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/185316:INFO:CONSOLE(0)] "Uncaught IndexSizeError: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.,31", source: about:docKey-85147 (0)
+[0812/185316:INFO:CONSOLE(31)] "Uncaught IndexSizeError: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.inlinetext-editor.author.min.js (31)
+[0812/185317:INFO:CONSOLE(0)] "Uncaught IndexSizeError: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.,31", source: about:docKey-85147 (0)
+[0812/185317:INFO:CONSOLE(31)] "Uncaught IndexSizeError: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.inlinetext-editor.author.min.js (31)
+[0812/185317:INFO:CONSOLE(0)] "Uncaught IndexSizeError: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.,23", source: about:docKey-85147 (0)
+[0812/185317:INFO:CONSOLE(23)] "Uncaught IndexSizeError: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.inlinetext-editor.author.min.js (23)
+[0812/185323:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js (48)
+[0812/185323:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js (48)
+[0812/185324:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js (48)
+[0812/185324:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/Diana%20Bejarano/Documents/Agosto%2013/Guia%20R6/R6_PRE4/edge_includes/an.canvas.overlay.min.js (48)
+[0812/185836:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0812/185836:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:13)
+    at <anonymous>:0:63", source:  (1)
+[0812/185855:INFO:CONSOLE(1)] "ReferenceError: EdgeDOM is not defined
+    at eval (eval at <anonymous> (about:blank:0:49), <anonymous>:1:7)
+    at about:blank:0:49", source:  (1)
+[0812/185857:ERROR:ipc_channel_win.cc(405)] pipe error: 232

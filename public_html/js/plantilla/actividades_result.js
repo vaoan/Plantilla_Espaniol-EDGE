@@ -213,7 +213,7 @@ function selecting_blanks_santiago_submit(evt) {
 }
 
 function filling_blanks_santiago_submit(evt) {
-    var strRetro = null;    
+    var strRetro = null;
     if (evt.attempts >= evt.attempts_limit) {
         return false;
     }
@@ -264,7 +264,7 @@ function filling_blanks_santiago_submit(evt) {
 
 function sortable_santiago_submit(evt) {
 
-    var strRetro = null;    
+    var strRetro = null;
     if (evt.attempts >= evt.attempts_limit) {
         return false;
     }
@@ -446,6 +446,9 @@ function check_answers(evt) {
 }
 
 function retroalimentacion(strRetroalimentacion, objTextInject) {
+    if (!EDGE_Plantilla.allow_popups) {
+        return;
+    }
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
 
     switch (strRetroalimentacion) {
@@ -464,7 +467,7 @@ function retroalimentacion(strRetroalimentacion, objTextInject) {
     }
 }
 
-function send_interactions(pagina, objEvt, results) {
+function send_interactions(pagina, objEvt, results, isSendToFather) {
     if (isEmpty(pagina)) {
         console.error("NOT SEND TO FATHER", objEvt);
         return false;
@@ -484,8 +487,13 @@ function send_interactions(pagina, objEvt, results) {
         case "correct":
         case "incorrect":
         case "created":
-            EDGE_Plantilla.debug ? console.log("EVENT TO SEND", objEvt, sym_contenedor) : false;
-            $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+            if (isSendToFather) {
+                EDGE_Plantilla.debug ? console.log("EVENT TO SEND FATHER", objEvt, sym_contenedor) : false;
+                parent.$(parent.document).trigger(objEvt);
+            } else {
+                EDGE_Plantilla.debug ? console.log("EVENT TO SEND CHILD", objEvt, sym_contenedor) : false;
+                $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+            }
             break;
         default :
             break;
@@ -497,7 +505,7 @@ function attemps_answer(evt) {
     var this_block = false;
     var this_show_answers = false;
     var intentos = evt.attempts + EDGE_Plantilla.attemps_increasment;
-    
+
     var objAttemps = {};
 
     if (intentos >= evt.attempts_limit) {

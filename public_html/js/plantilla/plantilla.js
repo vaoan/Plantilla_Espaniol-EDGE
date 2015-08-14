@@ -16,6 +16,7 @@ $("body").on("EDGE_Container_loaded", function () {
 
     $("body").css({
         overflow: "hidden",
+        //zoom: "1.5"
         //"background": "rgba(0,0,0,0.5)"
     });
 });

@@ -413,4 +413,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       })("PICK_4");
    //Edge symbol end:'PICK_4'
 
+   //=========================================================
+   
+   //Edge symbol: 'SIG_2'
+   (function(symbolName) {   
+   
+   })("SIG_2");
+   //Edge symbol end:'SIG_2'
+
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-17298671");

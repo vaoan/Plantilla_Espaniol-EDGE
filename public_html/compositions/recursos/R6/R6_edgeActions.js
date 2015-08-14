@@ -79,7 +79,7 @@
 
         Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
-            
+            do_submit(sym);
         });
         //Edge binding end
 
