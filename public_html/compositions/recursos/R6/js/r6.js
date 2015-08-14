@@ -10,6 +10,10 @@
 /************************** Eventos de inicializado *****************************/
 
 $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
+    EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_prev);
+    EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_extra);
+
+    
     inicializar(evt.sym);
 });
 
@@ -40,29 +44,8 @@ $("body").on("EDGE_Container_Finishloaded", function (evt) {
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
+    console.log("R6 previous data", evt);
     stage.prop("ed_attempts", evt.attempts);
-
-    EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.previous_data);
-
-    console.log("R6 previous data", EDGE_Plantilla.temp_scorm);
-    
-    
-
-    /*$.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
-     var pagina = EDGE_Plantilla.config.paginas[value];
-     var stage = EDGE_Plantilla.config.paginas[value].stage;
-     var objEvt = {type: "EDGE_Recurso_sendPreviousData", sym: stage};
-     
-     $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
-     .contentWindow.$("body").trigger(objEvt);
-     });//*/
-});
-
-$("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
-    var stage = $(evt.sym.getComposition().getStage().ele);
-    stage.prop("ed_attempts", evt.attempts);
-    
-    
 });
 
 /********************** Eventos interno de Actividad **********************/
@@ -89,7 +72,7 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     }
     var result = check_every_answer();
 
-    console.log("SENDING R6", result, EDGE_Plantilla.temp_scorm);
+    
 
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",
@@ -102,12 +85,15 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
         attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
         //timer: evt.timer,
         sym: evt.sym,
-        identify: identify
+        identify: identify,
+        extra_data: EDGE_Plantilla.temp_scorm_suspendData
     };
 
     if (!isEmpty(evt.timer)) {
 
     }
+    
+    console.log("SENDING R6", result, objEvt, EDGE_Plantilla.temp_scorm);
 
     send_interactions(identify, objEvt, result.respuesta, true);
 });

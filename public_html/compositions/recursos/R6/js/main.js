@@ -11,7 +11,7 @@ EDGE_Plantilla = {
     allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,
-    debug: false,
+    debug: true,
     base_audio: new Audio('sounds/snap.mp3'),
     config: null,
     popup_on_show: null,
@@ -21,7 +21,7 @@ EDGE_Plantilla = {
         "base_contenedor": ["back_contenedor_home"]
     },
     title: ["titulo"],
-    basic_contenedor_popup: ["overlay", "container_overlay"],
+    basic_contenedor_popup: ["container_overlay"],
     basic_contenedor_portada: ["contenedor_portada"],
     button_menutools: {
         fullscreen: "btn_full",
@@ -100,20 +100,21 @@ ion.sound({
 function handle_popup(boolShow) {
     var sym = EDGE_Plantilla.plantilla_sym;
     var copy = EDGE_Plantilla.basic_contenedor_popup;
-    var temp_arr = [];
-
-    $.each(copy, function (index, value) {
-        temp_arr.push(value);
-        var sym_element = buscar_sym(sym, temp_arr, true);
-
-        EDGE_Plantilla.debug ? console.log("HANDLE", sym_element) : false;
-        if (boolShow) {
-            sym_element.show();
-        } else {
-            sym_element.hide();
-        }
-        EDGE_Plantilla.debug ? console.log("COPY contenedor pop", index) : false;
-    });
+    
+    var sym_element = buscar_sym(sym, copy);
+    
+    console.log("MOSTRANDO POPUP", sym_element);
+    $(sym_element.ele).css({"z-index": 2000});
+    
+    sym_element = buscar_sym(sym, copy, true);
+    
+    if(boolShow){
+        sym_element.show();
+        $("#popup_gray").css({display : "block"});
+    }else{
+        sym_element.hide();
+        $("#popup_gray").css({display : "none"});
+    }
 }
 
 function handle_portada(boolShow) {
@@ -174,6 +175,7 @@ function mostrar_pagina(strPagina, objRetro) {
     var sym = EDGE_Plantilla.plantilla_sym;
     EDGE_Plantilla.debug ? console.log(strPagina) : false;
     var sym_contenedor = null;
+    var sym_animate = null;
 
     if (!EDGE_Plantilla.config.paginas.hasOwnProperty(strPagina)) {
         console.error(strPagina, EDGE_Plantilla.config.paginas, "PAGINA No encontrado");
@@ -216,6 +218,7 @@ function mostrar_pagina(strPagina, objRetro) {
             }
             EDGE_Plantilla.portada_on_show = pagina;
             handle_portada(true);
+            //$("body").css({background: "rgba(0,0,0,0)"});
             break;
         case "popup_mini":
         case "popup_full":
@@ -226,6 +229,8 @@ function mostrar_pagina(strPagina, objRetro) {
             } else {
                 sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup);
             }
+            sym_contenedor = $("#popup_gray");
+            //$("body").css({background: "rgba(0,0,0,0.5)"});
             EDGE_Plantilla.popup_on_show = pagina;
             handle_popup(true);
             break;
@@ -234,7 +239,9 @@ function mostrar_pagina(strPagina, objRetro) {
                 sym_contenedor = buscar_sym(sym, pagina.sym);
             } else {
                 sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+                sym_animate = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor)
             }
+            //$("body").css({background: "rgba(0,0,0,0)"});
             break;
     }
 
@@ -244,7 +251,23 @@ function mostrar_pagina(strPagina, objRetro) {
 
     EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config.default.url_pages + pagina.url, sym_contenedor) : false;
 
+    //sym_contenedor.play();
+    //sym.getSymbol("contenedor_home").play();
+    if (!isEmpty(sym_animate)) {
+        sym_animate.play(0);
+        console.log("EDGE ANIMATE!");
+    }
+
+    load_pages(sym_contenedor, strPagina, pagina, objRetro);
+
+
+    //sym.getSymbol("contenedor_home").play();
+
     // Load Third Composition and inject data
+
+}
+
+function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
     var promise = EC.loadComposition(EDGE_Plantilla.config.default.url_pages + pagina.url,
             sym_contenedor);
 
@@ -256,7 +279,9 @@ function mostrar_pagina(strPagina, objRetro) {
         if (!isEmpty(pagina.actividad)) {
             var objEvt = {
                 type: "EDGE_Recurso_promiseCreated",
-                sym: stage
+                sym: stage,
+                scorm_prev: EDGE_Plantilla.temp_scorm,
+                scorm_extra: EDGE_Plantilla.temp_scorm_suspendData
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
         }
@@ -273,7 +298,6 @@ function mostrar_pagina(strPagina, objRetro) {
             });
         }
     });
-
 }
 //</editor-fold>
 
@@ -318,12 +342,12 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
     return temp;
 }
 
-function inicializarPlantilla(sym){
+function inicializarPlantilla(sym) {
     var objEvt = {
         type: "EDGE_Container_loaded",
         sym: sym
     };
-    $("body").trigger(objEvt);
+    $("body").trigger();
 }
 
 $("body").on("EDGE_Container_loaded", function (evt) {
@@ -335,8 +359,7 @@ $("body").on("EDGE_Container_loaded", function (evt) {
     EDGE_Plantilla.config.default.url_pages =
             url.substring(0, url.lastIndexOf('/'))
             + "/" + EDGE_Plantilla.config.default.url_pages;
-    
-    console.log("Paginas a cargar... ",EDGE_Plantilla.config.default.default_page);
+    console.log("Paginas a cargar... ", EDGE_Plantilla.config.default.default_page);
 
     if (typeof EDGE_Plantilla.config.default.default_page === "string") {
         mostrar_pagina(EDGE_Plantilla.config.default.default_page);
@@ -345,6 +368,18 @@ $("body").on("EDGE_Container_loaded", function (evt) {
             mostrar_pagina(value);
         });
     }
+    var element;
+    
+    element = $("<div/>", {
+        id: "popup_gray", ed_position: "top"
+    });
+    element.css({
+        order: 1, width: "100%", height: "100%", position: "absolute",
+        "z-index": 10, top: "0px", left: "0px", "background-color": "rgba(0, 0, 0, 0.470588)",
+        display: "none"
+    });
+    $("body").append(element);
+    
 
     EDGE_Plantilla.debug ? console.log("****************** ENDED LOAD ********************") : false;
     
@@ -352,6 +387,7 @@ $("body").on("EDGE_Container_loaded", function (evt) {
         type: "EDGE_Container_Finishloaded",
         sym: evt.sym
     });
+
     //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
 });
 
@@ -373,12 +409,18 @@ $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
     if (!isEmpty(pagina.al_cerrar)) {
         !isEmpty(pagina.al_cerrar.cargar) ?
                 mostrar_pagina(pagina.al_cerrar.cargar) : false;
-                
+
         !isEmpty(pagina.al_cerrar.cambia_color) ?
                 cambiarColorBordes(EDGE_Plantilla.plantilla_sym, pagina.al_cerrar.cambia_color) : false;
-                
-                
+
+
     }
+    
+    $("html").css({
+        //overflow: "hidden",
+        //zoom: "1.5"
+        //"background": "rgba(0,0,0,0.5)"
+    });
 
     //console.log("MOSTRAR CLICK ",evt.sym.getSymbol(EDGE_Plantilla.button_nav.R2));
     //evt.sym.$(EDGE_Plantilla.button_nav.R2).click();
@@ -409,7 +451,6 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             mostrar_pagina("accesibilidad");
             break;
     }
-
     play_buttons(evt);
 });
 
@@ -437,6 +478,12 @@ $("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R7.button:
             mostrar_pagina("7");
+            break;
+        case "Stage_" + EDGE_Plantilla.button_nav.learning.button:
+            mostrar_pagina("learning");
+            break;
+        case "Stage_" + EDGE_Plantilla.button_nav.vocabulario.button:
+            mostrar_pagina("vocabulario");
             break;
         default:
             break;

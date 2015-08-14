@@ -44,7 +44,7 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
 function R6_heiner_created(evt){
     var objEvt = {
         type: "EDGE_Recurso_sendPreviousData",
-        previous_data: read_interactions(evt),
+        previous_data: get_interactions_by_start(evt),
         sym: evt.sym,
         block: false,
         attempts: 0
@@ -174,11 +174,70 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "sortable":
             sortable_santiago_submit(evt);
             break;
+        case "R6":
+            R6_heiner_submit(evt);
+            break;
         default:
             console.error("Submit inexistente", evt.identify);
             break;
     }
 });
+
+function R6_heiner_submit(evt) {
+    var strRetro = null;
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
+
+    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+        delete evt.timer.time_out;
+        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+        var timer = {reset_timer: true};
+        objEvt = merge_options(objEvt, {timer: timer});
+    } else {
+        if (evt.results === "neutral") {
+            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+            evt.results = "neutral";
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+        }
+    }
+
+    if (evt.results === "correct") {
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+        objEvt = merge_options(objEvt, {
+            block: true,
+            show_answers: false,
+            attempts: evt.attempts
+        });
+        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+    } else if (evt.results === "incorrect") {
+        if (!isEmpty(evt.timer)) {
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        }
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+        var attemps = attemps_answer(evt);
+        objEvt = merge_options(objEvt, attemps);
+        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if (!attemps.block) {
+            strRetro = "nuevo_intento";
+        }
+    }
+    
+    
+
+    retroalimentacion(strRetro);
+    save_extra_data(objEvt, evt);
+    
+    merge_temp_scorm(evt.answer);
+    
+    //upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    send_interactions(evt.identify, objEvt, evt.results);
+}
 
 function selecting_blanks_santiago_submit(evt) {
     var strRetro = null;
@@ -493,6 +552,7 @@ function send_interactions(pagina, objEvt, results, isSendToFather) {
     } else {
         EDGE_Plantilla.debug ? console.log("SENDING...", pagina, objEvt) : false;
     }
+    console.log("sending...");
 
     var sym_contenedor;
 
@@ -544,6 +604,10 @@ function attemps_answer(evt) {
 //</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
+function merge_temp_scorm(temp_scorm){
+    EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, temp_scorm);
+}
+
 function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
     EDGE_Plantilla.debug ? console.log("Trying to upload interactions", json_data, pagina) : false;
     var pagina = evt.identify;
@@ -599,18 +663,21 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
     }
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions);
     EDGE_Plantilla.debug ? console.log("UPLOADING interactions", interactions, pagina, EDGE_Plantilla.temp_scorm) : false;
+    
+    console.log("UPLOADING interactions", interactions, pagina, EDGE_Plantilla.temp_scorm)
 
 }
 
-function read_interactions(evt) {
+function get_interactions_by_start(evt) {
     var pagina = evt.identify;
     EDGE_Plantilla.debug ? console.log("READING interactions", pagina, evt) : false;
-    var id_interaction = pagina.recurso + "000";
+    var id_interaction = pagina.recurso;
     var objData = {};
 
     $.each(EDGE_Plantilla.temp_scorm, function (key, value) {
         if (key.startsWith(id_interaction)) {
-            objData[key.substring(id_interaction.length, key.length)] = value.respuesta;
+            console.log("entra", key.substring(id_interaction.length, key.length));
+            objData[key] = value.respuesta;
         }
     });
 
@@ -620,7 +687,35 @@ function read_interactions(evt) {
         }
     }
 
-    EDGE_Plantilla.debug ? console.log("READ interactions", objData) : false;
+    EDGE_Plantilla.debug ? console.log("READ interactions", objData, EDGE_Plantilla.temp_scorm) : false;
+
+    return objData;
+}
+
+function read_interactions(evt) {
+    var pagina = evt.identify;
+    EDGE_Plantilla.debug ? console.log("READING interactions", pagina, evt) : false;
+    var id_interaction = pagina.recurso;
+    var objData = {};
+
+    $.each(EDGE_Plantilla.temp_scorm, function (key, value) {
+        if (key.startsWith(id_interaction)) {
+            console.log("entra", key.substring(id_interaction.length, key.length));
+            objData[key.substring(id_interaction.length, key.length)] = value.respuesta;
+        }
+    });
+
+    if (!isEmpty(objData)) {
+        var temp;
+        if (pagina.interaction.ALL) {
+            $.each(objData, function (key, value){
+                temp = value;
+            });
+            objData = temp;
+        }
+    }
+
+    EDGE_Plantilla.debug ? console.log("READ interactions", objData, EDGE_Plantilla.temp_scorm) : false;
 
     return objData;
 }

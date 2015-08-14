@@ -279,7 +279,9 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
         if (!isEmpty(pagina.actividad)) {
             var objEvt = {
                 type: "EDGE_Recurso_promiseCreated",
-                sym: stage
+                sym: stage,
+                scorm_prev: EDGE_Plantilla.temp_scorm,
+                scorm_extra: EDGE_Plantilla.temp_scorm_suspendData
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
         }
