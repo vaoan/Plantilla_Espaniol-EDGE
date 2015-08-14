@@ -1,0 +1,61 @@
+{
+    "default": {
+        "url_pages": "compositions/",
+        "default_page": [
+            "1","2","3","4","5"
+        ],
+        "limit_attemps": 1
+    },
+    "paginas": {
+        "1": {
+            "type": "actividad",
+            "recurso": "51",
+            "actividad": "pick_many",
+            "url": "recursos/qqsm_pre1/pre1.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["qqsm_1"]
+        },
+        "2": {
+            "type": "actividad",
+            "recurso": "52",
+            "actividad": "pick_many",
+            "url": "recursos/qqsm_pre2/pre2.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["qqsm_2"]
+        },
+        "3": {
+            "type": "actividad",
+            "recurso": "53",
+            "actividad": "pick_many",
+            "url": "recursos/qqsm_pre3/pre3.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["qqsm_3"]
+        },
+        "4": {
+            "type": "actividad",
+            "recurso": "54",
+            "actividad": "pick_many",
+            "url": "recursos/qqsm_pre4/pre4.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["qqsm_4"]
+        },
+        "5": {
+            "type": "actividad",
+            "recurso": "55",
+            "actividad": "pick_many",
+            "url": "recursos/qqsm_pre5/pre5.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["qqsm_5"]
+        }
+    }
+}

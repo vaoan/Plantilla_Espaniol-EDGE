@@ -1,0 +1,22 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Instrucción: escuche el audio y seleccione la opción que corresponda. Tiene dos intentos para esta actividad.",
+    "picks": {
+        "1": {
+            "descripcion": "paso",
+            "esRespuesta": false
+        },
+        "2": {
+            "descripcion": "trazo",
+            "esRespuesta": false
+        },
+        "3": {
+            "descripcion": "mazo",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "brazo",
+            "esRespuesta": true
+        }
+    }
+}

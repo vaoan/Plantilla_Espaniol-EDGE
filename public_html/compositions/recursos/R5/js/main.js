@@ -7,12 +7,12 @@
 
 //<editor-fold defaultstate="collapsed" desc="Global values">
 EDGE_Plantilla = {
-    attemps_increasment: 1,
-    allow_popups: true,
+    attemps_increasment: 0,
+    allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,
     debug: true,
-    base_audio: new Audio('sounds/navigate-main.mp3'),
+    base_audio: new Audio('sounds/snap.mp3'),
     config: null,
     popup_on_show: null,
     portada_on_show: null,
@@ -295,7 +295,7 @@ function getRemote() {
 function play_buttons(evt) {
     if (EDGE_Plantilla.play_general_sound) {
         var temp = EDGE_Plantilla.base_audio.cloneNode();
-        temp.play();
+        temp.play("snap");
     }
 }
 

@@ -13,6 +13,8 @@ $("body").on("EDGE_Container_loaded", function () {
         "background-position": "center center",
         "background": "url('images/r1.png') 50% 50% / cover no-repeat gray"
     });
+    
+    var audio = new Audio('media/navigate-begin.mp3');
 
     $("body").css({
         overflow: "hidden",
