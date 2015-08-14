@@ -32,11 +32,30 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "select":
             selecting_blanks_santiago_created(evt);
             break;
+        case "R6":
+            R6_heiner_created(evt);
+            break;
         default:
             console.error("Creation inexistente", evt.identify);
             break;
     }
 });
+
+function R6_heiner_created(evt){
+    var objEvt = {
+        type: "EDGE_Recurso_sendPreviousData",
+        previous_data: read_interactions(evt),
+        sym: evt.sym,
+        block: false,
+        attempts: 0
+    };
+
+    objEvt = merge_options(objEvt, read_extra_data(evt));
+
+    //console.log(objEvt);
+
+    send_interactions(evt.identify, objEvt, "created");
+}
 
 function selecting_blanks_santiago_created(evt) {
     var objEvt = {
@@ -446,7 +465,7 @@ function check_answers(evt) {
 }
 
 function retroalimentacion(strRetroalimentacion, objTextInject) {
-    if (!EDGE_Plantilla.allow_popups) {
+    if(!EDGE_Plantilla.allow_popups){
         return;
     }
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, objTextInject) : false;
@@ -487,6 +506,7 @@ function send_interactions(pagina, objEvt, results, isSendToFather) {
         case "correct":
         case "incorrect":
         case "created":
+        case "neutral":
             if (isSendToFather) {
                 EDGE_Plantilla.debug ? console.log("EVENT TO SEND FATHER", objEvt, sym_contenedor) : false;
                 parent.$(parent.document).trigger(objEvt);

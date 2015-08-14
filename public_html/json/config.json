@@ -61,7 +61,7 @@
             "actividad": "R6",
             "url": "recursos/R6/R6.html",
             "interaction": {
-                "ALL": true
+                "ALL": false
             },
             "titulo": "Evaluemos",
             "subtitulo": "las letras"

@@ -11,7 +11,7 @@ EDGE_Plantilla = {
     allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,
-    debug: true,
+    debug: false,
     base_audio: new Audio('sounds/snap.mp3'),
     config: null,
     popup_on_show: null,
@@ -347,7 +347,11 @@ $("body").on("EDGE_Container_loaded", function (evt) {
     }
 
     EDGE_Plantilla.debug ? console.log("****************** ENDED LOAD ********************") : false;
-
+    
+    $("body").trigger({
+        type: "EDGE_Container_Finishloaded",
+        sym: evt.sym
+    });
     //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
 });
 

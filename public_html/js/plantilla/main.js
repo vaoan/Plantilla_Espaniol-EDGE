@@ -380,6 +380,11 @@ $("body").on("EDGE_Container_loaded", function (evt) {
     
 
     EDGE_Plantilla.debug ? console.log("****************** ENDED LOAD ********************") : false;
+    
+    $("body").trigger({
+        type: "EDGE_Container_Finishloaded",
+        sym: evt.sym
+    });
 
     //EDGE_Plantilla.debug ? console.log(EDGE_Plantilla.config) : false;
 });

@@ -28,15 +28,41 @@ function inicializar(sym) {
 }
 
 /******************** Eventos de respuesta PLANTILLA **********************/
+$("body").on("EDGE_Container_Finishloaded", function (evt) {
+    var stage = $(evt.sym.getComposition().getStage().ele);
+    var objEvt = {
+        type: "EDGE_Plantilla_creationComplete",
+        sym: evt.sym,
+        identify: stage.prop("ed_identify")
+    };
+    parent.$(parent.document).trigger(objEvt);
+});
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     stage.prop("ed_attempts", evt.attempts);
+
+    EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.previous_data);
+
+    console.log("R6 previous data", EDGE_Plantilla.temp_scorm);
+    
+    
+
+    /*$.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
+     var pagina = EDGE_Plantilla.config.paginas[value];
+     var stage = EDGE_Plantilla.config.paginas[value].stage;
+     var objEvt = {type: "EDGE_Recurso_sendPreviousData", sym: stage};
+     
+     $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
+     .contentWindow.$("body").trigger(objEvt);
+     });//*/
 });
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     stage.prop("ed_attempts", evt.attempts);
+    
+    
 });
 
 /********************** Eventos interno de Actividad **********************/
@@ -63,14 +89,15 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     }
     var result = check_every_answer();
 
-    EDGE_Plantilla.debug ? console.log("SENDING R6", result, EDGE_Plantilla.temp_scorm) : false;
+    console.log("SENDING R6", result, EDGE_Plantilla.temp_scorm);
 
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",
         interactionType: "other",
         question: "R6",
         answer: EDGE_Plantilla.temp_scorm,
-        results: result.respuestas,
+        position_which_is_right: result.respuestas,
+        results: result.respuesta,
         attempts: stage.prop("ed_attempts"),
         attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
         //timer: evt.timer,
@@ -79,7 +106,7 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     };
 
     if (!isEmpty(evt.timer)) {
-        
+
     }
 
     send_interactions(identify, objEvt, result.respuesta, true);
@@ -137,3 +164,4 @@ function reload_pages() {
 
     EDGE_Plantilla.debug ? console.log("****************** ENDED RELOAD ********************") : false;
 }
+
