@@ -9,53 +9,53 @@
     "paginas": {
         "1": {
             "type": "actividad",
-            "recurso": "51",
+            "recurso": "61",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre1/pre1.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["qqsm_1"]
+            "sym": ["R6_1"]
         },
         "2": {
             "type": "actividad",
-            "recurso": "52",
+            "recurso": "62",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre2/pre2.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["qqsm_2"]
+            "sym": ["R6_2"]
         },
         "3": {
             "type": "actividad",
-            "recurso": "53",
+            "recurso": "63",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre3/pre3.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["qqsm_3"]
+            "sym": ["R6_3"]
         },
         "4": {
             "type": "actividad",
-            "recurso": "54",
+            "recurso": "64",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre4/pre4.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["qqsm_4"]
+            "sym": ["R6_4"]
         },
         "5": {
             "type": "actividad",
-            "recurso": "55",
+            "recurso": "65",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre5/pre5.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["qqsm_5"]
+            "sym": ["R6_5"]
         }
     }
 }

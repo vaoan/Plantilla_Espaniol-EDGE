@@ -23,7 +23,7 @@
         //Edge binding end
 
     })("stage");
-    //Edge symbol end:'stage'
+   //Edge symbol end:'stage'
 
     //=========================================================
 
@@ -43,7 +43,7 @@
         //Edge binding end
 
     })("lectora");
-    //Edge symbol end:'lectora'
+   //Edge symbol end:'lectora'
 
     //=========================================================
 
@@ -63,7 +63,7 @@
         //Edge binding end
 
     })("auditiva");
-    //Edge symbol end:'auditiva'
+   //Edge symbol end:'auditiva'
 
     //=========================================================
 
@@ -83,7 +83,7 @@
         //Edge binding end
 
     })("escrita");
-    //Edge symbol end:'escrita'
+   //Edge symbol end:'escrita'
 
     //=========================================================
 
@@ -103,7 +103,7 @@
         //Edge binding end
 
     })("oral");
-    //Edge symbol end:'oral'
+   //Edge symbol end:'oral'
 
     //=========================================================
 
@@ -159,6 +159,6 @@
         //Edge binding end
 
     })("Skills");
-    //Edge symbol end:'Skills'
+   //Edge symbol end:'Skills'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-31713253");

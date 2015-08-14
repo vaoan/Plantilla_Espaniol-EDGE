@@ -11,13 +11,30 @@
     </style>
 <script>
    AdobeEdge.loadComposition('pre5', 'EDGE-17298671', {
-    scaleToFit: "both",
+    scaleToFit: "none",
     centerStage: "both",
     minW: "0px",
     maxW: "undefined",
     width: "1830px",
     height: "780px"
-}, {dom: [ ]}, {dom: [ ]});
+}, {
+    dom: [
+        {
+            id: 'preloader4',
+            type: 'image',
+            tag: 'img',
+            rect: ['855', '330', '120px', '120px', 'auto', 'auto'],
+            fill: ["rgba(0,0,0,0)",'images/preloader4.gif','0px','0px']
+        }
+    ],
+    style: {
+        '${symbolSelector}': {
+            isStage: true,
+            rect: [undefined, undefined, '1830px', '780px'],
+            fill: ["rgba(255,255,255,1)"]
+        }
+    }
+}, {dom: [ ]});
 </script>
 <!--Adobe Edge Runtime End-->
 

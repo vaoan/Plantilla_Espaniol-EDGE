@@ -195,16 +195,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol end:'Submit'
 
    //=========================================================
-
-   //=========================================================
-   
-   //Edge symbol: 'btn_enviar_1'
-   (function(symbolName) {   
-   
-   })("btn_audio");
-   //Edge symbol end:'btn_audio'
-
-   //=========================================================
    
    //Edge symbol: 'ayuda_1'
    (function(symbolName) {   
@@ -343,30 +333,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("publico");
    //Edge symbol end:'publico'
-
-   //=========================================================
-   
-   //Edge symbol: 'btn_audio_1'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         // introducir código aquí
-         sym.stop();
-         sym.$("r6_audio_1")[0].pause();
-         sym.$("r6_audio_1")[0].currentTime = 0;
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1159, function(sym, e) {
-         // introducir código aquí
-         sym.play("stop");
-
-      });
-      //Edge binding end
-
-   })("btn_audio_1");
-   //Edge symbol end:'btn_audio_1'
 
    //=========================================================
    

@@ -87,38 +87,38 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-12px', '15px', '140px', '140px', 'auto', 'auto'],
-                            id: 'V_LECTURA',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'V_LECTURA',
                             type: 'image',
+                            rect: ['-12px', '15px', '140px', '140px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_LECTURA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_lectora',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-13px', '117px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-13px', '117px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'Rectangle',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​lectora</p>',
-                                id: 'Text',
-                                textStyle: ['', '', '23px', '', ''],
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'Text',
+                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​lectora</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -165,38 +165,38 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-12px', '12px', '141px', '141px', 'auto', 'auto'],
-                            id: 'V_ESCUCHA',
                             transform: [[], [], [], ['0.45', '0.45']],
+                            id: 'V_ESCUCHA',
                             type: 'image',
+                            rect: ['-12px', '12px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_ESCUCHA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_auditiva',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-9px', '117px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-9px', '117px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'RectangleCopy',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​auditiva</p>',
-                                id: 'TextCopy',
-                                textStyle: ['', '', '23px', '', ''],
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy',
+                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​auditiva</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -243,38 +243,38 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-18px', '17px', '141px', '141px', 'auto', 'auto'],
-                            id: 'V_ESCRITURA',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'V_ESCRITURA',
                             type: 'image',
+                            rect: ['-18px', '17px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_ESCRITURA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_escrita',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'RectangleCopy3',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​escrita</p>',
-                                id: 'TextCopy3',
-                                textStyle: ['', '', '23px', '', ''],
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy3',
+                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​escrita</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -321,38 +321,38 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-24px', '16px', '141px', '141px', 'auto', 'auto'],
-                            id: 'V_HABLA',
                             transform: [[], [], [], ['0.45', '0.45']],
+                            id: 'V_HABLA',
                             type: 'image',
+                            rect: ['-24px', '16px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_HABLA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_oral',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'RectangleCopy2',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​oral</p>',
-                                id: 'TextCopy2',
-                                textStyle: ['', '', '23px', '', ''],
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy2',
+                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​oral</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -399,103 +399,103 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-122px', '-30px', '530px', '250px', 'auto', 'auto'],
-                            id: 'Skills',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'Skills',
                             type: 'image',
+                            rect: ['-122px', '-30px', '530px', '250px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/Skills.png', '0px', '0px']
                         },
                         {
-                            rect: ['44px', '33px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.5', '0.5']],
-                            id: 'B_ESCRITURA',
                             type: 'image',
+                            id: 'B_ESCRITURA',
                             display: 'block',
+                            rect: ['44px', '33px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/B_ESCRITURA.png', '0px', '0px']
                         },
                         {
-                            rect: ['100px', '14px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.45', '0.45']],
-                            id: 'B_ESCUCHA',
                             type: 'image',
+                            id: 'B_ESCUCHA',
                             display: 'block',
+                            rect: ['100px', '14px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/B_ESCUCHA.png', '0px', '0px']
                         },
                         {
-                            rect: ['157px', '35px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.45', '0.45']],
-                            id: 'B_HABLA',
                             type: 'image',
+                            id: 'B_HABLA',
                             display: 'none',
+                            rect: ['157px', '35px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/B_HABLA.png', '0px', '0px']
                         },
                         {
-                            rect: ['-12px', '14px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.5', '0.5']],
-                            id: 'B_LECTURA',
                             type: 'image',
+                            id: 'B_LECTURA',
                             display: 'none',
+                            rect: ['-12px', '14px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/B_LECTURA.png', '0px', '0px']
                         },
                         {
-                            type: 'rect',
+                            rect: ['62px', '16px', '102', '108', 'auto', 'auto'],
                             display: 'none',
                             symbolName: 'escrita',
-                            rect: ['62px', '16px', '102', '108', 'auto', 'auto'],
-                            id: 'escrita'
+                            id: 'escrita',
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['181px', '19px', '102', '109', 'auto', 'auto'],
                             display: 'block',
                             symbolName: 'oral',
-                            rect: ['181px', '19px', '102', '109', 'auto', 'auto'],
-                            id: 'oral'
+                            id: 'oral',
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '117', '113', 'auto', 'auto'],
                             display: 'block',
                             symbolName: 'lectora',
-                            rect: ['0px', '0px', '117', '113', 'auto', 'auto'],
-                            id: 'lectora'
+                            id: 'lectora',
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['112px', '2px', '117', '104', 'auto', 'auto'],
                             display: 'none',
                             symbolName: 'auditiva',
-                            rect: ['112px', '2px', '117', '104', 'auto', 'auto'],
-                            id: 'auditiva'
+                            id: 'auditiva',
+                            type: 'rect'
                         },
                         {
-                            rect: ['23px', '50px', '70px', '70px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             type: 'ellipse',
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            rect: ['23px', '50px', '70px', '70px', 'auto', 'auto'],
                             id: 'Tool_lectora',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'default',
                             fill: ['rgba(45,110,51,0.00)']
                         },
                         {
-                            rect: ['80px', '71px', '70px', '70px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             type: 'ellipse',
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            rect: ['80px', '71px', '70px', '70px', 'auto', 'auto'],
                             id: 'Tool_escrita',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'default',
                             fill: ['rgba(45,110,51,0.00)']
                         },
                         {
-                            rect: ['136px', '49px', '70px', '70px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             type: 'ellipse',
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            rect: ['136px', '49px', '70px', '70px', 'auto', 'auto'],
                             id: 'Tool_auditiva',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'default',
                             fill: ['rgba(45,110,51,0.00)']
                         },
                         {
-                            rect: ['192px', '72px', '70px', '70px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             type: 'ellipse',
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            rect: ['192px', '72px', '70px', '70px', 'auto', 'auto'],
                             id: 'Tool_oral',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'default',
@@ -504,8 +504,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '283px', '157px']
+                            rect: [null, null, '283px', '157px']
                         }
                     }
                 },
@@ -544,22 +543,22 @@
                             'none'
                         ],
                         [
+                            "eid47",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${oral}",
+                            'block',
+                            'block'
+                        ],
+                        [
                             "eid45",
                             "display",
                             0,
                             0,
                             "linear",
                             "${auditiva}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid48",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${escrita}",
                             'none',
                             'none'
                         ],
@@ -584,14 +583,14 @@
                             'block'
                         ],
                         [
-                            "eid47",
+                            "eid48",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${oral}",
-                            'block',
-                            'block'
+                            "${escrita}",
+                            'none',
+                            'none'
                         ]
                     ]
                 }

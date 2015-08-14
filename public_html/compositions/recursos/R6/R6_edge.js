@@ -8,7 +8,7 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -29,7 +29,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "both",
+                scaleToFit: "none",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -423,34 +423,34 @@
                             'none'
                         ],
                         [
-                            "eid226",
+                            "eid57",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${Text3}",
+                            "${r6_siguiente}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid231",
+                            "eid58",
                             "display",
-                            643,
+                            450,
                             0,
                             "linear",
-                            "${Text3}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid252",
-                            "display",
-                            2905,
-                            0,
-                            "linear",
-                            "${Text3}",
+                            "${r6_siguiente}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid88",
+                            "display",
+                            2065,
+                            0,
+                            "linear",
+                            "${r6_siguiente}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid43",
@@ -543,34 +543,136 @@
                             'block'
                         ],
                         [
-                            "eid223",
-                            "display",
-                            0,
+                            "eid219",
+                            "-webkit-transform-origin",
+                            3000,
                             0,
                             "linear",
                             "${medidor}",
-                            'none',
-                            'none'
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid228",
-                            "display",
-                            643,
+                            "eid297",
+                            "-moz-transform-origin",
+                            3000,
                             0,
                             "linear",
                             "${medidor}",
-                            'none',
-                            'none'
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid255",
-                            "display",
-                            2905,
+                            "eid298",
+                            "-ms-transform-origin",
+                            3000,
                             0,
                             "linear",
                             "${medidor}",
-                            'none',
-                            'block'
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid299",
+                            "msTransformOrigin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid300",
+                            "-o-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid301",
+                            "transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid220",
+                            "-webkit-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid302",
+                            "-moz-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid303",
+                            "-ms-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid304",
+                            "msTransformOrigin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid305",
+                            "-o-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid306",
+                            "transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
                             "eid56",
@@ -623,166 +725,64 @@
                             '180deg'
                         ],
                         [
-                            "eid219",
-                            "-webkit-transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid267",
-                            "-moz-transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid268",
-                            "-ms-transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid269",
-                            "msTransformOrigin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid270",
-                            "-o-transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid271",
-                            "transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid220",
-                            "-webkit-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid272",
-                            "-moz-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid273",
-                            "-ms-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid274",
-                            "msTransformOrigin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid275",
-                            "-o-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid276",
-                            "transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid57",
+                            "eid223",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${r6_siguiente}",
+                            "${medidor}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid58",
+                            "eid228",
                             "display",
-                            450,
+                            643,
                             0,
                             "linear",
-                            "${r6_siguiente}",
+                            "${medidor}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid255",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${medidor}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid88",
+                            "eid226",
                             "display",
-                            2065,
+                            0,
                             0,
                             "linear",
-                            "${r6_siguiente}",
-                            'block',
+                            "${Text3}",
+                            'none',
                             'none'
+                        ],
+                        [
+                            "eid231",
+                            "display",
+                            643,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid252",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${Text3}",
+                            'none',
+                            'block'
                         ]
                     ]
                 }
@@ -800,16 +800,16 @@
                             rect: ['37px', '29px', '563px', '749px', 'auto', 'auto'],
                             borderRadius: ['17px', '17px', '17px', '17px 17px'],
                             id: 'IMG_R6',
-                            fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px'],
+                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)'],
                             type: 'image',
-                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)']
+                            fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px']
                         },
                         {
-                            rect: ['632px', '32px', '1198px', '377px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700;\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700;\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif;\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800;\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif;\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
-                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['632px', '32px', '1198px', '377px', 'auto', 'auto']
                         },
                         {
                             type: 'rect',
@@ -843,10 +843,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
@@ -874,10 +874,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(255,119,0,1.00)']
                         }
                     ],
@@ -905,10 +905,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(239,255,0,1.00)']
                         }
                     ],
@@ -936,10 +936,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,255,117,1.00)']
                         }
                     ],
@@ -967,10 +967,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,103,255,1.00)']
                         }
                     ],
@@ -1001,8 +1001,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '91px', '33px']
+                            rect: [null, null, '91px', '33px']
                         }
                     }
                 },
@@ -1114,12 +1113,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1178,18 +1177,18 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
-                            type: 'image',
-                            id: 'signo_mas_que_1_Blancofw',
                             rect: ['231px', '14px', '25px', '25px', 'auto', 'auto'],
+                            id: 'signo_mas_que_1_Blancofw',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/signo%20mas%20que%201%20Blanco.fw.png', '0px', '0px']
                         }
                     ],
@@ -1217,19 +1216,18 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '91px', '33px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
+                            rect: ['0px', '0px', '91px', '33px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '91px', '33px']
+                            rect: [null, null, '91px', '33px']
                         }
                     }
                 },
@@ -1251,9 +1249,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '198px', '27px', 'auto', 'auto'],
-                            id: 'medidor_examen-02Copy2',
                             type: 'image',
+                            id: 'medidor_examen-02Copy2',
+                            rect: ['0px', '0px', '198px', '27px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/medidor%20examen-02.png', '0px', '0px']
                         }
                     ],

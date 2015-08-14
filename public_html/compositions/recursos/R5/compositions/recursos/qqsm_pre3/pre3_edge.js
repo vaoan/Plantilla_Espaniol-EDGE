@@ -28,7 +28,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "both",
+                scaleToFit: "none",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -86,13 +86,15 @@
                             id: 'publico',
                             symbolName: 'publico',
                             type: 'rect',
-                            rect: ['1384px', '156px', '399', '509', 'auto', 'auto']
+                            rect: ['1384px', '156px', '399', '509', 'auto', 'auto'],
+                            transform: [[],[],[],['0.6','0.6']]
                         },
                         {
                             id: 'llamada',
                             symbolName: 'llamada',
                             type: 'rect',
-                            rect: ['1384', '124', '399', '574', 'auto', 'auto']
+                            rect: ['1384', '124', '399', '574', 'auto', 'auto'],
+                            transform: [[],[],[],['0.6','0.6']]
                         }
                     ],
                     style: {
@@ -100,12 +102,12 @@
                             isStage: true,
                             rect: ['null', 'null', '1830px', '780px', 'auto', 'auto'],
                             overflow: 'hidden',
-                            fill: ["rgba(255,255,255,1)"]
+                            fill: ["rgba(255,255,255,0.00)"]
                         }
                     }
                 },
                 timeline: {
-                    duration: 1159,
+                    duration: 11587,
                     autoPlay: true,
                     data: [
                         [
@@ -168,12 +170,12 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -251,60 +253,13 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
-            "btn_audio": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
-                            fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
-                            c: [
-                            {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
-                                textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
-                            }]
-                        },
-                        {
-                            type: 'image',
-                            id: 'BTN-tools-ES',
-                            rect: ['65px', '7px', '7%', '18px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/BTN-tools-ES.png', '0px', '0px']
                         }
                     ],
                     style: {
@@ -382,19 +337,18 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
+                            type: 'text',
                             rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​a. Cábano</p>',
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
                             align: 'center',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '401px', '57px']
+                            rect: [null, null, '401px', '57px']
                         }
                     }
                 },
@@ -481,13 +435,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            type: 'text',
                             align: 'center',
                             id: 'Text2',
-                            textStyle: ['', '', '', '', 'none'],
                             text: '<p style=\"margin: 0px;\">​b. Caballo</p>',
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
+                            textStyle: ['', '', '', '', 'none'],
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -579,13 +533,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            type: 'text',
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​c. Abajo</p>',
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
                             align: 'center',
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -677,13 +631,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            type: 'text',
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​d. Contrabajo</p>',
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
                             align: 'center',
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -754,10 +708,10 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.8', '0.8']],
-                            id: 'ayuda_llamada_1',
-                            type: 'image',
                             rect: ['-50px', '-72px', '499px', '718px', 'auto', 'auto'],
+                            id: 'ayuda_llamada_1',
+                            transform: [[], [], [], ['0.8', '0.8']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/ayuda_llamada_1.png', '0px', '0px']
                         },
                         {
@@ -768,12 +722,12 @@
                             fill: ['rgba(255,255,255,1.00)']
                         },
                         {
+                            rect: ['43px', '453px', '314px', '55px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [35, 'px'], 'rgba(79,45,110,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​La palabra correcta contiene la letra <span style=\"font-weight: 700;\">ll</span></p>',
                             align: 'center',
-                            rect: ['43px', '453px', '314px', '55px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -848,98 +802,6 @@
                     ]
                 }
             },
-            "btn_audio_1": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
-                            fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
-                            c: [
-                            {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
-                                textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
-                            }]
-                        },
-                        {
-                            fill: ['rgba(255,255,255,1)'],
-                            type: 'rect',
-                            borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            id: 'stop',
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            opacity: '0',
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
-                        },
-                        {
-                            transform: [[], [], [], ['0.2', '0.2']],
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
-                            id: 'play',
-                            opacity: '1',
-                            type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-032.png', '0px', '0px']
-                        },
-                        {
-                            preload: 'auto',
-                            type: 'audio',
-                            source: ['media/r6_audio_1.mp3'],
-                            id: 'r6_audio_1',
-                            rect: ['515', '535', '320px', '45px', 'auto', 'auto'],
-                            display: 'none',
-                            tag: 'audio'
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 1159,
-                    autoPlay: true,
-                    labels: {
-                        "stop": 0,
-                        "play": 124
-                    },
-                    data: [
-                        [
-                            "eid190",
-                            "opacity",
-                            0,
-                            124,
-                            "linear",
-                            "${play}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid188",
-                            "opacity",
-                            0,
-                            124,
-                            "linear",
-                            "${stop}",
-                            '0.000000',
-                            '1'
-                        ],
-                            [ "eid193", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${r6_audio_1}', [] ] ]
-                    ]
-                }
-            },
             "btn_audio_2": {
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
@@ -950,30 +812,30 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
+                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
@@ -996,8 +858,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '213px', '31px']
+                            rect: [null, null, '213px', '31px']
                         }
                     }
                 },
