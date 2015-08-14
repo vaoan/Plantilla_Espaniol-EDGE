@@ -12,7 +12,7 @@ EDGE_Plantilla = {
     play_general_sound: true,
     plantilla_sym: null,
     debug: true,
-    base_audio: new Audio('sounds/snap.mp3'),
+    base_audio: new Audio('sounds/navigate-main.mp3'),
     config: null,
     popup_on_show: null,
     portada_on_show: null,
