@@ -4,7 +4,7 @@
         "default_page": [
             "1","2","3","4","5"
         ],
-        "limit_attemps": 2
+        "limit_attemps": 1
     },
     "paginas": {
         "1": {

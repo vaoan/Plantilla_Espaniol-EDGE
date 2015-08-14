@@ -227,16 +227,10 @@ function R6_heiner_submit(evt) {
             strRetro = "nuevo_intento";
         }
     }
-    
-    
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    
-    merge_temp_scorm(evt.answer);
-    
-    //upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    merge_temp_scorm(evt.answer);send_interactions(evt.identify, objEvt, evt.results);
 }
 
 function selecting_blanks_santiago_submit(evt) {
@@ -582,6 +576,7 @@ function send_interactions(pagina, objEvt, results, isSendToFather) {
 }
 
 function attemps_answer(evt) {
+    
     var this_block = false;
     var this_show_answers = false;
     var intentos = evt.attempts + EDGE_Plantilla.attemps_increasment;
@@ -599,6 +594,7 @@ function attemps_answer(evt) {
         show_answers: this_show_answers,
         attempts: intentos
     });
+    
     return objAttemps;
 }
 //</editor-fold>

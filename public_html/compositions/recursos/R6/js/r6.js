@@ -42,7 +42,7 @@ $("body").on("EDGE_Container_Finishloaded", function (evt) {
     parent.$(parent.document).trigger(objEvt);
 });
 
-$("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
+$("body").on("EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     console.log("R6 previous data", evt);
     stage.prop("ed_attempts", evt.attempts);
