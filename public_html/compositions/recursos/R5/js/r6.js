@@ -97,8 +97,11 @@ function check_every_answer() {
     $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
         var pagina = EDGE_Plantilla.config.paginas[value];
         var stage = EDGE_Plantilla.config.paginas[value].stage;
+        var actual_sym = buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true);
+        
+        console.log($("iframe", actual_sym));
 
-        $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
+        $("iframe", actual_sym)[0]
                 .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
     });
 
