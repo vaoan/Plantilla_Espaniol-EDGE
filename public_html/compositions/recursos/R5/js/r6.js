@@ -13,6 +13,9 @@ $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_prev);
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_extra);
 
+    EDGE_Plantilla.debug ? console.log("R6 EDGE_Recurso_promiseCreated",
+            EDGE_Plantilla.temp_scorm,
+            EDGE_Plantilla.temp_scorm_suspendData) : false;
 
     inicializar(evt.sym);
 });
@@ -67,16 +70,14 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     }
     var result = check_every_answer();
 
-
-
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",
         interactionType: "other",
         question: "R6",
+        attempts: stage.prop("ed_attempts"),
         answer: EDGE_Plantilla.temp_scorm,
         position_which_is_right: result.respuestas,
         results: result.respuesta,
-        attempts: stage.prop("ed_attempts"),
         attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
         //timer: evt.timer,
         sym: evt.sym,
@@ -98,7 +99,7 @@ function check_every_answer() {
         var pagina = EDGE_Plantilla.config.paginas[value];
         var stage = EDGE_Plantilla.config.paginas[value].stage;
         var actual_sym = buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true);
-        
+
         console.log($("iframe", actual_sym));
 
         $("iframe", actual_sym)[0]

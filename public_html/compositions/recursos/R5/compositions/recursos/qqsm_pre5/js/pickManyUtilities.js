@@ -107,7 +107,7 @@ function inicializarPickMany(sym) {
         });
         stage.prop("cantidad_picks", cont);
         inicializarPicks(sym);
-        stage.prop("usa_timer", typeof startTimer == 'function');
+        stage.prop("usa_timer", !isEmpty(stage.prop("timer")));
         //enviarEventoActividadTerminada(sym);
     });
 }

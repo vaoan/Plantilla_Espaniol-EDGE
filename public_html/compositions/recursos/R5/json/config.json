@@ -9,7 +9,7 @@
     "paginas": {
         "1": {
             "type": "actividad",
-            "recurso": "61",
+            "recurso": "51",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre1/pre1.html",
             "interaction": {
@@ -19,7 +19,7 @@
         },
         "2": {
             "type": "actividad",
-            "recurso": "62",
+            "recurso": "52",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre2/pre2.html",
             "interaction": {
@@ -29,7 +29,7 @@
         },
         "3": {
             "type": "actividad",
-            "recurso": "63",
+            "recurso": "53",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre3/pre3.html",
             "interaction": {
@@ -39,7 +39,7 @@
         },
         "4": {
             "type": "actividad",
-            "recurso": "64",
+            "recurso": "54",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre4/pre4.html",
             "interaction": {
@@ -49,7 +49,7 @@
         },
         "5": {
             "type": "actividad",
-            "recurso": "65",
+            "recurso": "55",
             "actividad": "pick_many",
             "url": "recursos/qqsm_pre5/pre5.html",
             "interaction": {
