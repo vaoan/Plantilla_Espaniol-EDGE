@@ -66,8 +66,6 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     }
     var result = check_every_answer();
 
-
-
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",
         interactionType: "other",
@@ -78,13 +76,14 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
         attempts: stage.prop("ed_attempts"),
         attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
         //timer: evt.timer,
+        pagina_actual: EDGE_Plantilla.pagina_actual,
         sym: evt.sym,
         identify: identify,
         extra_data: EDGE_Plantilla.temp_scorm_suspendData
     };
 
     if (!isEmpty(evt.timer)) {
-
+        
     }
 
     console.log("SENDING R6", result, objEvt, EDGE_Plantilla.temp_scorm);
@@ -145,3 +144,6 @@ function reload_pages() {
     EDGE_Plantilla.debug ? console.log("****************** ENDED RELOAD ********************") : false;
 }
 
+function pagina_actual(strPaginaActual){
+    EDGE_Plantilla.pagina_actual = EDGE_Plantilla.config.paginas[strPaginaActual];
+}

@@ -253,16 +253,13 @@ function R5_QQSM_heiner_submit(evt) {
         return false;
     }
 
-    merge_extra_scorm(evt.extra_data);
-    merge_temp_scorm(evt.answer);
-
     var objEvt = {
         type: "EDGE_Recurso_postSubmitApplied",
         sym: evt.sym,
         attempts: evt.attempts
     };
 
-    var max_preguntas = evt.extra_data.length - 1;
+    var max_preguntas = evt.position_which_is_right.length;
 
     var actual_pregunta = evt.pagina_actual.recurso;
     var id_actual_pregunta = actual_pregunta + "000";
@@ -270,30 +267,53 @@ function R5_QQSM_heiner_submit(evt) {
     var resp_actual = evt.position_which_is_right[id_actual_pregunta];
     retroalimentacion(resp_actual, evt.identify.actividad);
 
-    if(resp_actual === "incorrect"){
-        objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
-        if(objEvt.attempts >= evt.attempts_limit){
-            objEvt.send_to = "failed";
-        }else{
-            objEvt.send_to = "try_again";
-        }
-    }else{
-        var correct =0;
-        $.each(evt.position_which_is_right, function(key, val){
-            if(val === "correct"){
-                correct++;
-            }else{
-                return false;
-            }
-        });
-        
-        if(correct >= max_preguntas){
-            objEvt.send_to = "correct";
-        }else{
-            objEvt.send_to = "next";
-        }
-    }
+    var objInteraction = {
+        pregunta: evt.identify.titulo + " " + evt.identify.subtitulo,
+        respuesta: "",
+        estado: "",
+        type: "other"
+    };
+
+    var correct = 0;
+    var incorrect = 0;
+    var neutral = 0;
     
+    $.each(evt.position_which_is_right, function (key, val) {
+        if (val === "correct") {
+            correct++;
+        } else if(val === "incorrect") {
+            incorrect++;
+        } else{
+            neutral++;
+        }
+    });
+
+    if (resp_actual === "incorrect") {
+        //objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
+        if (objEvt.attempts >= evt.attempts_limit) {
+            objEvt.send_to = "failed";
+            objInteraction.estado = "incorrect";
+        } else {
+            objEvt.send_to = "try_again";
+            objInteraction.estado = "neutral";
+        }
+    } else if(resp_actual === "correct") {
+        if (correct >= max_preguntas) {
+            objEvt.send_to = "correct";
+            objInteraction.estado = "correct";
+        } else {
+            objEvt.send_to = "next";
+            objInteraction.estado = "neutral";
+        }
+    } else{
+        objEvt.send_to = "nothing";
+        objInteraction.estado = "neutral";
+    }
+
+    evt.answer[evt.identify.recurso + "000"] = objInteraction;
+    merge_extra_scorm(evt.extra_data);
+    merge_temp_scorm(evt.answer);
+
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -733,7 +753,7 @@ function retroalimentacion(strRetroalimentacion, type) {
             break;
         case "R5_QQSM":
             switch (strRetroalimentacion) {
-                case "complete_all":
+                case "neutral":
                     mostrar_pagina("incompleto");
                     break;
             }

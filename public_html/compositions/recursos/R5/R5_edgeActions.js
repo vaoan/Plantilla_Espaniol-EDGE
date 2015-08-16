@@ -22,7 +22,7 @@
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
             
-            pagina_actual(EDGE_Plantilla.config.paginas["1"]);
+            pagina_actual("1");
 
         });
         //Edge binding end
@@ -43,7 +43,7 @@
             	sym.$("audio_entrada")[0].play();
             }
             
-            pagina_actual(EDGE_Plantilla.config.paginas["2"]);
+            pagina_actual("2");
             
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
@@ -59,7 +59,7 @@
             	sym.$("audio_entrada")[0].play();
             }
             
-            pagina_actual(EDGE_Plantilla.config.paginas["3"]);
+            pagina_actual("3");
             
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
@@ -77,7 +77,7 @@
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
             
-            pagina_actual(EDGE_Plantilla.config.paginas["4"]);
+            pagina_actual("4");
 
         });
         //Edge binding end
@@ -88,7 +88,7 @@
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
             
-            pagina_actual(EDGE_Plantilla.config.paginas["5"]);
+            pagina_actual("5");
 
         });
         //Edge binding end
@@ -158,6 +158,11 @@
       Symbol.bindElementAction(compId, symbolName, "${volver}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          
+         // Ir a una etiqueta o a un momento específicos y parar. Por ejemplo:
+         // sym.stop(500); o sym.stop("miEtiqueta");
+         sym.stop(0);
+         
+
       });
       //Edge binding end
 

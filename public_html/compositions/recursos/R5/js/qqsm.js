@@ -4,18 +4,19 @@
  * and open the template in the editor.
  */
 
-$("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
+$("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
+    console.log("R6 GET data", evt, EDGE_Plantilla.temp_scorm);
     var stage = $(evt.sym.getComposition().getStage().ele);
-    console.log("R6 previous data", evt);
     stage.prop("ed_attempts", evt.attempts);
-
-    //send_to(evt);
 });
 
-$("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
+$("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
+    console.log("R6 previous data", evt);
     var stage = $(evt.sym.getComposition().getStage().ele);
-    console.log("R6 GET data", evt);
+    
     stage.prop("ed_attempts", evt.attempts);
+
+    send_to(evt);
 });
 
 function send_to(evt) {
