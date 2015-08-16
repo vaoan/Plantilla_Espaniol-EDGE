@@ -4,10 +4,33 @@
  * and open the template in the editor.
  */
 
-$("body").on("EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied", function (evt) {
+$("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     console.log("R6 previous data", evt);
     stage.prop("ed_attempts", evt.attempts);
 
-    
+    //send_to(evt);
 });
+
+$("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
+    var stage = $(evt.sym.getComposition().getStage().ele);
+    console.log("R6 GET data", evt);
+    stage.prop("ed_attempts", evt.attempts);
+});
+
+function send_to(evt) {
+    switch (evt.send_to) {
+        case "try_again":
+            evt.sym.play("incorrecto");
+            break;
+        case "failed":
+            evt.sym.play("respuestas");
+            break;
+        case "correct":
+            evt.sym.play("corecto");
+            break;
+        case "next":
+            evt.sym.play();
+            break;
+    }
+}

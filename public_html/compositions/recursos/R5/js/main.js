@@ -8,10 +8,10 @@
 //<editor-fold defaultstate="collapsed" desc="Global values">
 EDGE_Plantilla = {
     attemps_increasment: 1,
-    allow_popups: true,
+    allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,
-    debug: true,
+    debug: false,
     base_audio: new Audio('media/navigate-main.mp3'),
     config: null,
     popup_on_show: null,

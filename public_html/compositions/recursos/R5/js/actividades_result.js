@@ -69,7 +69,7 @@ function concentrese_santiago_created(evt) {
         objEvt.show_answers = true;
     }
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function sopa_letras_toscano_created(evt) {
@@ -92,7 +92,7 @@ function sopa_letras_toscano_created(evt) {
         objEvt.show_answers = true;
     }
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function R6_heiner_created(evt) {
@@ -108,7 +108,7 @@ function R6_heiner_created(evt) {
 
     //console.log(objEvt);
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function selecting_blanks_santiago_created(evt) {
@@ -124,7 +124,7 @@ function selecting_blanks_santiago_created(evt) {
 
     //console.log(objEvt);
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function filling_blanks_santiago_created(evt) {
@@ -140,7 +140,7 @@ function filling_blanks_santiago_created(evt) {
 
     //console.log(objEvt);
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function sortable_santiago_created(evt) {
@@ -154,7 +154,7 @@ function sortable_santiago_created(evt) {
 
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function drag_drop_toscano_created(evt) {
@@ -177,7 +177,7 @@ function drag_drop_toscano_created(evt) {
         objEvt.show_answers = true;
     }
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 
 function pick_many_toscano_created(evt) {
@@ -197,7 +197,7 @@ function pick_many_toscano_created(evt) {
         objEvt.show_answers = true;
     }
 
-    send_interactions(evt.identify, objEvt, "created");
+    send_evt_to(evt.identify, objEvt, "created");
 }
 //</editor-fold>
 
@@ -254,54 +254,47 @@ function R5_QQSM_heiner_submit(evt) {
     }
 
     merge_extra_scorm(evt.extra_data);
+    merge_temp_scorm(evt.answer);
 
     var objEvt = {
         type: "EDGE_Recurso_postSubmitApplied",
-        sym: evt.sym
+        sym: evt.sym,
+        attempts: evt.attempts
     };
 
-    if (!isEmpty(evt.timer) && evt.timer.time_out) {
-        delete evt.timer.time_out;
-        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
-        var timer = {reset_timer: true};
-        objEvt = merge_options(objEvt, {timer: timer});
-    } else {
-        if (evt.results === "neutral") {
-            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
-            evt.results = "neutral";
-            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
-        }
-    }
+    var max_preguntas = evt.extra_data.length - 1;
 
-    if (evt.results === "correct") {
-        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
-        objEvt = merge_options(objEvt, {
-            block: true,
-            show_answers: false,
-            attempts: evt.attempts
-        });
-        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+    var actual_pregunta = evt.pagina_actual.recurso;
+    var id_actual_pregunta = actual_pregunta + "000";
 
-    } else if (evt.results === "incorrect") {
-        if (!isEmpty(evt.timer)) {
-            timer = merge_options(timer, {reset_timer: true});
-            objEvt = merge_options(objEvt, {timer: timer});
-        }
-        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
-        var attemps = attemps_answer(evt);
-        objEvt = merge_options(objEvt, attemps);
-        
-        if (!attemps.block) {
-            strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
+    var resp_actual = evt.position_which_is_right[id_actual_pregunta];
+    retroalimentacion(resp_actual, evt.identify.actividad);
+
+    if(resp_actual === "incorrect"){
+        objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
+        if(objEvt.attempts >= evt.attempts_limit){
+            objEvt.send_to = "failed";
         }else{
-            strRetro = "incorrect";
+            objEvt.send_to = "try_again";
+        }
+    }else{
+        var correct =0;
+        $.each(evt.position_which_is_right, function(key, val){
+            if(val === "correct"){
+                correct++;
+            }else{
+                return false;
+            }
+        });
+        
+        if(correct >= max_preguntas){
+            objEvt.send_to = "correct";
+        }else{
+            objEvt.send_to = "next";
         }
     }
-
-    retroalimentacion(strRetro, "R6");
-    save_extra_data(objEvt, evt);
-    merge_temp_scorm(evt.answer);
-    send_interactions(evt.identify, objEvt, evt.results);
+    
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function sopa_letras_toscano_submit(evt) {
@@ -353,10 +346,10 @@ function sopa_letras_toscano_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -364,7 +357,7 @@ function sopa_letras_toscano_submit(evt) {
     retroalimentacion(strRetro);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
     save_extra_data(objEvt, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function concentrese_santiago_submit(evt) {
@@ -416,10 +409,10 @@ function concentrese_santiago_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -427,7 +420,7 @@ function concentrese_santiago_submit(evt) {
     retroalimentacion(strRetro);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
     save_extra_data(objEvt, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function selecting_blanks_santiago_submit(evt) {
@@ -469,10 +462,10 @@ function selecting_blanks_santiago_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -480,7 +473,7 @@ function selecting_blanks_santiago_submit(evt) {
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function filling_blanks_santiago_submit(evt) {
@@ -521,10 +514,10 @@ function filling_blanks_santiago_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -532,7 +525,7 @@ function filling_blanks_santiago_submit(evt) {
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function sortable_santiago_submit(evt) {
@@ -571,10 +564,10 @@ function sortable_santiago_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -582,7 +575,7 @@ function sortable_santiago_submit(evt) {
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function drag_drop_toscano_submit(evt) {
@@ -627,10 +620,10 @@ function drag_drop_toscano_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -640,7 +633,7 @@ function drag_drop_toscano_submit(evt) {
     save_extra_data(objEvt, evt);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
 
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 function pick_many_toscano_submit(evt) {
@@ -684,10 +677,10 @@ function pick_many_toscano_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        
+
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
-        }else{
+        } else {
             strRetro = "incorrect";
         }
     }
@@ -695,7 +688,7 @@ function pick_many_toscano_submit(evt) {
     retroalimentacion(strRetro);
     upload_interaction(evt.question, evt.answer, evt.results, evt.interactionType, evt);
     save_extra_data(objEvt, evt);
-    send_interactions(evt.identify, objEvt, evt.results);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 //</editor-fold>
 
@@ -730,27 +723,53 @@ function retroalimentacion(strRetroalimentacion, type) {
     }
     EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, type) : false;
 
+    switch (type) {
+        case "R6":
+            switch (strRetroalimentacion) {
+                case "complete_all":
+                    mostrar_pagina("incompleto");
+                    break;
+            }
+            break;
+        case "R5_QQSM":
+            switch (strRetroalimentacion) {
+                case "complete_all":
+                    mostrar_pagina("incompleto");
+                    break;
+            }
+        default :
+            switch (strRetroalimentacion) {
+                case "correct":
+                    mostrar_pagina("correcto");
+                    break;
+                case "incorrect":
+                    mostrar_pagina("incorrecto");
+                    break;
+                case "nuevo_intento":
+                    mostrar_pagina("nuevointento");
+                    break;
+                case "complete_all":
+                    mostrar_pagina("incompleto");
+                    break;
+                case "timeout":
+                    mostrar_pagina("tiempo");
+                    break;
+            }
+            break;
+    }
+
     if (type === "R6" && strRetroalimentacion !== "complete_all") {
         return;
     }
 
-    switch (strRetroalimentacion) {
-        case "correct":
-            mostrar_pagina("correcto");
-            break;
-        case "incorrect":
-            mostrar_pagina("incorrecto");
-            break;
-        case "nuevo_intento":
-            mostrar_pagina("nuevointento");
-            break;
-        case "complete_all":
-            mostrar_pagina("incompleto");
-            break;
+    if (type === "R5_QQSM") {
+        return;
     }
+
+
 }
 
-function send_interactions(pagina, objEvt, results, isSendToFather) {
+function send_evt_to(pagina, objEvt, results, isSendToFather) {
     if (isEmpty(pagina)) {
         console.error("NOT SEND TO FATHER", objEvt);
         return false;
@@ -772,6 +791,7 @@ function send_interactions(pagina, objEvt, results, isSendToFather) {
         case "incorrect":
         case "created":
         case "neutral":
+        case "working":
             if (isSendToFather) {
                 EDGE_Plantilla.debug ? console.log("EVENT TO SEND FATHER", objEvt, sym_contenedor) : false;
                 parent.$(parent.document).trigger(objEvt);
@@ -958,6 +978,7 @@ function save_extra_data(objData, evt) {
 
 function merge_extra_scorm(extra_scorm) {
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm_suspendData, extra_scorm);
+    EDGE_Plantilla.debug ? console.log("EXTRA SCORM MERGED", EDGE_Plantilla.temp_scorm_suspendData) : false;
 }
 
 function read_extra_data(evt) {

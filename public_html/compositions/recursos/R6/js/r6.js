@@ -89,7 +89,7 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
 
     console.log("SENDING R6", result, objEvt, EDGE_Plantilla.temp_scorm);
 
-    send_interactions(identify, objEvt, result.respuesta, true);
+    send_evt_to(identify, objEvt, result.respuesta, true);
 });
 
 function check_every_answer() {

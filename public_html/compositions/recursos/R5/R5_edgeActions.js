@@ -21,6 +21,8 @@
             
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
+            
+            pagina_actual(EDGE_Plantilla.config.paginas["1"]);
 
         });
         //Edge binding end
@@ -41,6 +43,7 @@
             	sym.$("audio_entrada")[0].play();
             }
             
+            pagina_actual(EDGE_Plantilla.config.paginas["2"]);
             
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
@@ -55,6 +58,8 @@
             if (sym.$("audio_entrada")[0].paused) {
             	sym.$("audio_entrada")[0].play();
             }
+            
+            pagina_actual(EDGE_Plantilla.config.paginas["3"]);
             
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
@@ -71,6 +76,8 @@
             }
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
+            
+            pagina_actual(EDGE_Plantilla.config.paginas["4"]);
 
         });
         //Edge binding end
@@ -80,6 +87,8 @@
             
             // Establecer el volumen de una pista de audio en 20% 
             sym.$("audio_entrada")[0].volume = 0.2;
+            
+            pagina_actual(EDGE_Plantilla.config.paginas["5"]);
 
         });
         //Edge binding end
