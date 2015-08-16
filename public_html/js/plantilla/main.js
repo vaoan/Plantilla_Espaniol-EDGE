@@ -265,6 +265,10 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
                 scorm_extra: EDGE_Plantilla.temp_scorm_suspendData
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+            var html = $("iframe", sym_contenedor.ele)[0].contentWindow.$('html');
+            prevent_scroll(html);
+            var html = $("iframe", sym_contenedor.ele)[0].contentWindow.$('body');
+            prevent_scroll(html);
         }
 
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
@@ -352,7 +356,7 @@ $("body").on("EDGE_Container_loaded", function (evt) {
     var element;
     
     element = $("<div/>", {
-        id: "popup_gray", ed_position: "top"
+        id: "popup_gray", ed_position: "top", overflow : "hidden"
     });
     element.css({
         order: 1, width: "100%", height: "100%", position: "absolute",
