@@ -53,7 +53,7 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
     if (data.block) {
         stage.prop("blocked", true);
         deshabilitarPickManys(data.sym);
-        
+
         if (stage.prop("usa_timer")) {
             stopTimer(data.sym);
         }
@@ -76,7 +76,7 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
     if (data.block) {
         stage.prop("blocked", true);
         deshabilitarPickManys(data.sym);
-        if (stage.prop("usa_timer") ) {
+        if (stage.prop("usa_timer")) {
             setHTMLTimer(data.timer.remaining_time, data.sym);
             cambiarEstadoTimer(data.sym, data.timer.current_state);
         }
@@ -210,9 +210,9 @@ function deseleccionarPick(sym, nombrePick) {
 
 //**********************************************************************************
 
-function cambiarEstadoPick(sym, nombrePick, new_state){
+function cambiarEstadoPick(sym, nombrePick, new_state) {
     var pickObj = sym.$(nombrePick);
-    if (pickObj.prop("current_state")!== new_state) {
+    if (pickObj.prop("current_state") !== new_state) {
         sym.getSymbol(nombrePick).play(new_state);
         pickObj.prop("current_state", new_state);
     }
@@ -234,7 +234,7 @@ function checkAnswersPickMany(sym) {
             if (!pickObj.prop("correct")) {
                 correct = false;
             }
-            
+
             if (pickObj.prop("selected")) {
                 respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("nombre") + ")");
             }
@@ -296,7 +296,7 @@ function deshabilitarPickManys(sym) {
     for (var i = 1; i <= CANTIDAD_PICKS; i++) {
         sym.$("PICK_" + i).off();
     }
-
+}
 //***********************************************************************
 
 //retorna la parte numérica del nombre de un elemento
@@ -316,5 +316,4 @@ function nombreANumero(strNombre) {
 
 function inicializar(sym) {
     inicializarPickMany(sym);
-}      
 }

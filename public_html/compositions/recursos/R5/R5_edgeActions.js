@@ -474,6 +474,12 @@
    //Edge symbol end:'Submit'
 
    //=========================================================
+   
+   //Edge symbol: 'R6_6'
+   (function(symbolName) {   
+   
+       })("R6_respuestas");
+   //Edge symbol end:'R6_respuestas'
 
    //=========================================================
    
@@ -613,10 +619,10 @@
 
    //=========================================================
    
-   //Edge symbol: 'R6_6'
+   //Edge symbol: 'margen_superior'
    (function(symbolName) {   
    
-       })("R6_respuestas");
-   //Edge symbol end:'R6_respuestas'
+   })("margen_superior");
+   //Edge symbol end:'margen_superior'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");
