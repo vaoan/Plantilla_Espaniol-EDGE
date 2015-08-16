@@ -4,6 +4,17 @@
  * and open the template in the editor.
  */
 
+function WhatBrowser() {
+
+    var browser = (!!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) ? "Opera" :
+            typeof InstallTrigger !== 'undefined' ? "Firefox" :
+            (Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0) ? "Safari" :
+            !!window.chrome ? "Chrome" : "IE";
+    console.log(browser);
+    
+    return browser;
+}
+
 
 $("body").on("EDGE_Container_loaded", function () {
     //document.body.style.background = "url('images/r1.png') 50% 50% / cover no-repeat gray";
@@ -21,6 +32,7 @@ $("body").on("EDGE_Container_loaded", function () {
         //zoom: "1.5"
         //"background": "rgba(0,0,0,0.5)"
     });
+    $("html").scrollTop();
 });
 
 function menu_tools_hide_show(sym) {
