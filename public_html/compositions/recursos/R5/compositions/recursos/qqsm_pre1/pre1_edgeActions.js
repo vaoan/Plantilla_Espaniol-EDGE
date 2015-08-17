@@ -44,7 +44,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          pickClickeado(sym, "PICK_1");
-
+         //eliminarPicks(sym, 2);
       });
       //Edge binding end
 

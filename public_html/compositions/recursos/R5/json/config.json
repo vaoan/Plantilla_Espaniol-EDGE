@@ -2,7 +2,7 @@
     "default": {
         "url_pages": "compositions/",
         "default_page": [
-            "1","2","3","4","5"
+            "1","2","3","4","5","respuestas"
         ],
         "limit_attemps": 2
     },

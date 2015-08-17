@@ -117,19 +117,22 @@
 
       Symbol.bindElementAction(compId, symbolName, "${ayuda_3}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         
+         tooltips("publico");
+
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${ayuda_2}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         
+         tooltips("llamada");
+
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${ayuda_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         
+         tooltips("50_50");
+
       });
       //Edge binding end
 

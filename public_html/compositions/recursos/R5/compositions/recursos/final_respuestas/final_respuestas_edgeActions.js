@@ -20,6 +20,51 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${audio_5}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         var numeroAudio = 5;
+         var cantidadDeAudios = 6; 
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${audio_4}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         var numeroAudio = 4;
+         var cantidadDeAudios = 6; 
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${audio_3}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         var numeroAudio = 3;
+         var cantidadDeAudios = 6; 
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${audio_2}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         var numeroAudio = 2;
+         var cantidadDeAudios = 6; 
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${audio_1}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         var numeroAudio = 1;
+         var cantidadDeAudios = 6; 
+         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
@@ -124,50 +169,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol: 'contenedorrespuestas'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${audio_1}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var numeroAudio = 1;
-         var cantidadDeAudios = 6; 
-         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${audio_2}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var numeroAudio = 2;
-         var cantidadDeAudios = 6; 
-         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindElementAction(compId, symbolName, "${audio_3}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var numeroAudio = 3;
-         var cantidadDeAudios = 6; 
-         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${audio_4}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var numeroAudio = 4;
-         var cantidadDeAudios = 6; 
-         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${audio_5}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var numeroAudio = 5;
-         var cantidadDeAudios = 6; 
-         reproducirAudio(sym, numeroAudio, cantidadDeAudios);
-
-      });
-      //Edge binding end
+      
 
    })("contenedorrespuestas");
    //Edge symbol end:'contenedorrespuestas'

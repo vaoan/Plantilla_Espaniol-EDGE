@@ -76,7 +76,7 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
         attempts: stage.prop("ed_attempts"),
         attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
         //timer: evt.timer,
-        pagina_actual: EDGE_Plantilla.pagina_actual,
+        pagina_actual: EDGE_Plantilla.config.paginas[EDGE_Plantilla.pagina_actual],
         sym: evt.sym,
         identify: identify,
         extra_data: EDGE_Plantilla.temp_scorm_suspendData
@@ -145,5 +145,5 @@ function reload_pages() {
 }
 
 function pagina_actual(strPaginaActual){
-    EDGE_Plantilla.pagina_actual = EDGE_Plantilla.config.paginas[strPaginaActual];
+    EDGE_Plantilla.pagina_actual = strPaginaActual;
 }

@@ -247,7 +247,6 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
 });
 
 function R5_QQSM_heiner_submit(evt) {
-    var strRetro = null;
 
     if (evt.attempts >= evt.attempts_limit) {
         return false;
@@ -259,13 +258,19 @@ function R5_QQSM_heiner_submit(evt) {
         attempts: evt.attempts
     };
 
-    var max_preguntas = evt.position_which_is_right.length;
+    var max_preguntas = 0;
+
+    $.each(evt.position_which_is_right, function (key, value) {
+        max_preguntas++;
+    });
+
+    max_preguntas = max_preguntas - 1;
 
     var actual_pregunta = evt.pagina_actual.recurso;
-    var id_actual_pregunta = actual_pregunta + "000";
+    var id_actual_pregunta = actual_pregunta + "0000";
 
     var resp_actual = evt.position_which_is_right[id_actual_pregunta];
-    retroalimentacion(resp_actual, evt.identify.actividad);
+
 
     var objInteraction = {
         pregunta: evt.identify.titulo + " " + evt.identify.subtitulo,
@@ -277,43 +282,47 @@ function R5_QQSM_heiner_submit(evt) {
     var correct = 0;
     var incorrect = 0;
     var neutral = 0;
-    
+
     $.each(evt.position_which_is_right, function (key, val) {
         if (val === "correct") {
             correct++;
-        } else if(val === "incorrect") {
+        } else if (val === "incorrect") {
             incorrect++;
-        } else{
+        } else {
             neutral++;
         }
     });
 
     if (resp_actual === "incorrect") {
-        //objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
+        objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
             objInteraction.estado = "incorrect";
+            objEvt.block = true;
         } else {
             objEvt.send_to = "try_again";
             objInteraction.estado = "neutral";
         }
-    } else if(resp_actual === "correct") {
-        if (correct >= max_preguntas) {
-            objEvt.send_to = "correct";
-            objInteraction.estado = "correct";
-        } else {
-            objEvt.send_to = "next";
-            objInteraction.estado = "neutral";
-        }
-    } else{
+    } else if (resp_actual === "neutral") {
+        retroalimentacion(resp_actual, evt.identify.actividad);
         objEvt.send_to = "nothing";
         objInteraction.estado = "neutral";
+    } else if (correct >= max_preguntas) {
+        objEvt.send_to = "correct";
+        objInteraction.estado = "correct";
+        objEvt.block = true;
+    } else {
+        objEvt.send_to = "next";
+        objInteraction.estado = "neutral";
     }
+
 
     evt.answer[evt.identify.recurso + "000"] = objInteraction;
     merge_extra_scorm(evt.extra_data);
     merge_temp_scorm(evt.answer);
 
+    console.log(objEvt);
+    save_extra_data(objEvt, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -712,6 +721,27 @@ function pick_many_toscano_submit(evt) {
 }
 //</editor-fold>
 
+//<editor-fold defaultstate="collapsed" desc="Actividades EXTRA SAVE">
+$(document).on("EDGE_Plantilla_ExtraSave", function (evt) {
+    //var temp_pagina = evt.identify;
+    EDGE_Plantilla.debug ? console.log(evt) : false;
+
+    switch (evt.identify.actividad) {
+        case "R5_QQSM":
+            R6_heiner_Extra_save(evt);
+            break;
+        default:
+            console.error("Creation inexistente", evt.identify);
+            break;
+    }
+});
+//</editor-fold>
+
+function R6_heiner_Extra_save(evt){
+    merge_extra_scorm(evt.extra_data);
+}
+
+
 //<editor-fold defaultstate="collapsed" desc="Check data Actividades">
 function check_answers(evt) {
     var is_empty = false;
@@ -738,10 +768,10 @@ function check_answers(evt) {
 }
 
 function retroalimentacion(strRetroalimentacion, type) {
+    EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, type, EDGE_Plantilla.allow_popups) : false;
     if (!EDGE_Plantilla.allow_popups) {
         return;
     }
-    EDGE_Plantilla.debug ? console.log("Retroalimentacion", strRetroalimentacion, type) : false;
 
     switch (type) {
         case "R6":

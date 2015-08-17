@@ -1,0 +1,23 @@
+{
+    "num_intentos": 2,
+    "pregunta":"observe la imagen y luego marque la casilla según corresponda. Recuerde que cuenta con un minuto y cuarenta segundos para desarrollar esta actividad. Tiene dos intentos para esta actividad.",
+    "picks": {
+        "1": {
+            "descripcion": "un",
+            "esRespuesta": false
+        },
+        "2": {
+            "descripcion": "una",
+            "esRespuesta": true
+        },
+        "3": {
+            "descripcion": "unos",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "unas",
+            "esRespuesta": false
+        }      
+        
+    }
+}
