@@ -59,13 +59,14 @@ $("body").on("EDGE_Container_loaded", function () {
     
     prevent_scroll($("html"));
     
-    var suspendData = SCORM_INITIALIZE();
-    if(suspendData !== ""){
-        EDGE_Plantilla.temp_scorm_suspendData = jQuery.parseJSON(suspendData);
+    if(EDGE_Plantilla.scorm_available){
+        var suspendData = SCORM_INITIALIZE();
+        if(suspendData !== ""){
+            EDGE_Plantilla.temp_scorm_suspendData = jQuery.parseJSON(suspendData);
+        }
+        var interactions = LOAD_INTERACTIONS();
+        EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions)
     }
-    
-    var interactions = LOAD_INTERACTIONS();
-    EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions)
 
 });
 
