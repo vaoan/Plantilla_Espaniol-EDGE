@@ -52,7 +52,7 @@ $("body").on("EDGE_Recurso_PaginaOnShow", function (evt) {
 
 
     if (!isEmpty(extra) && !isEmpty(extra.response_pattern)) {
-        
+
         $.each(extra.response_pattern, function (key) {
             buscar_sym(EDGE_Plantilla.plantilla_sym,
                     EDGE_Plantilla.tool_tips[key].sym, true).hide();
@@ -155,7 +155,14 @@ function tooltips(strTool) {
 
     switch (evt.show_tooltip) {
         case "50_50":
-            $('iframe', sym_modify.ele)[0].contentWindow.eliminarPicks(sym_modify, 2);
+            var sym_contenedor = buscar_sym(EDGE_Plantilla.plantilla_sym,
+                    EDGE_Plantilla.config.paginas[EDGE_Plantilla.pagina_actual].sym);
+            console.log("EVENT TO SEND CHILD", objEvt, sym_contenedor, $('iframe', sym_contenedor.ele)[0].contentWindow.$('body'));
+            $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger({
+                type: "EDGE_Recurso_eliminarOpciones",
+                cantidad: 2,
+                sym: sym_modify
+            });
             break;
     }
 
