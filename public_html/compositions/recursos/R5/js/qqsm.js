@@ -35,26 +35,25 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
         console.log("BLOQUEADA", estado);
         send_to(estado, evt);
     }
-
-    if (!isEmpty(evt.response_pattern)) {
-        $.each(evt.response_pattern, function (key, value) {
-            buscar_sym(EDGE_Plantilla.plantilla_sym,
-                    EDGE_Plantilla.tool_tips[key].sym, true).hide();
-        });
-    }
 });
 
 $("body").on("EDGE_Recurso_PaginaOnShow", function (evt) {
 
     var stage = $(evt.sym.getComposition().getStage().ele);
     stage.prop("ed_attempts", evt.attempts);
-    var strPagina = evt.pagina;
     var extra = EDGE_Plantilla.temp_scorm_suspendData[stage.prop("ed_identify").recurso];
+    console.log("SUSPEND DATA R5_QQSM", extra);
 
-    console.log("extra", extra);
+    $.each(EDGE_Plantilla.tool_tips, function (key, value) {
+        var ele = buscar_sym(EDGE_Plantilla.plantilla_sym,
+                value.sym, true);
+        ele.show();
+    });
 
-    if (!isEmpty(extra.response_pattern)) {
-        $.each(extra.response_pattern, function (key, value) {
+
+    if (!isEmpty(extra) && !isEmpty(extra.response_pattern)) {
+        
+        $.each(extra.response_pattern, function (key) {
             buscar_sym(EDGE_Plantilla.plantilla_sym,
                     EDGE_Plantilla.tool_tips[key].sym, true).hide();
         });
@@ -102,18 +101,9 @@ function reset_tooltips() {
 
     var stage = $(evt.sym.getComposition().getStage().ele);
     var identify = stage.prop("ed_identify");
-    $.each(EDGE_Plantilla.tool_tips, function (key, value) {
-        if (!isEmpty(value.sym_externo)) {
-            var busc_sym = buscar_sym(sym_modify, value.sym_externo, true);
-            busc_sym.hide();
-            busc_sym = buscar_sym(EDGE_Plantilla.plantilla_sym, value.sym, true);
-            busc_sym.show();
-        }
-        console.log(key);
-    });
 
-    if (isEmpty(EDGE_Plantilla.temp_scorm_suspendData[identify.recurso + "000"])) {
-        EDGE_Plantilla.temp_scorm_suspendData[identify.recurso + "000"] = {};
+    if (isEmpty(EDGE_Plantilla.temp_scorm_suspendData[identify.recurso])) {
+        EDGE_Plantilla.temp_scorm_suspendData[identify.recurso] = {};
     }
 
     var objExtra = {};
@@ -123,6 +113,14 @@ function reset_tooltips() {
     };
 
     merge_extra_scorm(objExtra);
+
+    var objEvt = {
+        type: "EDGE_Plantilla_ExtraSave",
+        "extra_data": EDGE_Plantilla.temp_scorm_suspendData,
+        identify: identify
+    };
+
+    send_evt_to(identify, objEvt, "working", true);
 }
 
 function tooltips(strTool) {
@@ -161,8 +159,13 @@ function tooltips(strTool) {
             break;
     }
 
-    if (isEmpty(EDGE_Plantilla.temp_scorm_suspendData[identify.recurso + "000"])) {
-        EDGE_Plantilla.temp_scorm_suspendData[identify.recurso + "000"] = {};
+    var extra = EDGE_Plantilla.temp_scorm_suspendData[identify.recurso];
+
+    if (isEmpty(EDGE_Plantilla.temp_scorm_suspendData[identify.recurso])) {
+        EDGE_Plantilla.temp_scorm_suspendData[identify.recurso] = {
+            "response_pattern": {}
+        };
+        extra = EDGE_Plantilla.temp_scorm_suspendData[identify.recurso];
     }
 
     var objExtra = {};
@@ -170,6 +173,11 @@ function tooltips(strTool) {
     objExtra[identify.recurso] = {
         "response_pattern": response_pattern
     };
+
+    if (!isEmpty(extra.response_pattern)) {
+        objExtra[identify.recurso].response_pattern =
+                merge_options(objExtra[identify.recurso].response_pattern, extra.response_pattern);
+    }
 
     merge_extra_scorm(objExtra);
 

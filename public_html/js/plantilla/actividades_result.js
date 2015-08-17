@@ -347,6 +347,7 @@ function R6_heiner_submit(evt) {
         if (evt.results === "neutral") {
             strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
             evt.results = "neutral";
+            retroalimentacion(strRetro);
             EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
         }
     }
@@ -374,9 +375,9 @@ function R6_heiner_submit(evt) {
         }
     }
 
-    retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    merge_temp_scorm(evt.answer);send_interactions(evt.identify, objEvt, evt.results);
+    merge_temp_scorm(evt.answer);
+    send_evt_to(evt.identify, objEvt, evt.results);
 }
 
 
