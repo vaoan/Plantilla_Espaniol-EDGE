@@ -1,44 +1,36 @@
 {
     "num_intentos": 2,
-    "pregunta":"haga clic en cada uno de los botones para observar las imágenes.  Escuche el audio y luego relacione los nombres de la lista desplegable con la letra de la columna. Tiene dos intentos para esta actividad.",
+    "pregunta":"prueba de pregunta drag and drop",
     "tipo": "uno a uno",
     "drags": {
         "1": {
-            "descripcion": "eme"
+            "descripcion": "Ce – a – erre – te – a - ge - e - ene - a"
         },
         "2": {
-            "descripcion": "pe"
+            "descripcion": "A – eme – a – zeta – o – ene –a –ese"
         },
-         "3": {
-            "descripcion": "erre"
+        "3": {
+            "descripcion": "Se – a – erre – efe – a - je - e - ene - a"
         },
-         "4": {
-            "descripcion": "ese"
+        "4": {
+            "descripcion": "A – ene – a – zeta – o – eñe –a –eze"
         },
-         "5": {
-            "descripcion": "hache"
+        "5": {
+            "descripcion": "Ce – a – pe – te – a - je - e - eñe - e"
+        },
+        "6": {
+            "descripcion": "A – eñe – a – seta – o – eme –a –ese​"
         }
+
     },
     "drops": {
         "1": {
-            "descripcion": "recuadro eme",
+            "descripcion": "cuadro cartagena",
             "accepted": []
         },
         "2": {
-            "descripcion": "recuadro pe",
-            "accepted": []
-        },
-        "3": {
-            "descripcion": "recuadro erre",
-            "accepted": []
-        },
-        "4": {
-            "descripcion": "recuadro ese",
-            "accepted": []
-        },
-        "5": {
-            "descripcion": "recuadro hache",
-            "accepted": []
+            "descripcion": "cuadro amazonas",
+            "accepted": ["5"]
         }
     }
 }

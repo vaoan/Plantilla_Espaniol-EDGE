@@ -2,16 +2,16 @@
     "default": {
         "url_pages": "compositions/",
         "default_page": [
-            "1"
+            "1","2","3","4","5"
         ],
-        "limit_attemps": 3
+        "limit_attemps": 1
     },
     "paginas": {
         "1": {
             "type": "actividad",
-            "recurso": "3",
-            "actividad": "select",
-            "url": "recursos/actividad-selecting_select/actividad-filling_selects.html",
+            "recurso": "61",
+            "actividad": "drag_drop",
+            "url": "recursos/R6_PRE1/esn1le01ob02r6pre1.html",
             "interaction": {
                 "ALL": true
             },
@@ -19,23 +19,43 @@
         },
         "2": {
             "type": "actividad",
-            "recurso": "4",
+            "recurso": "62",
             "actividad": "pick_many",
-            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "url": "recursos/R6_PRE2/esn1le01ob02r6pre2.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["contenedor_2"]
+            "sym": ["R6_2"]
         },
         "3": {
             "type": "actividad",
-            "recurso": "5",
+            "recurso": "63",
             "actividad": "pick_many",
-            "url": "actividades/EDGE_PickMany-master/bolita.html",
+            "url": "recursos/R6_PRE3/esn1le01ob02r6pre3.html",
             "interaction": {
                 "ALL": true
             },
-            "sym": ["contenedor_3"]
+            "sym": ["R6_3"]
+        },
+        "4": {
+            "type": "actividad",
+            "recurso": "64",
+            "actividad": "pick_many",
+            "url": "recursos/R6_PRE4/esn1le01ob02r6pre4.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_4"]
+        },
+        "5": {
+            "type": "actividad",
+            "recurso": "65",
+            "actividad": "pick_many",
+            "url": "recursos/R6_PRE5/esn1le01ob02r6pre5.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_5"]
         }
     }
 }

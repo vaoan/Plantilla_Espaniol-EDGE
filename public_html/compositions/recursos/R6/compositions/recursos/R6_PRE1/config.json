@@ -1,0 +1,25 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Escuche el audio y arrastre la letra que falta para completar la palabra.",
+    "tipo": "uno a uno",
+    "drags": {
+        "1": {
+            "descripcion": "a"
+        },
+        "2": {
+            "descripcion": "o"
+        },
+         "3": {
+            "descripcion": "e"
+        },
+         "4": {
+            "descripcion": "i"
+        }        
+    },
+    "drops": {
+        "1": {
+            "descripcion": "cuadro",
+            "accepted": ["1"]
+        }        
+    }
+}

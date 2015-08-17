@@ -22,7 +22,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -361,10 +361,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'cerrar',
+                            type: 'image',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],

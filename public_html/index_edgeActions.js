@@ -253,38 +253,7 @@
         Symbol.bindElementAction(compId, symbolName, "${btn_menugrafico}", "click", function (sym, e) {
             // muestra/oculta menu grafico
 
-            if (sym.$("menu_grafico").is(":visible")) {
-
-                sym.$("menu_grafico").hide();
-                sym.$("btn_full").hide();
-                sym.$("btn_creditos").hide();
-                sym.$("btn_ayuda").hide();
-                sym.$("btn_audio").hide();
-                sym.$("btn_info").hide();
-                sym.$("btn_accesibilidad").hide()
-                sym.$("Tool_accesibilidad").hide();
-                sym.$("Tool_info").hide();
-                sym.$("Tool_full").hide();
-                sym.$("Tool_ayuda").hide();
-                sym.$("Tool_audio").hide();
-                sym.$("Tool_creditos").hide();
-
-            } else {
-
-                sym.$("menu_grafico").show();
-                sym.$("btn_full").show();
-                sym.$("btn_creditos").show();
-                sym.$("btn_ayuda").show();
-                sym.$("btn_audio").show();
-                sym.$("btn_info").show();
-                sym.$("btn_accesibilidad").show();
-                sym.$("Tool_accesibilidad").show();
-                sym.$("Tool_info").show();
-                sym.$("Tool_full").show();
-                sym.$("Tool_ayuda").show();
-                sym.$("Tool_audio").show();
-                sym.$("Tool_creditos").show();
-            }
+            menu_tools_hide_show(sym);
 
 
         });
@@ -536,16 +505,7 @@
         });
         //Edge binding end
 
-        Symbol.bindElementAction(compId, symbolName, "${overlay}", "click", function (sym, e) {
-            // introducir aquí código para clic de ratón
-            $(document).trigger({
-                type: 'EDGE_Plantilla_ClosePopup',
-                sym: sym,
-                evt: e
-            });
-
-        });
-        //Edge binding end
+        
 
         Symbol.bindElementAction(compId, symbolName, "${btn_sena}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
@@ -565,8 +525,26 @@
         });
         //Edge binding end
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${container_overlay}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         $(document).trigger({
+             type: 'EDGE_Plantilla_ClosePopup',
+             sym: sym,
+             evt: e
+         });
+
+      });
+      //Edge binding end
+
     })("stage");
-    //Edge symbol end:'stage'
+   //Edge symbol end:'stage'
 
     //=========================================================
 
@@ -586,7 +564,7 @@
         //Edge binding end
 
     })("Tool_audio");
-    //Edge symbol end:'Tool_audio'
+   //Edge symbol end:'Tool_audio'
 
     //=========================================================
 
@@ -594,7 +572,7 @@
     (function (symbolName) {
 
     })("btn_audio");
-    //Edge symbol end:'btn_audio'
+   //Edge symbol end:'btn_audio'
 
     //=========================================================
 
@@ -614,7 +592,7 @@
         //Edge binding end
 
     })("rec_6");
-    //Edge symbol end:'rec_6'
+   //Edge symbol end:'rec_6'
 
     //=========================================================
 
@@ -634,7 +612,7 @@
         //Edge binding end
 
     })("rec_2");
-    //Edge symbol end:'rec_2'
+   //Edge symbol end:'rec_2'
 
     //=========================================================
 
@@ -654,7 +632,7 @@
         //Edge binding end
 
     })("rec_3");
-    //Edge symbol end:'rec_3'
+   //Edge symbol end:'rec_3'
 
     //=========================================================
 
@@ -674,7 +652,7 @@
         //Edge binding end
 
     })("rec_4");
-    //Edge symbol end:'rec_4'
+   //Edge symbol end:'rec_4'
 
     //=========================================================
 
@@ -694,7 +672,7 @@
         //Edge binding end
 
     })("rec_5");
-    //Edge symbol end:'rec_5'
+   //Edge symbol end:'rec_5'
 
     //=========================================================
 
@@ -714,7 +692,7 @@
         //Edge binding end
 
     })("rec_1");
-    //Edge symbol end:'rec_1'
+   //Edge symbol end:'rec_1'
 
     //=========================================================
 
@@ -722,7 +700,7 @@
     (function (symbolName) {
 
     })("btnR_1");
-    //Edge symbol end:'btnR_1'
+   //Edge symbol end:'btnR_1'
 
     //=========================================================
 
@@ -730,7 +708,7 @@
     (function (symbolName) {
 
     })("btnR_2");
-    //Edge symbol end:'btnR_2'
+   //Edge symbol end:'btnR_2'
 
     //=========================================================
 
@@ -738,7 +716,7 @@
     (function (symbolName) {
 
     })("btnR_3");
-    //Edge symbol end:'btnR_3'
+   //Edge symbol end:'btnR_3'
 
     //=========================================================
 
@@ -746,7 +724,7 @@
     (function (symbolName) {
 
     })("btnR_4");
-    //Edge symbol end:'btnR_4'
+   //Edge symbol end:'btnR_4'
 
     //=========================================================
 
@@ -754,7 +732,7 @@
     (function (symbolName) {
 
     })("btnR_5");
-    //Edge symbol end:'btnR_5'
+   //Edge symbol end:'btnR_5'
 
     //=========================================================
 
@@ -774,7 +752,7 @@
         //Edge binding end
 
     })("btnR_6");
-    //Edge symbol end:'btnR_6'
+   //Edge symbol end:'btnR_6'
 
     //=========================================================
 
@@ -794,7 +772,7 @@
         //Edge binding end
 
     })("Tool_creditos");
-    //Edge symbol end:'Tool_creditos'
+   //Edge symbol end:'Tool_creditos'
 
     //=========================================================
 
@@ -814,7 +792,7 @@
         //Edge binding end
 
     })("Tool_ayuda");
-    //Edge symbol end:'Tool_ayuda'
+   //Edge symbol end:'Tool_ayuda'
 
     //=========================================================
 
@@ -834,7 +812,7 @@
         //Edge binding end
 
     })("Tool_full");
-    //Edge symbol end:'Tool_full'
+   //Edge symbol end:'Tool_full'
 
     //=========================================================
 
@@ -854,7 +832,7 @@
         //Edge binding end
 
     })("Tool_info");
-    //Edge symbol end:'Tool_info'
+   //Edge symbol end:'Tool_info'
 
     //=========================================================
 
@@ -874,7 +852,7 @@
         //Edge binding end
 
     })("Tool_accesibilidad");
-    //Edge symbol end:'Tool_accesibilidad'
+   //Edge symbol end:'Tool_accesibilidad'
 
     //=========================================================
 
@@ -882,7 +860,7 @@
     (function (symbolName) {
 
     })("btn_full");
-    //Edge symbol end:'btn_full'
+   //Edge symbol end:'btn_full'
 
     //=========================================================
 
@@ -890,7 +868,7 @@
     (function (symbolName) {
 
     })("btn_ayuda");
-    //Edge symbol end:'btn_ayuda'
+   //Edge symbol end:'btn_ayuda'
 
     //=========================================================
 
@@ -898,7 +876,7 @@
     (function (symbolName) {
 
     })("btn_creditos");
-    //Edge symbol end:'btn_creditos'
+   //Edge symbol end:'btn_creditos'
 
     //=========================================================
 
@@ -906,7 +884,7 @@
     (function (symbolName) {
 
     })("btn_info");
-    //Edge symbol end:'btn_info'
+   //Edge symbol end:'btn_info'
 
     //=========================================================
 
@@ -914,7 +892,7 @@
     (function (symbolName) {
 
     })("btn_accesibilidad");
-    //Edge symbol end:'btn_accesibilidad'
+   //Edge symbol end:'btn_accesibilidad'
 
     //=========================================================
 
@@ -934,7 +912,7 @@
         //Edge binding end
 
     })("punto_A");
-    //Edge symbol end:'punto_A'
+   //Edge symbol end:'punto_A'
 
     //=========================================================
 
@@ -954,7 +932,7 @@
         //Edge binding end
 
     })("vocabulario");
-    //Edge symbol end:'vocabulario'
+   //Edge symbol end:'vocabulario'
 
     //=========================================================
 
@@ -974,7 +952,7 @@
         //Edge binding end
 
     })("rec_7");
-    //Edge symbol end:'rec_7'
+   //Edge symbol end:'rec_7'
 
     //=========================================================
 
@@ -982,7 +960,7 @@
     (function (symbolName) {
 
     })("overlay");
-    //Edge symbol end:'overlay'
+   //Edge symbol end:'overlay'
 
     //=========================================================
 
@@ -990,7 +968,7 @@
     (function (symbolName) {
 
     })("container_overlay");
-    //Edge symbol end:'container_overlay'
+   //Edge symbol end:'container_overlay'
 
     //=========================================================
 
@@ -998,7 +976,7 @@
     (function (symbolName) {
 
     })("contenedor_home");
-    //Edge symbol end:'contenedor_home'
+   //Edge symbol end:'contenedor_home'
 
     //=========================================================
 
@@ -1006,7 +984,7 @@
     (function (symbolName) {
 
     })("overlay_portada");
-    //Edge symbol end:'overlay_portada'
+   //Edge symbol end:'overlay_portada'
 
     //=========================================================
 
@@ -1014,7 +992,7 @@
     (function (symbolName) {
 
     })("back_contenedor_home");
-    //Edge symbol end:'back_contenedor_home'
+   //Edge symbol end:'back_contenedor_home'
 
     //=========================================================
 
@@ -1022,7 +1000,7 @@
     (function (symbolName) {
 
     })("menu_grafico");
-    //Edge symbol end:'menu_grafico'
+   //Edge symbol end:'menu_grafico'
 
     //=========================================================
 
@@ -1030,7 +1008,7 @@
     (function (symbolName) {
 
     })("btn_menugrafico");
-    //Edge symbol end:'btn_menugrafico'
+   //Edge symbol end:'btn_menugrafico'
 
     //=========================================================
 
@@ -1038,7 +1016,7 @@
     (function (symbolName) {
 
     })("titulo");
-    //Edge symbol end:'titulo'
+   //Edge symbol end:'titulo'
 
     //=========================================================
 
@@ -1046,7 +1024,7 @@
     (function (symbolName) {
 
     })("btn_PA");
-    //Edge symbol end:'btn_PA'
+   //Edge symbol end:'btn_PA'
 
     //=========================================================
 
@@ -1054,7 +1032,7 @@
     (function (symbolName) {
 
     })("btn_VC");
-    //Edge symbol end:'btn_VC'
+   //Edge symbol end:'btn_VC'
 
     //=========================================================
 
@@ -1074,7 +1052,7 @@
         //Edge binding end
 
     })("btnr_6");
-    //Edge symbol end:'btnr_6'
+   //Edge symbol end:'btnr_6'
 
     //=========================================================
 
@@ -1094,7 +1072,7 @@
         //Edge binding end
 
     })("btnr_5");
-    //Edge symbol end:'btnr_5'
+   //Edge symbol end:'btnr_5'
 
     //=========================================================
 
@@ -1114,7 +1092,7 @@
         //Edge binding end
 
     })("btnr_4");
-    //Edge symbol end:'btnr_4'
+   //Edge symbol end:'btnr_4'
 
     //=========================================================
 
@@ -1134,7 +1112,7 @@
         //Edge binding end
 
     })("btnr_3");
-    //Edge symbol end:'btnr_3'
+   //Edge symbol end:'btnr_3'
 
     //=========================================================
 
@@ -1154,7 +1132,7 @@
         //Edge binding end
 
     })("btnr_2");
-    //Edge symbol end:'btnr_2'
+   //Edge symbol end:'btnr_2'
 
     //=========================================================
 
@@ -1174,7 +1152,7 @@
         //Edge binding end
 
     })("btnr_1");
-    //Edge symbol end:'btnr_1'
+   //Edge symbol end:'btnr_1'
 
     //=========================================================
 
@@ -1194,7 +1172,7 @@
         //Edge binding end
 
     })("btnr_7");
-    //Edge symbol end:'btnr_7'
+   //Edge symbol end:'btnr_7'
 
     //=========================================================
 
@@ -1202,6 +1180,14 @@
     (function (symbolName) {
 
     })("btn_sena");
-    //Edge symbol end:'btn_sena'
+   //Edge symbol end:'btn_sena'
+
+   //=========================================================
+   
+   //Edge symbol: 'ruta'
+   (function(symbolName) {   
+   
+   })("ruta");
+   //Edge symbol end:'ruta'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");

@@ -1,0 +1,23 @@
+{
+    "num_intentos": 2,
+    "pregunta":"marque la casilla o las casillas que correspondan a la imagen. Tiene dos intentos y dos minutos para esta actividad.",
+    "picks": {
+        "1": {
+            "descripcion": "ombre /mujer",
+            "esRespuesta": false
+        },
+        "2": {
+            "descripcion": "hombre / hombra",
+            "esRespuesta": false
+        },
+        "3": {
+            "descripcion": "hombre / mujer",
+            "esRespuesta": true
+        },
+        "4": {
+            "descripcion": "hembra /mujer",
+            "esRespuesta": false
+        }      
+        
+    }
+}

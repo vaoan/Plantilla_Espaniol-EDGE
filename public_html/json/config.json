@@ -7,53 +7,53 @@
         "1": {
             "type": "portada",
             "recurso": "1",
-            "url": "recursos/R1/esn1le01ob01r1.html",
+            "url": "recursos/R1/esn1le01ob02r1.html",
             "al_cerrar": {
                 "cargar": "2",
                 "cambia_color": "2"
             },
             "titulo": "Empecemos",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
         },
         "2": {
             "type": "recurso",
             "recurso": "2",
-            "url": "recursos/R2/esn1le01ob01r2.html",
+            "url": "recursos/R2/esn1le01ob02r2.html",
             "titulo": "Exploremos",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
         },
         "3": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "drag_drop_many",
-            "url": "recursos/R3/esn1le01ob01r3.html",
+            "actividad": "drag_drop",
+            "url": "recursos/R3/esn1le01ob02r3.html",
             "interaction": {
                 "ALL": true
             },
             "titulo": "Practiquemos",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
         },
         "4": {
             "type": "actividad",
             "recurso": "4",
             "actividad": "drag_drop",
-            "url": "recursos/R4/le1obj1r4.html",
+            "url": "recursos/R4/esn1le01ob02r4.html",
             "interaction": {
                 "ALL": true
             },
             "titulo": "Practiquemos",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
         },
         "5": {
             "type": "actividad",
             "recurso": "5",
-            "actividad": "filling_blanks",
-            "url": "recursos/R5/not_yet.edistribution",
+            "actividad": "R5_QQSM",
+            "url": "recursos/R5/R5.html",
             "interaction": {
                 "ALL": true
             },
             "titulo": "Practiquemos",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
         },
         "6": {
             "type": "actividad",
@@ -61,17 +61,30 @@
             "actividad": "R6",
             "url": "recursos/R6/R6.html",
             "interaction": {
-                "ALL": true
+                "ALL": false
             },
             "titulo": "Evaluemos",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
         },
         "7": {
             "type": "recurso",
             "recurso": "7",
-            "url": "recursos/R7/R7.html",
+            "url": "recursos/R7/esn1le01ob02r7.html",
+            "pdf":"../../../media/pdf/esn1le01ob02guion.pdf",
             "titulo": "Aprendamos en papel",
-            "subtitulo": "las letras"
+            "subtitulo": "¡A deletrear!"
+        },
+        "vocabulario": {
+            "url": "anexos/vocabulario/vocabulario.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
+        },
+        "learning": {
+            "url": "anexos/puntoaprendizaje/puntoaprendizaje.html",
+            "type": "popup_mini",
+            "symbols": {
+            }
         },
         "incompleto": {
             "url": "elementos_plantilla/completar/completar.html",

@@ -1,0 +1,22 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Escuche el audio y seleccione la opción que contiene las  palabras mencionadas.",
+    "picks": {
+        "1": {
+            "descripcion": "k, b, g",
+            "esRespuesta": false
+        },
+        "2": {
+            "descripcion": "c, n, j",
+            "esRespuesta": true
+        },
+        "3": {
+            "descripcion": "q, n, p",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "s, n, v",
+            "esRespuesta": false
+        }    
+    }
+}

@@ -11,13 +11,29 @@
     </style>
 <script>
    AdobeEdge.loadComposition('tiempo', 'EDGE-25249914', {
-    scaleToFit: "none",
+    scaleToFit: "both",
     centerStage: "both",
     minW: "0px",
     maxW: "undefined",
-    width: "400px",
-    height: "400px"
-}, {dom: [ ]}, {dom: [ ]});
+    width: "1920px",
+    height: "1080px"
+}, {
+    dom: [
+        {
+            id: 'preloader4',
+            type: 'image',
+            tag: 'img',
+            rect: ['900px', '480px', '120px', '120px', 'auto', 'auto'],
+            fill: ["rgba(0,0,0,0)",'images/preloader4.gif','0px','0px']
+        }
+    ],
+    style: {
+        '${symbolSelector}': {
+            isStage: true,
+            rect: [undefined, undefined, '1920px', '1080px']
+        }
+    }
+}, {dom: [ ]});
 </script>
 <!--Adobe Edge Runtime End-->
 

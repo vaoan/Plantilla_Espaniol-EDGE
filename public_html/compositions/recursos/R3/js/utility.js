@@ -21,6 +21,7 @@ function isEmpty(obj) {
         return false;
     if (obj.length === 0)
         return true;
+
 // Otherwise, does it have any properties of its own?
 // Note that this doesn't handle
 // toString and valueOf enumeration bugs in IE < 9
@@ -28,6 +29,14 @@ function isEmpty(obj) {
         if (hasOwnProperty.call(obj, key))
             return false;
     }
+
+    try {
+        obj = parseInt(obj);
+        return false;
+    } catch (e) {
+
+    }
+
     return true;
 }
 

@@ -22,7 +22,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -30,7 +30,7 @@
                         {
                             id: 'RoundRect',
                             type: 'rect',
-                            rect: ['20px', '20px', '360px', '360px', 'auto', 'auto'],
+                            rect: ['780px', '180px', '360px', '360px', 'auto', 'auto'],
                             borderRadius: ["15px", "15px", "15px", "15px 15px"],
                             fill: ["rgba(255,255,255,1.00)"],
                             stroke: [0,"rgba(0,0,0,1)","none"],
@@ -39,13 +39,13 @@
                         {
                             id: 'incorrecto',
                             type: 'image',
-                            rect: ['125px', '88px', '150px', '150px', 'auto', 'auto'],
+                            rect: ['885px', '248px', '150px', '150px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"incorrecto.png",'0px','0px']
                         },
                         {
                             id: 'Text',
                             type: 'text',
-                            rect: ['37px', '262px', '326px', '86px', 'auto', 'auto'],
+                            rect: ['797px', '422px', '326px', '86px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​¡Respuesta incorrecta!</p><p style=\"margin: 0px;\">Vea las respuestas.&nbsp;</p>",
                             align: "center",
                             font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", ""]
@@ -54,14 +54,24 @@
                             id: 'cerrar_inco',
                             symbolName: 'cerrar_inco',
                             type: 'rect',
-                            rect: ['317', '29', '53', '54', 'auto', 'auto'],
+                            rect: ['1077px', '189px', '53', '54', 'auto', 'auto'],
                             cursor: 'pointer'
+                        },
+                        {
+                            id: 'attempt-fail',
+                            display: 'none',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['1183', '609', '320px', '45px', 'auto', 'auto'],
+                            autoplay: 'autoplay',
+                            source: [aud+"attempt-fail.mp3"],
+                            preload: 'metadata'
                         }
                     ],
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '400px', '400px', 'auto', 'auto'],
+                            rect: ['null', 'null', '1920px', '1080px', 'auto', 'auto'],
                             overflow: 'hidden',
                             fill: ["rgba(255,255,255,0.00)"]
                         }
@@ -71,7 +81,26 @@
                     duration: 0,
                     autoPlay: true,
                     data: [
-
+                        [
+                            "eid2",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${cerrar_inco}",
+                            '189px',
+                            '189px'
+                        ],
+                        [
+                            "eid1",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${cerrar_inco}",
+                            '1077px',
+                            '1077px'
+                        ]
                     ]
                 }
             },
@@ -85,10 +114,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.35', '0.35']],
+                            id: 'cerrar',
+                            type: 'image',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],

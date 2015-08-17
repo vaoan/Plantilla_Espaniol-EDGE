@@ -22,7 +22,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
                 content: {
@@ -30,7 +30,7 @@
                         {
                             id: 'contacce',
                             type: 'rect',
-                            rect: ['193px', '180px', '1550px', '424px', 'auto', 'auto'],
+                            rect: ['193px', '180px', '1550px', '573px', 'auto', 'auto'],
                             borderRadius: ["0px", "0px", "15px 15px", "15px 15px"],
                             fill: ["rgba(255,255,255,1)"],
                             stroke: [0,"rgba(0, 0, 0, 0)","none"]
@@ -59,13 +59,6 @@
                             fill: ["rgba(0,0,0,0)",im+"ACCESIBILIDAD2.png",'0px','0px']
                         },
                         {
-                            id: 'icono_descargar',
-                            type: 'image',
-                            rect: ['922px', '435px', '93px', '96px', 'auto', 'auto'],
-                            cursor: 'pointer',
-                            fill: ["rgba(0,0,0,0)",im+"descargable2.png",'0px','0px']
-                        },
-                        {
                             id: 'Subtitulo',
                             type: 'text',
                             rect: ['538px', '365px', '860px', '42px', 'auto', 'auto'],
@@ -89,6 +82,14 @@
                             type: 'rect',
                             rect: ['1640', '87', '75', '76', 'auto', 'auto'],
                             cursor: 'pointer'
+                        },
+                        {
+                            id: 'descargable2',
+                            type: 'image',
+                            rect: ['775px', '351px', '386px', '406px', 'auto', 'auto'],
+                            cursor: 'pointer',
+                            fill: ["rgba(0,0,0,0)",im+"descargable3.png",'0px','0px'],
+                            transform: [[],[],[],['0.54','0.54']]
                         }
                     ],
                     style: {
@@ -118,9 +119,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'Btn_cerrar',
                             rect: ['7px', '5px', '37', '40', 'auto', 'auto'],
+                            id: 'Btn_cerrar',
+                            type: 'group',
                             c: [
                             {
                                 id: 'btn_cerrar',
@@ -129,16 +130,16 @@
                                 fill: ['rgba(0,0,0,0)', 'images/btn_cerrar.png', '0px', '0px']
                             },
                             {
-                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 transform: [[], ['-42'], [], ['1.03', '0.95']],
+                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 id: 'Rectangle2',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(255,255,255,1.00)']
                             },
                             {
-                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 transform: [[], ['-138'], [], ['1.03', '0.95']],
+                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 id: 'Rectangle2Copy',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
