@@ -24,7 +24,9 @@
             js+"plantilla/plantilla.js",
             js+"plantilla/utility.js",
             js+"plantilla/main.js",
-            js+"EdgeCommons.js"
+            js+"EdgeCommons.js",
+            js+"SCORM_2004_APIWrapper.js",
+            js+"SCORM_HELPER.js"
         ],
         symbols = {
             "stage": {
