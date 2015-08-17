@@ -94,10 +94,13 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
 function check_every_answer() {
     $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
         var pagina = EDGE_Plantilla.config.paginas[value];
-        var stage = EDGE_Plantilla.config.paginas[value].stage;
+        if (pagina.type === "actividad") {
+            var stage = EDGE_Plantilla.config.paginas[value].stage;
+            console.warn("entra");
 
-        $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
-                .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
+            $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
+                    .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
+        }
     });
 
     var respuestas = {};

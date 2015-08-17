@@ -1,0 +1,15 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Observe las imágenes y escuche el audio para identificar si las palabras corresponden al singular o al plural.",
+    "picks": {
+        "1": {
+            "descripcion": "plaza",
+            "esRespuesta": true
+        },
+        "2": {
+            "descripcion": "plazas",
+            "esRespuesta": false
+        }     
+        
+    }
+}

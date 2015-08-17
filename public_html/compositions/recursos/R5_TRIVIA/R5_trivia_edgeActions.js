@@ -21,30 +21,35 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          sym.stop();
+         pagina_actual("2");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          sym.stop();
+         pagina_actual("1");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          sym.stop();
+         pagina_actual("3");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
          sym.stop();
+         pagina_actual("4");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5000, function(sym, e) {
          sym.stop();
+         pagina_actual("5");
 
       });
       //Edge binding end

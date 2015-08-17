@@ -115,24 +115,104 @@
                     },
                     data: [
                         [
-                            "eid55",
-                            "left",
-                            2000,
+                            "eid123",
+                            "display",
                             1000,
+                            0,
                             "linear",
-                            "${trivia_4}",
-                            '3660px',
-                            '0px'
+                            "${Submit}",
+                            'none',
+                            'block'
                         ],
                         [
-                            "eid47",
-                            "left",
-                            3000,
-                            1000,
+                            "eid126",
+                            "display",
+                            1135,
+                            0,
                             "linear",
-                            "${trivia_4}",
-                            '0px',
-                            '-3660px'
+                            "${Submit}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid124",
+                            "display",
+                            2000,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid128",
+                            "display",
+                            2129,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid130",
+                            "display",
+                            3000,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid132",
+                            "display",
+                            3124,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid134",
+                            "display",
+                            4000,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid136",
+                            "display",
+                            4118,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid138",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid140",
+                            "display",
+                            5112,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid39",
@@ -285,116 +365,6 @@
                             'none'
                         ],
                         [
-                            "eid123",
-                            "display",
-                            1000,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid126",
-                            "display",
-                            1135,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid124",
-                            "display",
-                            2000,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid128",
-                            "display",
-                            2129,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid130",
-                            "display",
-                            3000,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid132",
-                            "display",
-                            3124,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid134",
-                            "display",
-                            4000,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid136",
-                            "display",
-                            4118,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid138",
-                            "display",
-                            5000,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid140",
-                            "display",
-                            5112,
-                            0,
-                            "linear",
-                            "${Submit}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid111",
-                            "display",
-                            108,
-                            0,
-                            "linear",
-                            "${btnInicio}",
-                            'block',
-                            'none'
-                        ],
-                        [
                             "eid57",
                             "left",
                             3000,
@@ -423,6 +393,36 @@
                             "${trivia_respuesta}",
                             '3660px',
                             '0px'
+                        ],
+                        [
+                            "eid111",
+                            "display",
+                            108,
+                            0,
+                            "linear",
+                            "${btnInicio}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid55",
+                            "left",
+                            2000,
+                            1000,
+                            "linear",
+                            "${trivia_4}",
+                            '3660px',
+                            '0px'
+                        ],
+                        [
+                            "eid47",
+                            "left",
+                            3000,
+                            1000,
+                            "linear",
+                            "${trivia_4}",
+                            '0px',
+                            '-3660px'
                         ],
                         [
                             "eid53",
@@ -465,13 +465,13 @@
                             fill: ['rgba(214,219,65,1.00)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]]
                         },
                         {
-                            rect: ['14px', '11px', '200px', '36px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-weight: 700; font-size: 28px;\">Iniciar</span></p>',
-                            id: 'Text',
-                            textStyle: ['', '', '', '', 'none'],
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-weight: 700; font-size: 28px;\">Iniciar</span></p>',
+                            textStyle: ['', '', '', '', 'none'],
+                            rect: ['14px', '11px', '200px', '36px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -498,25 +498,25 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'fondotrivia-01',
                             rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            id: 'fondotrivia-01',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/fondotrivia-01.jpg', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'sopadeletras-09',
                             rect: ['719px', '201px', '393px', '393px', 'auto', 'auto'],
+                            id: 'sopadeletras-09',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/sopadeletras-09.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [41, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
-                            align: 'center',
+                            rect: ['863px', '370px', 'auto', 'auto', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">Trivia</p>',
                             id: 'TextCopy',
                             opacity: '1',
-                            text: '<p style=\"margin: 0px;\">Trivia</p>',
-                            rect: ['863px', '370px', 'auto', 'auto', 'auto', 'auto']
+                            align: 'center',
+                            font: ['source-sans-pro, sans-serif', [41, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -543,10 +543,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(255,0,0,1.00)']
                         }
                     ],
@@ -574,10 +574,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy2',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(255,239,0,1.00)']
                         }
                     ],
@@ -605,10 +605,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy4',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,223,255,1.00)']
                         }
                     ],
@@ -636,10 +636,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy3',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,23,255,1.00)']
                         }
                     ],
@@ -667,10 +667,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy6',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(231,0,255,1.00)']
                         }
                     ],
@@ -698,10 +698,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'RectangleCopy6',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             fill: ['rgba(0,255,63,1.00)']
                         }
                     ],
@@ -746,8 +746,8 @@
                             fill: ['rgba(255,215,0,0.86)'],
                             c: [
                             {
-                                transform: [[], [], ['62'], [1, 1, 1]],
                                 rect: ['42px', '43px', '95px', '36px', 'auto', 'auto'],
+                                transform: [[], [], ['62'], [1, 1, 1]],
                                 id: 'Rectangle2',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
@@ -763,13 +763,13 @@
                             }]
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', ''],
                             type: 'text',
-                            align: 'center',
+                            rect: ['18px', '38px', '64px', '26px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​timer</p>',
                             id: 'Text',
                             textStyle: ['', '', '23px', '', 'none'],
-                            text: '<p style=\"margin: 0px;\">​timer</p>',
-                            rect: ['18px', '38px', '64px', '26px', 'auto', 'auto']
+                            align: 'center',
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', '']
                         }
                     ],
                     style: {
@@ -857,7 +857,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid147",
+                            "eid152",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -868,7 +868,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid148",
+                            "eid153",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -879,7 +879,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid149",
+                            "eid154",
                             "msTransformOrigin",
                             0,
                             0,
@@ -890,7 +890,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid150",
+                            "eid155",
                             "-o-transform-origin",
                             0,
                             0,
@@ -901,7 +901,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid151",
+                            "eid156",
                             "transform-origin",
                             0,
                             0,
@@ -924,20 +924,20 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-24px', '3px', '213px', '31px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['-24px', '3px', '213px', '31px', 'auto', 'auto'],
+                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['60px', '-2px', '94px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'TextCopy3',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],

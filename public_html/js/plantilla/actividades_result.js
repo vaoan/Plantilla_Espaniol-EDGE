@@ -37,6 +37,9 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "R5_QQSM":
             R6_heiner_created(evt);
             break;
+        case "R5_TRIVIA":
+            R6_heiner_created(evt);
+            break;
         case "sopa_letras":
             sopa_letras_toscano_created(evt);
             break;
@@ -865,11 +868,11 @@ $(document).on("EDGE_Plantilla_ExtraSave", function (evt) {
             break;
     }
 });
-//</editor-fold>
 
 function R6_heiner_Extra_save(evt) {
     merge_extra_scorm(evt.extra_data);
 }
+//</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Check data Actividades">
 function check_answers(evt) {
