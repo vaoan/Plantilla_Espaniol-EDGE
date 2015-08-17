@@ -7,7 +7,7 @@
 
 //<editor-fold defaultstate="collapsed" desc="Global values">
 EDGE_Plantilla = {
-    attemps_increasment: 1,
+    attemps_increasment: 0,
     allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,

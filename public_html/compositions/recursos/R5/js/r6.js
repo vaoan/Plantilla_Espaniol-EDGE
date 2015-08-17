@@ -83,7 +83,7 @@ $("body").on("EDGE_Actividad_Submit", function (evt) {
     };
 
     if (!isEmpty(evt.timer)) {
-        
+
     }
 
     console.log("SENDING R6", result, objEvt, EDGE_Plantilla.temp_scorm);
@@ -144,6 +144,12 @@ function reload_pages() {
     EDGE_Plantilla.debug ? console.log("****************** ENDED RELOAD ********************") : false;
 }
 
-function pagina_actual(strPaginaActual){
+function pagina_actual(strPaginaActual) {
     EDGE_Plantilla.pagina_actual = strPaginaActual;
+    var objEvt = {
+        type: "EDGE_Recurso_PaginaOnShow",
+        pagina: strPaginaActual,
+        sym: EDGE_Plantilla.plantilla_sym
+    };
+    $("body").trigger(objEvt);
 }

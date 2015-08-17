@@ -1035,10 +1035,10 @@ function read_extra_data(evt) {
     var pagina = evt.identify;
     var id_interaction = pagina.recurso;
     var extra_data = EDGE_Plantilla.temp_scorm_suspendData[id_interaction];
-    extra_data = !isEmpty(extra_data) ? extra_data : {};
+    extra_data = typeof (extra_data) !== "undefined" ? extra_data : {};
 
     EDGE_Plantilla.debug ?
-            console.log("READ extradata", extra_data) : false;
+            console.log("READ extradata", extra_data, EDGE_Plantilla.temp_scorm_suspendData) : false;
     return extra_data;
 }
 //</editor-fold>
