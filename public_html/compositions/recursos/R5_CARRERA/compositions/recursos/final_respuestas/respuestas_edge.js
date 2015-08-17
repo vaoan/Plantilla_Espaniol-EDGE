@@ -28,18 +28,160 @@
                 content: {
                     dom: [
                         {
-                            id: 'contenedorrespuestas',
-                            symbolName: 'contenedorrespuestas',
+                            id: 'jefe',
+                            type: 'image',
+                            rect: ['463px', '99px', '250px', '250px', 'auto', 'auto'],
+                            borderRadius: ["15px", "15px", "15px", "15px 15px"],
+                            fill: ["rgba(0,0,0,0)",im+"jefe.png",'0px','0px']
+                        },
+                        {
+                            id: 'plaza',
+                            type: 'image',
+                            rect: ['790px', '99px', '250px', '250px', 'auto', 'auto'],
+                            borderRadius: ["15px", "15px", "15px", "15px 15px"],
+                            fill: ["rgba(0,0,0,0)",im+"plaza.png",'0px','0px']
+                        },
+                        {
+                            id: 'iglesias',
+                            type: 'image',
+                            rect: ['1117px', '99px', '250px', '250px', 'auto', 'auto'],
+                            borderRadius: ["15px", "15px", "15px", "15px 15px"],
+                            fill: ["rgba(0,0,0,0)",im+"iglesias.png",'0px','0px']
+                        },
+                        {
+                            id: 'hospital',
+                            type: 'image',
+                            rect: ['962px', '431px', '250px', '250px', 'auto', 'auto'],
+                            borderRadius: ["15px", "15px", "15px", "15px 15px"],
+                            fill: ["rgba(0,0,0,0)",im+"hospital.png",'0px','0px']
+                        },
+                        {
+                            id: 'caminos',
+                            type: 'image',
+                            rect: ['618px', '431px', '250px', '250px', 'auto', 'auto'],
+                            borderRadius: ["15px", "15px", "15px", "15px 15px"],
+                            fill: ["rgba(0,0,0,0)",im+"caminos.png",'0px','0px']
+                        },
+                        {
+                            id: 'RectangleCopy4',
                             type: 'rect',
-                            rect: ['0', '0', '1920', '1080', 'auto', 'auto'],
-                            opacity: '0',
-                            transform: [[],[],[],['0.5','0.5']]
+                            rect: ['463px', '309px', '250px', '40px', 'auto', 'auto'],
+                            borderRadius: ["0px", "0px", "18px 18px", "18px 18px"],
+                            fill: ["rgba(79,45,110,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'RectangleCopy3',
+                            type: 'rect',
+                            rect: ['790px', '309px', '250px', '40px', 'auto', 'auto'],
+                            borderRadius: ["0px", "0px", "18px 18px", "18px 18px"],
+                            fill: ["rgba(79,45,110,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'RectangleCopy2',
+                            type: 'rect',
+                            rect: ['1117px', '309px', '250px', '40px', 'auto', 'auto'],
+                            borderRadius: ["0px", "0px", "18px 18px", "18px 18px"],
+                            fill: ["rgba(79,45,110,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'RectangleCopy',
+                            type: 'rect',
+                            rect: ['962px', '641px', '250px', '40px', 'auto', 'auto'],
+                            borderRadius: ["0px", "0px", "18px 18px", "18px 18px"],
+                            fill: ["rgba(79,45,110,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'Rectangle',
+                            type: 'rect',
+                            rect: ['618px', '641px', '250px', '40px', 'auto', 'auto'],
+                            borderRadius: ["0px", "0px", "18px 18px", "18px 18px"],
+                            fill: ["rgba(79,45,110,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'contorno_televisorCopy4',
+                            type: 'rect',
+                            rect: ['463px', '99px', '240px', '240px', 'auto', 'auto'],
+                            borderRadius: ["10px", "10px", "10px", "10px"],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [5,"rgba(79,45,110,1.00)","solid"]
+                        },
+                        {
+                            id: 'contorno_televisorCopy3',
+                            type: 'rect',
+                            rect: ['790px', '99px', '240px', '240px', 'auto', 'auto'],
+                            borderRadius: ["10px", "10px", "10px", "10px"],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [5,"rgba(79,45,110,1.00)","solid"]
+                        },
+                        {
+                            id: 'contorno_televisorCopy2',
+                            type: 'rect',
+                            rect: ['1117px', '99px', '240px', '240px', 'auto', 'auto'],
+                            borderRadius: ["10px", "10px", "10px", "10px"],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [5,"rgba(79,45,110,1.00)","solid"]
+                        },
+                        {
+                            id: 'contorno_televisorCopy',
+                            type: 'rect',
+                            rect: ['962px', '431px', '240px', '240px', 'auto', 'auto'],
+                            borderRadius: ["10px", "10px", "10px", "10px"],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [5,"rgba(79,45,110,1.00)","solid"]
+                        },
+                        {
+                            id: 'contorno_televisor',
+                            type: 'rect',
+                            rect: ['618px', '431px', '240px', '240px', 'auto', 'auto'],
+                            borderRadius: ["10px", "10px", "10px", "10px"],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [5,"rgba(79,45,110,1.00)","solid"]
+                        },
+                        {
+                            id: 'TextCopy4',
+                            type: 'text',
+                            rect: ['506px', '309px', '165px', '40px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">jefe</span></p>",
+                            font: ['Arial, Helvetica, sans-serif', [24, ""], "rgba(0,0,0,1)", "normal", "none", "", "break-word", "normal"]
+                        },
+                        {
+                            id: 'TextCopy3',
+                            type: 'text',
+                            rect: ['833px', '309px', '165px', '40px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">plaza</span></p>",
+                            font: ['Arial, Helvetica, sans-serif', [24, ""], "rgba(0,0,0,1)", "normal", "none", "", "break-word", "normal"]
+                        },
+                        {
+                            id: 'TextCopy2',
+                            type: 'text',
+                            rect: ['1160px', '309px', '165px', '40px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">iglesias</span></p>",
+                            font: ['Arial, Helvetica, sans-serif', [24, ""], "rgba(0,0,0,1)", "normal", "none", "", "break-word", "normal"]
+                        },
+                        {
+                            id: 'TextCopy',
+                            type: 'text',
+                            rect: ['1005px', '641px', '165px', '40px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">hospital</span></p>",
+                            font: ['Arial, Helvetica, sans-serif', [24, ""], "rgba(0,0,0,1)", "normal", "none", "", "break-word", "normal"]
+                        },
+                        {
+                            id: 'Text',
+                            type: 'text',
+                            rect: ['661px', '641px', '165px', '40px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">caminos</span></p>",
+                            font: ['Arial, Helvetica, sans-serif', [24, ""], "rgba(0,0,0,1)", "normal", "none", "", "break-word", "normal"]
                         }
                     ],
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '1920px', '1080px', 'auto', 'auto'],
+                            rect: ['null', 'null', '1830px', '780px', 'auto', 'auto'],
                             overflow: 'hidden',
                             fill: ["rgba(255,255,255,0.00)"]
                         }
@@ -49,16 +191,6 @@
                     duration: 500,
                     autoPlay: true,
                     data: [
-                        [
-                            "eid7",
-                            "scaleX",
-                            0,
-                            500,
-                            "linear",
-                            "${contenedorrespuestas}",
-                            '0.5',
-                            '1'
-                        ],
                         [
                             "eid10",
                             "background-color",
@@ -70,24 +202,24 @@
                             'rgba(255,255,255,0.00)'
                         ],
                         [
-                            "eid9",
-                            "opacity",
-                            0,
+                            "eid13",
+                            "height",
                             500,
+                            0,
                             "linear",
-                            "${contenedorrespuestas}",
-                            '0',
-                            '1'
+                            "${Stage}",
+                            '780px',
+                            '780px'
                         ],
                         [
-                            "eid8",
-                            "scaleY",
-                            0,
+                            "eid12",
+                            "width",
                             500,
+                            0,
                             "linear",
-                            "${contenedorrespuestas}",
-                            '0.5',
-                            '1'
+                            "${Stage}",
+                            '1830px',
+                            '1830px'
                         ]
                     ]
                 }
@@ -102,166 +234,17 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            borderRadius: ['15px', '15px', '15px', '15px 15px'],
-                            id: 'jefe',
-                            rect: ['508px', '183px', '250px', '250px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/jefe.png', '0px', '0px']
-                        },
-                        {
-                            rect: ['508px', '393px', '250px', '40px', 'auto', 'auto'],
-                            borderRadius: ['0px', '0px', '18px 18px', '18px 18px'],
-                            id: 'RectangleCopy5',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
-                            fill: ['rgba(79,45,110,1.00)']
-                        },
-                        {
-                            rect: ['508px', '183px', '240px', '240px', 'auto', 'auto'],
-                            borderRadius: ['10px', '10px', '10px', '10px'],
-                            id: 'contorno_televisorCopy6',
-                            stroke: [5, 'rgba(79,45,110,1.00)', 'solid'],
-                            type: 'rect',
-                            fill: ['rgba(192,192,192,0.00)']
-                        },
-                        {
-                            type: 'image',
-                            borderRadius: ['15px', '15px', '15px', '15px 15px'],
-                            id: 'plaza',
-                            rect: ['835px', '183px', '250px', '250px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/plaza.png', '0px', '0px']
-                        },
-                        {
-                            rect: ['835px', '183px', '240px', '240px', 'auto', 'auto'],
-                            borderRadius: ['10px', '10px', '10px', '10px'],
-                            id: 'contorno_televisorCopy7',
-                            stroke: [5, 'rgba(79,45,110,1.00)', 'solid'],
-                            type: 'rect',
-                            fill: ['rgba(192,192,192,0.00)']
-                        },
-                        {
-                            rect: ['835px', '393px', '250px', '40px', 'auto', 'auto'],
-                            borderRadius: ['0px', '0px', '18px 18px', '18px 18px'],
-                            id: 'RectangleCopy6',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
-                            fill: ['rgba(79,45,110,1.00)']
-                        },
-                        {
-                            type: 'image',
-                            borderRadius: ['15px', '15px', '15px', '15px 15px'],
-                            id: 'iglesias',
-                            rect: ['1162px', '183px', '250px', '250px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/iglesias.png', '0px', '0px']
-                        },
-                        {
-                            rect: ['1162px', '393px', '250px', '40px', 'auto', 'auto'],
-                            borderRadius: ['0px', '0px', '18px 18px', '18px 18px'],
-                            id: 'RectangleCopy7',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
-                            fill: ['rgba(79,45,110,1.00)']
-                        },
-                        {
-                            rect: ['1162px', '183px', '240px', '240px', 'auto', 'auto'],
-                            borderRadius: ['10px', '10px', '10px', '10px'],
-                            id: 'contorno_televisorCopy8',
-                            stroke: [5, 'rgba(79,45,110,1.00)', 'solid'],
-                            type: 'rect',
-                            fill: ['rgba(192,192,192,0.00)']
-                        },
-                        {
-                            type: 'image',
-                            borderRadius: ['15px', '15px', '15px', '15px 15px'],
-                            id: 'hospital',
-                            rect: ['1007px', '515px', '250px', '250px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/hospital.png', '0px', '0px']
-                        },
-                        {
-                            rect: ['1007px', '725px', '250px', '40px', 'auto', 'auto'],
-                            borderRadius: ['0px', '0px', '18px 18px', '18px 18px'],
-                            id: 'RectangleCopy9',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
-                            fill: ['rgba(79,45,110,1.00)']
-                        },
-                        {
-                            rect: ['1007px', '515px', '240px', '240px', 'auto', 'auto'],
-                            borderRadius: ['10px', '10px', '10px', '10px'],
-                            id: 'contorno_televisorCopy9',
-                            stroke: [5, 'rgba(79,45,110,1.00)', 'solid'],
-                            type: 'rect',
-                            fill: ['rgba(192,192,192,0.00)']
-                        },
-                        {
-                            type: 'image',
-                            borderRadius: ['15px', '15px', '15px', '15px 15px'],
-                            id: 'caminos',
-                            rect: ['663px', '515px', '250px', '250px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/caminos.png', '0px', '0px']
-                        },
-                        {
-                            rect: ['663px', '515px', '240px', '240px', 'auto', 'auto'],
-                            borderRadius: ['10px', '10px', '10px', '10px'],
-                            id: 'contorno_televisorCopy5',
-                            stroke: [5, 'rgba(79,45,110,1.00)', 'solid'],
-                            type: 'rect',
-                            fill: ['rgba(192,192,192,0.00)']
-                        },
-                        {
-                            rect: ['663px', '725px', '250px', '40px', 'auto', 'auto'],
-                            borderRadius: ['0px', '0px', '18px 18px', '18px 18px'],
-                            id: 'RectangleCopy8',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
-                            fill: ['rgba(79,45,110,1.00)']
-                        },
-                        {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1920px', '1080px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1920px', '1080px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(79,45,110,0.00)']
-                        },
-                        {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'TextCopy9',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">jefe</span></p>',
-                            type: 'text',
-                            rect: ['551px', '393px', '165px', '40px', 'auto', 'auto']
-                        },
-                        {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'TextCopy8',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">plaza</span></p>',
-                            type: 'text',
-                            rect: ['878px', '393px', '165px', '40px', 'auto', 'auto']
-                        },
-                        {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'TextCopy7',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">iglesias</span></p>',
-                            type: 'text',
-                            rect: ['1205px', '393px', '165px', '40px', 'auto', 'auto']
-                        },
-                        {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'TextCopy6',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">hospital</span></p>',
-                            type: 'text',
-                            rect: ['1050px', '725px', '165px', '40px', 'auto', 'auto']
-                        },
-                        {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'TextCopy5',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-size: 30px; color: rgb(255, 255, 255);\">caminos</span></p>',
-                            type: 'text',
-                            rect: ['706px', '725px', '165px', '40px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '1920px', '1080px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1920px', '1080px']
                         }
                     }
                 },
