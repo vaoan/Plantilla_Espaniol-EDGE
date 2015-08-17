@@ -376,30 +376,31 @@ function R6_heiner_submit(evt) {
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
     merge_temp_scorm(evt.answer);
-    send_interactions(evt.identify, objEvt, evt.results);
-    
+    send_evt_to(evt.identify, objEvt, evt.results);
+
     //puntuación SCORM
-    
+    console.log("inicia puntuacion");
     var correct = 0, total = 0;
-        $.each(evt.answer, function (key, value) {
-            
-            if (value.estado === "neutral") {
-                return;
-            }
-            
-            total++;
-            if (value.estado === "correct") {
-                correct++;
-            }
-        });
-        
-        var porc = parseInt((correct / total) * 100);
-        
-        if(porc>=80){
-            SET_TOTAL_SCORE(porc, "passed");
-        }else{
-            SET_TOTAL_SCORE(porc, "failed");
+    $.each(evt.answer, function (key, value) {
+
+        if (value.estado === "neutral") {
+            return;
         }
+
+        total++;
+        if (value.estado === "correct") {
+            correct++;
+        }
+    });
+
+    var porc = parseInt((correct / total) * 100);
+    console.log(porc);
+
+    if (porc >= 80) {
+        SET_TOTAL_SCORE(porc, "passed");
+    } else {
+        SET_TOTAL_SCORE(porc, "failed");
+    }
 }
 
 function sopa_letras_toscano_submit(evt) {
@@ -961,12 +962,15 @@ function merge_temp_scorm(temp_scorm) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, temp_scorm);
 
     $.each(temp_scorm, function (key, value) {
-        if(value.estado!=="neutral"){  
-            SEND_INTERACTION_TO_LMS(key, JSON.stringify(value.respuesta), value.estado, value.pregunta, "other");
+        if (value.estado !== "neutral") {
+            if (EDGE_Plantilla.scorm_available) {
+                SEND_INTERACTION_TO_LMS(key, JSON.stringify(value.respuesta), value.estado, value.pregunta, "other");
+            }
         }
     });
-
-    
+    if (EDGE_Plantilla.scorm_available) {
+        SCORM_COMMIT();
+    }
 }
 
 function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
@@ -988,6 +992,8 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
             var estado;
             if (typeof estado_answers !== "string") {
                 estado = estado_answers ? "correct" : "incorrect";
+            } else {
+                estado = estado_answers;
             }
 
             if (estado_answers === "neutral") {
@@ -1002,7 +1008,10 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
             };
 
             var id = id_interaction + "0";
-            SEND_INTERACTION_TO_LMS(id, JSON.stringify(answers), estado, json_data, "other");
+            if (EDGE_Plantilla.scorm_available) {
+                SEND_INTERACTION_TO_LMS(id, JSON.stringify(answers), estado, json_data, "other");
+            }
+
         } else {
             $.each(answers, function (key, value) {
                 var estado;
@@ -1023,7 +1032,12 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                 };
             });
             var id = id_interaction + key;
-            SEND_INTERACTION_TO_LMS(id, JSON.stringify(value), estado, json_data[key].pregunta, "other");
+            if (EDGE_Plantilla.scorm_available) {
+                SEND_INTERACTION_TO_LMS(id, JSON.stringify(value), estado, json_data[key].pregunta, "other");
+            }
+        }
+        if (EDGE_Plantilla.scorm_available) {
+            SCORM_COMMIT();
         }
     }
 
@@ -1114,13 +1128,19 @@ function save_extra_data(objData, evt) {
     EDGE_Plantilla.debug ?
             console.log("UPLOADED extradata", EDGE_Plantilla.temp_scorm_suspendData) : false;
 
-    WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
+    if (EDGE_Plantilla.scorm_available) {
+        WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
+        SCORM_COMMIT();
+    }
 }
 
 function merge_extra_scorm(extra_scorm) {
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm_suspendData, extra_scorm);
     EDGE_Plantilla.debug ? console.log("EXTRA SCORM MERGED", EDGE_Plantilla.temp_scorm_suspendData) : false;
-    WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
+    if (EDGE_Plantilla.scorm_available) {
+        WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
+        SCORM_COMMIT();
+    }
 }
 
 function read_extra_data(evt) {
