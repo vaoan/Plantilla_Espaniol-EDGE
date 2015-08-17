@@ -20,7 +20,6 @@ $("body").on("EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied", fun
         
         var correct = 0, total = 0;
         $.each(EDGE_Plantilla.temp_scorm, function (key, value) {
-            //console.log("PROBANDO VALORES",value);
             total++;
             if (value.estado === "correct") {
                 correct++;

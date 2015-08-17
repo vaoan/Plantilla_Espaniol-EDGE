@@ -321,9 +321,85 @@ function R5_QQSM_heiner_submit(evt) {
     merge_extra_scorm(evt.extra_data);
     merge_temp_scorm(evt.answer);
 
-    console.log(objEvt);
     save_extra_data(objEvt, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
+}
+
+function R6_heiner_submit(evt) {
+    var strRetro = null;
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: evt.sym
+    };
+
+    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+        delete evt.timer.time_out;
+        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+        var timer = {reset_timer: true};
+        objEvt = merge_options(objEvt, {timer: timer});
+    } else {
+        if (evt.results === "neutral") {
+            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+            evt.results = "neutral";
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+        }
+    }
+
+    if (evt.results === "correct") {
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+        objEvt = merge_options(objEvt, {
+            block: true,
+            show_answers: false,
+            attempts: evt.attempts
+        });
+        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+    } else if (evt.results === "incorrect") {
+        if (!isEmpty(evt.timer)) {
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        }
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+        var attemps = attemps_answer(evt);
+        objEvt = merge_options(objEvt, attemps);
+        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        if (!attemps.block) {
+            strRetro = "nuevo_intento";
+        }
+    }
+
+    retroalimentacion(strRetro);
+    save_extra_data(objEvt, evt);
+    merge_temp_scorm(evt.answer);
+    send_interactions(evt.identify, objEvt, evt.results);
+    
+    //puntuación SCORM
+    
+    var correct = 0, total = 0;
+        $.each(evt.answer, function (key, value) {
+            
+            if (value.estado === "neutral") {
+                return;
+            }
+            
+            total++;
+            if (value.estado === "correct") {
+                correct++;
+            }
+        });
+        
+        var porc = parseInt((correct / total) * 100);
+        
+        if(porc>=80){
+            SET_TOTAL_SCORE(porc, "passed");
+        }else{
+            SET_TOTAL_SCORE(porc, "failed");
+        }
 }
 
 function sopa_letras_toscano_submit(evt) {
@@ -737,7 +813,7 @@ $(document).on("EDGE_Plantilla_ExtraSave", function (evt) {
 });
 //</editor-fold>
 
-function R6_heiner_Extra_save(evt){
+function R6_heiner_Extra_save(evt) {
     merge_extra_scorm(evt.extra_data);
 }
 
@@ -883,6 +959,14 @@ function attemps_answer(evt) {
 //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
 function merge_temp_scorm(temp_scorm) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, temp_scorm);
+
+    $.each(temp_scorm, function (key, value) {
+        if(value.estado!=="neutral"){  
+            SEND_INTERACTION_TO_LMS(key, JSON.stringify(value.respuesta), value.estado, value.pregunta, "other");
+        }
+    });
+
+    
 }
 
 function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
@@ -916,6 +1000,9 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                 estado: estado_answers,
                 type: typeInteraction
             };
+
+            var id = id_interaction + "0";
+            SEND_INTERACTION_TO_LMS(id, JSON.stringify(answers), estado, json_data, "other");
         } else {
             $.each(answers, function (key, value) {
                 var estado;
@@ -935,9 +1022,11 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                     respuesta: value//JSON.stringify(value)
                 };
             });
-
+            var id = id_interaction + key;
+            SEND_INTERACTION_TO_LMS(id, JSON.stringify(value), estado, json_data[key].pregunta, "other");
         }
     }
+
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions);
     EDGE_Plantilla.debug ? console.log("UPLOADING interactions", interactions, pagina, EDGE_Plantilla.temp_scorm) : false;
 
@@ -1024,11 +1113,14 @@ function save_extra_data(objData, evt) {
 
     EDGE_Plantilla.debug ?
             console.log("UPLOADED extradata", EDGE_Plantilla.temp_scorm_suspendData) : false;
+
+    WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
 }
 
 function merge_extra_scorm(extra_scorm) {
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm_suspendData, extra_scorm);
     EDGE_Plantilla.debug ? console.log("EXTRA SCORM MERGED", EDGE_Plantilla.temp_scorm_suspendData) : false;
+    WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
 }
 
 function read_extra_data(evt) {

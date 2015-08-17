@@ -50,8 +50,6 @@ $("body").on("EDGE_Recurso_PaginaOnShow", function (evt) {
     stage.prop("ed_attempts", evt.attempts);
     var strPagina = evt.pagina;
     var extra = EDGE_Plantilla.temp_scorm_suspendData[stage.prop("ed_identify").recurso];
-    
-    console.log("extra", extra);
 
     if (!isEmpty(extra.response_pattern)) {
         $.each(extra.response_pattern, function (key, value) {
