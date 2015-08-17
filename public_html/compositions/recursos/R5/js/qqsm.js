@@ -45,12 +45,12 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
 });
 
 $("body").on("EDGE_Recurso_PaginaOnShow", function (evt) {
-    
+
     var stage = $(evt.sym.getComposition().getStage().ele);
     stage.prop("ed_attempts", evt.attempts);
     var strPagina = evt.pagina;
     var extra = EDGE_Plantilla.temp_scorm_suspendData[stage.prop("ed_identify").recurso];
-    
+
     console.log("extra", extra);
 
     if (!isEmpty(extra.response_pattern)) {
@@ -68,6 +68,10 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
     stage.prop("ed_attempts", evt.attempts);
 
     send_to(evt.send_to, evt);
+
+    if (evt.send_to === "try_again") {
+        reset_tooltips();
+    }
 });
 
 function send_to(send_to, evt) {

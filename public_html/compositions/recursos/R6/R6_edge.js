@@ -555,7 +555,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid297",
+                            "eid318",
                             "-moz-transform-origin",
                             3000,
                             0,
@@ -566,7 +566,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid298",
+                            "eid319",
                             "-ms-transform-origin",
                             3000,
                             0,
@@ -577,7 +577,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid299",
+                            "eid320",
                             "msTransformOrigin",
                             3000,
                             0,
@@ -588,7 +588,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid300",
+                            "eid321",
                             "-o-transform-origin",
                             3000,
                             0,
@@ -599,7 +599,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid301",
+                            "eid322",
                             "transform-origin",
                             3000,
                             0,
@@ -621,7 +621,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid302",
+                            "eid323",
                             "-moz-transform-origin",
                             6750,
                             0,
@@ -632,7 +632,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid303",
+                            "eid324",
                             "-ms-transform-origin",
                             6750,
                             0,
@@ -643,7 +643,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid304",
+                            "eid325",
                             "msTransformOrigin",
                             6750,
                             0,
@@ -654,7 +654,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid305",
+                            "eid326",
                             "-o-transform-origin",
                             6750,
                             0,
@@ -665,7 +665,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid306",
+                            "eid327",
                             "transform-origin",
                             6750,
                             0,
@@ -806,23 +806,31 @@
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            rect: ['632px', '32px', '1198px', '377px', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700;\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif;\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif;\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700;\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif;\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800;\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif;\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
-                            type: 'text',
-                            rect: ['632px', '32px', '1198px', '377px', 'auto', 'auto']
+                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            type: 'text'
+                        },
+                        {
+                            id: 'precarga_gif',
+                            type: 'image',
+                            rect: ['1141px', '438px', '161px', '12px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
                         },
                         {
                             type: 'rect',
-                            id: 'btn_evaluemosCopy2',
+                            rect: ['1054', '419px', '335', '49', 'auto', 'auto'],
+                            display: 'none',
                             symbolName: 'btn_evaluemos',
                             cursor: 'pointer',
-                            rect: ['1054', '419px', '335', '49', 'auto', 'auto']
+                            id: 'btn_evaluemosCopy2'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '335px', '49px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '335px', '49px']
                         }
                     }
                 },
@@ -830,7 +838,16 @@
                     duration: 0,
                     autoPlay: true,
                     data: [
-
+                        [
+                            "eid307",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${btn_evaluemosCopy2}",
+                            'none',
+                            'none'
+                        ]
                     ]
                 }
             },
@@ -1114,12 +1131,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
+                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1178,12 +1195,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
-                                type: 'text',
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         },
                         {
@@ -1217,13 +1234,13 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '91px', '33px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal'],
-                            type: 'text',
                             align: 'center',
                             id: 'Text2',
-                            textStyle: ['', '', '', '', 'none'],
                             text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
-                            rect: ['0px', '0px', '91px', '33px', 'auto', 'auto']
+                            textStyle: ['', '', '', '', 'none'],
+                            type: 'text'
                         }
                     ],
                     style: {

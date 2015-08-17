@@ -4,6 +4,12 @@
  * and open the template in the editor.
  */
 
+EDGE_Plantilla.btn_inicio = ["R6_portada", "btn_evaluemosCopy2"];
+
+$(document).on("EDGE_Plantilla_creationComplete", function (evt) {
+    buscar_sym(EDGE_Plantilla.plantilla_sym,
+            EDGE_Plantilla.btn_inicio, true).show();
+});
 
 $("body").on("EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
