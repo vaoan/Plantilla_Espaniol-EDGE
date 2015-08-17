@@ -117,14 +117,14 @@ function check_every_answer() {
                     }
                 }
             });
-        }
 
-        if (isEmpty(page_respuestas)) {
-            page_respuestas[pagina.recurso + "0000"] = "neutral";
-            result = "neutral";
-        }
+            if (isEmpty(page_respuestas)) {
+                page_respuestas[pagina.recurso + "0000"] = "neutral";
+                result = "neutral";
+            }
 
-        respuestas = merge_options(respuestas, page_respuestas);
+            respuestas = merge_options(respuestas, page_respuestas);
+        }
     });
 
     var objResult = {respuesta: result, respuestas: respuestas};

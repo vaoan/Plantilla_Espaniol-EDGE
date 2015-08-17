@@ -58,7 +58,7 @@
             "sym": ["R6_5"]
         },
         "respuestas":{
-            "type": "actividad",
+            "type": "recurso",
             "url": "recursos/final_respuestas/final_respuestas.html",
             "sym": ["R6_respuestas"]
         }

@@ -264,8 +264,6 @@ function R5_QQSM_heiner_submit(evt) {
         max_preguntas++;
     });
 
-    max_preguntas = max_preguntas - 1;
-
     var actual_pregunta = evt.pagina_actual.recurso;
     var id_actual_pregunta = actual_pregunta + "0000";
 

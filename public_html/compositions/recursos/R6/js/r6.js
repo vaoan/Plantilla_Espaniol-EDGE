@@ -117,14 +117,14 @@ function check_every_answer() {
                     }
                 }
             });
-        }
 
-        if (isEmpty(page_respuestas)) {
-            page_respuestas[pagina.recurso + "0000"] = "neutral";
-            result = "neutral";
-        }
+            if (isEmpty(page_respuestas)) {
+                page_respuestas[pagina.recurso + "0000"] = "neutral";
+                result = "neutral";
+            }
 
-        respuestas = merge_options(respuestas, page_respuestas);
+            respuestas = merge_options(respuestas, page_respuestas);
+        }
     });
 
     var objResult = {respuesta: result, respuestas: respuestas};
@@ -148,7 +148,8 @@ function pagina_actual(strPaginaActual) {
     EDGE_Plantilla.pagina_actual = strPaginaActual;
     var objEvt = {
         type: "EDGE_Recurso_PaginaOnShow",
-        pagina: strPaginaActual
+        pagina: strPaginaActual,
+        sym: EDGE_Plantilla.plantilla_sym
     };
     $("body").trigger(objEvt);
 }
