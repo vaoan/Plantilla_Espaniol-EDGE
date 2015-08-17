@@ -19,7 +19,7 @@ $(window).unload(function () {
 function SCORM_INITIALIZE() {
 
     //LOAD_INTERACTIONS();
-    IS_SCORM = getAPI() !== null;
+    IS_SCORM = typeof getAPI() !== "undefined";
 
     if (!IS_SCORM) {
         console.log("SCORM API can not be accessed");
@@ -192,10 +192,25 @@ function SET_TOTAL_SCORE(score, result) {
     }
     
     doSetValue("cmi.success_status", result);
+    doSetValue("cmi.score.min", 0);
+    doSetValue("cmi.score.max", 100);
     doSetValue("cmi.score.raw", score);
     doSetValue("cmi.score.scaled", (score / 100));
     doSetValue("cmi.completion_status", "completed");
     doSetValue("cmi.exit", "logout");
+    doCommit();
+}
+
+/******************************************************************************/
+
+function SCORM_COMMIT()
+{
+    if (!IS_SCORM) {
+        console.log("SCORM API can not be accessed");
+        return;
+    }
+    
+    doCommit();
 }
 
 /******************************************************************************/
@@ -228,12 +243,10 @@ function LOAD_INTERACTIONS() {
         intObj.type = doGetValue("cmi.interactions."+i+".type");
         intObj.respuesta = jQuery.parseJSON(doGetValue("cmi.interactions."+i+".learner_response"));
         intObj.pregunta = doGetValue("cmi.interactions."+i+".description");
-        intObj.result = doGetValue("cmi.interactions."+i+".result");
+        intObj.estado = doGetValue("cmi.interactions."+i+".result");
         interactions[doGetValue("cmi.interactions."+i+".id")] = intObj;
     }
     return interactions;
 }
-
-
 
 
