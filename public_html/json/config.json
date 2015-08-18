@@ -48,7 +48,7 @@
             "type": "actividad",
             "recurso": "5",
             "actividad": "R5_QQSM",
-            "url": "recursos/R5/R5.html",
+            "url": "recursos/R5_QQSM/R5.html",
             "interaction": {
                 "ALL": true
             },

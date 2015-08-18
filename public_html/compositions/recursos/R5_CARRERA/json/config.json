@@ -1,0 +1,66 @@
+{
+    "default": {
+        "url_pages": "compositions/",
+        "default_page": [
+            "1","2","3","4","5","respuestas"
+        ],
+        "limit_attemps": 2
+    },
+    "paginas": {
+        "1": {
+            "type": "actividad",
+            "recurso": "51",
+            "actividad": "pick_many",
+            "url": "recursos/preg_1/preg_1.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_1"]
+        },
+        "2": {
+            "type": "actividad",
+            "recurso": "52",
+            "actividad": "pick_many",
+            "url": "recursos/preg_2/preg_2.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_2"]
+        },
+        "3": {
+            "type": "actividad",
+            "recurso": "53",
+            "actividad": "pick_many",
+            "url": "recursos/preg_3/preg_3.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_3"]
+        },
+        "4": {
+            "type": "actividad",
+            "recurso": "54",
+            "actividad": "pick_many",
+            "url": "recursos/preg_4/preg_4.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_4"]
+        },
+        "5": {
+            "type": "actividad",
+            "recurso": "55",
+            "actividad": "pick_many",
+            "url": "recursos/preg_5/preg_5.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_5"]
+        },
+        "respuestas":{
+            "type": "recurso",
+            "url": "recursos/final_respuestas/respuestas.html",
+            "sym": ["R6_respuestas"]
+        }
+    }
+}
