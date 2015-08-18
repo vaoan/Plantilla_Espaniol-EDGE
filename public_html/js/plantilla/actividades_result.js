@@ -243,6 +243,9 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "R5_QQSM":
             R5_QQSM_heiner_submit(evt);
             break;
+        case "R5_TRIVIA":
+            R5_TRIVIA_toscano_submit(evt);
+            break;
         default:
             console.error("Submit inexistente", evt.identify);
             break;
@@ -295,6 +298,84 @@ function R5_QQSM_heiner_submit(evt) {
     });
 
     if (resp_actual === "incorrect") {
+        objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
+        if (objEvt.attempts >= evt.attempts_limit) {
+            objEvt.send_to = "failed";
+            objInteraction.estado = "incorrect";
+            objEvt.block = true;
+        } else {
+            objEvt.send_to = "try_again";
+            objInteraction.estado = "neutral";
+        }
+    } else if (resp_actual === "neutral") {
+        retroalimentacion(resp_actual, evt.identify.actividad);
+        objEvt.send_to = "nothing";
+        objInteraction.estado = "neutral";
+    } else if (correct >= max_preguntas) {
+        objEvt.send_to = "correct";
+        objInteraction.estado = "correct";
+        objEvt.block = true;
+    } else {
+        objEvt.send_to = "next";
+        objInteraction.estado = "neutral";
+    }
+
+
+    evt.answer[evt.identify.recurso + "000"] = objInteraction;
+    merge_extra_scorm(evt.extra_data);
+    merge_temp_scorm(evt.answer);
+
+    save_extra_data(objEvt, evt);
+    send_evt_to(evt.identify, objEvt, evt.results);
+}
+
+function R5_TRIVIA_toscano_submit(evt) {
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: evt.sym,
+        attempts: evt.attempts
+    };
+
+    var max_preguntas = 0;
+
+    $.each(evt.position_which_is_right, function (key, value) {
+        max_preguntas++;
+    });
+
+    var actual_pregunta = evt.pagina_actual.recurso;
+    var id_actual_pregunta = actual_pregunta + "0000";
+
+    var resp_actual = evt.position_which_is_right[id_actual_pregunta];
+
+
+    var objInteraction = {
+        pregunta: evt.identify.titulo + " " + evt.identify.subtitulo,
+        respuesta: "",
+        estado: "",
+        type: "other"
+    };
+
+    var correct = 0;
+    var incorrect = 0;
+    var neutral = 0;
+
+    $.each(evt.position_which_is_right, function (key, val) {
+        if (val === "correct") {
+            correct++;
+        } else if (val === "incorrect") {
+            incorrect++;
+        } else {
+            neutral++;
+        }
+    });
+
+    
+    if (resp_actual === "incorrect" || evt.timer.time_out) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
