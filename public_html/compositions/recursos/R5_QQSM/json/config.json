@@ -50,7 +50,7 @@
         "5": {
             "type": "actividad",
             "recurso": "55",
-            "actividad": "pick_many",
+            "actividad": "R5_QQSM",
             "url": "recursos/qqsm_pre5/pre5.html",
             "interaction": {
                 "ALL": true

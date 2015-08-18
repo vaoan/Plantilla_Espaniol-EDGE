@@ -96,7 +96,6 @@ function check_every_answer() {
         var pagina = EDGE_Plantilla.config.paginas[value];
         if (pagina.type === "actividad") {
             var stage = EDGE_Plantilla.config.paginas[value].stage;
-            console.warn("entra");
 
             $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
                     .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});

@@ -23,7 +23,7 @@
             js+"timerUtilities.js",
             js+"actividades_result.js",
             js+"r6.js",
-            js+"r6_puntaje.js"
+            js+"obj10_r6.js"
         ],
         symbols = {
             "stage": {
