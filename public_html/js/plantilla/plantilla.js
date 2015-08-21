@@ -4,6 +4,17 @@
  * and open the template in the editor.
  */
 
+jQuery.fn.center = function (realScale) {
+    this.css("position", "absolute");
+
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight() * realScale) / 2) +
+            $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth() * realScale) / 2) +
+            $(window).scrollLeft()) + "px");
+
+    return this;
+};
+
 function WhatBrowser() {
 
     var browser = (!!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) ? "Opera" :
@@ -65,6 +76,8 @@ $("body").on("EDGE_Container_loaded", function () {
         EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions)
     }
 
+    //$(document).trigger("resize");
+
 });
 
 function menu_tools_hide_show(sym) {
@@ -110,8 +123,8 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
 function resize() {
     var ancho = $("#Stage").width();
     var alto = $("#Stage").height();
-    
-    
+
+
 
     var windowWidth = $(window).width(); //retrieve current window width
     var windowHeight = $(window).height(); //retrieve current window height
@@ -119,17 +132,45 @@ function resize() {
     var documentHeight = $(document).height(); //retrieve current document height
     var vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
     var hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
-    
+
     var scale1 = windowWidth / ancho;
     var scale2 = windowHeight / alto;
-    
+
     var realScale = scale1 > scale2 ? scale2 : scale1;
-    
-    $("#Stage").css("transform", "scale("+ realScale +")").css({
-        margin : "0 auto"
+
+    $("#Stage").css({// Set the transform origin so we always scale to the top left corner of the stage
+        "transform-origin": "0% 0%",
+        "-ms-transform-origin": "0% 0%",
+        "-webkit-transform-origin": "0% 0%",
+        "-moz-transform-origin": "0% 0%",
+        "-o-transform-origin": "0% 0%"
     });
-    
-    EC.centerStage(EDGE_Plantilla.plantilla_sym); 
+
+    $("body").css({height: 0, width: windowWidth});
+
+    var element = $("<div/>", {id: "magic_container"});
+    element.css({
+        display: "flex",
+        "align-items": "center",
+        "flex-direction": "column",
+        "width": "100%",
+        "height": "100%",
+        position: "absolute",
+        left: 0,
+        top: 0
+    });
+
+    $("#Stage").css("transform", "scale(" + realScale + ")").css({
+        //margin: "0 auto",
+        position: "relative"
+    }).center(realScale);
+
+    //$("body").append(element);
+
+    //$("#magic_container").append($("#Stage"));  
+
+    //EC.centerStage(EDGE_Plantilla.plantilla_sym); 
 
     console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);
 }
+
