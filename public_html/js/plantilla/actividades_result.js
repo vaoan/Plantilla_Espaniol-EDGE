@@ -715,7 +715,7 @@ function selecting_blanks_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    upload_interaction(evt.json.pregunta, evt.answer, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -767,7 +767,7 @@ function filling_blanks_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    upload_interaction(evt.json.pregunta, evt.answer, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
