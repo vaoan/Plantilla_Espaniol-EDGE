@@ -34,34 +34,31 @@ function prevent_scroll(jqueryObject) {
 
     // un-lock scroll position
     /*var html = jqueryObject;
-    var scrollPosition = html.data('scroll-position');
-    html.css('overflow', html.data('previous-overflow'));
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);*/
+     var scrollPosition = html.data('scroll-position');
+     html.css('overflow', html.data('previous-overflow'));
+     window.scrollTo(scrollPosition[0], scrollPosition[1]);*/
 }
 
 
 $("body").on("EDGE_Container_loaded", function () {
+
+    $.backstretch("images/r1.png");
     //document.body.style.background = "url('images/r1.png') 50% 50% / cover no-repeat gray";
-    $("html").css({
-        "background-size": "cover",
-        "background-repeat": "no-repeat",
-        "background-position": "center center",
-        "background": "url('images/r1.png') 50% 50% / cover no-repeat gray"
-    });
+    /*$("body").css({
+     "background-size": "cover",
+     "background-repeat": "no-repeat",
+     "background-position": "center center",
+     "background": "url('images/r1.png') 50% 50% / cover no-repeat gray"
+     });*/
 
     var audio = new Audio('media/navigate-begin.mp3');
 
-    $("body").css({
-        overflow: "hidden",
-        //zoom: "1.5"
-        //"background": "rgba(0,0,0,0.5)"
-    });
-    
-    prevent_scroll($("html"));
-    
-    if(EDGE_Plantilla.scorm_available){
+    resize();
+    //prevent_scroll($("html"));
+
+    if (EDGE_Plantilla.scorm_available) {
         var suspendData = SCORM_INITIALIZE();
-        if(suspendData !== ""){
+        if (suspendData !== "") {
             EDGE_Plantilla.temp_scorm_suspendData = jQuery.parseJSON(suspendData);
         }
         var interactions = LOAD_INTERACTIONS();
@@ -108,3 +105,31 @@ function menu_tools_hide_show(sym) {
 $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
     menu_tools_hide_show(evt.sym);
 });
+
+
+function resize() {
+    var ancho = $("#Stage").width();
+    var alto = $("#Stage").height();
+    
+    
+
+    var windowWidth = $(window).width(); //retrieve current window width
+    var windowHeight = $(window).height(); //retrieve current window height
+    var documentWidth = $(document).width(); //retrieve current document width
+    var documentHeight = $(document).height(); //retrieve current document height
+    var vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
+    var hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
+    
+    var scale1 = windowWidth / ancho;
+    var scale2 = windowHeight / alto;
+    
+    var realScale = scale1 > scale2 ? scale2 : scale1;
+    
+    $("#Stage").css("transform", "scale("+ realScale +")").css({
+        margin : "0 auto"
+    });
+    
+    EC.centerStage(EDGE_Plantilla.plantilla_sym); 
+
+    console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);
+}

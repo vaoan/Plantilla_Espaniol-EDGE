@@ -437,7 +437,7 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             mostrar_pagina("accesibilidad");
             break;
     }
-    play_buttons(evt);
+    //play_buttons(evt);
 });
 
 $("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
@@ -446,24 +446,31 @@ $("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
     switch (evt.evt.currentTarget.id) {
         case "Stage_" + EDGE_Plantilla.button_nav.R1.button:
             mostrar_pagina("1");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R2.button:
             mostrar_pagina("2");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R3.button:
             mostrar_pagina("3");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R4.button:
             mostrar_pagina("4");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R5.button:
             mostrar_pagina("5");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R6.button:
             mostrar_pagina("6");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.R7.button:
             mostrar_pagina("7");
+            play_buttons(evt);
             break;
         case "Stage_" + EDGE_Plantilla.button_nav.learning.button:
             mostrar_pagina("learning");
@@ -474,7 +481,7 @@ $("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
         default:
             break;
     }
-    play_buttons(evt);
+    
 });
 //</editor-fold>
 
