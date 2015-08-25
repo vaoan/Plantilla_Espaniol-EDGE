@@ -29,23 +29,23 @@
         "3": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "drag_drop",
-            "url": "recursos/R3/esn1le01ob02r3.html",
+            "actividad": "concentrese",
+            "url": "recursos/R4_Concentrese/concentrece.html",
             "interaction": {
                 "ALL": true
             },
-            "titulo": "Practiquemos",
+            "titulo": "Concentrese",
             "subtitulo": "¡A deletrear!"
         },
         "4": {
             "type": "actividad",
             "recurso": "4",
             "actividad": "sopa_letras",
-            "url": "recursos/R4_SopaDeLetras/esn1le01ob02r4.html",
+            "url": "recursos/R4_SopaDeLetras/esn1le01ob04r4.html",
             "interaction": {
                 "ALL": true
             },
-            "titulo": "Practiquemos",
+            "titulo": "sopa_letras",
             "subtitulo": "¡A deletrear!"
         },
         "5": {
