@@ -22,8 +22,8 @@
             js+"dragAndDropUtilities.js",
             js+"interactionUtilities.js",
             js+"utility.js",
-            js+"audioUtilities.js",
-            js+"jquery.ui.touch-punch.min"
+            js+"audioUtilities.js"
+            
         ],
         symbols = {
             "stage": {
