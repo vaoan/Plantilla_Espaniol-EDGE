@@ -44,41 +44,42 @@
                             id: 'Text3',
                             type: 'text',
                             rect: ['168px', '50px', '754px', '37px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700; font-size: 30px;\">Deletreo la palabra</span></p>",
+                            text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700; font-size: 30px; color: rgb(51, 51, 51);\">Deletreo la palabra</span></p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(51,51,51,1.00)", "400", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
                         },
                         {
                             id: 'Text2Copy',
                             type: 'text',
                             rect: ['137px', '95px', '1589px', '30px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 30px;\">Instrucción: seleccione la respuesta correcta.</span></p>",
+                            text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 30px; color: rgb(51, 51, 51);\">Instrucción: escuche el audio y seleccione la palabra que corresponda. Tiene distractores.</span></p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "400", "none", "italic", "break-word", "normal"],
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(51,51,51,1.00)", "400", "none", "italic", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
                         },
                         {
                             id: 'Text4',
                             type: 'text',
-                            rect: ['144px', '143px', '531px', '37px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 30px;\">¿Cómo se deletrea el audio?</span></p>",
+                            rect: ['144px', '143px', '1589px', '37px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 30px; color: rgb(51, 51, 51);\">Reconozca el deletreo de una palabra.&nbsp;</span></p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(51,51,51,1.00)", "400", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
                         },
                         {
                             id: 'Text2Copy4',
                             type: 'text',
                             rect: ['753px', '203px', '441px', '160px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 30px;\">pe- a- &nbsp;ese- &nbsp;o</span> </p><p style=\"margin: 0px;\"><span style=\"font-size: 30px;\">te- ere-a- zeta- o</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 30px;\">eme- a– zeta- o</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 30px;\">be- ere- a- zeta- o</span> </p>",
+                            text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 30px; color: rgb(51, 51, 51);\">pe- a- &nbsp;ese- &nbsp;o</span><span style=\"color: rgb(51, 51, 51);\"> </span></p><p style=\"margin: 0px;\"><span style=\"font-size: 30px; color: rgb(51, 51, 51);\">te- ere-a- zeta- o</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 30px; color: rgb(51, 51, 51);\">eme- a– zeta- o</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 30px; color: rgb(51, 51, 51);\">be- ere- a- zeta- o</span> </p>",
                             align: "left",
-                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(51,51,51,1.00)", "400", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "40px", "", "none"]
                         },
                         {
                             id: 'signo_mas_que_1_VIOLETA',
                             type: 'image',
+                            tag: 'img',
                             rect: ['103px', '60px', '18px', '18px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"signo%20mas%20que%201%20VIOLETA.png",'0px','0px']
                         },
@@ -143,14 +144,14 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid128",
-                            "scaleY",
+                            "eid134",
+                            "left",
                             500,
                             0,
                             "linear",
                             "${audio_1}",
-                            '1.1784',
-                            '1.1784'
+                            '293px',
+                            '293px'
                         ],
                         [
                             "eid136",
@@ -173,14 +174,14 @@
                             '1.1784'
                         ],
                         [
-                            "eid134",
-                            "left",
+                            "eid128",
+                            "scaleY",
                             500,
                             0,
                             "linear",
                             "${audio_1}",
-                            '293px',
-                            '293px'
+                            '1.1784',
+                            '1.1784'
                         ]
                     ]
                 }
@@ -195,10 +196,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
@@ -326,12 +327,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
@@ -340,16 +341,17 @@
                             id: 'stop',
                             opacity: '0',
                             rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            fill: ['rgba(255,255,255,1)']
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            tag: 'img',
+                            type: 'image',
                             id: 'play',
                             opacity: '1',
-                            type: 'image',
+                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/play-03.png', '0px', '0px']
                         },
                         {
@@ -412,21 +414,21 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             id: 'Ellipse2Copy2',
                             opacity: '0',
-                            rect: ['4px', '4px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgb(164, 160, 161)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -519,21 +521,21 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             id: 'Ellipse2Copy2',
                             opacity: '0',
-                            rect: ['4px', '4px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgb(164, 160, 161)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -626,21 +628,21 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             id: 'Ellipse2Copy2',
                             opacity: '0',
-                            rect: ['4px', '4px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgb(164, 160, 161)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -733,21 +735,21 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             id: 'Ellipse2Copy2',
                             opacity: '0',
-                            rect: ['4px', '4px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgb(164, 160, 161)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -838,8 +840,8 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '83px', '90px', 'auto', 'auto'],
                             type: 'rect',
+                            rect: ['0px', '0px', '83px', '90px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
@@ -848,8 +850,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '83px', '90px']
+                            rect: [null, null, '83px', '90px']
                         }
                     }
                 },

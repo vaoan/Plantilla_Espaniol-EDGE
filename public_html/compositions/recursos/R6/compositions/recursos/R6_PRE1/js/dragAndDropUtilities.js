@@ -429,6 +429,12 @@ function checkAnswersDragAndDrop(sym) {
 function mostrarRespuestasDragAndDropUnoAUno(sym) {
     var stage = $(sym.getComposition().getStage().ele);
     var CANTIDAD_DROPS = stage.prop("cantidad_drops");
+    var CANTIDAD_DRAGS = stage.prop("cantidad_drags");
+    
+    for (var i = 1; i <= CANTIDAD_DRAGS; i++) {
+        var newposition = sym.$('DRAG_' + i).prop("posicion_inicial");
+        moverDrag(sym.$('DRAG_' + i), newposition);
+    }
 
     for (var i = 1; i <= CANTIDAD_DROPS; i++) {
         ubicarDragEnCentroDeDrop(sym.$('DRAG_' + i), sym.$('DROP_' + i));
@@ -445,6 +451,11 @@ function mostrarRespuestasDragAndDropUnoAMuchos(sym) {
     var dropsObj = stage.prop("drops");
 
     //console.log(dropsObj);
+    
+    for (var i = 1; i <= stage.prop("cantidad_drags"); i++) {
+        var newposition = sym.$('DRAG_' + i).prop("posicion_inicial");
+        moverDrag(sym.$('DRAG_' + i), newposition);
+    }
 
     $.each(dropsObj, function (key, val) {
         var arrayDrags = [];
