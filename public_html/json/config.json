@@ -74,7 +74,7 @@
             "type": "recurso",
             "recurso": "7",
             "url": "recursos/R7/esn1le01ob02r7.html",
-            "pdf":"../../../media/pdf/esn1le01ob02guion.pdf",
+            "pdf": "../../../media/pdf/esn1le01ob02guion.pdf",
             "titulo": "Aprendamos en papel",
             "subtitulo": "¡A deletrear!"
         },
@@ -141,8 +141,9 @@
         "accesibilidad": {
             "url": "elementos_plantilla/Accesibilidad/Accesibilidad.html",
             "type": "popup_full",
+            "pdf": "../../../media/pdf/accessibility.pdf",
             "symbols": {
             }
-        }        
+        }
     }
 }
