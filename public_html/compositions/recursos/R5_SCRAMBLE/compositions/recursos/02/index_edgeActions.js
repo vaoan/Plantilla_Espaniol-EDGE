@@ -20,8 +20,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         checkAnswersDragAndDrop(sym);
+         
 
       });
       //Edge binding end
@@ -31,9 +30,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
 
       Symbol.bindElementAction(compId, symbolName, "${DRAG_1}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var stage = $(sym.getComposition().getStage().ele);
-         startTimer(sym, buscar_sym(sym, stage.prop("timer"),true));
+         
 
       });
       //Edge binding end

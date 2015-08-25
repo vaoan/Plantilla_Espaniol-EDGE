@@ -5,7 +5,7 @@
  */
 
 $("body").on("TimeAlert", function (data) {
-    cambiarEstadoTimer(data.sym, data.remaining_time);  //POSIBLEMENTE CON ERROR
+    cambiarEstadoTimer(data.sym, data.tag);
 });
 
 function cambiarEstadoTimer(sym, estado) {
@@ -23,6 +23,9 @@ function cambiarEstadoTimer(sym, estado) {
 function inicializarTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
 
+	$.ajaxSetup({
+        async: false
+    });
 
     $.getJSON("timer_config.json").done(function (data) {
         var timerObj = buscar_sym(sym, data.sym, true);
@@ -55,11 +58,14 @@ function startTimer(sym) {
             currentTime--;
             timerObj.prop("timer_text").html(secondsToClockFormat(currentTime));
             timerObj.prop("segundos_restantes", currentTime);
+            var strSegundos = ""+timerObj.prop("segundos_restantes");
+            var alertas = timerObj.prop("alertas");
 
-            if ($.inArray(currentTime, timerObj.prop("alertas")) >= 0) {
+            if (alertas.hasOwnProperty(strSegundos)) {
                 $("body").trigger({
                     type: "TimeAlert",
                     remaining_time: currentTime,
+                    tag: alertas[strSegundos].tag,
                     timerObj: timerObj,
                     sym: sym
                 });
@@ -146,19 +152,3 @@ function secondsToClockFormat(sec_num) {
 
 //***********************************************************************************
 
-$("body").on("TimeOut", function (data) {
-    var stage = $(data.sym.getComposition().getStage().ele);
-
-    var timer = {};
-    var timerObj = buscar_sym(data.sym, stage.prop("timer"), true);
-    timer.remaining_time = 0;
-    timer.time_out = true;
-    timer.current_state = timerObj.prop("alertState");
-    
-    $("body").trigger({
-        type: "EDGE_Actividad_Submit",
-        sym: data.sym,
-        timer: timer
-    });
-    //enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), "", "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, data.sym);
-});

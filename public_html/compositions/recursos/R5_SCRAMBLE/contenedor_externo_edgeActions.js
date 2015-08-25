@@ -23,13 +23,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
          // introducir código aquí
          sym.stop();
+         pagina_actual("1");
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btn_inicio_scrabble}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         sym.play();
+         sym.play("slide1");
          
 
       });
@@ -38,6 +39,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          // introducir código aquí
          sym.stop();
+         pagina_actual("2");
 
       });
       //Edge binding end
@@ -45,6 +47,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
          // introducir código aquí
          sym.stop();
+         pagina_actual("3");
 
       });
       //Edge binding end
@@ -52,6 +55,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
          // introducir código aquí
          sym.stop();
+         pagina_actual("4");
 
       });
       //Edge binding end
@@ -93,6 +97,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8500, function(sym, e) {
          // introducir código aquí
          sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         do_submit(sym);
 
       });
       //Edge binding end

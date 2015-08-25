@@ -26,9 +26,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
 
       Symbol.bindElementAction(compId, symbolName, "${DRAG_1}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         var stage = $(sym.getComposition().getStage().ele);
-         startTimer(sym, buscar_sym(sym, stage.prop("timer"),true));
+         
 
       });
       //Edge binding end

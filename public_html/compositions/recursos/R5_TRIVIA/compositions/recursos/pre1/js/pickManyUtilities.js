@@ -53,7 +53,6 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
     if (data.block) {
         stage.prop("blocked", true);
         if (stage.prop("usa_timer")) {
-
             stopTimer(data.sym);
         }
     } else {

@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 
-EDGE_Plantilla.btn_inicio = ["btn_inicio"];
+EDGE_Plantilla.btn_inicio = ["R6_portada", "btn_inicio"];
 
 $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
     buscar_sym(EDGE_Plantilla.plantilla_sym,
             EDGE_Plantilla.btn_inicio, true).show();
+
 });
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
@@ -28,6 +29,10 @@ $("body").on("EDGE_Recurso_PaginaOnShow", function (evt) {
     stage.prop("ed_attempts", evt.attempts);
     var extra = EDGE_Plantilla.temp_scorm_suspendData[stage.prop("ed_identify").recurso];
     console.log("SUSPEND DATA R5_QQSM", extra);
+
+    if (typeof startTimer === "function") {
+        startTimer(evt.sym);
+    }
 });
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
@@ -37,10 +42,50 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (evt) {
     stage.prop("ed_attempts", evt.attempts);
 
     send_to(evt.send_to, evt);
+});
 
-    if (evt.send_to === "try_again") {
-        reset_tooltips();
+$("body").on("EDGE_Recurso_promiseCreated", function (evt) {  
+    if (typeof inicializarTimer === "function") {
+        inicializarTimer(evt.sym);
     }
+    var stage = $(evt.sym.getComposition().getStage().ele);
+    stage.prop("ed_attempts", 0);
+});
+
+$("body").on("TimeOut", function (evt) {
+    var stage = $(evt.sym.getComposition().getStage().ele);
+    var identify = stage.prop("ed_identify");
+    var result = check_every_answer();
+
+    var timer = {};
+    var timerObj = buscar_sym(evt.sym, stage.prop("timer"), true);
+    timer.remaining_time = 0;
+    timer.time_out = true;
+    timer.current_state = timerObj.prop("alertState");
+
+    var objEvt = {
+        type: "EDGE_Plantilla_submitApplied",
+        interactionType: "other",
+        question: "R5",
+        answer: EDGE_Plantilla.temp_scorm,
+        position_which_is_right: result.respuestas,
+        results: result.respuesta,
+        attempts: stage.prop("ed_attempts"),
+        attempts_limit: EDGE_Plantilla.config.default.limit_attemps,
+        timer: timer,
+        pagina_actual: EDGE_Plantilla.config.paginas[EDGE_Plantilla.pagina_actual],
+        sym: evt.sym,
+        identify: identify,
+        extra_data: EDGE_Plantilla.temp_scorm_suspendData
+    };
+
+    if (!isEmpty(evt.timer)) {
+
+    }
+
+    console.log("SENDING R6", result, objEvt, EDGE_Plantilla.temp_scorm);
+
+    send_evt_to(identify, objEvt, result.respuesta, true);
 });
 
 function send_to(send_to, evt) {

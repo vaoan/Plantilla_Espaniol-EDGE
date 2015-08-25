@@ -8,6 +8,15 @@ $("body").on("TimeAlert", function (data) {
     cambiarEstadoTimer(data.sym, data.tag);
 });
 
+$("body").on("EDGE_Recurso_startTimerRemoto", function (data) {
+    var stage = $(data.sym.getComposition().getStage().ele);
+    if (!isEmpty(stage.prop("blocked"))) {
+        if (!stage.prop("blocked")) {
+            startTimer(data.sym);
+        }
+    }
+});
+
 function cambiarEstadoTimer(sym, estado) {
     var stage = $(sym.getComposition().getStage().ele);
     var timerObj = buscar_sym(sym, stage.prop("timer"), true);
@@ -23,7 +32,7 @@ function cambiarEstadoTimer(sym, estado) {
 function inicializarTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
 
-	$.ajaxSetup({
+    $.ajaxSetup({
         async: false
     });
 
@@ -58,7 +67,7 @@ function startTimer(sym) {
             currentTime--;
             timerObj.prop("timer_text").html(secondsToClockFormat(currentTime));
             timerObj.prop("segundos_restantes", currentTime);
-            var strSegundos = ""+timerObj.prop("segundos_restantes");
+            var strSegundos = "" + timerObj.prop("segundos_restantes");
             var alertas = timerObj.prop("alertas");
 
             if (alertas.hasOwnProperty(strSegundos)) {

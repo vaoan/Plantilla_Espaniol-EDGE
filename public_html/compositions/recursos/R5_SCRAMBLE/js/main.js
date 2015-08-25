@@ -11,7 +11,7 @@ EDGE_Plantilla = {
     allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,
-    debug: false,
+    debug: true,
     base_audio: new Audio('media/navigate-main.mp3'),
     config: null,
     popup_on_show: null,

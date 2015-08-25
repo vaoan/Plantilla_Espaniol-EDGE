@@ -16,12 +16,6 @@
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
             sym.stop();
             
-            // Reproducir una pista de audio 
-            sym.$("audio_entrada")[0].play();
-            
-            // Establecer el volumen de una pista de audio en 20% 
-            sym.$("audio_entrada")[0].volume = 0.2;
-            
             pagina_actual("1");
 
         });
@@ -36,17 +30,7 @@
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function (sym, e) {
             sym.stop();
             
-            
-            // Reproducir una pista de audio desde el principio, independientemente del estado de reproducción actual 
-            sym.$("audio_entrada")[0].currentTime = 0;
-            if (sym.$("audio_entrada")[0].paused) {
-            	sym.$("audio_entrada")[0].play();
-            }
-            
             pagina_actual("2");
-            
-            // Establecer el volumen de una pista de audio en 20% 
-            sym.$("audio_entrada")[0].volume = 0.2;
 
         });
         //Edge binding end
@@ -54,29 +38,12 @@
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function (sym, e) {
             sym.stop();
             
-            sym.$("audio_entrada")[0].currentTime = 0;
-            if (sym.$("audio_entrada")[0].paused) {
-            	sym.$("audio_entrada")[0].play();
-            }
-            
             pagina_actual("3");
-            
-            // Establecer el volumen de una pista de audio en 20% 
-            sym.$("audio_entrada")[0].volume = 0.2;
-
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function (sym, e) {
             sym.stop();
-            
-            sym.$("audio_entrada")[0].currentTime = 0;
-            if (sym.$("audio_entrada")[0].paused) {
-            	sym.$("audio_entrada")[0].play();
-            }
-            // Establecer el volumen de una pista de audio en 20% 
-            sym.$("audio_entrada")[0].volume = 0.2;
-            
             pagina_actual("4");
 
         });
@@ -84,10 +51,6 @@
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function (sym, e) {
             sym.stop();
-            
-            // Establecer el volumen de una pista de audio en 20% 
-            sym.$("audio_entrada")[0].volume = 0.2;
-            
             pagina_actual("5");
 
         });
@@ -145,6 +108,7 @@
          // Ir a una etiqueta o a un momento específicos y parar. Por ejemplo:
          // sym.stop(500); o sym.stop("miEtiqueta");
          sym.stop(0);
+         inicializarTimer(sym);
          
 
       });

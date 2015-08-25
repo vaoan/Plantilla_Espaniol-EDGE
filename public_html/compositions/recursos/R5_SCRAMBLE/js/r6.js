@@ -45,7 +45,7 @@ $("body").on("EDGE_Container_Finishloaded", function (evt) {
 /********************** Eventos interno de Actividad **********************/
 
 $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
-    startTimer(evt.sym);
+    //startTimer(evt.sym);
 });
 
 /********************* Eventos de ENVIO a la PLANTILLA ********************/
@@ -98,13 +98,14 @@ function check_every_answer() {
             var stage = EDGE_Plantilla.config.paginas[value].stage;
             console.warn("entra");
 
-            $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
-                    .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
+            $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0].contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
         }
     });
 
     var respuestas = {};
     var result = "correct";
+    
+    console.log("here");
 
     $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
         var page_respuestas = {};
@@ -129,6 +130,8 @@ function check_every_answer() {
             respuestas = merge_options(respuestas, page_respuestas);
         }
     });
+    
+    console.log("here2");
 
     var objResult = {respuesta: result, respuestas: respuestas};
 

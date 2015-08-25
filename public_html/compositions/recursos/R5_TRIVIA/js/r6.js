@@ -60,11 +60,19 @@ function do_submit(sym) {
 $("body").on("EDGE_Actividad_Submit", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     var identify = stage.prop("ed_identify");
-
-    if (!isEmpty(stage.prop("timer"))) {
-        stopTimer(evt.sym);
-    }
     var result = check_every_answer();
+
+    var timer = {};
+    if (typeof stage.prop("timer") !== "undefined") {
+        var timerObj = buscar_sym(evt.sym, stage.prop("timer"), true);
+        timer.remaining_time = 0;
+        timer.time_out = true;
+        timer.current_state = timerObj.prop("alertState");
+    }else{
+        timer.remaining_time = null;
+        timer.current_state = null;
+        timer.time_out = false;
+    }
 
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",

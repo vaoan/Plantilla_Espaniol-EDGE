@@ -196,18 +196,18 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '165px', '38px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '165px', '38px', 'auto', 'auto'],
                             fill: ['rgba(179,156,0,1.00)']
                         },
                         {
-                            rect: ['11px', '7px', '154px', '20px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Soy un Botón</p>',
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['11px', '7px', '154px', '20px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -234,20 +234,20 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '197px', '38px', 'auto', 'auto'],
                             fill: ['rgba(193,193,193,1.00)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
-                            id: 'Text2',
-                            textStyle: ['', '', '', '', 'none'],
+                            rect: ['22px', '7px', '154px', '38px', 'auto', 'auto'],
                             align: 'center',
-                            rect: ['22px', '7px', '154px', '38px', 'auto', 'auto']
+                            id: 'Text2',
+                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -264,26 +264,6 @@
                         "10": 500
                     },
                     data: [
-                        [
-                            "eid32",
-                            "background-color",
-                            0,
-                            500,
-                            "linear",
-                            "${Rectangle2}",
-                            'rgba(193,193,193,1.00)',
-                            'rgba(255,0,0,1.00)'
-                        ],
-                        [
-                            "eid34",
-                            "background-color",
-                            500,
-                            500,
-                            "linear",
-                            "${Rectangle2}",
-                            'rgba(255,0,0,1)',
-                            'rgba(193,193,193,1.00)'
-                        ],
                         [
                             "eid41",
                             "color",
@@ -303,6 +283,26 @@
                             "${Text2}",
                             'rgba(255,255,255,1.00)',
                             'rgba(0,0,0,1)'
+                        ],
+                        [
+                            "eid32",
+                            "background-color",
+                            0,
+                            500,
+                            "linear",
+                            "${Rectangle2}",
+                            'rgba(193,193,193,1.00)',
+                            'rgba(255,0,0,1.00)'
+                        ],
+                        [
+                            "eid34",
+                            "background-color",
+                            500,
+                            500,
+                            "linear",
+                            "${Rectangle2}",
+                            'rgba(255,0,0,1)',
+                            'rgba(193,193,193,1.00)'
                         ]
                     ]
                 }
@@ -509,9 +509,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'c',
                             type: 'image',
+                            id: 'c',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/c.png', '0px', '0px']
                         }
                     ],
@@ -539,9 +539,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'e',
                             type: 'image',
+                            id: 'e',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/e.png', '0px', '0px']
                         }
                     ],
@@ -569,9 +569,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'p',
                             type: 'image',
+                            id: 'p',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/p.png', '0px', '0px']
                         }
                     ],
@@ -599,9 +599,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'i',
                             type: 'image',
+                            id: 'i',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/i.png', '0px', '0px']
                         }
                     ],
@@ -629,9 +629,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'll',
                             type: 'image',
+                            id: 'll',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/ll.png', '0px', '0px']
                         }
                     ],
@@ -659,9 +659,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'o',
                             type: 'image',
+                            id: 'o',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/o.png', '0px', '0px']
                         }
                     ],
@@ -689,9 +689,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'n',
                             type: 'image',
+                            id: 'n',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/n.png', '0px', '0px']
                         }
                     ],
@@ -719,9 +719,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'd',
                             type: 'image',
+                            id: 'd',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/d.png', '0px', '0px']
                         }
                     ],
@@ -749,9 +749,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
-                            id: 'h',
                             type: 'image',
+                            id: 'h',
+                            rect: ['0px', '0px', '80px', '81px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/h.png', '0px', '0px']
                         }
                     ],
@@ -787,12 +787,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -845,9 +845,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['2px', '2px', '70', '70', 'auto', 'auto'],
-                            id: 'Group',
                             type: 'group',
+                            id: 'Group',
+                            rect: ['2px', '2px', '70', '70', 'auto', 'auto'],
                             c: [
                             {
                                 rect: ['0px', '0px', '70px', '70px', 'auto', 'auto'],
@@ -923,26 +923,26 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            rect: ['2px', '2px', '70', '70', 'auto', 'auto'],
                             id: 'clock_circle3',
                             symbolName: 'clock_circle',
-                            rect: ['2px', '2px', '70', '70', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['34px', '6px', '6', '33', 'auto', 'auto'],
                             display: 'block',
                             symbolName: 'segundero',
-                            rect: ['34px', '6px', '6', '33', 'auto', 'auto'],
-                            id: 'segundero'
+                            id: 'segundero',
+                            type: 'rect'
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            textStyle: ['', '', '', '', 'none'],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            rect: ['4px', '22px', '67px', '38px', 'auto', 'auto'],
                             align: 'center',
-                            rect: ['4px', '22px', '67px', '38px', 'auto', 'auto']
+                            id: 'Text2',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -1024,6 +1024,16 @@
                     autoPlay: true,
                     data: [
                         [
+                            "eid274",
+                            "rotateZ",
+                            0,
+                            2000,
+                            "linear",
+                            "${RoundRect3}",
+                            '0deg',
+                            '360deg'
+                        ],
+                        [
                             "eid273",
                             "-webkit-transform-origin",
                             0,
@@ -1035,7 +1045,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid50",
+                            "eid60",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -1046,7 +1056,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid51",
+                            "eid61",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -1057,7 +1067,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid52",
+                            "eid62",
                             "msTransformOrigin",
                             0,
                             0,
@@ -1068,7 +1078,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid53",
+                            "eid63",
                             "-o-transform-origin",
                             0,
                             0,
@@ -1079,7 +1089,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid54",
+                            "eid64",
                             "transform-origin",
                             0,
                             0,
@@ -1088,16 +1098,6 @@
                             [50,100],
                             [50,100],
                             {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid274",
-                            "rotateZ",
-                            0,
-                            2000,
-                            "linear",
-                            "${RoundRect3}",
-                            '0deg',
-                            '360deg'
                         ]
                     ]
                 }

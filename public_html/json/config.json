@@ -16,11 +16,15 @@
             "subtitulo": "¡A deletrear!"
         },
         "2": {
-            "type": "recurso",
+            "type": "actividad",
             "recurso": "2",
-            "url": "recursos/R2/esn1le01ob02r2.html",
-            "titulo": "Exploremos",
-            "subtitulo": "¡A deletrear!"
+            "actividad": "R5_CARRERA",
+            "url": "recursos/R5_CARRERA/R5.html",
+            "interaction": {
+                "ALL": true
+            },
+            "titulo": "Practiquemos",
+            "subtitulo": "R5_CARRERA"
         },
         "3": {
             "type": "actividad",
@@ -36,8 +40,8 @@
         "4": {
             "type": "actividad",
             "recurso": "4",
-            "actividad": "drag_drop",
-            "url": "recursos/R4/esn1le01ob02r4.html",
+            "actividad": "sopa_letras",
+            "url": "recursos/R4_SopaDeLetras/esn1le01ob02r4.html",
             "interaction": {
                 "ALL": true
             },

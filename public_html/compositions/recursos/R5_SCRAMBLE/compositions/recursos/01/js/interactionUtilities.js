@@ -60,7 +60,6 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
 $("body").on("EDGE_Recurso_Submit", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     var pagina = stage.prop("ed_identify");
-    
     switch(pagina.actividad){
         case "drag_drop_many":
         case "drag_drop":
