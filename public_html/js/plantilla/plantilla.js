@@ -4,53 +4,6 @@
  * and open the template in the editor.
  */
 
-jQuery.fn.center = function (realScale) {
-    this.css("position", "absolute");
-
-    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight() * realScale) / 2) +
-            $(window).scrollTop()) + "px");
-    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth() * realScale) / 2) +
-            $(window).scrollLeft()) + "px");
-
-    return this;
-};
-
-function WhatBrowser() {
-
-    var browser = (!!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) ? "Opera" :
-            typeof InstallTrigger !== 'undefined' ? "Firefox" :
-            (Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0) ? "Safari" :
-            !!window.chrome ? "Chrome" : "IE";
-    console.log(browser);
-
-    return browser;
-}
-
-function prevent_scroll(jqueryObject) {
-    jqueryObject.scrollTop();
-
-    //Fixing IE EDGE
-
-    // lock scroll position, but retain settings for later
-    var scrollPosition = [
-        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-        self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-    ];
-    var html = jqueryObject; // it would make more sense to apply this to body, but IE7 won't have that
-    html.data('scroll-position', scrollPosition);
-    html.data('previous-overflow', html.css('overflow'));
-    html.css('overflow', 'hidden');
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);
-
-
-    // un-lock scroll position
-    /*var html = jqueryObject;
-     var scrollPosition = html.data('scroll-position');
-     html.css('overflow', html.data('previous-overflow'));
-     window.scrollTo(scrollPosition[0], scrollPosition[1]);*/
-}
-
-
 $("body").on("EDGE_Container_loaded", function () {
 
     $.backstretch("images/r1.png");
@@ -64,7 +17,7 @@ $("body").on("EDGE_Container_loaded", function () {
 
     var audio = new Audio('media/navigate-begin.mp3');
 
-    resize();
+    //resize();
     //prevent_scroll($("html"));
 
     if (EDGE_Plantilla.scorm_available) {
@@ -174,3 +127,6 @@ function resize() {
     console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);
 }
 
+$("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
+    buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
+});

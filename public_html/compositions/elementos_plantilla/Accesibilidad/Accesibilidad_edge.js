@@ -97,6 +97,7 @@
                         '${Stage}': {
                             isStage: true,
                             rect: ['null', 'null', '1920px', '1080px', 'auto', 'auto'],
+                            sizeRange: ['0px','','',''],
                             overflow: 'hidden',
                             fill: ["rgba(255,255,255,0.00)"]
                         }
@@ -120,9 +121,9 @@
                 content: {
                     dom: [
                         {
-                            rect: ['7px', '5px', '37', '40', 'auto', 'auto'],
-                            id: 'Btn_cerrar',
                             type: 'group',
+                            id: 'Btn_cerrar',
+                            rect: ['7px', '5px', '37', '40', 'auto', 'auto'],
                             c: [
                             {
                                 id: 'btn_cerrar',
@@ -131,16 +132,16 @@
                                 fill: ['rgba(0,0,0,0)', 'images/btn_cerrar.png', '0px', '0px']
                             },
                             {
-                                transform: [[], ['-42'], [], ['1.03', '0.95']],
                                 rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
+                                transform: [[], ['-42'], [], ['1.03', '0.95']],
                                 id: 'Rectangle2',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(255,255,255,1.00)']
                             },
                             {
-                                transform: [[], ['-138'], [], ['1.03', '0.95']],
                                 rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
+                                transform: [[], ['-138'], [], ['1.03', '0.95']],
                                 id: 'Rectangle2Copy',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',

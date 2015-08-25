@@ -82,20 +82,20 @@ EDGE_Plantilla = {
 function handle_popup(boolShow) {
     var sym = EDGE_Plantilla.plantilla_sym;
     var copy = EDGE_Plantilla.basic_contenedor_popup;
-    
+
     var sym_element = buscar_sym(sym, copy);
-    
+
     console.log("MOSTRANDO POPUP", sym_element);
     $(sym_element.ele).css({"z-index": 2000});
-    
+
     sym_element = buscar_sym(sym, copy, true);
-    
-    if(boolShow){
+
+    if (boolShow) {
         sym_element.show();
-        $("#popup_gray").css({display : "block"});
-    }else{
+        $("#popup_gray").css({display: "block"});
+    } else {
         sym_element.hide();
-        $("#popup_gray").css({display : "none"});
+        $("#popup_gray").css({display: "none"});
     }
 }
 
@@ -266,12 +266,8 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
                 scorm_extra: EDGE_Plantilla.temp_scorm_suspendData
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
-            var html = $("iframe", sym_contenedor.ele)[0].contentWindow.$('html');
-            prevent_scroll(html);
-            var html = $("iframe", sym_contenedor.ele)[0].contentWindow.$('body');
-            prevent_scroll(html);
         }
-
+        
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {
             $.each(objRetro, function (index, value) {
@@ -355,20 +351,20 @@ $("body").on("EDGE_Container_loaded", function (evt) {
         });
     }
     var element;
-    
+
     element = $("<div/>", {
-        id: "popup_gray", ed_position: "top", overflow : "hidden"
+        id: "popup_gray"
     });
     element.css({
         order: 1, width: "100%", height: "100%", position: "absolute",
         "z-index": 10, top: "0px", left: "0px", "background-color": "rgba(0, 0, 0, 0.470588)",
-        display: "none"
+        display: "none", overflow: "hidden"
     });
     $("body").append(element);
-    
+
 
     EDGE_Plantilla.debug ? console.log("****************** ENDED LOAD ********************") : false;
-    
+
     $("body").trigger({
         type: "EDGE_Container_Finishloaded",
         sym: evt.sym
@@ -378,7 +374,6 @@ $("body").on("EDGE_Container_loaded", function (evt) {
 });
 
 $(document).on("EDGE_Plantilla_ClosePopup", function (evt) {
-    play_buttons();
     handle_popup(false);
     EDGE_Plantilla.debug ? console.log("close") : false;
     EDGE_Plantilla.popup_on_show = null;
@@ -401,7 +396,7 @@ $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
 
 
     }
-    
+
     $("html").css({
         //overflow: "hidden",
         //zoom: "1.5"
@@ -481,7 +476,7 @@ $("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
         default:
             break;
     }
-    
+
 });
 //</editor-fold>
 

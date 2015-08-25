@@ -41,3 +41,49 @@ function merge_options(obj1, obj2) {
     }
     return obj3;
 }
+
+jQuery.fn.center = function (realScale) {
+    this.css("position", "absolute");
+
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight() * realScale) / 2) +
+            $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth() * realScale) / 2) +
+            $(window).scrollLeft()) + "px");
+
+    return this;
+};
+
+function WhatBrowser() {
+
+    var browser = (!!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) ? "Opera" :
+            typeof InstallTrigger !== 'undefined' ? "Firefox" :
+            (Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0) ? "Safari" :
+            !!window.chrome ? "Chrome" : "IE";
+    console.log(browser);
+
+    return browser;
+}
+
+function prevent_scroll(jqueryObject) {
+    jqueryObject.scrollTop();
+
+    //Fixing IE EDGE
+
+    // lock scroll position, but retain settings for later
+    var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+    ];
+    var html = jqueryObject; // it would make more sense to apply this to body, but IE7 won't have that
+    html.data('scroll-position', scrollPosition);
+    html.data('previous-overflow', html.css('overflow'));
+    html.css('overflow', 'hidden');
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+
+    // un-lock scroll position
+    /*var html = jqueryObject;
+     var scrollPosition = html.data('scroll-position');
+     html.css('overflow', html.data('previous-overflow'));
+     window.scrollTo(scrollPosition[0], scrollPosition[1]);*/
+}

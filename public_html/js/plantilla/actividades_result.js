@@ -31,6 +31,12 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "select":
             selecting_blanks_santiago_created(evt);
             break;
+        case "sopa_letras":
+            sopa_letras_toscano_created(evt);
+            break;
+        case "concentrese":
+            concentrese_santiago_created(evt);
+            break;
         case "R6":
             R6_heiner_created(evt);
             break;
@@ -40,11 +46,11 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "R5_TRIVIA":
             R6_heiner_created(evt);
             break;
-        case "sopa_letras":
-            sopa_letras_toscano_created(evt);
+        case "R5_CARRERA":
+            R6_heiner_created(evt);
             break;
-        case "concentrese":
-            concentrese_santiago_created(evt);
+        case "R5_RULETA":
+            R6_heiner_created(evt);
             break;
         default:
             console.error("Creation inexistente", evt.identify);
@@ -246,6 +252,12 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "R5_TRIVIA":
             R5_TRIVIA_toscano_submit(evt);
             break;
+        case "R5_CARRERA":
+            R5_QQSM_heiner_submit(evt);
+            break;
+        case "R5_RULETA":
+            R5_QQSM_heiner_submit(evt);
+            break;
         default:
             console.error("Submit inexistente", evt.identify);
             break;
@@ -374,7 +386,7 @@ function R5_TRIVIA_toscano_submit(evt) {
         }
     });
 
-    
+
     if (resp_actual === "incorrect" || evt.timer.time_out) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
