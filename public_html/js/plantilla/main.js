@@ -130,13 +130,23 @@ function handle_style_nav(boolShow) {
         } else {
             sym_element = sym.$(value);
         }
-        //console.log("STYLE NAV", sym_element, boolShow);
-
+        
         if (boolShow) {
             sym_element.show();
         } else {
             sym_element.hide();
         }
+        
+        value = valor.image;
+        
+        if (typeof value !== "string") {
+            sym_element = buscar_sym(sym, value, true);
+        } else {
+            sym_element = sym.$(value);
+        }
+        //console.log("STYLE NAV", sym_element, boolShow);
+
+        sym_element.hide();
         //});
     });
 

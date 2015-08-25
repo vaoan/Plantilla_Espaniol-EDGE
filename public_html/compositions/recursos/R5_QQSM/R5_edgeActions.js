@@ -482,7 +482,7 @@
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+         //sym.stop();
 
       });
       //Edge binding end
