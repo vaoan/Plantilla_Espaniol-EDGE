@@ -1,13 +1,10 @@
 
 {
 
-	"HTMLFileName":"ayuda.html",
+	"expanded:images/r4.png":"nil",
 	"expanded:images/cerrar.png":"nil",
 	"expanded:images/vocabulario.png":"nil",
-	"expanded:images/punto.png":"nil",
-	"expanded:images/preloader4.gif":"nil",
-	"expanded:images/apendamos.png":"nil",
-	"expanded:images/tools.png":"nil",
+	"cerrar_ayuda-Default Timeline_playhead_ms":"0",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -21,41 +18,51 @@
    }},\
 \"Precargador\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
+\
    }},\
 \"Nivel inferior\": {\
    \"timelines\": {\
 \
    }}\
 }",
+	"expanded:images/Skills_final.png":"nil",
+	"expanded:images/punto.png":"nil",
+	"expanded:images/empecemos.png":"nil",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"expanded:images/r5.png":"nil",
 	"symbol_Precargador":{
 		"dummyStageParentWidth":"1920px",
 		"dummyStageParentHeight":"1080px",
 		"defaultStageParentWidth":"1920px",
+		"defaultStageParentHeight":"1080px",
 		"element_${preloader4}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
-			"timelineColor":"0x008dc8"},
-		"defaultStageParentHeight":"1080px"},
-	"expanded:images/evaluemos.png":"nil",
+			"timelineColor":"0x008dc8"}},
+	"expanded:images/preloader4.gif":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
-	"expanded:images/exploremos.png":"nil",
-	"expanded:images/r4.png":"nil",
-	"viewStartY":"0",
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"expanded:images/apendamos.png":"nil",
+	"expanded:images/r3.png":"nil",
+	"StageZoomFactor":"48",
+	"expanded:images/tools.png":"nil",
 	"symbol_cerrar_ayuda":{
 		"element_${cerrar}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82"}},
+			"timelineColor":"0x50bd82"},
+		"element_${Ellipse}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"}},
 	"symbol_stage":{
-		"element_${texto_menu_herramientas}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"timelineColor":"0x2f73ad"},
-		"dummyStageParentHeight":"1080px",
+		"element_${RoundRect}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"},
+		"element_${punto}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d"},
 		"element_${Texto_empecemos}":{
 			"timelineColor2":"0xba5b89",
 			"timelineColor3":"0x734a5f",
@@ -73,14 +80,14 @@
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"},
-		"element_${empecemos}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"timelineColor":"0x63599f"},
-		"element_${line1Copy2}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"timelineColor":"0x00a9fa"},
+		"element_${line1}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"},
+		"element_${line2Copy2}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad"},
 		"element_${ayuda_2}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
@@ -103,51 +110,50 @@
 			"timelineColor3":"0x2a6a61",
 			"animationEnabled":"false",
 			"timelineColor":"0x00bda4"},
+		"element_${exploremos}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"timelineColor":"0xceaef4"},
+		"element_${line1Copy2}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa"},
+		"hGuides":"71px",
 		"element_${cerrar_ayuda}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"animationEnabled":"true",
 			"timelineColor":"0x2f73ad"},
-		"element_${line2Copy2}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"timelineColor":"0x2f73ad"},
-		"hGuides":"71px",
-		"element_${Texto_practiquemos}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d"},
-		"element_${line1}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767"},
-		"element_${Text}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"animationEnabled":"false",
-			"timelineColor":"0x50bd82"},
+		"element_${Texto_vocabulario}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa"},
+		"element_${migadepan}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"},
 		"dummyStageParentWidth":"1920px",
 		"element_${line2Copy6}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"timelineColor":"0x00a096"},
-		"defaultStageParentWidth":"1920px",
-		"element_${RoundRect3}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82"},
+		"element_${line2Copy4}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"timelineColor":"0xceaef4"},
+		"element_${Stage}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
 		"element_${vocabulario}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
 			"timelineColor":"0xeedf79"},
-		"element_${Texto_habilidades}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"},
-		"element_${punto}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d"},
+		"element_${line1Copy}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"},
+		"dummyStageParentHeight":"1080px",
 		"element_${r5}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
@@ -156,18 +162,19 @@
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
 			"timelineColor":"0x50bd82"},
-		"element_${RoundRect}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767"},
-		"element_${migadepan}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"},
-		"element_${line1Copy}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"},
+		"element_${texto_menu_herramientas}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad"},
+		"element_${Text}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"},
+		"element_${Texto_habilidades}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
 		"element_${line2Copy}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
@@ -178,30 +185,30 @@
 			"invisible":"false",
 			"timelineColor":"0xeedf79"},
 		"vGuides":"300px",
-		"element_${Texto_exploremos}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"timelineColor":"0xfb657a"},
-		"element_${Texto_punto_de_aprendizaje}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"timelineColor":"0x008dc8"},
-		"element_${Texto_evaluemos}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4"},
-		"element_${Texto_cabezote}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"},
-		"element_${line1Copy4}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"timelineColor":"0xfb657a"},
 		"element_${line2Copy3}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"timelineColor":"0x008dc8"},
+		"element_${Texto_cabezote}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"},
+		"element_${Texto_evaluemos}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"timelineColor":"0xceaef4"},
+		"element_${Texto_punto_de_aprendizaje}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"timelineColor":"0x008dc8"},
+		"element_${line1Copy4}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"timelineColor":"0xfb657a"},
+		"element_${Texto_exploremos}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"timelineColor":"0xfb657a"},
 		"element_${r4}":{
 			"timelineColor2":"0x1095d2",
 			"timelineColor3":"0x29647e",
@@ -224,37 +231,34 @@
 			"timelineColor3":"0x81714f",
 			"animationEnabled":"false",
 			"timelineColor":"0xffd46d"},
-		"element_${Stage}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"},
-		"element_${line2Copy4}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4"},
-		"element_${Texto_vocabulario}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"timelineColor":"0x00a9fa"},
+		"element_${RoundRect3}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82"},
+		"defaultStageParentWidth":"1920px",
+		"element_${empecemos}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"},
 		"element_${Group}":{
 			"timelineColor2":"0x81aa62",
-			"invisible":"false",
-			"timelineColor":"0x91c767",
 			"timelineColor3":"0x5b6c4d",
-			"epOpened":"true"},
-		"element_${exploremos}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4"}},
+			"timelineColor":"0x91c767",
+			"epOpened":"true",
+			"invisible":"false"},
+		"element_${Texto_practiquemos}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d"}},
 	"expanded:images/ayuda%20%282%29.png":"nil",
 	"CompZoomFactor":"100",
-	"StageZoomFactor":"48",
+	"viewStartY":"0",
 	"pixelsPerMs":"0.2",
-	"usedBOM":"false",
+	"HTMLFileName":"ayuda.html",
 	"expanded:images/migadepan.png":"nil",
-	"expanded:images/r3.png":"nil",
-	"nextElementColorIndex":"9",
+	"usedBOM":"false",
+	"nextElementColorIndex":"10",
 	"stage-Default Timeline_playhead_ms":"0",
-	"expanded:images/empecemos.png":"nil",
+	"expanded:images/exploremos.png":"nil",
 	"Precargador-Default Timeline_playhead_ms":"0",
-	"expanded:images/Skills_final.png":"nil"}
+	"expanded:images/evaluemos.png":"nil"}

@@ -3,6 +3,7 @@
 
 	"HTMLFileName":"creditos.html",
 	"expanded:images/cerrar.png":"nil",
+	"cerrar_creditos-Default Timeline_playhead_ms":"0",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -16,8 +17,7 @@
    }},\
 \"Precargador\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
+\
    }},\
 \"Nivel inferior\": {\
    \"timelines\": {\
@@ -35,7 +35,7 @@
 		"defaultStageParentHeight":"1080px"},
 	"expanded:images/preloader4.gif":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"symbol_stage":{
 		"element_${Text}":{
 			"timelineColor2":"0x4fa275",
@@ -52,7 +52,7 @@
 		"element_${contcreditos}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
-			"epOpened":"false",
+			"epOpened":"true",
 			"timelineColor":"0x00a096"},
 		"element_${ayuda_2}":{
 			"timelineColor2":"0x81aa62",
@@ -71,7 +71,7 @@
 		"element_${Text2}":{
 			"timelineColor2":"0x1095d2",
 			"timelineColor3":"0x29647e",
-			"locked":"true",
+			"locked":"false",
 			"timelineColor":"0x00a9fa"},
 		"element_${RoundRect3}":{
 			"timelineColor2":"0xba5b89",
@@ -104,10 +104,10 @@
 			"timelineColor3":"0x2a6a61",
 			"timelineColor":"0x00bda4"},
 		"element_${Group}":{
-			"epOpened":"false",
+			"epOpened":"true",
 			"timelineColor3":"0x7e4b52",
 			"timelineColor":"0xfb657a",
-			"locked":"true",
+			"locked":"false",
 			"timelineColor2":"0xd35d6e"},
 		"element_${txtCreditos}":{
 			"timelineColor2":"0x107faa",
@@ -117,15 +117,19 @@
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"pixelsPerMs":"0.2",
-	"Precargador-Default Timeline_playhead_ms":"0",
 	"TransitionIdCounter":"2",
+	"Precargador-Default Timeline_playhead_ms":"0",
 	"usedBOM":"false",
-	"nextElementColorIndex":"5",
+	"nextElementColorIndex":"6",
 	"stage-Default Timeline_playhead_ms":"0",
 	"expanded:images/creditos.png":"nil",
 	"symbol_cerrar_creditos":{
 		"element_${cerrar}":{
 			"timelineColor2":"0xd8b467",
 			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d"}},
-	"StageZoomFactor":"22"}
+			"timelineColor":"0xffd46d"},
+		"element_${Ellipse}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"}},
+	"StageZoomFactor":"62"}

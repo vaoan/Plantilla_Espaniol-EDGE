@@ -104,8 +104,11 @@ function check_every_answer() {
 
     var respuestas = {};
     var result = "correct";
+    
+    
 
     $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
+        console.log("ENTRA");
         var page_respuestas = {};
         var pagina = EDGE_Plantilla.config.paginas[value];
         if (pagina.type === "actividad") {

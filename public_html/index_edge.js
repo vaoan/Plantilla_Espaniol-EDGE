@@ -37,8 +37,8 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "both",
-                centerStage: "both",
+                scaleToFit: "none",
+                centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
@@ -128,6 +128,14 @@
                             cursor: 'pointer'
                         },
                         {
+                            id: 'bannerCopy',
+                            type: 'image',
+                            tag: 'img',
+                            rect: ['20px', '20px', '1882px', '114px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"banner2.png",'0px','0px'],
+                            filter: [1, 0, 2, 0, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                        },
+                        {
                             id: 'banner',
                             type: 'image',
                             rect: ['20px', '20px', '1882px', '114px', 'auto', 'auto'],
@@ -136,6 +144,7 @@
                         {
                             id: 'nivel',
                             type: 'image',
+                            tag: 'img',
                             rect: ['21px', '55px', '1880px', '80px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"nivel.png",'0px','0px']
                         },
@@ -191,10 +200,18 @@
                         },
                         {
                             id: 'contenedor_portada',
-                            symbolName: 'overlay_portada',
-                            display: 'block',
+                            symbolName: 'contenedor_portada',
                             type: 'rect',
-                            rect: ['0', '136', '1920', '944', 'auto', 'auto']
+                            rect: ['-2', '136', '1924', '946', 'auto', 'auto']
+                        },
+                        {
+                            id: 'BTN-tools-ES',
+                            type: 'image',
+                            tag: 'img',
+                            rect: ['1793px', '20px', '107px', '101px', 'auto', 'auto'],
+                            cursor: 'pointer',
+                            fill: ["rgba(0,0,0,0)",im+"BTN-tools-ES.png",'0px','0px'],
+                            filter: [1, 0, 2, 0, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
                         },
                         {
                             id: 'btn_menugrafico',
@@ -365,16 +382,6 @@
                             "${container_overlay}",
                             'none',
                             'none'
-                        ],
-                        [
-                            "eid217",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${contenedor_portada}",
-                            'block',
-                            'block'
                         ]
                     ]
                 }
@@ -415,13 +422,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '', '', 'none'],
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px;\">​Audio</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             },
                             {
                                 rect: ['83px', '19px', '15px', '15px', 'auto', 'auto'],
@@ -432,13 +439,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '', '', 'none'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\">​Audio</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -558,13 +565,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
+                                rect: ['13px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'TextCopy7',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Evaluemos</p>',
-                                rect: ['13px', '11px', 'auto', 'auto', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -653,13 +660,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['18px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '24px', '', ''],
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px;\">​Exploremos</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['18px', '11px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -748,13 +755,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '24px', '', ''],
                                 id: 'TextCopy2',
                                 text: '<p style=\"margin: 0px;\">​Practiquemos</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -843,13 +850,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '24px', '', ''],
                                 id: 'TextCopy5',
                                 text: '<p style=\"margin: 0px;\">​Practiquemos</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -938,13 +945,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '24px', '', ''],
                                 id: 'TextCopy6',
                                 text: '<p style=\"margin: 0px;\">​Practiquemos</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1033,13 +1040,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 textStyle: ['', '', '24px', '', ''],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\">​Empecemos</p>',
                                 align: 'center',
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -1324,13 +1331,13 @@
                             boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
                                 align: 'center',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '', '', 'none'],
                                 text: '<p style=\"margin: 0px;\">​Créditos</p>',
-                                type: 'text'
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             },
                             {
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
@@ -1427,13 +1434,13 @@
                             fill: ['rgba(79,45,110,1.00)'],
                             c: [
                             {
-                                rect: ['9px', '8px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
                                 textStyle: ['', '', '', '', 'none'],
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px;\">​Ayuda</p>',
                                 align: 'center',
-                                type: 'text'
+                                rect: ['9px', '8px', 'auto', 'auto', 'auto', 'auto']
                             },
                             {
                                 rect: ['83px', '19px', '15px', '15px', 'auto', 'auto'],
@@ -1530,13 +1537,13 @@
                             fill: ['rgba(79,45,110,1.00)'],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                                 text: '<p style=\"margin: 0px;\">​Pantalla completa</p>',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '', '', 'none'],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap']
+                                type: 'text'
                             },
                             {
                                 rect: ['229px', '19px', '15px', '15px', 'auto', 'auto'],
@@ -1641,13 +1648,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
                                 align: 'center',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '', '', 'none'],
                                 text: '<p style=\"margin: 0px;\">​Información</p>',
-                                type: 'text'
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1746,13 +1753,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                                 type: 'text',
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '', '', 'none'],
                                 text: '<p style=\"margin: 0px;\">​Accesibilidad</p>',
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -1996,13 +2003,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
+                                rect: ['14px', '9px', 'auto', 'auto', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Punto de</p><p style=\"margin: 0px;\">​aprendizaje</p>',
-                                rect: ['14px', '9px', 'auto', 'auto', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -2091,13 +2098,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
+                                rect: ['12px', '9px', 'auto', 'auto', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">Vocabulario</p>',
-                                rect: ['12px', '9px', 'auto', 'auto', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -2186,12 +2193,12 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
+                                rect: ['9px', '13px', 'auto', 'auto', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\">​Aprendamos</p><p style=\"margin: 0px;\">​en papel</p>',
                                 align: 'center',
-                                rect: ['9px', '13px', 'auto', 'auto', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -2357,31 +2364,6 @@
                     ]
                 }
             },
-            "overlay_portada": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '1920px', '944px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
             "back_contenedor_home": {
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
@@ -2400,16 +2382,15 @@
                             fill: ['rgba(255,255,255,0.40)']
                         },
                         {
+                            rect: ['0px', '0', '1838', '785', 'auto', 'auto'],
                             id: 'back_container',
                             symbolName: 'back_container',
-                            rect: ['0px', '0', '1838', '785', 'auto', 'auto'],
                             type: 'rect'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1838px', '785px']
+                            rect: [null, null, '1838px', '785px']
                         }
                     }
                 },
@@ -2468,45 +2449,45 @@
                             fill: ['rgba(0,0,0,0.47)'],
                             c: [
                             {
-                                type: 'image',
-                                id: 'accesi',
                                 rect: ['8px', '486px', '91px', '91px', 'auto', 'auto'],
+                                id: 'accesi',
                                 transform: [[], [], [], ['0.9', '0.9']],
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/accesi.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                id: 'audio',
                                 rect: ['8px', '295px', '91px', '91px', 'auto', 'auto'],
+                                id: 'audio',
                                 transform: [[], [], [], ['0.9', '0.9']],
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/audio.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                id: 'ayuda_2',
                                 rect: ['8px', '199px', '91px', '91px', 'auto', 'auto'],
+                                id: 'ayuda_2',
                                 transform: [[], [], [], ['0.9', '0.9']],
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/ayuda%20%282%29.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                id: 'info',
                                 rect: ['8px', '390px', '91px', '91px', 'auto', 'auto'],
+                                id: 'info',
                                 transform: [[], [], [], ['0.9', '0.9']],
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/info.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                id: 'creditos',
                                 rect: ['8px', '106px', '91px', '91px', 'auto', 'auto'],
+                                id: 'creditos',
                                 transform: [[], [], [], ['0.9', '0.9']],
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/creditos.png', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                id: 'Full_screen',
                                 rect: ['-71px', '-70px', '250px', '250px', 'auto', 'auto'],
+                                id: 'Full_screen',
                                 transform: [[], [], [], ['0.25', '0.25']],
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/Full%20screen.png', '0px', '0px']
                             }]
                         }
@@ -2540,6 +2521,30 @@
                             type: 'image',
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/BTN-tools-ES.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['23px', '44px', '18px', '18px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'Ellipse',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,182,0,1.00)']
+                        },
+                        {
+                            rect: ['46px', '44px', '18px', '18px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'EllipseCopy',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,182,0,1.00)']
+                        },
+                        {
+                            rect: ['68px', '44px', '18px', '18px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'EllipseCopy2',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,182,0,1.00)']
                         }
                     ],
                     style: {
@@ -2566,13 +2571,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'text',
                             rect: ['0px', '0px', '649px', '50px', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [40, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
                             textStyle: ['', '', '', '', 'none'],
                             id: 'Titulo',
                             text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: normal;\">&nbsp;<span style=\"font-size: 41px;\">Empecemos</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: bold; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;&nbsp;</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 500; font-style: normal; text-decoration: none; font-size: 35px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">las letras</span></p>',
                             align: 'left',
-                            font: ['source-sans-pro, sans-serif', [40, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -2602,7 +2607,7 @@
                             rect: ['0px', '0px', '90px', '90px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             id: 'EllipseCopy2',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(204,204,204,1.00)']
                         },
@@ -2641,13 +2646,13 @@
                             rect: ['0px', '0px', '90px', '90px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             id: 'EllipseCopy2',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(204,204,204,1.00)']
                         },
                         {
-                            transform: [[], [], [], ['0.4', '0.4']],
                             rect: ['-55px', '-55px', '200px', '200px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.4', '0.4']],
                             id: 'btn_vocabularioCopy',
                             opacity: '1',
                             type: 'image',
@@ -2680,7 +2685,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
@@ -2728,6 +2733,16 @@
                             '1'
                         ],
                         [
+                            "eid416",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid316",
                             "scaleX",
                             0,
@@ -2762,7 +2777,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
@@ -2810,6 +2825,16 @@
                             '1'
                         ],
                         [
+                            "eid415",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid367",
                             "scaleX",
                             0,
@@ -2844,7 +2869,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
@@ -2892,6 +2917,16 @@
                             '1'
                         ],
                         [
+                            "eid414",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid357",
                             "scaleX",
                             0,
@@ -2926,7 +2961,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['0px', '0px', '100px', '100px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
@@ -2974,6 +3009,16 @@
                             '1'
                         ],
                         [
+                            "eid413",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid347",
                             "scaleX",
                             0,
@@ -3008,7 +3053,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
@@ -3056,6 +3101,16 @@
                             '1'
                         ],
                         [
+                            "eid412",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid337",
                             "scaleX",
                             0,
@@ -3090,7 +3145,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
@@ -3138,6 +3193,16 @@
                             '1'
                         ],
                         [
+                            "eid411",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid327",
                             "scaleX",
                             0,
@@ -3172,7 +3237,7 @@
                         {
                             type: 'ellipse',
                             id: 'borde',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
                             rect: ['12px', '12px', '84px', '84px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(205,205,205,1.00)'],
@@ -3220,6 +3285,16 @@
                             '1'
                         ],
                         [
+                            "eid417",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${borde}",
+                            'rgba(204,204,204,1.00)',
+                            'rgba(204,204,204,1.00)'
+                        ],
+                        [
                             "eid304",
                             "scaleX",
                             0,
@@ -3254,8 +3329,9 @@
                         {
                             rect: ['0px', '0px', '239px', '173px', 'auto', 'auto'],
                             id: 'logo_sena',
+                            fill: ['rgba(0,0,0,0)', 'images/logo_sena.png', '0px', '0px'],
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/logo_sena.png', '0px', '0px']
+                            tag: 'img'
                         }
                     ],
                     style: {
@@ -3282,13 +3358,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'text',
                             rect: ['0px', '0px', '632px', '41px', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,182,0,1.00)', '500', 'none', 'normal', 'break-word', 'normal'],
                             text: '<p style=\"margin: 0px;\">​Español &gt; Pre A1 Introductorio &gt; Mi contexto</p>',
                             id: 'Ruta',
                             textStyle: ['', '', '', '', 'none'],
                             align: 'right',
-                            font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,182,0,1.00)', '500', 'none', 'normal', 'break-word', 'normal']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -3357,6 +3433,39 @@
                     style: {
                         '${symbolSelector}': {
                             rect: [null, null, '1838px', '785px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
+                    ]
+                }
+            },
+            "contenedor_portada": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '1924px', '946px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'Rectangle',
+                            opacity: '0.9',
+                            type: 'rect',
+                            fill: ['rgba(192,192,192,1)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '1924px', '946px']
                         }
                     }
                 },

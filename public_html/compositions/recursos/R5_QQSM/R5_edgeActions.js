@@ -500,6 +500,14 @@
 
    //=========================================================
    
+   //Edge symbol: 'margen_superior'
+   (function(symbolName) {   
+   
+   })("margen_superior");
+   //Edge symbol end:'margen_superior'
+
+   //=========================================================
+   
    //Edge symbol: 'oral'
    (function(symbolName) {   
    
@@ -633,13 +641,5 @@
 
    })("escrita");
    //Edge symbol end:'escrita'
-
-   //=========================================================
-   
-   //Edge symbol: 'margen_superior'
-   (function(symbolName) {   
-   
-   })("margen_superior");
-   //Edge symbol end:'margen_superior'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

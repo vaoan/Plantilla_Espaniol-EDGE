@@ -40,7 +40,7 @@
         //Edge binding end
 
     })("stage");
-    //Edge symbol end:'stage'
+   //Edge symbol end:'stage'
 
     //=========================================================
 
@@ -48,7 +48,7 @@
     (function (symbolName) {
 
     })("btn_cerrar_creditos");
-    //Edge symbol end:'btn_cerrar_creditos'
+   //Edge symbol end:'btn_cerrar_creditos'
 
     //=========================================================
 
@@ -56,6 +56,6 @@
     (function (symbolName) {
 
     })("cerrar_acce");
-    //Edge symbol end:'cerrar_acce'
+   //Edge symbol end:'cerrar_acce'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-13904317");

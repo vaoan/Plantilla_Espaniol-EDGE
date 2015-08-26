@@ -901,14 +901,6 @@
 
     //=========================================================
 
-    //Edge symbol: 'overlay_portada'
-    (function (symbolName) {
-
-    })("overlay_portada");
-   //Edge symbol end:'overlay_portada'
-
-    //=========================================================
-
     //Edge symbol: 'back_contenedor_home'
     (function (symbolName) {
 
@@ -1126,5 +1118,13 @@
    
    })("back_container");
    //Edge symbol end:'back_container'
+
+   //=========================================================
+   
+   //Edge symbol: 'contenedor_portada'
+   (function(symbolName) {   
+   
+   })("contenedor_portada");
+   //Edge symbol end:'contenedor_portada'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");

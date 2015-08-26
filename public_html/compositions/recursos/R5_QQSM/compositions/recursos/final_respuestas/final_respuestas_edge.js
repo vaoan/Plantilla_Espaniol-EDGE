@@ -281,7 +281,7 @@
                             boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
                             rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
                             type: 'rect',
@@ -290,10 +290,11 @@
                         {
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
@@ -340,6 +341,16 @@
                             '0.000000',
                             '1'
                         ],
+                        [
+                            "eid14",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
                             [ "eid36", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
                     ]
                 }
@@ -354,11 +365,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
@@ -371,22 +382,23 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
@@ -400,7 +412,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
@@ -432,6 +445,16 @@
                             '0.000000',
                             '1'
                         ],
+                        [
+                            "eid16",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
                             [ "eid38", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_3}', [] ] ]
                     ]
                 }
@@ -446,11 +469,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
@@ -463,22 +486,23 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            fill: ['rgba(255,255,255,1)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
+                            type: 'rect',
+                            fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            transform: [[], [], [], ['0.2', '0.2']],
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
@@ -492,7 +516,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
@@ -523,6 +548,16 @@
                             "${stop}",
                             '0.000000',
                             '1'
+                        ],
+                        [
+                            "eid18",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                             [ "eid40", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_5}', [] ] ]
                     ]
@@ -538,11 +573,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
@@ -555,22 +590,23 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
@@ -584,7 +620,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
@@ -615,6 +652,16 @@
                             "${stop}",
                             '0.000000',
                             '1'
+                        ],
+                        [
+                            "eid17",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                             [ "eid39", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_4}', [] ] ]
                     ]
@@ -633,8 +680,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '1830px', '780px']
+                            rect: [null, null, '1830px', '780px']
                         }
                     }
                 },
@@ -656,11 +702,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
@@ -673,22 +719,23 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
@@ -702,7 +749,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
@@ -733,6 +781,16 @@
                             "${stop}",
                             '0.000000',
                             '1'
+                        ],
+                        [
+                            "eid15",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                             [ "eid37", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_2}', [] ] ]
                     ]

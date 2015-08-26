@@ -17,7 +17,7 @@ $("body").on("EDGE_Container_loaded", function () {
 
     var audio = new Audio('media/navigate-begin.mp3');
 
-    //resize();
+    resize();
     //prevent_scroll($("html"));
 
     if (EDGE_Plantilla.scorm_available) {
@@ -127,6 +127,11 @@ function resize() {
     console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);
 }
 
-$("body").on("EDGE_Self_Plantilla_ClickNav", function (evt) {
-    buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
+$("body").on("EDGE_Self_promiseCreating", function (evt) {
+    //console.log(evt);
+    var page = evt.identify;
+    console.log(page);
+    if(!page.type.startsWith("popup")){
+        buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
+    }
 });

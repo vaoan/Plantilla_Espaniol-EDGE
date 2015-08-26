@@ -130,15 +130,15 @@ function handle_style_nav(boolShow) {
         } else {
             sym_element = sym.$(value);
         }
-        
+
         if (boolShow) {
             sym_element.show();
         } else {
             sym_element.hide();
         }
-        
+
         value = valor.image;
-        
+
         if (typeof value !== "string") {
             sym_element = buscar_sym(sym, value, true);
         } else {
@@ -174,6 +174,7 @@ function mostrar_pagina(strPagina, objRetro) {
         return false;
     }
     var pagina = EDGE_Plantilla.config.paginas[strPagina];
+    EDGE_Plantilla.pagina_actual = pagina;
     EDGE_Plantilla.debug ? console.log("MOSTRANDO PAGINA", pagina) : false;
 
     if (!isEmpty(pagina.symbols)) {
@@ -208,7 +209,7 @@ function mostrar_pagina(strPagina, objRetro) {
             } else {
                 sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_portada);
             }
-            EDGE_Plantilla.portada_on_show = pagina;
+            //EDGE_Plantilla.portada_on_show = pagina;
             handle_portada(true);
             //$("body").css({background: "rgba(0,0,0,0)"});
             break;
@@ -231,7 +232,8 @@ function mostrar_pagina(strPagina, objRetro) {
                 sym_contenedor = buscar_sym(sym, pagina.sym);
             } else {
                 sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
-                sym_animate = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor)
+                //sym_animate = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor);
+                //sym_animate.play(0);
             }
             //$("body").css({background: "rgba(0,0,0,0)"});
             break;
@@ -245,10 +247,6 @@ function mostrar_pagina(strPagina, objRetro) {
 
     //sym_contenedor.play();
     //sym.getSymbol("contenedor_home").play();
-    if (!isEmpty(sym_animate)) {
-        sym_animate.play(0);
-        console.log("EDGE ANIMATE!");
-    }
 
     load_pages(sym_contenedor, strPagina, pagina, objRetro);
 
@@ -262,6 +260,12 @@ function mostrar_pagina(strPagina, objRetro) {
 function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
     var promise = EC.loadComposition(EDGE_Plantilla.config.default.url_pages + pagina.url,
             sym_contenedor);
+            
+    var objEvt = {
+        type: "EDGE_Self_promiseCreating",
+        identify: pagina
+    };
+    $("body").trigger(merge_options(objEvt));
 
     promise.done(function (comp) {
         var stage = comp.getStage();
@@ -273,11 +277,13 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
                 type: "EDGE_Recurso_promiseCreated",
                 sym: stage,
                 scorm_prev: EDGE_Plantilla.temp_scorm,
-                scorm_extra: EDGE_Plantilla.temp_scorm_suspendData
+                scorm_extra: EDGE_Plantilla.temp_scorm_suspendData,
+                identify: pagina
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+
         }
-        
+
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {
             $.each(objRetro, function (index, value) {

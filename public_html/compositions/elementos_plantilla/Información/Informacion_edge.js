@@ -16,7 +16,6 @@
         resources = [
         ],
         scripts = [
-            js+"jquery-1.11.3.min.js"
         ],
         symbols = {
             "stage": {
@@ -155,16 +154,25 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
+                            rect: ['8px', '9px', '58px', '58px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'Ellipse',
+                            stroke: [1, 'rgba(0, 0, 0, 0)', 'solid'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,255,255,1)']
+                        },
+                        {
                             rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '76px', '77px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '76px', '77px']
                         }
                     }
                 },

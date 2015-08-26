@@ -16,7 +16,6 @@
         resources = [
         ],
         scripts = [
-            js+"jquery-1.11.3.min.js",
         ],
         symbols = {
             "stage": {
@@ -40,6 +39,7 @@
                         {
                             id: 'incorrecto',
                             type: 'image',
+                            tag: 'img',
                             rect: ['885px', '248px', '150px', '150px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"incorrecto.png",'0px','0px']
                         },
@@ -57,16 +57,6 @@
                             type: 'rect',
                             rect: ['1077px', '189px', '53', '54', 'auto', 'auto'],
                             cursor: 'pointer'
-                        },
-                        {
-                            id: 'attempt-fail',
-                            display: 'none',
-                            type: 'audio',
-                            tag: 'audio',
-                            rect: ['1578', '398', '320px', '45px', 'auto', 'auto'],
-                            autoplay: 'autoplay',
-                            source: [aud+"attempt-fail.mp3"],
-                            preload: 'metadata'
                         }
                     ],
                     style: {
@@ -115,16 +105,25 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.35', '0.35']],
-                            id: 'cerrar',
-                            type: 'image',
+                            rect: ['3px', '4px', '43px', '43px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'Ellipse',
+                            stroke: [1, 'rgba(0, 0, 0, 0)', 'solid'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,255,255,1)']
+                        },
+                        {
                             rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
+                            transform: [[], [], [], ['0.35', '0.35']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '53px', '54px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '53px', '54px']
                         }
                     }
                 },

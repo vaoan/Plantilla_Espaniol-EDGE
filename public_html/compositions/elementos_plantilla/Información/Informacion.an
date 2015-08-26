@@ -26,7 +26,11 @@
 		"element_${cerrar}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82"}},
+			"timelineColor":"0x50bd82"},
+		"element_${Ellipse}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa"}},
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -45,17 +49,16 @@
    }},\
 \"Precargador\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
+\
    }},\
 \"Nivel inferior\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
+\
    }}\
 }",
-	"expanded:images/informacion.png":"nil",
 	"expanded:images/cerrar.png":"nil",
+	"expanded:images/informacion.png":"nil",
+	"cerrar_info-Default Timeline_playhead_ms":"0",
 	"HTMLFileName":"Informacion.html",
 	"symbol_Precargador":{
 		"dummyStageParentWidth":"1920px",
@@ -71,7 +74,7 @@
 	"expanded:images/2015-08-06%2011_30_17-undefined%20undefined%20undefined.jpg":"nil",
 	"expanded:images/2015-08-06%2012_15_55-.jpg":"nil",
 	"expanded:images/2015-08-06%2010_49_48-Articulate%20Storyline%202%20-%20%5Besn1le01ob02.story%5D.jpg":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"expanded:images/2015-08-06%2012_23_39-Articulate%20Storyline%202%20-%20%5Besn1le01ob02.story_%5D.jpg":"nil",
 	"symbol_stage":{
 		"element_${_2015-08-06_11_30_17-undefined_undefined_undefined}":{
@@ -224,7 +227,7 @@
 	"viewStartY":"0",
 	"expanded:images/btn_cerrar.png":"nil",
 	"usedBOM":"false",
-	"nextElementColorIndex":"7",
+	"nextElementColorIndex":"8",
 	"stage-Default Timeline_playhead_ms":"0",
 	"expanded:images/2015-08-06%2012_15_55-2.jpg":"nil",
 	"Precargador-Default Timeline_playhead_ms":"0",

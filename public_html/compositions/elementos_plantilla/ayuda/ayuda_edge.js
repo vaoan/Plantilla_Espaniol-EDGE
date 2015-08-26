@@ -16,7 +16,6 @@
         resources = [
         ],
         scripts = [
-            js+"jquery-1.11.3.min.js",
         ],
         symbols = {
             "stage": {
@@ -145,6 +144,7 @@
                                 {
                                     id: 'migadepan',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['-18px', '1264px', '351px', '28px', 'auto', 'auto'],
                                     clip: 'rect(0px 351px 28px 32px)',
                                     fill: ["rgba(0,0,0,0)",im+"migadepan.png",'0px','0px']
@@ -152,12 +152,14 @@
                                 {
                                     id: 'tools',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['134px', '980px', '48px', '223px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"tools.png",'0px','0px']
                                 },
                                 {
                                     id: 'r5',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['205px', '134px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"r5.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -165,6 +167,7 @@
                                 {
                                     id: 'r4',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['109px', '134px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"r4.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -172,6 +175,7 @@
                                 {
                                     id: 'r3',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['13px', '134px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"r3.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -179,6 +183,7 @@
                                 {
                                     id: 'empecemos',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['109px', '254px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"empecemos.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -186,6 +191,7 @@
                                 {
                                     id: 'exploremos',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['109px', '376px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"exploremos.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -193,6 +199,7 @@
                                 {
                                     id: 'evaluemos',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['109px', '495px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"evaluemos.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -200,6 +207,7 @@
                                 {
                                     id: 'apendamos',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['109px', '616px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"apendamos.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -207,6 +215,7 @@
                                 {
                                     id: 'punto',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['111px', '742px', '95px', '95px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"punto.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -214,6 +223,7 @@
                                 {
                                     id: 'vocabulario',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['115px', '862px', '91px', '91px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"vocabulario.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
@@ -221,6 +231,7 @@
                                 {
                                     id: 'Skills_final',
                                     type: 'image',
+                                    tag: 'img',
                                     rect: ['77px', '6px', '163px', '110px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"Skills_final.png",'0px','0px']
                                 },
@@ -362,16 +373,25 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.5', '0.5']],
-                            id: 'cerrar',
-                            type: 'image',
+                            rect: ['7px', '7px', '60px', '60px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'Ellipse',
+                            stroke: [1, 'rgba(0, 0, 0, 0)', 'solid'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,255,255,1)']
+                        },
+                        {
                             rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
+                            transform: [[], [], [], ['0.5', '0.5']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '76px', '77px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '76px', '77px']
                         }
                     }
                 },
