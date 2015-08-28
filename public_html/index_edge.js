@@ -17,6 +17,7 @@
         ],
         scripts = [
             js+"jquery-1.11.3.min.js",
+            js+"detect-zoom.min.js",
             js+"jquery-migrate-1.2.1.js",
             js+"jquery-ui-1.11.4.custom/jquery-ui.min.js",
             js+"jquery.fullscreen-0.5.0/jquery.fullscreen.min.js",

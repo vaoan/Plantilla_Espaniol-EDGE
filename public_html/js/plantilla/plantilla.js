@@ -7,13 +7,6 @@
 $("body").on("EDGE_Container_loaded", function () {
 
     $.backstretch("images/r1.png");
-    //document.body.style.background = "url('images/r1.png') 50% 50% / cover no-repeat gray";
-    /*$("body").css({
-     "background-size": "cover",
-     "background-repeat": "no-repeat",
-     "background-position": "center center",
-     "background": "url('images/r1.png') 50% 50% / cover no-repeat gray"
-     });*/
 
     var audio = new Audio('media/navigate-begin.mp3');
 
@@ -72,12 +65,22 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
     menu_tools_hide_show(evt.sym);
 });
 
+function refresh() {    
+    EDGE_Plantilla.device = window.detectZoom.device().toFixed(2);
+    EDGE_Plantilla.zoom = window.detectZoom.zoom().toFixed(2);
+}
+$(document).ready(function () {
+    refresh();
+    $(window).on('resize', refresh);
+});
 
 function resize() {
     var ancho = $("#Stage").width();
     var alto = $("#Stage").height();
 
+    var zoom = detectZoom.zoom();
 
+    console.log("ZOOM LEVEL", zoom);
 
     var windowWidth = $(window).width(); //retrieve current window width
     var windowHeight = $(window).height(); //retrieve current window height
@@ -101,28 +104,10 @@ function resize() {
 
     $("body").css({height: 0, width: windowWidth});
 
-    var element = $("<div/>", {id: "magic_container"});
-    element.css({
-        display: "flex",
-        "align-items": "center",
-        "flex-direction": "column",
-        "width": "100%",
-        "height": "100%",
-        position: "absolute",
-        left: 0,
-        top: 0
-    });
-
     $("#Stage").css("transform", "scale(" + realScale + ")").css({
         //margin: "0 auto",
         position: "relative"
     }).center(realScale);
-
-    //$("body").append(element);
-
-    //$("#magic_container").append($("#Stage"));  
-
-    //EC.centerStage(EDGE_Plantilla.plantilla_sym); 
 
     console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);
 }
@@ -131,7 +116,7 @@ $("body").on("EDGE_Self_promiseCreating", function (evt) {
     //console.log(evt);
     var page = evt.identify;
     console.log(page);
-    if(!page.type.startsWith("popup")){
+    if (!page.type.startsWith("popup")) {
         buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
     }
 });
