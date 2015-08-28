@@ -65,13 +65,8 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
     menu_tools_hide_show(evt.sym);
 });
 
-function refresh() {    
-    EDGE_Plantilla.device = window.detectZoom.device().toFixed(2);
-    EDGE_Plantilla.zoom = window.detectZoom.zoom().toFixed(2);
-}
 $(document).ready(function () {
-    refresh();
-    $(window).on('resize', refresh);
+    $(window).on('resize', resize);
 });
 
 function resize() {
@@ -79,20 +74,29 @@ function resize() {
     var alto = $("#Stage").height();
 
     var zoom = detectZoom.zoom();
+    var device = detectZoom.device();
 
-    console.log("ZOOM LEVEL", zoom);
+    console.log(zoom, device);
 
+    console.log("ZOOM LEVEL", device);
+
+    //<editor-fold defaultstate="collapsed" desc="comment">
     var windowWidth = $(window).width(); //retrieve current window width
     var windowHeight = $(window).height(); //retrieve current window height
     var documentWidth = $(document).width(); //retrieve current document width
     var documentHeight = $(document).height(); //retrieve current document height
     var vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
     var hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
-
+    
     var scale1 = windowWidth / ancho;
     var scale2 = windowHeight / alto;
-
+    
     var realScale = scale1 > scale2 ? scale2 : scale1;
+    //</editor-fold>
+
+    realScale = realScale * ((device));
+
+    console.log("SCALE LEVEL", realScale);
 
     $("#Stage").css({// Set the transform origin so we always scale to the top left corner of the stage
         "transform-origin": "0% 0%",
