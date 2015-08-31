@@ -426,6 +426,7 @@ $(document).on("EDGE_Plantilla_ClosePortada", function (evt) {
 
 //<editor-fold defaultstate="collapsed" desc="Controles de la plantilla">
 $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
+    var sym = EDGE_Plantilla.plantilla_sym;
     EDGE_Plantilla.debug ? console.log(evt) : false;
     EDGE_Plantilla.debug ? console.log(evt.evt.currentTarget.id) : false;
     switch (evt.evt.currentTarget.id) {
@@ -440,6 +441,12 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             break;
         case "Stage_" + EDGE_Plantilla.button_menutools.audio:
             EDGE_Plantilla.play_general_sound = !EDGE_Plantilla.play_general_sound;
+            if(!EDGE_Plantilla.play_general_sound){
+                sym.getSymbol("menu_grafico").stop("audio");
+            }else{
+                sym.getSymbol("menu_grafico").stop("normal");
+            }
+
             break;
         case "Stage_" + EDGE_Plantilla.button_menutools.info:
             mostrar_pagina("info");

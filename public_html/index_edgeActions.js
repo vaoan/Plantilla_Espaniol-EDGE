@@ -132,6 +132,11 @@
                 sym: sym,
                 evt: e
             });
+            
+            
+            // Definir un conmutador para reproducir o pausar la línea de tiempo del símbolo 
+            
+            
 
         });
         //Edge binding end
@@ -911,6 +916,18 @@
 
     //Edge symbol: 'menu_grafico'
     (function (symbolName) {
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
 
     })("menu_grafico");
    //Edge symbol end:'menu_grafico'
