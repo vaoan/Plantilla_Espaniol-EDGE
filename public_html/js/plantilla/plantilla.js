@@ -8,6 +8,17 @@ $("body").on("EDGE_Container_loaded", function () {
 
     $.backstretch("images/r1.png");
 
+    var ele = $(".backstretch");
+    ele.empty();
+    ele.css({
+        "background": "url(images/r1.png) no-repeat center center fixed",
+        "-webkit-background-size": "cover",
+        "-moz-background-size": "cover",
+        "-o-background-size": "cover",
+        "background-size": "cover"
+    });
+
+
     var audio = new Audio('media/navigate-begin.mp3');
 
     resize();
@@ -87,10 +98,10 @@ function resize() {
     var documentHeight = $(document).height(); //retrieve current document height
     var vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
     var hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
-    
+
     var scale1 = windowWidth / ancho;
     var scale2 = windowHeight / alto;
-    
+
     var realScale = scale1 > scale2 ? scale2 : scale1;
     //</editor-fold>
 
