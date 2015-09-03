@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 
+$(document).on("EDGE_Plantilla_creationComplete", function (evt) {
+    //switch (evt.identify.actividad) {
+});
+
 $("body").on("EDGE_Container_loaded", function () {
 
     $.backstretch("images/r1.png");
@@ -77,7 +81,7 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
 });
 
 $(document).ready(function () {
-    $(window).on('resize', resize);
+    //$(window).on('resize', resize);
 });
 
 function resize() {
@@ -87,9 +91,11 @@ function resize() {
     var zoom = detectZoom.zoom();
     var device = detectZoom.device();
 
-    console.log(zoom, device);
+    //console.log(zoom, device);
 
-    console.log("ZOOM LEVEL", device);
+    //console.log("ZOOM LEVEL", device);
+	
+	EDGE_Plantilla.zoom = device;
 
     //<editor-fold defaultstate="collapsed" desc="comment">
     var windowWidth = $(window).width(); //retrieve current window width
@@ -105,26 +111,30 @@ function resize() {
     var realScale = scale1 > scale2 ? scale2 : scale1;
     //</editor-fold>
 
-    realScale = realScale * ((device));
+    //realScale = realScale * ((device));
+    
+    //$().
+	
+	
 
-    console.log("SCALE LEVEL", realScale);
+    //console.log("SCALE LEVEL", realScale);
 
-    $("#Stage").css({// Set the transform origin so we always scale to the top left corner of the stage
+    /*$("#Stage").css({// Set the transform origin so we always scale to the top left corner of the stage
         "transform-origin": "0% 0%",
         "-ms-transform-origin": "0% 0%",
         "-webkit-transform-origin": "0% 0%",
         "-moz-transform-origin": "0% 0%",
         "-o-transform-origin": "0% 0%"
-    });
+    });*/
 
-    $("body").css({height: 0, width: windowWidth});
+    //$("body").css({height: 0, width: windowWidth});
 
-    $("#Stage").css("transform", "scale(" + realScale + ")").css({
+    /*$("#Stage").css("transform", "scale(" + realScale + ")").css({
         //margin: "0 auto",
         position: "relative"
     }).center(realScale);
 
-    console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);
+    console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);*/
 }
 
 $("body").on("EDGE_Self_promiseCreating", function (evt) {

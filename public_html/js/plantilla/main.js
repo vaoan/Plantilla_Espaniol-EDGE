@@ -266,7 +266,7 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
         identify: pagina
     };
     $("body").trigger(merge_options(objEvt));
-
+    
     promise.done(function (comp) {
         var stage = comp.getStage();
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
@@ -278,10 +278,10 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
                 sym: stage,
                 scorm_prev: EDGE_Plantilla.temp_scorm,
                 scorm_extra: EDGE_Plantilla.temp_scorm_suspendData,
-                identify: pagina
+                identify: pagina,
+                zoom: EDGE_Plantilla.zoom
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
-
         }
 
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;

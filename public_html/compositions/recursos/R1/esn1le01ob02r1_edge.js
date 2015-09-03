@@ -16,6 +16,8 @@
         resources = [
         ],
         scripts = [
+            js+"jquery-1.11.3.min.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -108,49 +110,48 @@
                 content: {
                     dom: [
                         {
+                            type: 'rect',
                             rect: ['0px', '0px', '650px', '49px', 'auto', 'auto'],
                             id: 'cont_funcion',
                             stroke: [1, 'rgba(0, 0, 0, 0)', 'dashed'],
-                            type: 'rect',
                             fill: ['rgba(51,26,63,1.00)'],
                             c: [
                             {
-                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'Rectangle',
                                 stroke: [1, 'rgba(0,0,0,0.00)', 'dashed'],
-                                type: 'rect',
+                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
                                 fill: ['rgba(178,163,196,1.00)']
                             },
                             {
-                                rect: ['43px', '1px', '366px', '38px', 'auto', 'auto'],
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\"><span style=\"font-size: 32px;\">Función comunicativa:</span></p>',
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal'],
-                                type: 'text'
+                                type: 'text',
+                                rect: ['43px', '1px', '366px', '38px', 'auto', 'auto']
                             }]
                         },
                         {
-                            rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
                             transform: [[], [], [], ['1.14999', '1.14999']],
+                            tag: 'img',
                             id: 'Vineta1_funcion_comunicativa',
-                            fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px'],
                             type: 'image',
-                            tag: 'img'
+                            rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px']
                         },
                         {
-                            rect: ['44px', '57px', '612px', '106px', 'auto', 'auto'],
-                            textStyle: ['', '', '34px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Texto_Funcion_Comunicativa',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">Deletrear nombres, topónimos  y otras palabras de su contexto inmediato usando el alfabeto en español.&nbsp;</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​&nbsp;</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Texto_Funcion_Comunicativa',
+                            textStyle: ['', '', '34px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">Deletrear nombres, topónimos  y otras palabras de su contexto inmediato usando el alfabeto en español.&nbsp;</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​&nbsp;</span></p>',
+                            rect: ['44px', '57px', '612px', '106px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '652px', '163px']
+                            rect: [null, null, '652px', '163px']
                         }
                     }
                 },
@@ -172,51 +173,51 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '650px', '49px', 'auto', 'auto'],
                             type: 'rect',
+                            rect: ['0px', '0px', '650px', '49px', 'auto', 'auto'],
                             id: 'cont_funcion',
                             stroke: [1, 'rgba(0, 0, 0, 0)', 'dashed'],
                             fill: ['rgba(51,26,63,1.00)'],
                             c: [
                             {
-                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'Rectangle',
                                 stroke: [1, 'rgba(0,0,0,0.00)', 'dashed'],
-                                type: 'rect',
+                                rect: ['-1px', '-1px', '28px', '49px', 'auto', 'auto'],
                                 fill: ['rgba(178,163,196,1.00)']
                             },
                             {
-                                type: 'text',
+                                rect: ['41px', '2px', '569px', '38px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\"><span style=\"font-size: 32px;\">Discuta con sus compañeros</span></p>',
-                                rect: ['41px', '2px', '569px', '38px', 'auto', 'auto'],
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal']
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(253,191,0,1.00)', '700', 'none', '', 'break-word', 'normal'],
+                                type: 'text'
                             }]
                         },
                         {
-                            type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px'],
-                            id: 'Vineta1_funcion_comunicativa',
                             rect: ['18px', '66px', '10px', '17px', 'auto', 'auto'],
+                            tag: 'img',
+                            id: 'Vineta1_funcion_comunicativa',
                             transform: [[], [], [], ['1.14999', '1.14999']],
-                            tag: 'img'
-                        },
-                        {
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px'],
-                            id: 'Vineta2_funcion_comunicativa',
-                            rect: ['18px', '105px', '10px', '17px', 'auto', 'auto'],
-                            transform: [[], [], [], ['1.14999', '1.14999']],
-                            tag: 'img'
+                            fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px']
                         },
                         {
-                            type: 'text',
+                            rect: ['18px', '105px', '10px', '17px', 'auto', 'auto'],
+                            tag: 'img',
+                            id: 'Vineta2_funcion_comunicativa',
+                            transform: [[], [], [], ['1.14999', '1.14999']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/VI%C3%91ETA-10.png', '0px', '0px']
+                        },
+                        {
                             rect: ['45px', '57px', '607px', '106px', 'auto', 'auto'],
-                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">¿Por qué es importante deletrear?​</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​¿Qué palabras son difíciles de deletrear?</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\"></span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\">​</span></p>',
-                            id: 'Texto_Funcion_Comunicativa',
-                            textStyle: ['', '', '34px', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
                             align: 'left',
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(253,191,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal']
+                            id: 'Texto_Funcion_Comunicativa',
+                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255); font-size: 28px;\">¿Por qué es importante deletrear?​</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​¿Qué palabras son difíciles de deletrear?</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255); font-size: 28px;\">​</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\"></span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(255, 255, 255);\">​</span></p>',
+                            textStyle: ['', '', '34px', '', 'none'],
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -259,25 +260,24 @@
                             fill: ['rgba(255,255,255,0.749)']
                         },
                         {
+                            rect: ['0px', '0px', '95px', '95px', 'auto', 'auto'],
                             id: 'BTN_animado',
                             type: 'image',
-                            rect: ['0px', '0px', '95px', '95px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/BTN_R1_Explore-29.png', '0px', '0px']
                         },
                         {
-                            rect: ['163px', '23px', '198px', '50px', 'auto', 'auto'],
-                            textStyle: ['', '', '50px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text3',
-                            text: '<p style=\"margin: 0px;\">​Exploremos</p>',
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'Text3',
+                            textStyle: ['', '', '50px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Exploremos</p>',
+                            rect: ['163px', '23px', '198px', '50px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '447px', '95px']
+                            rect: [null, null, '447px', '95px']
                         }
                     }
                 },
@@ -285,26 +285,6 @@
                     duration: 2000,
                     autoPlay: true,
                     data: [
-                        [
-                            "eid33",
-                            "scaleX",
-                            0,
-                            1000,
-                            "linear",
-                            "${BTN_animado}",
-                            '1',
-                            '1.2'
-                        ],
-                        [
-                            "eid34",
-                            "scaleX",
-                            1000,
-                            1000,
-                            "linear",
-                            "${BTN_animado}",
-                            '1.2',
-                            '1'
-                        ],
                         [
                             "eid35",
                             "scaleY",
@@ -318,6 +298,26 @@
                         [
                             "eid36",
                             "scaleY",
+                            1000,
+                            1000,
+                            "linear",
+                            "${BTN_animado}",
+                            '1.2',
+                            '1'
+                        ],
+                        [
+                            "eid33",
+                            "scaleX",
+                            0,
+                            1000,
+                            "linear",
+                            "${BTN_animado}",
+                            '1',
+                            '1.2'
+                        ],
+                        [
+                            "eid34",
+                            "scaleX",
                             1000,
                             1000,
                             "linear",
