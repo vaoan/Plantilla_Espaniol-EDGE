@@ -272,7 +272,7 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
         $(stage.ele).prop("ed_identify", pagina);
 
-        if (!isEmpty(pagina.actividad) || !isEmpty(pagina.zoomApplied) ) {
+        if (!isEmpty(pagina.actividad) || !isEmpty(pagina.has_jquery) ) {
             var objEvt = {
                 type: "EDGE_Recurso_promiseCreated",
                 sym: stage,
