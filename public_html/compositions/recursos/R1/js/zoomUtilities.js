@@ -5,8 +5,7 @@
  * and open the template in the editor.
  */
 
-
-$(document).ready(function () {
+$("body").on("EDGE_Recurso_promiseCreated",function () {
     inicializarZoom();
     $(window).on('resize', resize);
     resize();
@@ -16,7 +15,7 @@ function resize() {
     var ancho = $("#Stage").width();
     var alto = $("#Stage").height();
 
-    var zoom = detectZoom.zoom();
+    //var zoom = detectZoom.zoom();
     var device = detectZoom.device();
     
     console.warn("ZOOM LEVEL", device);
@@ -25,14 +24,21 @@ function resize() {
 }
 
 function inicializarZoom(){
-    $("p, span").each(function(){
-        this.prop("current_font_size", this.css("font-size"));
+    $("div[id^=Stage_texto]").find("p, span").each(function(){
+        //console.log("set font", );
+        var text_size = $(this).css("font-size");
+        text_size = text_size.substring(0, text_size.length - 2);
+        //console.log(text_size);
+        
+        $(this).prop("current_font_size", text_size);
     });
+    //console.log($("p"));
 }
 
 function aplicarZoom(zoomLevel){
-    $("p, span").each(function(){
-        this.css("font-size", this.prop("current_font_size")*zoomLevel);
+    $("div[id^=Stage_texto]").find("p, span").each(function(){
+        console.log($(this).prop("current_font_size")*zoomLevel);
+        $(this).css("font-size", ($(this).prop("current_font_size")*zoomLevel) + "px");
     });
 }
 

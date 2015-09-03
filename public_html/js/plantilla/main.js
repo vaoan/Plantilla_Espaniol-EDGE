@@ -11,7 +11,7 @@ EDGE_Plantilla = {
     allow_popups: true,
     play_general_sound: true,
     plantilla_sym: null,
-    debug: true,
+    debug: false,
     base_audio: new Audio('media/navigate-main.mp3'),
     config: null,
     popup_on_show: null,
@@ -272,7 +272,7 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
         $(stage.ele).prop("ed_identify", pagina);
 
-        if (!isEmpty(pagina.actividad)) {
+        if (!isEmpty(pagina.actividad) || !isEmpty(pagina.zoomApplied) ) {
             var objEvt = {
                 type: "EDGE_Recurso_promiseCreated",
                 sym: stage,

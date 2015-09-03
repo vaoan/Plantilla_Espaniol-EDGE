@@ -12,6 +12,7 @@
                 "cargar": "2",
                 "cambia_color": "2"
             },
+            "zoomApplied": true,
             "titulo": "Empecemos",
             "subtitulo": "¡A deletrear!"
         },

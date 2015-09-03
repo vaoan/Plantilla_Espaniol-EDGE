@@ -61,4 +61,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    })("btnr1_exploremos");
    //Edge symbol end:'btnr1_exploremos'
 
+   //=========================================================
+   
+   //Edge symbol: 'texto_11'
+   (function(symbolName) {   
+   
+   })("texto_11");
+   //Edge symbol end:'texto_11'
+
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-16656972");
