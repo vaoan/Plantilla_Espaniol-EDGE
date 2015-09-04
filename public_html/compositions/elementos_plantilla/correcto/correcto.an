@@ -27,25 +27,23 @@
 		"element_${cerrar}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"}},
+			"timelineColor":"0x00a096"},
+		"element_${Ellipse}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"}},
 	"symbol_Precargador":{
-		"defaultStageParentHeight":"1080px",
+		"defaultStageParentHeight":"400px",
 		"dummyStageParentHeight":"400px",
-		"defaultStageParentWidth":"1920px",
-		"dummyStageParentWidth":"400px",
+		"defaultStageParentWidth":"400px",
 		"element_${preloader4}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
-			"animationEnabled":"false",
-			"timelineColor":"0x008dc8"}},
+			"timelineColor":"0x008dc8"},
+		"dummyStageParentWidth":"400px"},
 	"expanded:images/preloader4.gif":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
-	"symbol_Nivel inferior":{
-		"defaultStageParentWidth":"1920px",
-		"defaultStageParentHeight":"1080px",
-		"dummyStageParentWidth":"1920px",
-		"dummyStageParentHeight":"1080px"},
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"symbol_stage":{
 		"element_${Text}":{
 			"timelineColor2":"0x1aa38f",
@@ -61,10 +59,6 @@
 			"timelineColor3":"0x385063",
 			"animationEnabled":"true",
 			"timelineColor":"0x2f73ad"},
-		"element_${attempt-success}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"timelineColor":"0x63599f"},
 		"element_${cerrar}":{
 			"timelineColor2":"0x1095d2",
 			"timelineColor3":"0x29647e",
@@ -85,11 +79,10 @@
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"37",
 	"pixelsPerMs":"0.2",
-	"mediagroup_media/attempt-success.mp3":"attempt-success",
-	"expanded:images/correcto.png":"nil",
-	"Nivel inferior-Default Timeline_playhead_ms":"0",
+	"cerrar_corr-Default Timeline_playhead_ms":"0",
+	"usedBOM":"false",
 	"nextElementColorIndex":"10",
 	"stage-Default Timeline_playhead_ms":"0",
 	"viewStartY":"0",
 	"Precargador-Default Timeline_playhead_ms":"0",
-	"usedBOM":"false"}
+	"expanded:images/correcto.png":"nil"}

@@ -357,7 +357,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 205, function(sym, e) {
          // introducir código aquí
          sym.stop();
 

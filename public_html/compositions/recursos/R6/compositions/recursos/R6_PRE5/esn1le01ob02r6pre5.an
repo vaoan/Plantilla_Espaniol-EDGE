@@ -4,7 +4,7 @@
 	"expanded:images/zapatos.png":"nil",
 	"pref__general__AutoKeyframeProperties":"true",
 	"expanded:imagenes/camiseta.png":"nil",
-	"PICK_2-Default Timeline_playhead_ms":"0",
+	"PICK_1-Default Timeline_playhead_ms":"0",
 	"expanded:images/play-03.png":"nil",
 	"expanded:imagenes/zapatos.png":"nil",
 	"symbol_PICK_3":{
@@ -31,10 +31,34 @@
 			"timelineColor3":"0x734a5f",
 			"animationEnabled":"false",
 			"timelineColor":"0xdb619d"}},
-	"viewStartMs":"-25",
 	"expanded:imagenes/medias.png":"nil",
-	"stage-Default Timeline_playhead_ms":"500",
+	"bolita-Default Timeline_playhead_ms":"0",
 	"pref__general__FilterNonAnimatedElements":"false",
+	"symbol_bolita":{
+		"element_${Ellipse}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"animationEnabled":"true",
+			"timelineColor":"0x91c767"}},
+	"expanded:images/signo%20mas%20que%201%20VIOLETA.png":"nil",
+	"expanded:images/vineta_lila.png":"nil",
+	"expanded:imagenes/bufanda.png":"nil",
+	"expanded:images/camiseta.png":"nil",
+	"symbol_PICK_5":{
+		"element_${dedo}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"},
+		"element_${RoundRectCopy3}":{
+			"timelineColor2":"0x168c84",
+			"animationEnabled":"true",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"}},
+	"pixelsPerMs":"0.2",
+	"CompZoomFactor":"100",
+	"StageZoomFactor":"53",
+	"colorSwatches":"rgba(51,51,51,1.00)|rgba(106,55,137,1.00)",
+	"PICK_1-Default Timeline_mark_ms":"-1",
 	"symbol_PICK_4":{
 		"element_${bufanda}":{
 			"timelineColor2":"0x81aa62",
@@ -59,37 +83,12 @@
 			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
 			"timelineColor":"0xfb657a"}},
-	"expanded:images/signo%20mas%20que%201%20VIOLETA.png":"nil",
-	"expanded:images/vineta_lila.png":"nil",
-	"pixelsPerMs":"0.2",
-	"expanded:images/camiseta.png":"nil",
-	"symbol_PICK_5":{
-		"element_${dedo}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"timelineColor":"0x63599f"},
-		"element_${RoundRectCopy3}":{
-			"timelineColor2":"0x168c84",
-			"animationEnabled":"true",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"}},
-	"expanded:imagenes/bufanda.png":"nil",
-	"CompZoomFactor":"100",
-	"StageZoomFactor":"53",
-	"colorSwatches":"rgba(106,55,137,1.00)",
-	"symbol_bolita":{
-		"element_${Ellipse}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"animationEnabled":"true",
-			"timelineColor":"0x91c767"}},
-	"expanded:images/medias.png":"nil",
 	"mediagroup_media/r6_audio_1.mp3":"r6_audio_1",
 	"nextElementColorIndex":"12",
-	"pref__general__GenerateSmoothTransitions":"true",
-	"PICK_4-Default Timeline_playhead_ms":"0",
-	"PICK_1-Default Timeline_mark_ms":"-1",
+	"stage-Default Timeline_playhead_ms":"0",
 	"expanded:images/bufanda.png":"nil",
+	"expanded:images/medias.png":"nil",
+	"PICK_4-Default Timeline_playhead_ms":"0",
 	"expanded:images/faro.png":"nil",
 	"symbol_btn_audio_2":{
 		"element_${Text}":{
@@ -115,9 +114,9 @@
 			"timelineColor3":"0x385063",
 			"animationEnabled":"true",
 			"timelineColor":"0x2f73ad"}},
-	"PICK_1-Default Timeline_playhead_ms":"0",
+	"PICK_2-Default Timeline_playhead_ms":"0",
 	"PICK_5-Default Timeline_playhead_ms":"0",
-	"TransitionIdCounter":"135",
+	"TransitionIdCounter":"136",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -232,7 +231,7 @@
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"}},
-	"expanded:images/burro.png":"nil",
+	"Submit-Default Timeline_playhead_ms":"0",
 	"symbol_TIMER_CONTAINER":{
 		"element_${Rectangle}":{
 			"timelineColor2":"0x168c84",
@@ -245,10 +244,10 @@
 			"animationEnabled":"true",
 			"timelineColor":"0x00bda4"}},
 	"TIMER_CONTAINER-Default Timeline_playhead_ms":"0",
-	"Submit-Default Timeline_playhead_ms":"0",
+	"expanded:images/burro.png":"nil",
 	"expanded:images/arbol.png":"nil",
 	"expanded:images/BTN-tools-ES.png":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"expanded:images/BTN-tools-ES2.png":"nil",
 	"symbol_stage":{
 		"element_${Text2Copy}":{
@@ -432,7 +431,7 @@
 	"btn_audio-Default Timeline_playhead_ms":"0",
 	"expanded:images/mesa.png":"nil",
 	"usedBOM":"false",
-	"bolita-Default Timeline_playhead_ms":"0",
+	"pref__general__GenerateSmoothTransitions":"true",
 	"symbol_PICK_6":{
 		"element_${RoundRectCopy4}":{
 			"timelineColor2":"0x107faa",

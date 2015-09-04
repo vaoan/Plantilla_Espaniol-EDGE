@@ -109,7 +109,7 @@
                     }
                 },
                 timeline: {
-                    duration: 11587,
+                    duration: 10514.333,
                     autoPlay: true,
                     data: [
                         [
@@ -192,12 +192,12 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -275,12 +275,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -338,39 +338,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
                             rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​a. Cábano</p>',
-                            textStyle: ['', '', '', '', 'none'],
+                            align: 'center',
                             type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -422,6 +423,36 @@
                             "${box_respuesta_hover}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid92",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid93",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid94",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
                         ]
                     ]
                 }
@@ -457,18 +488,19 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            type: 'text',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​b. Caballo</p>',
                             align: 'center',
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -512,6 +544,36 @@
                             'none'
                         ],
                         [
+                            "eid95",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid96",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid97",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid77",
                             "display",
                             500,
@@ -534,39 +596,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover3',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            type: 'text',
-                            align: 'center',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​c. Abajo</p>',
-                            textStyle: ['', '', '', '', 'none'],
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
+                            align: 'center',
+                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -610,6 +673,36 @@
                             'none'
                         ],
                         [
+                            "eid98",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid99",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid100",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid79",
                             "display",
                             500,
@@ -632,39 +725,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover4',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            type: 'text',
-                            align: 'center',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​d. Contrabajo</p>',
-                            textStyle: ['', '', '', '', 'none'],
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
+                            align: 'center',
+                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -708,6 +802,36 @@
                             'none'
                         ],
                         [
+                            "eid101",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid102",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid103",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid81",
                             "display",
                             500,
@@ -730,10 +854,10 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.8', '0.8']],
-                            id: 'ayuda_llamada_1',
-                            type: 'image',
                             rect: ['-50px', '-72px', '499px', '718px', 'auto', 'auto'],
+                            id: 'ayuda_llamada_1',
+                            transform: [[], [], [], ['0.8', '0.8']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/ayuda_llamada_1.png', '0px', '0px']
                         },
                         {
@@ -744,12 +868,12 @@
                             fill: ['rgba(255,255,255,1.00)']
                         },
                         {
+                            rect: ['43px', '453px', '314px', '55px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [35, 'px'], 'rgba(79,45,110,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​La palabra correcta contiene la letra <span style=\"font-weight: 700;\">ll</span></p>',
                             align: 'center',
-                            rect: ['43px', '453px', '314px', '55px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -834,11 +958,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
@@ -851,41 +975,43 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            fill: ['rgba(255,255,255,1)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
+                            type: 'rect',
+                            fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            transform: [[], [], [], ['0.2', '0.2']],
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/audiomp3_1.mp3'],
                             id: 'audiomp3_1',
-                            rect: ['861', '570', '320px', '45px', 'auto', 'auto'],
+                            rect: ['1151', '473', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 11587,
+                    duration: 10514.333,
                     autoPlay: true,
                     labels: {
                         "stop": 0,
@@ -912,7 +1038,7 @@
                             '0.000000',
                             '1'
                         ],
-                            [ "eid88", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
+                            [ "eid91", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
                     ]
                 }
             }

@@ -30,7 +30,7 @@
                         {
                             id: 'contacce',
                             type: 'rect',
-                            rect: ['193px', '180px', '1550px', '573px', 'auto', 'auto'],
+                            rect: ['193px', '180px', '1550px', '424px', 'auto', 'auto'],
                             borderRadius: ["0px", "0px", "15px 15px", "15px 15px"],
                             fill: ["rgba(255,255,255,1)"],
                             stroke: [0,"rgba(0, 0, 0, 0)","none"]
@@ -59,6 +59,14 @@
                             fill: ["rgba(0,0,0,0)",im+"ACCESIBILIDAD2.png",'0px','0px']
                         },
                         {
+                            id: 'icono_descargar',
+                            type: 'image',
+                            tag: 'img',
+                            rect: ['922px', '435px', '93px', '96px', 'auto', 'auto'],
+                            cursor: 'pointer',
+                            fill: ["rgba(0,0,0,0)",im+"descargable2.png",'0px','0px']
+                        },
+                        {
                             id: 'Subtitulo',
                             type: 'text',
                             rect: ['538px', '365px', '860px', '42px', 'auto', 'auto'],
@@ -82,14 +90,6 @@
                             type: 'rect',
                             rect: ['1640', '87', '75', '76', 'auto', 'auto'],
                             cursor: 'pointer'
-                        },
-                        {
-                            id: 'descargable2',
-                            type: 'image',
-                            rect: ['775px', '351px', '386px', '406px', 'auto', 'auto'],
-                            cursor: 'pointer',
-                            fill: ["rgba(0,0,0,0)",im+"descargable3.png",'0px','0px'],
-                            transform: [[],[],[],['0.54','0.54']]
                         }
                     ],
                     style: {
@@ -171,16 +171,25 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'cerrar',
+                            rect: ['6px', '8px', '60px', '60px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'Ellipse',
+                            stroke: [1, 'rgba(0,0,0,1)', 'solid'],
+                            type: 'ellipse',
+                            fill: ['rgba(192,192,192,1)']
+                        },
+                        {
                             rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '75px', '76px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '75px', '76px']
                         }
                     }
                 },

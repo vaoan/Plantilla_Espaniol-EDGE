@@ -109,7 +109,7 @@
                     }
                 },
                 timeline: {
-                    duration: 11587,
+                    duration: 14239,
                     autoPlay: true,
                     data: [
                         [
@@ -192,12 +192,12 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -275,12 +275,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],
@@ -359,13 +359,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
                             align: 'center',
                             id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​a. Paisaje</p>',
                             textStyle: ['', '', '', '', 'none'],
-                            type: 'text'
+                            text: '<p style=\"margin: 0px;\">​a. Paisaje</p>',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -422,6 +422,36 @@
                             "${box_respuesta_hover}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid94",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid95",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid96",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
                         ]
                     ]
                 }
@@ -457,13 +487,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
                             align: 'center',
                             id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​b. Masaje</p>',
                             textStyle: ['', '', '', '', 'none'],
-                            type: 'text'
+                            text: '<p style=\"margin: 0px;\">​b. Masaje</p>',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -520,6 +550,36 @@
                             "${box_respuesta_hover2}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid97",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid98",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid99",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
                         ]
                     ]
                 }
@@ -555,13 +615,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
                             align: 'center',
                             id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​c. Mensaje</p>',
                             textStyle: ['', '', '', '', 'none'],
-                            type: 'text'
+                            text: '<p style=\"margin: 0px;\">​c. Mensaje</p>',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -610,6 +670,36 @@
                             'none'
                         ],
                         [
+                            "eid100",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid101",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid102",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid79",
                             "display",
                             500,
@@ -653,13 +743,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
                             align: 'center',
                             id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​d. Peaje</p>',
                             textStyle: ['', '', '', '', 'none'],
-                            type: 'text'
+                            text: '<p style=\"margin: 0px;\">​d. Peaje</p>',
+                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -708,6 +798,36 @@
                             'none'
                         ],
                         [
+                            "eid103",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid105",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid104",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid81",
                             "display",
                             500,
@@ -730,10 +850,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-50px', '-72px', '499px', '718px', 'auto', 'auto'],
-                            id: 'ayuda_llamada_1',
-                            transform: [[], [], [], ['0.8', '0.8']],
                             type: 'image',
+                            id: 'ayuda_llamada_1',
+                            rect: ['-50px', '-72px', '499px', '718px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.8', '0.8']],
                             fill: ['rgba(0,0,0,0)', 'images/ayuda_llamada_1.png', '0px', '0px']
                         },
                         {
@@ -744,12 +864,12 @@
                             fill: ['rgba(255,255,255,1.00)']
                         },
                         {
+                            type: 'text',
                             rect: ['43px', '453px', '314px', '55px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [35, 'px'], 'rgba(79,45,110,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​La palabra correcta contiene la letra <span style=\"font-weight: 700;\">p</span></p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [35, 'px'], 'rgba(79,45,110,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -834,11 +954,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
@@ -851,22 +971,23 @@
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            fill: ['rgba(255,255,255,1)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
+                            type: 'rect',
+                            fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            transform: [[], [], [], ['0.2', '0.2']],
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
@@ -880,12 +1001,13 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 11587,
+                    duration: 14239,
                     autoPlay: true,
                     labels: {
                         "stop": 0,

@@ -22,7 +22,7 @@
             js+"main.js",
             js+"actividades_result.js",
             js+"r6.js",
-            js+"qqsm.js"
+            js+"scramble.js"
         ],
         symbols = {
             "stage": {
@@ -120,14 +120,6 @@
                             display: 'block',
                             type: 'rect',
                             rect: ['0px', '-159px', 'undefined', 'undefined', 'auto', 'auto']
-                        },
-                        {
-                            id: 'btn_inicio_scrabble',
-                            symbolName: 'btn_inicio_scrabble',
-                            display: 'none',
-                            type: 'rect',
-                            rect: ['802px', '524px', 'undefined', 'undefined', 'auto', 'auto'],
-                            cursor: 'pointer'
                         },
                         {
                             id: 'correctocontenedor',
@@ -294,6 +286,21 @@
                                 font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", ""],
                                 textStyle: ["", "", "30px", "", ""]
                             }]
+                        },
+                        {
+                            id: 'precarga_gif',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['834px', '546px', '161px', '12px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"precarga_gif.gif",'0px','0px']
+                        },
+                        {
+                            id: 'btn_inicio_scrabble',
+                            symbolName: 'btn_inicio_scrabble',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['802px', '524px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer'
                         }
                     ],
                     style: {
@@ -321,14 +328,124 @@
                     },
                     data: [
                         [
-                            "eid193",
+                            "eid109",
                             "display",
                             2000,
                             0,
                             "linear",
-                            "${SCRABBLE_SLIDE_1}",
+                            "${Skills}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid277",
+                            "display",
+                            4250,
+                            0,
+                            "linear",
+                            "${Skills}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid312",
+                            "scaleY",
+                            7000,
+                            500,
+                            "linear",
+                            "${no_tiempo_contenedor}",
+                            '0.5',
+                            '1'
+                        ],
+                        [
+                            "eid286",
+                            "scaleY",
+                            5000,
+                            500,
+                            "linear",
+                            "${incorrecto_1_contenedor}",
+                            '0.5',
+                            '1'
+                        ],
+                        [
+                            "eid285",
+                            "opacity",
+                            5000,
+                            500,
+                            "linear",
+                            "${incorrecto_1_contenedor}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid254",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${SCRABBLE_SLIDE_4}",
+                            '1830px',
+                            '0px'
+                        ],
+                        [
+                            "eid270",
+                            "display",
+                            4250,
+                            0,
+                            "linear",
+                            "${SCRABBLE_SLIDE_4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid113",
+                            "display",
+                            2000,
+                            0,
+                            "linear",
+                            "${TextCopy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid275",
+                            "display",
+                            4250,
+                            0,
+                            "linear",
+                            "${TextCopy}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid112",
+                            "display",
+                            2000,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid272",
+                            "display",
+                            4250,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid260",
+                            "scaleX",
+                            4250,
+                            500,
+                            "linear",
+                            "${correctocontenedor}",
+                            '0.5',
+                            '1'
                         ],
                         [
                             "eid110",
@@ -401,46 +518,6 @@
                             '-1830px'
                         ],
                         [
-                            "eid294",
-                            "display",
-                            6000,
-                            0,
-                            "linear",
-                            "${incorrecto_2_contenedor}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid309",
-                            "display",
-                            6649,
-                            0,
-                            "linear",
-                            "${incorrecto_2_contenedor}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid212",
-                            "left",
-                            2500,
-                            500,
-                            "linear",
-                            "${SCRABBLE_SLIDE_2}",
-                            '1830px',
-                            '0px'
-                        ],
-                        [
-                            "eid213",
-                            "left",
-                            3000,
-                            500,
-                            "linear",
-                            "${SCRABBLE_SLIDE_2}",
-                            '0px',
-                            '-1830px'
-                        ],
-                        [
                             "eid218",
                             "left",
                             3000,
@@ -471,44 +548,64 @@
                             '1'
                         ],
                         [
-                            "eid285",
-                            "opacity",
-                            5000,
-                            500,
-                            "linear",
-                            "${incorrecto_1_contenedor}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid109",
+                            "eid193",
                             "display",
                             2000,
                             0,
                             "linear",
-                            "${Skills}",
+                            "${SCRABBLE_SLIDE_1}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid277",
-                            "display",
-                            4250,
-                            0,
-                            "linear",
-                            "${Skills}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid312",
-                            "scaleY",
-                            7000,
+                            "eid297",
+                            "scaleX",
+                            6000,
                             500,
                             "linear",
-                            "${no_tiempo_contenedor}",
+                            "${incorrecto_2_contenedor}",
                             '0.5',
                             '1'
+                        ],
+                        [
+                            "eid332",
+                            "left",
+                            8000,
+                            500,
+                            "linear",
+                            "${SCRABBLE_RESPUESTAS}",
+                            '1830px',
+                            '0px'
+                        ],
+                        [
+                            "eid212",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${SCRABBLE_SLIDE_2}",
+                            '1830px',
+                            '0px'
+                        ],
+                        [
+                            "eid213",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${SCRABBLE_SLIDE_2}",
+                            '0px',
+                            '-1830px'
+                        ],
+                        [
+                            "eid166",
+                            "display",
+                            2000,
+                            0,
+                            "linear",
+                            "${portada_scrabble}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid287",
@@ -531,86 +628,6 @@
                             'none'
                         ],
                         [
-                            "eid297",
-                            "scaleX",
-                            6000,
-                            500,
-                            "linear",
-                            "${incorrecto_2_contenedor}",
-                            '0.5',
-                            '1'
-                        ],
-                        [
-                            "eid112",
-                            "display",
-                            2000,
-                            0,
-                            "linear",
-                            "${Text}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid272",
-                            "display",
-                            4250,
-                            0,
-                            "linear",
-                            "${Text}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid330",
-                            "display",
-                            8000,
-                            0,
-                            "linear",
-                            "${SCRABBLE_RESPUESTAS}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid295",
-                            "opacity",
-                            6000,
-                            500,
-                            "linear",
-                            "${incorrecto_2_contenedor}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid166",
-                            "display",
-                            2000,
-                            0,
-                            "linear",
-                            "${portada_scrabble}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid254",
-                            "left",
-                            3500,
-                            500,
-                            "linear",
-                            "${SCRABBLE_SLIDE_4}",
-                            '1830px',
-                            '0px'
-                        ],
-                        [
-                            "eid286",
-                            "scaleY",
-                            5000,
-                            500,
-                            "linear",
-                            "${incorrecto_1_contenedor}",
-                            '0.5',
-                            '1'
-                        ],
-                        [
                             "eid313",
                             "display",
                             7000,
@@ -631,52 +648,42 @@
                             'none'
                         ],
                         [
-                            "eid113",
+                            "eid381",
                             "display",
-                            2000,
+                            0,
                             0,
                             "linear",
-                            "${TextCopy}",
+                            "${btn_inicio_scrabble}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid310",
+                            "scaleX",
+                            7000,
+                            500,
+                            "linear",
+                            "${no_tiempo_contenedor}",
+                            '0.5',
+                            '1'
+                        ],
+                        [
+                            "eid294",
+                            "display",
+                            6000,
+                            0,
+                            "linear",
+                            "${incorrecto_2_contenedor}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid275",
+                            "eid309",
                             "display",
-                            4250,
+                            6649,
                             0,
                             "linear",
-                            "${TextCopy}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid270",
-                            "display",
-                            4250,
-                            0,
-                            "linear",
-                            "${SCRABBLE_SLIDE_4}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid263",
-                            "display",
-                            4250,
-                            0,
-                            "linear",
-                            "${correctocontenedor}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid264",
-                            "display",
-                            5000,
-                            0,
-                            "linear",
-                            "${correctocontenedor}",
+                            "${incorrecto_2_contenedor}",
                             'block',
                             'none'
                         ],
@@ -691,44 +698,54 @@
                             '1'
                         ],
                         [
-                            "eid332",
-                            "left",
-                            8000,
-                            500,
-                            "linear",
-                            "${SCRABBLE_RESPUESTAS}",
-                            '1830px',
-                            '0px'
-                        ],
-                        [
-                            "eid108",
+                            "eid361",
                             "display",
-                            1830,
+                            0,
                             0,
                             "linear",
-                            "${btn_inicio_scrabble}",
+                            "${precarga_gif}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid362",
+                            "display",
+                            1876,
+                            0,
+                            "linear",
+                            "${precarga_gif}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid192",
+                            "eid363",
                             "display",
                             2000,
                             0,
                             "linear",
-                            "${btn_inicio_scrabble}",
+                            "${precarga_gif}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid260",
-                            "scaleX",
-                            4250,
+                            "eid295",
+                            "opacity",
+                            6000,
                             500,
                             "linear",
-                            "${correctocontenedor}",
-                            '0.5',
+                            "${incorrecto_2_contenedor}",
+                            '0',
                             '1'
+                        ],
+                        [
+                            "eid330",
+                            "display",
+                            8000,
+                            0,
+                            "linear",
+                            "${SCRABBLE_RESPUESTAS}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid114",
@@ -761,14 +778,24 @@
                             '1'
                         ],
                         [
-                            "eid310",
-                            "scaleX",
-                            7000,
-                            500,
+                            "eid263",
+                            "display",
+                            4250,
+                            0,
                             "linear",
-                            "${no_tiempo_contenedor}",
-                            '0.5',
-                            '1'
+                            "${correctocontenedor}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid264",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${correctocontenedor}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid261",
@@ -801,12 +828,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -834,38 +861,38 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'V_HABLA',
-                            rect: ['-24px', '16px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.45', '0.45']],
+                            id: 'V_HABLA',
+                            type: 'image',
+                            rect: ['-24px', '16px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_HABLA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_oral',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'RectangleCopy2',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto'],
-                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​oral</p>',
-                                id: 'TextCopy2',
-                                textStyle: ['', '', '23px', '', ''],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                id: 'TextCopy2',
+                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​oral</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -912,38 +939,38 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'V_ESCUCHA',
-                            rect: ['-12px', '12px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.45', '0.45']],
+                            id: 'V_ESCUCHA',
+                            type: 'image',
+                            rect: ['-12px', '12px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_ESCUCHA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_auditiva',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-9px', '117px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-9px', '117px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'RectangleCopy',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto'],
-                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​auditiva</p>',
-                                id: 'TextCopy',
-                                textStyle: ['', '', '23px', '', ''],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                id: 'TextCopy',
+                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​auditiva</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -990,71 +1017,71 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.5', '0.5']],
-                            id: 'Skills',
-                            type: 'image',
                             rect: ['-122px', '-30px', '530px', '250px', 'auto', 'auto'],
+                            id: 'Skills',
+                            transform: [[], [], [], ['0.5', '0.5']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/Skills.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
                             transform: [[], [], [], ['0.5', '0.5']],
-                            display: 'none',
                             rect: ['44px', '33px', '141px', '141px', 'auto', 'auto'],
+                            display: 'none',
                             id: 'B_ESCRITURA',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/B_ESCRITURA.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
                             transform: [[], [], [], ['0.45', '0.45']],
-                            display: 'block',
                             rect: ['100px', '14px', '141px', '141px', 'auto', 'auto'],
+                            display: 'block',
                             id: 'B_ESCUCHA',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/B_ESCUCHA.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
                             transform: [[], [], [], ['0.45', '0.45']],
-                            display: 'block',
                             rect: ['157px', '35px', '141px', '141px', 'auto', 'auto'],
+                            display: 'block',
                             id: 'B_HABLA',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/B_HABLA.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
                             transform: [[], [], [], ['0.5', '0.5']],
-                            display: 'block',
                             rect: ['-12px', '14px', '141px', '141px', 'auto', 'auto'],
+                            display: 'block',
                             id: 'B_LECTURA',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/B_LECTURA.png', '0px', '0px']
                         },
                         {
-                            rect: ['62px', '16px', '102', '108', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'escrita',
                             symbolName: 'escrita',
-                            type: 'rect',
-                            display: 'block'
+                            display: 'block',
+                            rect: ['62px', '16px', '102', '108', 'auto', 'auto']
                         },
                         {
-                            rect: ['181px', '19px', '102', '109', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'oral',
                             symbolName: 'oral',
-                            type: 'rect',
-                            display: 'none'
+                            display: 'none',
+                            rect: ['181px', '19px', '102', '109', 'auto', 'auto']
                         },
                         {
-                            rect: ['0px', '0px', '117', '113', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'lectora',
                             symbolName: 'lectora',
-                            type: 'rect',
-                            display: 'none'
+                            display: 'none',
+                            rect: ['0px', '0px', '117', '113', 'auto', 'auto']
                         },
                         {
-                            rect: ['112px', '2px', '117', '104', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'auditiva',
                             symbolName: 'auditiva',
-                            type: 'rect',
-                            display: 'none'
+                            display: 'none',
+                            rect: ['112px', '2px', '117', '104', 'auto', 'auto']
                         },
                         {
                             rect: ['23px', '50px', '70px', '70px', 'auto', 'auto'],
@@ -1110,14 +1137,14 @@
                             'block'
                         ],
                         [
-                            "eid47",
+                            "eid51",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${oral}",
-                            'none',
-                            'none'
+                            "${B_ESCUCHA}",
+                            'block',
+                            'block'
                         ],
                         [
                             "eid49",
@@ -1130,14 +1157,14 @@
                             'block'
                         ],
                         [
-                            "eid51",
+                            "eid45",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${B_ESCUCHA}",
-                            'block',
-                            'block'
+                            "${auditiva}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid48",
@@ -1170,12 +1197,12 @@
                             'none'
                         ],
                         [
-                            "eid45",
+                            "eid47",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${auditiva}",
+                            "${oral}",
                             'none',
                             'none'
                         ]
@@ -1192,38 +1219,38 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-12px', '15px', '140px', '140px', 'auto', 'auto'],
-                            id: 'V_LECTURA',
-                            transform: [[], [], [], ['0.5', '0.5']],
                             type: 'image',
+                            id: 'V_LECTURA',
+                            rect: ['-12px', '15px', '140px', '140px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.5', '0.5']],
                             fill: ['rgba(0,0,0,0)', 'images/V_LECTURA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_lectora',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-13px', '117px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-13px', '117px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['48px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'Rectangle',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                type: 'text',
                                 rect: ['7px', '6px', 'auto', 'auto', 'auto', 'auto'],
-                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                textStyle: ['', '', '23px', '', ''],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​lectora</p>',
                                 align: 'center',
-                                type: 'text'
+                                id: 'Text',
+                                textStyle: ['', '', '23px', '', ''],
+                                text: '<p style=\"margin: 0px;\">​Comprensión</p><p style=\"margin: 0px;\">​lectora</p>',
+                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
                             }]
                         }
                     ],
@@ -1270,38 +1297,38 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'V_ESCRITURA',
-                            rect: ['-18px', '17px', '141px', '141px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'V_ESCRITURA',
+                            type: 'image',
+                            rect: ['-18px', '17px', '141px', '141px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/V_ESCRITURA.png', '0px', '0px']
                         },
                         {
                             type: 'rect',
                             borderRadius: ['10px', '10px', '10px', '10px'],
                             id: 'Tool_escrita',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
                             opacity: '0',
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
+                            rect: ['0px', '-4px', '102px', '60px', 'auto', 'auto'],
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.00)'],
                             c: [
                             {
-                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
+                                rect: ['41px', '42px', '20px', '20px', 'auto', 'auto'],
                                 id: 'RectangleCopy3',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto'],
-                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​escrita</p>',
-                                id: 'TextCopy3',
-                                textStyle: ['', '', '23px', '', ''],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                id: 'TextCopy3',
+                                text: '<p style=\"margin: 0px;\">​Producción</p><p style=\"margin: 0px;\">​escrita</p>',
+                                textStyle: ['', '', '23px', '', ''],
+                                rect: ['8px', '6px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1373,9 +1400,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'Group',
                             rect: ['2px', '2px', '70', '70', 'auto', 'auto'],
+                            id: 'Group',
+                            type: 'group',
                             c: [
                             {
                                 rect: ['0px', '0px', '70px', '70px', 'auto', 'auto'],
@@ -1453,24 +1480,24 @@
                         {
                             id: 'clock_circle3',
                             rect: ['2px', '2px', '70', '70', 'auto', 'auto'],
-                            symbolName: 'clock_circle',
-                            type: 'rect'
+                            type: 'rect',
+                            symbolName: 'clock_circle'
                         },
                         {
                             type: 'rect',
-                            id: 'segundero',
-                            symbolName: 'segundero',
                             display: 'block',
-                            rect: ['34px', '6px', '6', '33', 'auto', 'auto']
+                            symbolName: 'segundero',
+                            rect: ['34px', '6px', '6', '33', 'auto', 'auto'],
+                            id: 'segundero'
                         },
                         {
+                            font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            rect: ['4px', '22px', '67px', '38px', 'auto', 'auto'],
-                            align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
-                            textStyle: ['', '', '', '', 'none'],
-                            font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal']
+                            align: 'center',
+                            rect: ['4px', '22px', '67px', '38px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1552,16 +1579,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid274",
-                            "rotateZ",
-                            0,
-                            2000,
-                            "linear",
-                            "${RoundRect3}",
-                            '0deg',
-                            '360deg'
-                        ],
-                        [
                             "eid273",
                             "-webkit-transform-origin",
                             0,
@@ -1573,7 +1590,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid365",
+                            "eid382",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -1584,7 +1601,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid366",
+                            "eid383",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -1595,7 +1612,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid367",
+                            "eid384",
                             "msTransformOrigin",
                             0,
                             0,
@@ -1606,7 +1623,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid368",
+                            "eid390",
                             "-o-transform-origin",
                             0,
                             0,
@@ -1617,7 +1634,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid369",
+                            "eid391",
                             "transform-origin",
                             0,
                             0,
@@ -1626,6 +1643,16 @@
                             [50,100],
                             [50,100],
                             {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid274",
+                            "rotateZ",
+                            0,
+                            2000,
+                            "linear",
+                            "${RoundRect3}",
+                            '0deg',
+                            '360deg'
                         ]
                     ]
                 }
@@ -1640,65 +1667,65 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'img_s',
                             rect: ['286px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_s',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_s.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_c',
                             rect: ['456px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_c',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_c.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_r',
                             rect: ['626px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_r',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_r.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_a',
                             rect: ['796px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_a',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_a.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_b',
                             rect: ['966px', '0px', '144px', '156px', 'auto', 'auto'],
+                            id: 'img_b',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_m.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_b2',
                             rect: ['1136px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_b2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_b.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_l',
                             rect: ['1306px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_l',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_l.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'img_e',
                             rect: ['1476px', '0px', '144px', '142px', 'auto', 'auto'],
+                            id: 'img_e',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/img_e.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '560px', '1830px', '8px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'linea01',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '560px', '1830px', '8px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['188px', '573px', '1400px', '8px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'linea02',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['188px', '573px', '1400px', '8px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         }
                     ],
@@ -1713,12 +1740,12 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid29",
+                            "eid28",
                             "top",
-                            376,
+                            126,
                             250,
                             "easeInOutQuad",
-                            "${img_r}",
+                            "${img_c}",
                             '0px',
                             '368px'
                         ],
@@ -1743,12 +1770,12 @@
                             '368px'
                         ],
                         [
-                            "eid33",
+                            "eid32",
                             "top",
-                            1376,
+                            1126,
                             250,
                             "easeInOutQuad",
-                            "${img_l}",
+                            "${img_b2}",
                             '0px',
                             '368px'
                         ],
@@ -1773,12 +1800,12 @@
                             '156px'
                         ],
                         [
-                            "eid28",
+                            "eid29",
                             "top",
-                            126,
+                            376,
                             250,
                             "easeInOutQuad",
-                            "${img_c}",
+                            "${img_r}",
                             '0px',
                             '368px'
                         ],
@@ -1793,12 +1820,12 @@
                             '368px'
                         ],
                         [
-                            "eid32",
+                            "eid33",
                             "top",
-                            1126,
+                            1376,
                             250,
                             "easeInOutQuad",
-                            "${img_b2}",
+                            "${img_l}",
                             '0px',
                             '368px'
                         ]
@@ -1823,13 +1850,13 @@
                             fill: ['rgba(214,219,65,1.00)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]]
                         },
                         {
+                            rect: ['14px', '11px', '200px', '36px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            type: 'text',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-weight: 700; font-size: 28px;\">Iniciar</span></p>',
-                            id: 'Text',
-                            textStyle: ['', '', '', '', 'none'],
                             align: 'left',
-                            rect: ['14px', '11px', '200px', '36px', 'auto', 'auto']
+                            id: 'Text',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-weight: 700; font-size: 28px;\">Iniciar</span></p>',
+                            textStyle: ['', '', '', '', 'none'],
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -1856,10 +1883,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'rect_slide1',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(122,28,28,1.00)']
                         }
                     ],
@@ -1887,10 +1914,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'rect_slide1',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(60,28,122,1.00)']
                         }
                     ],
@@ -1918,10 +1945,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'rect_slide1',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(28,122,113,1.00)']
                         }
                     ],
@@ -1949,10 +1976,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'rect_slide1',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(57,122,28,1.00)']
                         }
                     ],
@@ -1980,10 +2007,10 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.35', '0.35']],
-                            id: 'cerrar',
-                            type: 'image',
                             rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            id: 'cerrar',
+                            transform: [[], [], [], ['0.35', '0.35']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
@@ -2019,12 +2046,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['0px', '0px', '213px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Volver a intentar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],
@@ -2052,10 +2079,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             id: 'rect_slide1',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(221,119,17,1.00)']
                         }
                     ],
@@ -2091,12 +2118,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['0px', '-1px', '213px', '31px', 'auto', 'auto'],
-                                font: ['source-sans-pro, sans-serif', [24, ''], 'rgba(255,255,255,1.00)', '700', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​Ver respuestas</p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['source-sans-pro, sans-serif', [24, ''], 'rgba(255,255,255,1.00)', '700', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],

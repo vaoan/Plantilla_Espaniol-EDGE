@@ -12,36 +12,41 @@
                 "cargar": "2",
                 "cambia_color": "2"
             },
+            "has_jquery": true,
             "titulo": "Empecemos",
             "subtitulo": "¡A deletrear!"
         },
         "2": {
-            "type": "recurso",
-            "recurso": "2",
-            "url": "recursos/R2/esn1le01ob02r2.html",
-            "titulo": "Exploremos",
-            "subtitulo": "¡A deletrear!"
-        },
-        "3": {
             "type": "actividad",
-            "recurso": "3",
-            "actividad": "drag_drop",
-            "url": "recursos/R3/esn1le01ob02r3.html",
+            "recurso": "2",
+            "actividad": "R5_CARRERA",
+            "url": "recursos/R5_CARRERA/R5.html",
             "interaction": {
                 "ALL": true
             },
             "titulo": "Practiquemos",
+            "subtitulo": "R5_CARRERA"
+        },
+        "3": {
+            "type": "actividad",
+            "recurso": "3",
+            "actividad": "concentrese",
+            "url": "recursos/R4_Concentrese/esn1le01ob03r4.html",
+            "interaction": {
+                "ALL": true
+            },
+            "titulo": "Concentrese",
             "subtitulo": "¡A deletrear!"
         },
         "4": {
             "type": "actividad",
             "recurso": "4",
-            "actividad": "drag_drop",
-            "url": "recursos/R4/esn1le01ob02r4.html",
+            "actividad": "sopa_letras",
+            "url": "recursos/R4_SopaDeLetras/esn1le01ob04r4.html",
             "interaction": {
                 "ALL": true
             },
-            "titulo": "Practiquemos",
+            "titulo": "sopa_letras",
             "subtitulo": "¡A deletrear!"
         },
         "5": {
@@ -70,7 +75,7 @@
             "type": "recurso",
             "recurso": "7",
             "url": "recursos/R7/esn1le01ob02r7.html",
-            "pdf":"../../../media/pdf/esn1le01ob02guion.pdf",
+            "pdf": "../../../media/pdf/esn1le01ob02guion.pdf",
             "titulo": "Aprendamos en papel",
             "subtitulo": "¡A deletrear!"
         },
@@ -137,8 +142,9 @@
         "accesibilidad": {
             "url": "elementos_plantilla/Accesibilidad/Accesibilidad.html",
             "type": "popup_full",
+            "pdf": "../../../media/pdf/accessibility.pdf",
             "symbols": {
             }
-        }        
+        }
     }
 }

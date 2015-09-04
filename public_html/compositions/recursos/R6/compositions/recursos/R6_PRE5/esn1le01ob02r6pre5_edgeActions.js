@@ -21,7 +21,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         
          inicializarPickMany(sym);
 
       });
@@ -52,7 +51,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
          pickClickeado(sym, "PICK_1");
 
       });
@@ -62,6 +60,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          // introducir código que se ejecute cuando se sitúe el ratón sobre el objeto
          var nombrePick = "PICK_1";
          if(!sym.$(nombrePick).prop("selected")){
+         	console.log(sym.getSymbol(nombrePick));
          	sym.getSymbol(nombrePick).play("hover");
          }
 
@@ -239,21 +238,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          // introducir código aquí
-         
          sym.stop();
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
-         // introducir código aquí
          sym.stop();
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         // introducir código aquí
          sym.stop();
 
       });

@@ -43,36 +43,43 @@
 $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
 
-    if (data.show_answers) {
-        switch (stage.prop("tipo")) {
-            case "uno a uno":
-            {
-                mostrarRespuestasDragAndDropUnoAUno(data.sym);
-                break;
-            }
+    if (!isEmpty(data.show_answers)) {
+        if (data.show_answers) {
+            switch (stage.prop("tipo")) {
+                case "uno a uno":
+                {
+                    mostrarRespuestasDragAndDropUnoAUno(data.sym);
+                    break;
+                }
 
-            case "uno a muchos":
-            {
-                mostrarRespuestasDragAndDropUnoAMuchos(data.sym);
-                break;
+                case "uno a muchos":
+                {
+                    mostrarRespuestasDragAndDropUnoAMuchos(data.sym);
+                    break;
+                }
             }
         }
     }
 
-    if (data.block) {
-        inhabilitarDragsYDrops(data.sym);
-        stage.prop("blocked", true);
-        if (stage.prop("usa_timer")) {
-            stopTimer(data.sym);
-        }
-    } else {
-        if (stage.prop("usa_timer")) {
-            if (data.timer.reset_timer) {
-                resetTimer(data.sym);
+    if (!isEmpty(data.block)) {
+        if (data.block) {
+            inhabilitarDragsYDrops(data.sym);
+            stage.prop("blocked", true);
+            if (stage.prop("usa_timer")) {
+                stopTimer(data.sym);
+            }
+        } else {
+            if (stage.prop("usa_timer")) {
+                if (data.timer.reset_timer) {
+                    resetTimer(data.sym);
+                }
             }
         }
     }
-    stage.prop("intentos_previos", data.attempts);
+
+    if (!isEmpty()) {
+        stage.prop("intentos_previos", data.attempts);
+    }
 
 });
 
@@ -222,7 +229,7 @@ function inicializarDragAndDropUnoaUno(sym)
                         dropObj.prop("current_drag", $(ui.draggable));
                     }
                 }
-                
+
                 ubicarDragEnCentroDeDrop($(ui.draggable), dropObj);
 
                 //Establece la propiedad correct dependiendo de si el objeto soltado corresponde a la respuesta.
@@ -239,10 +246,10 @@ function inicializarDragAndDropUnoaUno(sym)
             out: function (event, ui) {
                 var dropObj = $(this);
                 var dragObj = $(ui.draggable);
-                if(!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre")){
-                dropObj.prop("current_drag", null);
-                dropObj.prop("correct", false);
-            }
+                if (!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre")) {
+                    dropObj.prop("current_drag", null);
+                    dropObj.prop("correct", false);
+                }
             }
         });
     }
@@ -314,7 +321,7 @@ function inicializarDragAndDropUnoaMuchos(sym)
                 $.each(dropObj.prop("current_drags"), function (key, val) {
                     cont++;
                 });
-                
+
                 ubicarDragEnBordes(dragObj, dropObj);
 
                 var correct = true;
@@ -336,28 +343,28 @@ function inicializarDragAndDropUnoaMuchos(sym)
                 var dropObj = $(this);
                 var dragObj = $(ui.draggable);
                 if (dropObj.prop("current_drags").hasOwnProperty(dragObj.prop("nombre"))) {
-                
-                delete dropObj.prop("current_drags")[dragObj.prop("nombre")];
-                    
-                var solutionArray = stage.prop("drops")[nombreANumero(dropObj.prop("nombre"))].accepted;
 
-                var cont = 0;
-                $.each(dropObj.prop("current_drags"), function (key, val) {
-                    cont++;
-                });
+                    delete dropObj.prop("current_drags")[dragObj.prop("nombre")];
 
-                var correct = true;
-                if (solutionArray.length === cont) {
+                    var solutionArray = stage.prop("drops")[nombreANumero(dropObj.prop("nombre"))].accepted;
+
+                    var cont = 0;
                     $.each(dropObj.prop("current_drags"), function (key, val) {
-                        if ($.inArray(nombreANumero(key), solutionArray) < 0) {
-                            correct = false;
-                            return false;
-                        }
+                        cont++;
                     });
-                } else {
-                    correct = false;
-                }
-                dropObj.prop("correct", correct);
+
+                    var correct = true;
+                    if (solutionArray.length === cont) {
+                        $.each(dropObj.prop("current_drags"), function (key, val) {
+                            if ($.inArray(nombreANumero(key), solutionArray) < 0) {
+                                correct = false;
+                                return false;
+                            }
+                        });
+                    } else {
+                        correct = false;
+                    }
+                    dropObj.prop("correct", correct);
                 }
             }
         });
@@ -569,7 +576,7 @@ function ubicarDragsEnDrop(drags, drop) {
     $.each(drags, function (key, value) {
         if ((currentLeft + $(value[0]).width()) > (dropPosition.left + dropWidth))
         {
-            currentTop += ($(value[0]).height() + (margen*2));
+            currentTop += ($(value[0]).height() + (margen * 2));
             console.log($(value[0]).height());
             currentLeft = dropPosition.left + margen;
         }
@@ -598,24 +605,24 @@ function ubicarDragEnBordes(drag, drop) {
 
     var newposition = {top: dragPosition.top, left: dragPosition.left};
     var margen = 10;
-    
-    if(dragPosition.left < dropPosition.left){
+
+    if (dragPosition.left < dropPosition.left) {
         newposition.left = dropPosition.left + margen;
     }
-    
-    if((dragPosition.left+dragWidth) > (dropPosition.left + dropWidth)){
+
+    if ((dragPosition.left + dragWidth) > (dropPosition.left + dropWidth)) {
         newposition.left = (dropPosition.left + dropWidth) - dragWidth - margen;
     }
-    
-    if(dragPosition.top < dropPosition.top){
+
+    if (dragPosition.top < dropPosition.top) {
         newposition.top = dropPosition.top + margen;
     }
-    
-    if((dragPosition.top+dragHeight) > (dropPosition.top + dropHeight)){
-        newposition.top = (dropPosition.top + dropHeight) - dragHeight - (margen*2);
+
+    if ((dragPosition.top + dragHeight) > (dropPosition.top + dropHeight)) {
+        newposition.top = (dropPosition.top + dropHeight) - dragHeight - (margen * 2);
     }
 
-    if(newposition.top !== drag.prop("posicion_inicial").top || newposition.left !== drag.prop("posicion_inicial").left ){
+    if (newposition.top !== drag.prop("posicion_inicial").top || newposition.left !== drag.prop("posicion_inicial").left) {
         moverDrag(drag, newposition);
     }
 }

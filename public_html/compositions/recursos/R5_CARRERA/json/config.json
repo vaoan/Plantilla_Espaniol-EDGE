@@ -9,7 +9,7 @@
     "paginas": {
         "1": {
             "type": "actividad",
-            "recurso": "51",
+            "recurso": "21",
             "actividad": "pick_many",
             "url": "recursos/preg_1/preg_1.html",
             "interaction": {
@@ -19,7 +19,7 @@
         },
         "2": {
             "type": "actividad",
-            "recurso": "52",
+            "recurso": "22",
             "actividad": "pick_many",
             "url": "recursos/preg_2/preg_2.html",
             "interaction": {
@@ -29,7 +29,7 @@
         },
         "3": {
             "type": "actividad",
-            "recurso": "53",
+            "recurso": "23",
             "actividad": "pick_many",
             "url": "recursos/preg_3/preg_3.html",
             "interaction": {
@@ -39,7 +39,7 @@
         },
         "4": {
             "type": "actividad",
-            "recurso": "54",
+            "recurso": "24",
             "actividad": "pick_many",
             "url": "recursos/preg_4/preg_4.html",
             "interaction": {
@@ -49,7 +49,7 @@
         },
         "5": {
             "type": "actividad",
-            "recurso": "55",
+            "recurso": "25",
             "actividad": "pick_many",
             "url": "recursos/preg_5/preg_5.html",
             "interaction": {

@@ -482,7 +482,7 @@
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.stop();
+         //sym.stop();
 
       });
       //Edge binding end
@@ -497,6 +497,14 @@
    
        })("R6_respuestas");
    //Edge symbol end:'R6_respuestas'
+
+   //=========================================================
+   
+   //Edge symbol: 'margen_superior'
+   (function(symbolName) {   
+   
+   })("margen_superior");
+   //Edge symbol end:'margen_superior'
 
    //=========================================================
    
@@ -633,13 +641,5 @@
 
    })("escrita");
    //Edge symbol end:'escrita'
-
-   //=========================================================
-   
-   //Edge symbol: 'margen_superior'
-   (function(symbolName) {   
-   
-   })("margen_superior");
-   //Edge symbol end:'margen_superior'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

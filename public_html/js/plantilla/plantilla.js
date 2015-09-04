@@ -4,69 +4,40 @@
  * and open the template in the editor.
  */
 
-function WhatBrowser() {
-
-    var browser = (!!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) ? "Opera" :
-            typeof InstallTrigger !== 'undefined' ? "Firefox" :
-            (Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0) ? "Safari" :
-            !!window.chrome ? "Chrome" : "IE";
-    console.log(browser);
-
-    return browser;
-}
-
-function prevent_scroll(jqueryObject) {
-    jqueryObject.scrollTop();
-
-    //Fixing IE EDGE
-
-    // lock scroll position, but retain settings for later
-    var scrollPosition = [
-        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-        self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-    ];
-    var html = jqueryObject; // it would make more sense to apply this to body, but IE7 won't have that
-    html.data('scroll-position', scrollPosition);
-    html.data('previous-overflow', html.css('overflow'));
-    html.css('overflow', 'hidden');
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);
-
-
-    // un-lock scroll position
-    /*var html = jqueryObject;
-    var scrollPosition = html.data('scroll-position');
-    html.css('overflow', html.data('previous-overflow'));
-    window.scrollTo(scrollPosition[0], scrollPosition[1]);*/
-}
-
+$(document).on("EDGE_Plantilla_creationComplete", function (evt) {
+    //switch (evt.identify.actividad) {
+});
 
 $("body").on("EDGE_Container_loaded", function () {
-    //document.body.style.background = "url('images/r1.png') 50% 50% / cover no-repeat gray";
-    $("html").css({
-        "background-size": "cover",
-        "background-repeat": "no-repeat",
-        "background-position": "center center",
-        "background": "url('images/r1.png') 50% 50% / cover no-repeat gray"
+
+    $.backstretch("images/r1.png");
+
+    var ele = $(".backstretch");
+    ele.empty();
+    ele.css({
+        "background": "url(images/r1.png) no-repeat center center fixed",
+        "-webkit-background-size": "cover",
+        "-moz-background-size": "cover",
+        "-o-background-size": "cover",
+        "background-size": "cover"
     });
+
 
     var audio = new Audio('media/navigate-begin.mp3');
 
-    $("body").css({
-        overflow: "hidden",
-        //zoom: "1.5"
-        //"background": "rgba(0,0,0,0.5)"
-    });
-    
-    prevent_scroll($("html"));
-    
-    if(EDGE_Plantilla.scorm_available){
+    resize();
+    //prevent_scroll($("html"));
+
+    if (EDGE_Plantilla.scorm_available) {
         var suspendData = SCORM_INITIALIZE();
-        if(suspendData !== ""){
+        if (suspendData !== "") {
             EDGE_Plantilla.temp_scorm_suspendData = jQuery.parseJSON(suspendData);
         }
         var interactions = LOAD_INTERACTIONS();
         EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions)
     }
+
+    //$(document).trigger("resize");
 
 });
 
@@ -107,4 +78,70 @@ function menu_tools_hide_show(sym) {
 
 $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
     menu_tools_hide_show(evt.sym);
+});
+
+$(document).ready(function () {
+    //$(window).on('resize', resize);
+});
+
+function resize() {
+    var ancho = $("#Stage").width();
+    var alto = $("#Stage").height();
+
+    var zoom = detectZoom.zoom();
+    var device = detectZoom.device();
+
+    //console.log(zoom, device);
+
+    //console.log("ZOOM LEVEL", device);
+	
+	EDGE_Plantilla.zoom = device;
+
+    //<editor-fold defaultstate="collapsed" desc="comment">
+    var windowWidth = $(window).width(); //retrieve current window width
+    var windowHeight = $(window).height(); //retrieve current window height
+    var documentWidth = $(document).width(); //retrieve current document width
+    var documentHeight = $(document).height(); //retrieve current document height
+    var vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
+    var hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
+
+    var scale1 = windowWidth / ancho;
+    var scale2 = windowHeight / alto;
+
+    var realScale = scale1 > scale2 ? scale2 : scale1;
+    //</editor-fold>
+
+    //realScale = realScale * ((device));
+    
+    //$().
+	
+	
+
+    //console.log("SCALE LEVEL", realScale);
+
+    /*$("#Stage").css({// Set the transform origin so we always scale to the top left corner of the stage
+        "transform-origin": "0% 0%",
+        "-ms-transform-origin": "0% 0%",
+        "-webkit-transform-origin": "0% 0%",
+        "-moz-transform-origin": "0% 0%",
+        "-o-transform-origin": "0% 0%"
+    });*/
+
+    //$("body").css({height: 0, width: windowWidth});
+
+    /*$("#Stage").css("transform", "scale(" + realScale + ")").css({
+        //margin: "0 auto",
+        position: "relative"
+    }).center(realScale);
+
+    console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);*/
+}
+
+$("body").on("EDGE_Self_promiseCreating", function (evt) {
+    //console.log(evt);
+    var page = evt.identify;
+    console.log(page);
+    if (!page.type.startsWith("popup")) {
+        buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
+    }
 });

@@ -109,7 +109,7 @@
                     }
                 },
                 timeline: {
-                    duration: 9132.8,
+                    duration: 5445.4,
                     autoPlay: true,
                     data: [
                         [
@@ -153,16 +153,6 @@
                             '1.1784'
                         ],
                         [
-                            "eid89",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${llamada}",
-                            'none',
-                            'none'
-                        ],
-                        [
                             "eid85",
                             "left",
                             500,
@@ -171,6 +161,16 @@
                             "${audio_1}",
                             '854px',
                             '854px'
+                        ],
+                        [
+                            "eid89",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${llamada}",
+                            'none',
+                            'none'
                         ]
                     ]
                 }
@@ -185,10 +185,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
@@ -338,39 +338,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
                             rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​a. Silla</p>',
-                            textStyle: ['', '', '', '', 'none'],
+                            align: 'center',
                             type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -422,6 +423,36 @@
                             "${box_respuesta_hover}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid94",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid95",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid96",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
                         ]
                     ]
                 }
@@ -436,39 +467,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover2',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
                             rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​b. Villa</p>',
-                            textStyle: ['', '', '', '', 'none'],
+                            align: 'center',
                             type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -512,6 +544,36 @@
                             'none'
                         ],
                         [
+                            "eid97",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid98",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid99",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid77",
                             "display",
                             500,
@@ -534,39 +596,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover3',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
                             rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​c. Niña</p>',
-                            textStyle: ['', '', '', '', 'none'],
+                            align: 'center',
                             type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -610,6 +673,36 @@
                             'none'
                         ],
                         [
+                            "eid100",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid101",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid102",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid79",
                             "display",
                             500,
@@ -632,39 +725,40 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            display: 'block',
                             rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta2',
+                            type: 'image',
+                            display: 'block',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_over',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            display: 'none',
                             rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
                             id: 'box_respuesta_hover4',
+                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
                             rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
-                            align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'Text2',
                             text: '<p style=\"margin: 0px;\">​d. Fila</p>',
-                            textStyle: ['', '', '', '', 'none'],
+                            align: 'center',
                             type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '401px', '57px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '401px', '57px']
                         }
                     }
                 },
@@ -708,6 +802,36 @@
                             'none'
                         ],
                         [
+                            "eid103",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid104",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid105",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${Text2}",
+                            '44px',
+                            '36px'
+                        ],
+                        [
                             "eid81",
                             "display",
                             500,
@@ -737,10 +861,10 @@
                             fill: ['rgba(0,0,0,0)', 'images/ayuda_llamada_1.png', '0px', '0px']
                         },
                         {
-                            type: 'rect',
+                            rect: ['38px', '453px', '315px', '85px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['38px', '453px', '315px', '85px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(255,255,255,1.00)']
                         },
                         {
@@ -776,37 +900,37 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '399px', '509px', 'auto', 'auto'],
-                            id: 'millonario',
                             type: 'image',
+                            id: 'millonario',
+                            rect: ['0px', '0px', '399px', '509px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/millonario.png', '0px', '0px']
                         },
                         {
-                            type: 'rect',
+                            rect: ['83px', '185px', '13px', '223px', 'auto', 'auto'],
                             id: 'Rectangle3Copy7',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['83px', '185px', '13px', '223px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(253,253,254,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['155px', '310px', '13px', '98px', 'auto', 'auto'],
                             id: 'Rectangle3Copy6',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['155px', '310px', '13px', '98px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(253,253,254,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['228px', '242px', '13px', '166px', 'auto', 'auto'],
                             id: 'Rectangle3Copy5',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['228px', '242px', '13px', '166px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(253,253,254,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['304px', '370px', '13px', '38px', 'auto', 'auto'],
                             id: 'Rectangle3Copy4',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['304px', '370px', '13px', '38px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(253,253,254,1.00)']
                         }
                     ],
@@ -834,58 +958,60 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            id: 'RoundRect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         },
                         {
-                            type: 'rect',
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
+                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            type: 'rect',
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
                             rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
                             opacity: '1',
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
+                            tag: 'img'
                         },
                         {
                             preload: 'auto',
                             type: 'audio',
                             source: ['media/audiomp3_1.mp3'],
                             id: 'audiomp3_1',
-                            rect: ['861', '570', '320px', '45px', 'auto', 'auto'],
+                            rect: ['1229', '377', '320px', '45px', 'auto', 'auto'],
                             display: 'none',
                             tag: 'audio'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '213px', '31px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '213px', '31px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 9132.8,
+                    duration: 5445.4,
                     autoPlay: true,
                     labels: {
                         "stop": 0,
@@ -912,7 +1038,7 @@
                             '0.000000',
                             '1'
                         ],
-                            [ "eid88", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
+                            [ "eid93", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
                     ]
                 }
             }
