@@ -309,7 +309,7 @@ function R5_QQSM_heiner_submit(evt) {
         }
     });
 
-    if if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out))  {
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
@@ -847,7 +847,7 @@ function drag_drop_toscano_submit(evt) {
         timer = {remaining_time: evt.timer.remaining_time, current_state: evt.timer.current_state};
     }
 
-    if (timer!==null && evt.timer.time_out) {
+    if (timer !== null && evt.timer.time_out) {
         delete evt.timer.time_out;
         strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
         timer.reset_timer = true;
