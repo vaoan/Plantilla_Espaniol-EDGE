@@ -85,12 +85,13 @@ function handle_popup(boolShow) {
 
     var sym_element = buscar_sym(sym, copy);
 
-    console.log("MOSTRANDO POPUP", sym_element);
+    
     $(sym_element.ele).css({"z-index": 2000});
 
     sym_element = buscar_sym(sym, copy, true);
 
     if (boolShow) {
+        console.log("MOSTRANDO POPUP", sym_element);
         sym_element.show();
         $("#popup_gray").css({display: "block"});
     } else {
@@ -205,9 +206,9 @@ function mostrar_pagina(strPagina, objRetro) {
                 return;
             handle_style_nav(false);
             if (!isEmpty(pagina.sym)) {
-                sym_contenedor = buscar_sym(sym, pagina.sym);
+                sym_contenedor = buscar_sym(sym, pagina.sym, true);
             } else {
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_portada);
+                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_portada, true);
             }
             //EDGE_Plantilla.portada_on_show = pagina;
             handle_portada(true);
@@ -218,9 +219,9 @@ function mostrar_pagina(strPagina, objRetro) {
             if (!EDGE_Plantilla.allow_popups)
                 return;
             if (!isEmpty(pagina.sym)) {
-                sym_contenedor = buscar_sym(sym, pagina.sym);
+                sym_contenedor = buscar_sym(sym, pagina.sym, true);
             } else {
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup);
+                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_popup, true);
             }
             sym_contenedor = $("#popup_gray");
             //$("body").css({background: "rgba(0,0,0,0.5)"});
@@ -229,9 +230,9 @@ function mostrar_pagina(strPagina, objRetro) {
             break;
         default:
             if (!isEmpty(pagina.sym)) {
-                sym_contenedor = buscar_sym(sym, pagina.sym);
+                sym_contenedor = buscar_sym(sym, pagina.sym, true);
             } else {
-                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+                sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor, true);
                 //sym_animate = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor);
                 //sym_animate.play(0);
             }
@@ -260,29 +261,34 @@ function mostrar_pagina(strPagina, objRetro) {
 function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
     var promise = EC.loadComposition(EDGE_Plantilla.config.default.url_pages + pagina.url,
             sym_contenedor);
-            
+
     var objEvt = {
         type: "EDGE_Self_promiseCreating",
         identify: pagina
     };
     $("body").trigger(merge_options(objEvt));
-    
+
     promise.done(function (comp) {
+        
         var stage = comp.getStage();
+        console.log(sym_contenedor);
+        
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
         $(stage.ele).prop("ed_identify", pagina);
 
-        if (!isEmpty(pagina.actividad) || !isEmpty(pagina.has_jquery) ) {
-            var objEvt = {
-                type: "EDGE_Recurso_promiseCreated",
-                sym: stage,
-                scorm_prev: EDGE_Plantilla.temp_scorm,
-                scorm_extra: EDGE_Plantilla.temp_scorm_suspendData,
-                identify: pagina,
-                zoom: EDGE_Plantilla.zoom
-            };
-            $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
-        }
+        //if (!isEmpty(pagina.actividad) || !isEmpty(pagina.has_jquery) ) {
+        //sleep(1000);
+        var objEvt = {
+            type: "EDGE_Recurso_promiseCreated",
+            sym: stage,
+            scorm_prev: EDGE_Plantilla.temp_scorm,
+            scorm_extra: EDGE_Plantilla.temp_scorm_suspendData,
+            identify: pagina,
+            zoom: EDGE_Plantilla.zoom
+        };
+        $("iframe", sym_contenedor).attr("allowfullscreen", "");
+        $("iframe", sym_contenedor)[0].contentWindow.$('body').trigger(objEvt);
+        //}
 
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {
@@ -441,9 +447,9 @@ $("body").on("EDGE_Self_Plantilla_ClickMenuTools", function (evt) {
             break;
         case "Stage_" + EDGE_Plantilla.button_menutools.audio:
             EDGE_Plantilla.play_general_sound = !EDGE_Plantilla.play_general_sound;
-            if(!EDGE_Plantilla.play_general_sound){
+            if (!EDGE_Plantilla.play_general_sound) {
                 sym.getSymbol("menu_grafico").stop("audio");
-            }else{
+            } else {
                 sym.getSymbol("menu_grafico").stop("normal");
             }
 
