@@ -7,58 +7,58 @@
         "1": {
             "type": "portada",
             "recurso": "1",
-            "url": "recursos/R1/esn1le01ob02r1.html",
+            "url": "recursos/R1/esn1le01ob01r1.html",
             "al_cerrar": {
                 "cargar": "2",
                 "cambia_color": "2"
             },
-            "has_jquery": true,
             "titulo": "Empecemos",
-            "subtitulo": "¡A deletrear!"
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "2": {
-            "type": "actividad",
+            "type": "recurso",
             "recurso": "2",
-            "actividad": "R5_CARRERA",
-            "url": "recursos/R5_CARRERA/R5.html",
-            "interaction": {
-                "ALL": true
-            },
-            "titulo": "Practiquemos",
-            "subtitulo": "R5_CARRERA"
+            "url": "recursos/R2/esn1le01ob01r2.html",
+            "titulo": "Exploremos",
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "3": {
             "type": "actividad",
             "recurso": "3",
-            "actividad": "concentrese",
-            "url": "recursos/R4_Concentrese/esn1le01ob03r4.html",
+            "actividad": "drag_drop",
+            "url": "recursos/R3/esn1le01ob01r3.html",
             "interaction": {
                 "ALL": true
             },
-            "titulo": "Concentrese",
-            "subtitulo": "¡A deletrear!"
+            "titulo": "Practiquemos",
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "4": {
             "type": "actividad",
             "recurso": "4",
-            "actividad": "sopa_letras",
-            "url": "recursos/R4_SopaDeLetras/esn1le01ob04r4.html",
+            "actividad": "drag_drop",
+            "url": "recursos/R4/le1obj1r4.html",
             "interaction": {
                 "ALL": true
             },
-            "titulo": "sopa_letras",
-            "subtitulo": "¡A deletrear!"
+            "titulo": "Practiquemos",
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "5": {
             "type": "actividad",
             "recurso": "5",
             "actividad": "R5_QQSM",
-            "url": "recursos/R5_QQSM/R5.html",
+            "url": "recursos/R5/R5.html",
             "interaction": {
                 "ALL": true
             },
             "titulo": "Practiquemos",
-            "subtitulo": "¡A deletrear!"
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "6": {
             "type": "actividad",
@@ -69,31 +69,36 @@
                 "ALL": false
             },
             "titulo": "Evaluemos",
-            "subtitulo": "¡A deletrear!"
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "7": {
             "type": "recurso",
             "recurso": "7",
-            "url": "recursos/R7/esn1le01ob02r7.html",
-            "pdf": "../../../media/pdf/esn1le01ob02guion.pdf",
+            "url": "recursos/R7/esn1le01ob01r7.html",
+            "pdf":"../../../media/pdf/esn1le01ob01guion.pdf",
             "titulo": "Aprendamos en papel",
-            "subtitulo": "¡A deletrear!"
+            "subtitulo": "Las letras",
+            "has_jquery": true
         },
         "vocabulario": {
             "url": "anexos/vocabulario/vocabulario.html",
             "type": "popup_mini",
+            "has_jquery": true,
             "symbols": {
             }
         },
         "learning": {
             "url": "anexos/puntoaprendizaje/puntoaprendizaje.html",
             "type": "popup_mini",
+            "has_jquery": true,
             "symbols": {
             }
         },
         "incompleto": {
             "url": "elementos_plantilla/completar/completar.html",
             "type": "popup_mini",
+            "has_jquery": true,
             "symbols": {
             }
         },
@@ -101,50 +106,57 @@
             "url": "elementos_plantilla/correcto/correcto.html",
             "type": "popup_mini",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "incorrecto": {
             "url": "elementos_plantilla/incorrecto/incorrecto.html",
             "type": "popup_mini",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "nuevointento": {
             "url": "elementos_plantilla/nuevointento/nuevointento.html",
             "type": "popup_mini",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "tiempo": {
             "url": "elementos_plantilla/tiempo/tiempo.html",
             "type": "popup_mini",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "creditos": {
             "url": "elementos_plantilla/creditos/creditos.html",
             "type": "popup_full",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "info": {
             "url": "elementos_plantilla/Información/Informacion.html",
             "type": "popup_full",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "ayudas": {
             "url": "elementos_plantilla/ayuda/ayuda.html",
             "type": "popup_full",
             "symbols": {
-            }
+            },
+            "has_jquery": true
         },
         "accesibilidad": {
             "url": "elementos_plantilla/Accesibilidad/Accesibilidad.html",
             "type": "popup_full",
-            "pdf": "../../../media/pdf/accessibility.pdf",
             "symbols": {
-            }
-        }
+            },
+            "has_jquery": true
+        }        
     }
 }
