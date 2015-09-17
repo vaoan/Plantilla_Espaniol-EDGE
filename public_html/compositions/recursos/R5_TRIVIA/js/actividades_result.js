@@ -31,6 +31,12 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "select":
             selecting_blanks_santiago_created(evt);
             break;
+        case "sopa_letras":
+            sopa_letras_toscano_created(evt);
+            break;
+        case "concentrese":
+            concentrese_santiago_created(evt);
+            break;
         case "R6":
             R6_heiner_created(evt);
             break;
@@ -40,11 +46,11 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "R5_TRIVIA":
             R6_heiner_created(evt);
             break;
-        case "sopa_letras":
-            sopa_letras_toscano_created(evt);
+        case "R5_CARRERA":
+            R6_heiner_created(evt);
             break;
-        case "concentrese":
-            concentrese_santiago_created(evt);
+        case "R5_RULETA":
+            R6_heiner_created(evt);
             break;
         default:
             console.error("Creation inexistente", evt.identify);
@@ -246,6 +252,12 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "R5_TRIVIA":
             R5_TRIVIA_toscano_submit(evt);
             break;
+        case "R5_CARRERA":
+            R5_QQSM_heiner_submit(evt);
+            break;
+        case "R5_RULETA":
+            R5_QQSM_heiner_submit(evt);
+            break;
         default:
             console.error("Submit inexistente", evt.identify);
             break;
@@ -297,7 +309,7 @@ function R5_QQSM_heiner_submit(evt) {
         }
     });
 
-    if (resp_actual === "incorrect") {
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
@@ -374,8 +386,8 @@ function R5_TRIVIA_toscano_submit(evt) {
         }
     });
 
-    
-    if (resp_actual === "incorrect" || evt.timer.time_out) {
+
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
@@ -715,7 +727,7 @@ function selecting_blanks_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    upload_interaction(evt.json.pregunta, evt.answer, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -767,7 +779,7 @@ function filling_blanks_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    upload_interaction(evt.json.pregunta, evt.answer, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -830,12 +842,18 @@ function drag_drop_toscano_submit(evt) {
 
     var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
-    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+    var timer = null;
+    if (!isEmpty(evt.timer)) {
+        timer = {remaining_time: evt.timer.remaining_time, current_state: evt.timer.current_state};
+    }
+
+    if (timer !== null && evt.timer.time_out) {
         delete evt.timer.time_out;
         strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
-        var timer = {reset_timer: true};
+        timer.reset_timer = true;
         objEvt = merge_options(objEvt, {timer: timer});
-    } else {
+    }
+    else {
         if (!check_answers(evt)) {
             strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
             evt.results = "neutral";

@@ -309,7 +309,7 @@ function R5_QQSM_heiner_submit(evt) {
         }
     });
 
-    if (resp_actual === "incorrect") {
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
@@ -387,7 +387,7 @@ function R5_TRIVIA_toscano_submit(evt) {
     });
 
 
-    if (resp_actual === "incorrect" || evt.timer.time_out) {
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
@@ -842,12 +842,18 @@ function drag_drop_toscano_submit(evt) {
 
     var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
-    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+    var timer = null;
+    if (!isEmpty(evt.timer)) {
+        timer = {remaining_time: evt.timer.remaining_time, current_state: evt.timer.current_state};
+    }
+
+    if (timer !== null && evt.timer.time_out) {
         delete evt.timer.time_out;
         strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
-        var timer = {reset_timer: true};
+        timer.reset_timer = true;
         objEvt = merge_options(objEvt, {timer: timer});
-    } else {
+    }
+    else {
         if (!check_answers(evt)) {
             strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
             evt.results = "neutral";
