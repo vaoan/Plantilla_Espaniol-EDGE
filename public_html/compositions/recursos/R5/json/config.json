@@ -1,0 +1,66 @@
+{
+    "default": {
+        "url_pages": "compositions/",
+        "default_page": [
+            "1","2","3","4","5","respuestas"
+        ],
+        "limit_attemps": 2
+    },
+    "paginas": {
+        "1": {
+            "type": "actividad",
+            "recurso": "51",
+            "actividad": "pick_many",
+            "url": "recursos/pre1/pre1.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_1"]
+        },
+        "2": {
+            "type": "actividad",
+            "recurso": "52",
+            "actividad": "pick_many",
+            "url": "recursos/pre2/pre2.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_2"]
+        },
+        "3": {
+            "type": "actividad",
+            "recurso": "53",
+            "actividad": "pick_many",
+            "url": "recursos/pre3/pre3.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_3"]
+        },
+        "4": {
+            "type": "actividad",
+            "recurso": "54",
+            "actividad": "pick_many",
+            "url": "recursos/pre4/pre4.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_4"]
+        },
+        "5": {
+            "type": "actividad",
+            "recurso": "55",
+            "actividad": "pick_many",
+            "url": "recursos/pre5/pre5.html",
+            "interaction": {
+                "ALL": true
+            },
+            "sym": ["R6_5"]
+        },
+        "respuestas":{
+            "type": "recurso",
+            "url": "recursos/final_respuestas/respuestas.html",
+            "sym": ["R6_respuestas"]
+        }
+    }
+}

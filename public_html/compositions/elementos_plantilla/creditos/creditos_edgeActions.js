@@ -28,7 +28,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          $(".center-wrapper").css({overflow: "hidden"});
 
       });
-
+		//Edge binding end
+		
    })("stage");
    //Edge symbol end:'stage'
 

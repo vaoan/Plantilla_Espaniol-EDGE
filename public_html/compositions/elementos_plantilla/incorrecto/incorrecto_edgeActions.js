@@ -21,13 +21,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
                              });
 
       });
-      //Edge binding 
-      //
-      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         $(".center-wrapper").css({overflow: "hidden"});
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${respuestas}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         parent.$(parent.document).trigger({
+                                 type: 'EDGE_Plantilla_ClosePopup',
+                                 sym: sym,
+                                 evt: e
+                             });
 
       });
+      //Edge binding end
 
    })("stage");
    //Edge symbol end:'stage'
@@ -39,5 +44,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("cerrar_inco");
    //Edge symbol end:'cerrar_inco'
+
+   //=========================================================
+   
+   //Edge symbol: 'Submit'
+   (function(symbolName) {   
+   
+   })("Submit");
+   //Edge symbol end:'Submit'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-25249914");

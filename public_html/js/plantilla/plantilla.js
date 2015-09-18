@@ -25,7 +25,7 @@ $("body").on("EDGE_Container_loaded", function () {
 
     var audio = new Audio('media/navigate-begin.mp3');
 
-    resize();
+    //resize1();
     //prevent_scroll($("html"));
 
     if (EDGE_Plantilla.scorm_available) {
@@ -84,7 +84,7 @@ $(document).ready(function () {
     //$(window).on('resize', resize);
 });
 
-function resize() {
+function resize1() {
     var ancho = $("#Stage").width();
     var alto = $("#Stage").height();
 
@@ -114,8 +114,6 @@ function resize() {
     //realScale = realScale * ((device));
     
     //$().
-	
-	
 
     //console.log("SCALE LEVEL", realScale);
 

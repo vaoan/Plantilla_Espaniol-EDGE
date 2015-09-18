@@ -39,6 +39,13 @@
         });
         //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${icono_descargar}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         window.open("../../../media/pdf/accessibility.pdf", "_blank");
+
+      });
+      //Edge binding end
+
     })("stage");
    //Edge symbol end:'stage'
 
