@@ -12,8 +12,7 @@
 $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_prev);
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_extra);
-
-
+    
     inicializar(evt.sym);
 });
 
@@ -45,7 +44,7 @@ $("body").on("EDGE_Container_Finishloaded", function (evt) {
 /********************** Eventos interno de Actividad **********************/
 
 $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
-    startTimer(evt.sym);
+    //startTimer(evt.sym);
 });
 
 /********************* Eventos de ENVIO a la PLANTILLA ********************/
@@ -60,19 +59,11 @@ function do_submit(sym) {
 $("body").on("EDGE_Actividad_Submit", function (evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     var identify = stage.prop("ed_identify");
-    var result = check_every_answer();
 
-    var timer = {};
-    if (typeof stage.prop("timer") !== "undefined") {
-        var timerObj = buscar_sym(evt.sym, stage.prop("timer"), true);
-        timer.remaining_time = 0;
-        timer.time_out = true;
-        timer.current_state = timerObj.prop("alertState");
-    }else{
-        timer.remaining_time = null;
-        timer.current_state = null;
-        timer.time_out = false;
+    if (!isEmpty(stage.prop("timer"))) {
+        stopTimer(evt.sym);
     }
+    var result = check_every_answer();
 
     var objEvt = {
         type: "EDGE_Plantilla_submitApplied",
@@ -106,8 +97,7 @@ function check_every_answer() {
             var stage = EDGE_Plantilla.config.paginas[value].stage;
             console.warn("entra");
 
-            $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0]
-                    .contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
+            $("iframe", buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym, true))[0].contentWindow.$("body").trigger({type: "EDGE_Recurso_Submit", sym: stage});
         }
     });
 

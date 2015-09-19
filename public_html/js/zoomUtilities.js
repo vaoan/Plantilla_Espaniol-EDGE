@@ -54,8 +54,6 @@ function aplicarZoom(zoomLevel) {
         });
     });
 
-    console.error($("div[id*=texto]"), zoomLevel);
-
     if (zoomLevel >= 1) {
         if (zoomLevel > 1) {
             $("#Stage").css("overflow-y", "auto");

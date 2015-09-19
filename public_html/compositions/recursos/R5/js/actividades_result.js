@@ -249,6 +249,9 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "R5_QQSM":
             R5_QQSM_heiner_submit(evt);
             break;
+        case "R5_SCRAMBLE":
+            R5_QQSM_heiner_submit(evt);
+            break;
         case "R5_TRIVIA":
             R5_TRIVIA_toscano_submit(evt);
             break;
@@ -265,7 +268,7 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
 });
 
 function R5_QQSM_heiner_submit(evt) {
-
+    
     if (evt.attempts >= evt.attempts_limit) {
         return false;
     }
@@ -298,6 +301,7 @@ function R5_QQSM_heiner_submit(evt) {
     var correct = 0;
     var incorrect = 0;
     var neutral = 0;
+    
 
     $.each(evt.position_which_is_right, function (key, val) {
         if (val === "correct") {
@@ -331,7 +335,6 @@ function R5_QQSM_heiner_submit(evt) {
         objEvt.send_to = "next";
         objInteraction.estado = "neutral";
     }
-
 
     evt.answer[evt.identify.recurso + "000"] = objInteraction;
     merge_extra_scorm(evt.extra_data);

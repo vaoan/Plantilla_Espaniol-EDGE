@@ -12,8 +12,7 @@
 $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_prev);
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_extra);
-
-
+    
     inicializar(evt.sym);
 });
 
@@ -104,8 +103,6 @@ function check_every_answer() {
 
     var respuestas = {};
     var result = "correct";
-    
-    console.log("here");
 
     $.each(EDGE_Plantilla.config.default.default_page, function (key, value) {
         var page_respuestas = {};
@@ -130,8 +127,6 @@ function check_every_answer() {
             respuestas = merge_options(respuestas, page_respuestas);
         }
     });
-    
-    console.log("here2");
 
     var objResult = {respuesta: result, respuestas: respuestas};
 

@@ -23,9 +23,6 @@ function cambiarEstadoTimer(sym, estado) {
 function inicializarTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
 
-	$.ajaxSetup({
-        async: false
-    });
 
     $.getJSON("timer_config.json").done(function (data) {
         var timerObj = buscar_sym(sym, data.sym, true);

@@ -6,7 +6,7 @@ $("body").on("EDGE_Recurso_promiseCreated", function(evt){
         identify: stage.prop("ed_identify")
     };
     
-    if(typeof inicializarTimer !== "undefined"){
+    if(typeof inicializarTimer == 'function'){
         inicializarTimer(evt.sym);
     }
     
@@ -74,3 +74,13 @@ $("body").on("EDGE_Recurso_Submit", function (evt) {
             break;
     }
 });
+
+function enviarEventoCambio(sym, resp){
+    var stage = $(sym.getComposition().getStage().ele);
+	parent.$(parent.document).trigger({
+        type: "EDGE_Plantilla_onChange",
+        sym: sym,
+        identify: stage.prop("ed_identify"),
+		resp: resp
+    });
+}
