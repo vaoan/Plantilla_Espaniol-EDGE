@@ -34,7 +34,7 @@
 
         Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function (sym, e) {
             // Insertar código para ejecutarse cuando el símbolo se crea aquí
-            $(".center-wrapper").css({overflow: "hidden"});
+            $(".center-wrapper, body").css({overflow: "hidden"});
 
         });
         //Edge binding end

@@ -94,16 +94,6 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid9",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${texto_1}",
-                            '369px',
-                            '369px'
-                        ],
-                        [
                             "eid4",
                             "top",
                             0,
@@ -132,6 +122,16 @@
                             "${cerrar_inco}",
                             '189px',
                             '189px'
+                        ],
+                        [
+                            "eid9",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${texto_1}",
+                            '369px',
+                            '369px'
                         ],
                         [
                             "eid10",
@@ -184,10 +184,10 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'image',
-                            id: 'cerrar',
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.35', '0.35']],
+                            id: 'cerrar',
+                            type: 'image',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
@@ -223,19 +223,18 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]]
                         },
                         {
+                            type: 'text',
                             rect: ['-24px', '6px', '213px', '31px', 'auto', 'auto'],
-                            textStyle: ['', '', '10px', '', 'none'],
-                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'texto_2',
                             text: '<p style=\"margin: 0px; text-align: center; line-height: 8px;\">​<span style=\"color: rgb(251, 247, 247); font-weight: 600; font-family: source-sans-pro, sans-serif;\">Ver respuestas</span></p>',
+                            id: 'texto_2',
+                            textStyle: ['', '', '10px', '', 'none'],
                             align: 'left',
-                            type: 'text'
+                            font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '400', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '165px', '38px']
+                            rect: [null, null, '165px', '38px']
                         }
                     }
                 },
