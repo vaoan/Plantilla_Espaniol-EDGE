@@ -10,7 +10,6 @@
         fonts = {
             'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
             'scroll_bar': '<link rel=\"stylesheet\" href=\"css/scrollbar.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
-        
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -34,7 +33,7 @@
                         {
                             id: 'contacce',
                             type: 'rect',
-                            rect: ['193px', '180px', '1550px', '424px', 'auto', 'auto'],
+                            rect: ['193px', '180px', '1550px', '469px', 'auto', 'auto'],
                             borderRadius: ["0px", "0px", "15px 15px", "15px 15px"],
                             fill: ["rgba(255,255,255,1)"],
                             stroke: [0,"rgba(0, 0, 0, 0)","none"]
@@ -66,7 +65,7 @@
                             id: 'icono_descargar',
                             type: 'image',
                             tag: 'img',
-                            rect: ['922px', '435px', '93px', '96px', 'auto', 'auto'],
+                            rect: ['889px', '437px', '159px', '164px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"descargable2.png",'0px','0px']
                         },
@@ -123,9 +122,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'group',
-                            id: 'Btn_cerrar',
                             rect: ['7px', '5px', '37', '40', 'auto', 'auto'],
+                            id: 'Btn_cerrar',
+                            type: 'group',
                             c: [
                             {
                                 id: 'btn_cerrar',
@@ -134,16 +133,16 @@
                                 fill: ['rgba(0,0,0,0)', 'images/btn_cerrar.png', '0px', '0px']
                             },
                             {
-                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 transform: [[], ['-42'], [], ['1.03', '0.95']],
+                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 id: 'Rectangle2',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(255,255,255,1.00)']
                             },
                             {
-                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 transform: [[], ['-138'], [], ['1.03', '0.95']],
+                                rect: ['15px', '-3px', '8px', '46px', 'auto', 'auto'],
                                 id: 'Rectangle2Copy',
                                 stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                                 type: 'rect',
@@ -183,10 +182,10 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'cerrar',
                             type: 'image',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],

@@ -42,6 +42,7 @@
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
+    console.log(data);
 
     if (!isEmpty(data.show_answers) && data.show_answers) {
         switch (stage.prop("tipo")) {

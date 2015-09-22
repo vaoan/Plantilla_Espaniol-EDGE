@@ -264,6 +264,26 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
     }
 });
 
+function send_fake_submit() {
+    //console.log(EDGE_Plantilla.pagina_actual);
+    var pagina = EDGE_Plantilla.config.paginas[EDGE_Plantilla.id_pagina_actual];
+    console.log(EDGE_Plantilla.id_pagina_actual, "ESTA ES LA PAGINA");
+    
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: pagina.stage,
+        //attempts: this.sym.prop("ed_attemps"),
+        show_answers: true
+    };
+    //alert("sending");
+    var sym_contenedor =
+            buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+    $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+}
+$(document).on("EDGE_Plantilla_FakeSubmit", function () {
+    send_fake_submit();
+});
+
 function R5_QQSM_heiner_submit(evt) {
 
     if (evt.attempts >= evt.attempts_limit) {

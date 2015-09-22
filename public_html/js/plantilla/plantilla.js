@@ -94,8 +94,8 @@ function resize1() {
     //console.log(zoom, device);
 
     //console.log("ZOOM LEVEL", device);
-	
-	EDGE_Plantilla.zoom = device;
+
+    EDGE_Plantilla.zoom = device;
 
     //<editor-fold defaultstate="collapsed" desc="comment">
     var windowWidth = $(window).width(); //retrieve current window width
@@ -112,34 +112,37 @@ function resize1() {
     //</editor-fold>
 
     //realScale = realScale * ((device));
-    
+
     //$().
 
     //console.log("SCALE LEVEL", realScale);
 
     /*$("#Stage").css({// Set the transform origin so we always scale to the top left corner of the stage
-        "transform-origin": "0% 0%",
-        "-ms-transform-origin": "0% 0%",
-        "-webkit-transform-origin": "0% 0%",
-        "-moz-transform-origin": "0% 0%",
-        "-o-transform-origin": "0% 0%"
-    });*/
+     "transform-origin": "0% 0%",
+     "-ms-transform-origin": "0% 0%",
+     "-webkit-transform-origin": "0% 0%",
+     "-moz-transform-origin": "0% 0%",
+     "-o-transform-origin": "0% 0%"
+     });*/
 
     //$("body").css({height: 0, width: windowWidth});
 
     /*$("#Stage").css("transform", "scale(" + realScale + ")").css({
-        //margin: "0 auto",
-        position: "relative"
-    }).center(realScale);
-
-    console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);*/
+     //margin: "0 auto",
+     position: "relative"
+     }).center(realScale);
+     
+     console.log("MEDIDAS STAGE ", ancho, alto, scale1, scale2, realScale);*/
 }
 
 $("body").on("EDGE_Self_promiseCreating", function (evt) {
     //console.log(evt);
     var page = evt.identify;
-    console.log(page);
+
     if (!page.type.startsWith("popup")) {
+        console.log(page, evt.pagina, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
+        EDGE_Plantilla.id_pagina_actual = evt.pagina;
     }
+
 });
