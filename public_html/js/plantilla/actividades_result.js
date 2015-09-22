@@ -267,7 +267,6 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
 function send_fake_submit() {
     //console.log(EDGE_Plantilla.pagina_actual);
     var pagina = EDGE_Plantilla.config.paginas[EDGE_Plantilla.id_pagina_actual];
-    console.log(EDGE_Plantilla.id_pagina_actual, "ESTA ES LA PAGINA");
     
     var objEvt = {
         type: "EDGE_Recurso_postSubmitApplied",

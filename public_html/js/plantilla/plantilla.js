@@ -140,7 +140,7 @@ $("body").on("EDGE_Self_promiseCreating", function (evt) {
     var page = evt.identify;
 
     if (!page.type.startsWith("popup")) {
-        console.log(page, evt.pagina, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        //console.log(page, evt.pagina, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.base_contenedor).play();
         EDGE_Plantilla.id_pagina_actual = evt.pagina;
     }
