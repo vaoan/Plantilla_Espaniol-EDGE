@@ -326,24 +326,34 @@
                             'none'
                         ],
                         [
-                            "eid96",
+                            "eid223",
                             "display",
-                            1960,
+                            0,
                             0,
                             "linear",
-                            "${Nav_R6_42}",
+                            "${medidor}",
                             'none',
-                            'block'
+                            'none'
                         ],
                         [
-                            "eid97",
+                            "eid228",
                             "display",
-                            2455,
+                            643,
                             0,
                             "linear",
-                            "${Nav_R6_42}",
-                            'block',
+                            "${medidor}",
+                            'none',
                             'none'
+                        ],
+                        [
+                            "eid255",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid44",
@@ -436,34 +446,24 @@
                             'none'
                         ],
                         [
-                            "eid223",
+                            "eid96",
                             "display",
-                            0,
+                            1960,
                             0,
                             "linear",
-                            "${medidor}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid228",
-                            "display",
-                            643,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid255",
-                            "display",
-                            2905,
-                            0,
-                            "linear",
-                            "${medidor}",
+                            "${Nav_R6_42}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid97",
+                            "display",
+                            2455,
+                            0,
+                            "linear",
+                            "${Nav_R6_42}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid43",
@@ -556,36 +556,6 @@
                             'block'
                         ],
                         [
-                            "eid56",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${r6_atras}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid87",
-                            "display",
-                            950,
-                            0,
-                            "linear",
-                            "${r6_atras}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid70",
-                            "display",
-                            2550,
-                            0,
-                            "linear",
-                            "${r6_atras}",
-                            'block',
-                            'none'
-                        ],
-                        [
                             "eid226",
                             "display",
                             0,
@@ -614,6 +584,36 @@
                             "${texto_3}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid56",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${r6_atras}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid87",
+                            "display",
+                            950,
+                            0,
+                            "linear",
+                            "${r6_atras}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid70",
+                            "display",
+                            2550,
+                            0,
+                            "linear",
+                            "${r6_atras}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid23",
@@ -647,7 +647,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid438",
+                            "eid518",
                             "-moz-transform-origin",
                             3000,
                             0,
@@ -658,7 +658,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid439",
+                            "eid519",
                             "-ms-transform-origin",
                             3000,
                             0,
@@ -669,7 +669,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid440",
+                            "eid520",
                             "msTransformOrigin",
                             3000,
                             0,
@@ -680,7 +680,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid441",
+                            "eid521",
                             "-o-transform-origin",
                             3000,
                             0,
@@ -691,7 +691,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid442",
+                            "eid522",
                             "transform-origin",
                             3000,
                             0,
@@ -713,7 +713,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid443",
+                            "eid523",
                             "-moz-transform-origin",
                             6750,
                             0,
@@ -724,7 +724,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid444",
+                            "eid524",
                             "-ms-transform-origin",
                             6750,
                             0,
@@ -735,7 +735,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid445",
+                            "eid525",
                             "msTransformOrigin",
                             6750,
                             0,
@@ -746,7 +746,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid446",
+                            "eid526",
                             "-o-transform-origin",
                             6750,
                             0,
@@ -757,7 +757,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid447",
+                            "eid527",
                             "transform-origin",
                             6750,
                             0,
@@ -832,20 +832,20 @@
                                 fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
                             },
                             {
-                                rect: ['422px', '33px', '335', '49', 'auto', 'auto'],
+                                type: 'rect',
                                 id: 'btn_evaluemosCopy2',
                                 display: 'none',
                                 symbolName: 'btn_evaluemos',
                                 cursor: 'pointer',
-                                type: 'rect'
+                                rect: ['422px', '33px', '335', '49', 'auto', 'auto']
                             }]
                         },
                         {
-                            type: 'text',
+                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'texto_1_empuja_cont_1',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800; color: rgb(51, 51, 51);\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
-                            rect: ['632px', '32px', '1198px', '348px', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                            type: 'text',
+                            rect: ['632px', '32px', '1198px', '348px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1151,12 +1151,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
+                                rect: ['0px', '1px', '165px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [25, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                type: 'text',
                                 id: 'texto_2',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
-                                rect: ['0px', '1px', '165px', '31px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1215,12 +1215,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
-                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto'],
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
+                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
@@ -1254,13 +1254,13 @@
                 content: {
                     dom: [
                         {
+                            type: 'text',
                             rect: ['0px', '0px', '91px', '33px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
-                            id: 'texto_4',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'texto_4',
+                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
