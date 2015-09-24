@@ -29,15 +29,20 @@ function stopAudios() {
     var cantidadDeAudios = AUDIOS.cantidad;
     var sym = AUDIOS.sym;
     for (var i = 1; i <= cantidadDeAudios; i++) {
-        if (typeof sym.getSymbol("audio_" + i) != 'undefined') {
-            var sym_temp = buscar_sym(sym, ["btn_audio_"+ i, "r6_audio_" + i], true);
-            sym_temp[0].pause();
-            sym_temp[0].currentTime = 0;
+        var audio = buscar_sym(sym, ["audio_" + i]);
+        console.log(audio);
+        if (typeof audio != 'undefined') {
+            var sym_temp = buscar_sym(sym, ["audio_" + i, "r6_audio_" + i], true);
+            if (!sym_temp[0].paused) {
+                audio.play("stop");
+                sym_temp[0].pause();
+                sym_temp[0].currentTime = 0;
+            }
         }
     }
 }
 
-$("body").on("EDGE_Recurso_PaginaChange", function(evt){
-    console.log(evt);
+$("body").on("EDGE_Recurso_PaginaChange", function (evt) {
+    //console.log(evt);
     stopAudios();
 });
