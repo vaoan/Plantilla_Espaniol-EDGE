@@ -16,6 +16,31 @@ $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
     inicializar(evt.sym);
 });
 
+/************************** Eventos de inicializado *****************************/
+
+$(document).on("EDGE_Plantilla_onChange", function (evt)
+{
+    EDGE_Plantilla.pages_ready[evt.identify.recurso] = evt.isReady;
+    var cont = 0;
+    for (var recurso in EDGE_Plantilla.pages_ready){
+        if(EDGE_Plantilla.pages_ready[recurso]){
+            cont++;
+        }
+    }
+    
+    var pagesCont = Object.keys(EDGE_Plantilla.config.paginas).length;
+    
+    if (cont >= pagesCont) {
+        if (symbolStateEquals(EDGE_Plantilla.plantilla_sym.getSymbol("Submit"), "desactivado")) {
+            EDGE_Plantilla.plantilla_sym.getSymbol("Submit").stop("activado");
+        }
+    } else {
+        if (symbolStateEquals(EDGE_Plantilla.plantilla_sym.getSymbol("Submit"), "activado")) {
+            EDGE_Plantilla.plantilla_sym.getSymbol("Submit").stop("desactivado");
+        }
+    }
+});
+
 function inicializar(sym) {
     //inicializarTimer(sym);
 
@@ -51,10 +76,12 @@ $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
 /********************* Eventos de ENVIO a la PLANTILLA ********************/
 
 function do_submit(sym) {
+    if(sym.$("Submit").length===0 || symbolStateEquals(sym.getSymbol("Submit"),"activado")){
     $("body").trigger({
         type: "EDGE_Actividad_Submit",
         sym: sym
     });
+    }
 }
 
 $("body").on("EDGE_Actividad_Submit", function (evt) {
