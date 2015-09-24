@@ -16,6 +16,7 @@ EDGE_Plantilla = {
     config: null,
     popup_on_show: null,
     portada_on_show: null,
+    pages_ready: {},
     basic_contenedor_name: {
         "contenedor": ["contenedor_home"],
         "base_contenedor": ["back_contenedor_home"]
