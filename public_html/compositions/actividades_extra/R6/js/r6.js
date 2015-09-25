@@ -12,6 +12,7 @@
 $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_prev);
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_extra);
+    
     inicializar(evt.sym);
 });
 
@@ -63,6 +64,7 @@ $("body").on("EDGE_Container_Finishloaded", function (evt) {
         identify: stage.prop("ed_identify")
     };
     parent.$(parent.document).trigger(objEvt);
+    last_actividad();
 });
 
 /********************** Eventos interno de Actividad **********************/
@@ -75,15 +77,11 @@ $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
 
 function do_submit(sym) {
     if(sym.$("Submit").length===0 || symbolStateEquals(sym.getSymbol("Submit"),"activado")){
-        $("body").trigger({
-            type: "EDGE_Actividad_Submit",
-            sym: sym
-        });
+    $("body").trigger({
+        type: "EDGE_Actividad_Submit",
+        sym: sym
+    });
     }
-}
-
-function do_partial_submit() {
-    check_every_answer();
 }
 
 $("body").on("EDGE_Actividad_Submit", function (evt) {
@@ -181,9 +179,38 @@ function pagina_actual(strPaginaActual) {
         sym: EDGE_Plantilla.plantilla_sym
     };
     $("body").trigger(objEvt);
+    send_change_page(strPaginaActual);
+    
 }
 
-function symbolStateEquals(symbol, state) {
-    //symbol = sym.getSymbol("sdasda");
-    return symbol.getPosition() === symbol.getLabelPosition(state);
+function send_change_page(strPaginaActual) {
+    $.each(EDGE_Plantilla.actividades_cargadas, function (key, val) {
+        var pagina = EDGE_Plantilla.config.paginas[val];
+        var sym_contenedor = buscar_sym(EDGE_Plantilla.plantilla_sym, pagina.sym);
+        var objEvt = {
+            type: "EDGE_Recurso_PaginaChange",
+            pagina: strPaginaActual,
+            sym: pagina.stage
+        };
+        $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+        //conole.log(objEvt);
+        //$("body").trigger(objEvt);
+    });
+}
+
+EDGE_Plantilla.actividades_cargadas = [];
+
+function last_actividad() {
+    var last_actividad = "1";
+    $.each(EDGE_Plantilla.config.paginas, function (key, val) {
+        if (val.type === "actividad") {
+            EDGE_Plantilla.actividades_cargadas.push(key);
+        }
+        if (!isNaN(parseInt(key))) {
+            last_actividad = key;
+        } else {
+            return false;
+        }
+    });
+    EDGE_Plantilla.last_actividad = last_actividad;
 }

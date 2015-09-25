@@ -15,36 +15,42 @@
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
             sym.stop();
+            pagina_actual(1);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
             sym.stop();
+            //pagina_actual("portada");
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function (sym, e) {
             sym.stop();
+            pagina_actual(2);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function (sym, e) {
             sym.stop();
+            pagina_actual(3);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function (sym, e) {
             sym.stop();
+            pagina_actual(4);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function (sym, e) {
             sym.stop();
+            pagina_actual(5);
 
         });
         //Edge binding end
@@ -53,14 +59,12 @@
 
         Symbol.bindElementAction(compId, symbolName, "${r6_atras}", "click", function (sym, e) {
             sym.playReverse();
-            do_partial_submit();
 
         });
         //Edge binding end
 
         Symbol.bindElementAction(compId, symbolName, "${r6_siguiente}", "click", function (sym, e) {
             sym.play();
-            do_partial_submit();
 
         });
         //Edge binding end
@@ -75,7 +79,7 @@
         });
         //Edge binding end
 
-        Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function (sym, e) {
+        Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
             do_submit(sym);
         });
@@ -84,6 +88,7 @@
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          // introducir código aquí
          sym.stop();
+         pagina_actual("final");
 
       });
       //Edge binding end
