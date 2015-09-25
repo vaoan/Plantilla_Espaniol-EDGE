@@ -72,6 +72,11 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
             }
         }
     }
+    
+    if(data.sym.$("Submit").length>0 && symbolStateEquals(data.sym.getSymbol("Submit"),"activado")){
+        data.sym.getSymbol("Submit").stop("desactivado");
+    }
+    
     stage.prop("intentos_previos", data.attempts);
 });
 
@@ -87,6 +92,10 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
         if (stage.prop("usa_timer")) {
             setHTMLTimer(data.timer.remaining_time, data.sym);
             cambiarEstadoTimer(data.sym, data.timer.current_state);
+        }
+        
+        if(data.sym.$("Submit").length>0 && symbolStateEquals(data.sym.getSymbol("Submit"),"activado")){
+        data.sym.getSymbol("Submit").stop("desactivado");
         }
     }
 
@@ -192,6 +201,7 @@ function inicializarDragAndDropUnoaUno(sym)
                 if (returnToOrigin) {
                     var position = $(this).prop("posicion_inicial");
                     moverDrag($(this), position);
+                    enviarCambios(sym);
                 }
             }
         });
@@ -298,6 +308,7 @@ function inicializarDragAndDropUnoaMuchos(sym)
                 if (returnToOrigin) {
                     var position = $(this).prop("posicion_inicial");
                     moverDrag($(this), position);
+                    enviarCambios(sym);
                 }
             }
         });
@@ -392,7 +403,7 @@ function inicializarDragAndDropUnoaMuchos(sym)
 function checkAnswersDragAndDrop(sym) {
     
     var stage = $(sym.getComposition().getStage().ele);
-    if (!stage.prop("blocked"))
+    if (!stage.prop("blocked")  && (sym.$("Submit").length===0 || symbolStateEquals(sym.getSymbol("Submit"),"activado")))
     {
         var objRespuesta;
         switch (stage.prop("tipo")) {
@@ -436,10 +447,10 @@ function checkAnswersDragAndDrop(sym) {
         //timer.time_out = false;
 
         if (answerCorrect) {
-            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta.resp, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
         else {
-            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta.resp, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
     }
 }
@@ -461,7 +472,19 @@ function enviarCambios(sym) {
             break;
         }
     }
-    enviarEventoCambio(sym, objRespuesta);
+    if(sym.$("Submit").length>0){
+        if(objRespuesta.isReady){
+            if(symbolStateEquals(sym.getSymbol("Submit"),"desactivado")){
+                sym.getSymbol("Submit").stop("activado");
+            }
+        }else{
+            if(symbolStateEquals(sym.getSymbol("Submit"),"activado")){
+                sym.getSymbol("Submit").stop("desactivado");
+            }
+        }
+    }else{
+        enviarEventoCambio(sym, objRespuesta.isReady);
+    }
 }
 
 //***********************************************************************
@@ -533,7 +556,10 @@ function inhabilitarDragsYDrops(sym) {
 
 function getRespuestaDragAndDropUnoAUno(sym) {
 
-    var obj = {};
+    var obj = {
+        resp: {},
+        isReady: true
+    };
 
     var stage = $(sym.getComposition().getStage().ele);
     var CANTIDAD_DROPS = stage.prop("cantidad_drops");
@@ -543,9 +569,10 @@ function getRespuestaDragAndDropUnoAUno(sym) {
         var dropDesc = sym.$('DROP_' + i).prop("descripcion");
         var curDrag = sym.$('DROP_' + i).prop("current_drag");
         if (curDrag !== null) {
-            obj["DROP_" + i + "_(" + dropDesc + ")"] = [curDrag.prop("nombre") + "_(" + curDrag.prop("descripcion") + ")"];
+            obj.resp["DROP_" + i + "_(" + dropDesc + ")"] = [curDrag.prop("nombre") + "_(" + curDrag.prop("descripcion") + ")"];
         } else {
-            obj["DROP_" + i + "_(" + dropDesc + ")"] = [];
+            obj.resp["DROP_" + i + "_(" + dropDesc + ")"] = [];
+            obj.isReady = false;
         }
     }
 
@@ -558,7 +585,10 @@ function getRespuestaDragAndDropUnoAUno(sym) {
 
 function getRespuestaDragAndDropUnoAMuchos(sym) {
 
-    var obj = {};
+    var obj = {
+        resp:{},
+        isReady: true
+    };
 
     var stage = $(sym.getComposition().getStage().ele);
     var CANTIDAD_DROPS = stage.prop("cantidad_drops");
@@ -571,7 +601,10 @@ function getRespuestaDragAndDropUnoAMuchos(sym) {
             arrayDrags.push(key + "_(" + val.prop("descripcion") + ")");
         });
 
-        obj["DROP_" + i + "_(" + dropDesc + ")"] = arrayDrags;
+        obj.resp["DROP_" + i + "_(" + dropDesc + ")"] = arrayDrags;
+        if(arrayDrags.length === 0){
+            obj.isReady = false;
+        }
     }
 
     return obj;

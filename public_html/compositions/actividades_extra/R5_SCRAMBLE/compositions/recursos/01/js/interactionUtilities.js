@@ -1,4 +1,9 @@
 $("body").on("EDGE_Recurso_promiseCreated", function(evt){
+    
+    if(evt.sym.$("Submit").length>0){
+        evt.sym.getSymbol("Submit").stop("desactivado");
+    }
+    
     var stage = $(evt.sym.getComposition().getStage().ele);
     var objEvt = {
         type: "EDGE_Plantilla_creationComplete",
@@ -6,10 +11,9 @@ $("body").on("EDGE_Recurso_promiseCreated", function(evt){
         identify: stage.prop("ed_identify")
     };
     
-    if(typeof inicializarTimer == 'function'){
-        inicializarTimer(evt.sym);
-    }
-    
+	if(typeof inicializarTimer == 'function'){
+			inicializarTimer(evt.sym);
+		}
     console.log("INTERACTION UTILITIES CREATED", objEvt, stage);
     parent.$(parent.document).trigger(objEvt);
 });
@@ -32,7 +36,7 @@ function enviarEventoInteraccion(tipo, pregunta, respuesta, resultado, intentos_
 
 $("body").on("TimeOut", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
-    parent.$(parent.document).trigger(data);
+	parent.$(parent.document).trigger(data);
     var timer = {};
     var timerObj = buscar_sym(data.sym, stage.prop("timer"), true);
     timer.remaining_time = 0;
@@ -75,12 +79,18 @@ $("body").on("EDGE_Recurso_Submit", function (evt) {
     }
 });
 
-function enviarEventoCambio(sym, resp){
+function enviarEventoCambio(sym, ready){
     var stage = $(sym.getComposition().getStage().ele);
 	parent.$(parent.document).trigger({
         type: "EDGE_Plantilla_onChange",
         sym: sym,
         identify: stage.prop("ed_identify"),
-		resp: resp
+	isReady: ready
     });
 }
+
+function symbolStateEquals(symbol, state){
+    //symbol = sym.getSymbol("sdasda");
+    return symbol.getPosition() === symbol.getLabelPosition(state);
+}
+

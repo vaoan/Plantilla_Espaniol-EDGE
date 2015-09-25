@@ -40,7 +40,7 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (evt) {
 $("body").on("EDGE_Recurso_PaginaOnShow", function (evt) {
 
     var stage = $(evt.sym.getComposition().getStage().ele);
-    stage.prop("ed_attempts", evt.attempts);
+    //stage.prop("ed_attempts", evt.attempts);
     var extra = EDGE_Plantilla.temp_scorm_suspendData[stage.prop("ed_identify").recurso];
     console.log("SUSPEND DATA R5_QQSM", extra);
 

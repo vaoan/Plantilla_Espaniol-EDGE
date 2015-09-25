@@ -17,7 +17,8 @@
         ],
         scripts = [
             js+"audioUtilities.js",
-            js+"jquery-1.10.2.js"
+            js+"jquery-1.10.2.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -47,9 +48,9 @@
                                 fill: ["rgba(0,0,0,0)",im+"box_respuesta55.png",'0px','0px']
                             },
                             {
-                                id: 'Text2Copy4',
+                                id: 'texto_11',
                                 type: 'text',
-                                rect: ['43px', '3px', '323px', '52px', 'auto', 'auto'],
+                                rect: ['43px', '-1px', '323px', '52px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​Brazo</p>",
                                 align: "center",
                                 font: ['source-sans-pro, sans-serif', [36, "px"], "rgba(255,255,255,1.00)", "700", "none", "normal", "break-word", ""],
@@ -57,9 +58,9 @@
                             }]
                         },
                         {
-                            id: 'Text2Copy5',
+                            id: 'texto_16',
                             type: 'text',
-                            rect: ['722px', '161px', '439px', '52px', 'auto', 'auto'],
+                            rect: ['722px', '157px', '439px', '52px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Respuestas Correctas</p>",
                             align: "center",
                             font: ['source-sans-pro, sans-serif', [36, "px"], "rgba(255,255,255,1.00)", "700", "none", "normal", "break-word", ""],
@@ -77,9 +78,9 @@
                                 fill: ["rgba(0,0,0,0)",im+"box_respuesta55.png",'0px','0px']
                             },
                             {
-                                id: 'Text2Copy3',
+                                id: 'texto_12',
                                 type: 'text',
-                                rect: ['44px', '2px', '323px', '52px', 'auto', 'auto'],
+                                rect: ['44px', '-2px', '323px', '52px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​Silla</p>",
                                 align: "center",
                                 font: ['source-sans-pro, sans-serif', [36, "px"], "rgba(255,255,255,1.00)", "700", "none", "normal", "break-word", ""],
@@ -98,9 +99,9 @@
                                 fill: ["rgba(0,0,0,0)",im+"box_respuesta55.png",'0px','0px']
                             },
                             {
-                                id: 'Text2Copy2',
+                                id: 'texto_13',
                                 type: 'text',
-                                rect: ['39px', '2px', '323px', '52px', 'auto', 'auto'],
+                                rect: ['39px', '-2px', '323px', '52px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​Caballo</p>",
                                 align: "center",
                                 font: ['source-sans-pro, sans-serif', [36, "px"], "rgba(255,255,255,1.00)", "700", "none", "normal", "break-word", ""],
@@ -108,25 +109,25 @@
                             }]
                         },
                         {
-                            id: 'TextCopy4',
+                            id: 'texto_7',
                             type: 'text',
-                            rect: ['441px', '360px', 'auto', 'auto', 'auto', 'auto'],
+                            rect: ['419px', '360px', '76px', '41px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">2.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>",
-                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", "nowrap"]
+                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", ""]
                         },
                         {
-                            id: 'TextCopy3',
+                            id: 'texto_8',
                             type: 'text',
-                            rect: ['441px', '440px', 'auto', 'auto', 'auto', 'auto'],
+                            rect: ['419px', '440px', '76px', '41px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">3.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>",
-                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", "nowrap"]
+                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", ""]
                         },
                         {
-                            id: 'TextCopy2',
+                            id: 'texto_9',
                             type: 'text',
-                            rect: ['441px', '517px', 'auto', 'auto', 'auto', 'auto'],
+                            rect: ['419px', '517px', '76px', '41px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">4.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>",
-                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", "nowrap"]
+                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", ""]
                         },
                         {
                             id: 'RTA4',
@@ -140,9 +141,9 @@
                                 fill: ["rgba(0,0,0,0)",im+"box_respuesta55.png",'0px','0px']
                             },
                             {
-                                id: 'Text2Copy',
+                                id: 'texto_14',
                                 type: 'text',
-                                rect: ['37px', '3px', '323px', '52px', 'auto', 'auto'],
+                                rect: ['37px', '-1px', '323px', '52px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​Paisaje</p>",
                                 align: "center",
                                 font: ['source-sans-pro, sans-serif', [36, "px"], "rgba(255,255,255,1.00)", "700", "none", "normal", "break-word", ""],
@@ -150,18 +151,18 @@
                             }]
                         },
                         {
-                            id: 'TextCopy',
+                            id: 'texto_10',
                             type: 'text',
-                            rect: ['441px', '595px', 'auto', 'auto', 'auto', 'auto'],
+                            rect: ['419px', '595px', '76px', '41px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">5.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>",
-                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", "nowrap"]
+                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", ""]
                         },
                         {
-                            id: 'Text',
+                            id: 'texto_6',
                             type: 'text',
-                            rect: ['441px', '280px', 'auto', 'auto', 'auto', 'auto'],
+                            rect: ['419px', '280px', '76px', '41px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">1.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>",
-                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", "nowrap"]
+                            font: ['source-sans-pro, sans-serif', [30, "px"], "rgba(79,45,110,1.00)", "700", "none", "", "break-word", ""]
                         },
                         {
                             id: 'audio_1',
@@ -183,9 +184,9 @@
                                 fill: ["rgba(0,0,0,0)",im+"box_respuesta55.png",'0px','0px']
                             },
                             {
-                                id: 'Text2',
+                                id: 'texto_15',
                                 type: 'text',
-                                rect: ['33px', '2px', '323px', '52px', 'auto', 'auto'],
+                                rect: ['33px', '-2px', '323px', '52px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​Cama</p>",
                                 align: "center",
                                 font: ['source-sans-pro, sans-serif', [36, "px"], "rgba(255,255,255,1.00)", "700", "none", "normal", "break-word", ""],
@@ -261,7 +262,7 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
+                            rect: ['-117px', '0px', '433px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
@@ -269,17 +270,17 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
+                                id: 'texto_1',
+                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
                                 type: 'text'
                             }]
                         },
                         {
                             boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            rect: ['52px', '8px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
                             stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
@@ -288,7 +289,7 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            rect: ['-23px', '-65px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
                             fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
@@ -322,6 +323,26 @@
                     },
                     data: [
                         [
+                            "eid19",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid14",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
                             "eid190",
                             "opacity",
                             0,
@@ -342,14 +363,14 @@
                             '1'
                         ],
                         [
-                            "eid14",
-                            "border-color",
+                            "eid20",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${stop}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${play}",
+                            '-65px',
+                            '-65px'
                         ],
                             [ "eid36", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_1}', [] ] ]
                     ]
@@ -365,7 +386,7 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
+                            rect: ['-117px', '0px', '433px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
@@ -373,17 +394,17 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
+                                id: 'texto_3',
+                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
                                 type: 'text'
                             }]
                         },
                         {
                             boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            rect: ['52px', '8px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
                             stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
@@ -392,7 +413,7 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            rect: ['-23px', '-65px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
                             fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
@@ -426,6 +447,26 @@
                     },
                     data: [
                         [
+                            "eid24",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid16",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
                             "eid190",
                             "opacity",
                             0,
@@ -446,14 +487,14 @@
                             '1'
                         ],
                         [
-                            "eid16",
-                            "border-color",
+                            "eid23",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${stop}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${play}",
+                            '-65px',
+                            '-65px'
                         ],
                             [ "eid38", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_3}', [] ] ]
                     ]
@@ -469,7 +510,7 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
+                            rect: ['-117px', '0px', '433px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
@@ -477,17 +518,17 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
+                                id: 'texto_5',
+                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
                                 type: 'text'
                             }]
                         },
                         {
                             boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            rect: ['52px', '8px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
                             stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
@@ -496,7 +537,7 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            rect: ['-23px', '-65px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
                             fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
@@ -530,6 +571,26 @@
                     },
                     data: [
                         [
+                            "eid27",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid18",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
                             "eid190",
                             "opacity",
                             0,
@@ -550,14 +611,14 @@
                             '1'
                         ],
                         [
-                            "eid18",
-                            "border-color",
+                            "eid28",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${stop}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${play}",
+                            '-65px',
+                            '-65px'
                         ],
                             [ "eid40", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_5}', [] ] ]
                     ]
@@ -573,7 +634,7 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
+                            rect: ['-117px', '0px', '433px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
@@ -581,17 +642,17 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
+                                id: 'texto_4',
+                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
                                 type: 'text'
                             }]
                         },
                         {
                             boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            rect: ['52px', '8px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
                             stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
@@ -600,7 +661,7 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            rect: ['-23px', '-65px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
                             fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
@@ -634,6 +695,26 @@
                     },
                     data: [
                         [
+                            "eid26",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid17",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
                             "eid190",
                             "opacity",
                             0,
@@ -654,14 +735,14 @@
                             '1'
                         ],
                         [
-                            "eid17",
-                            "border-color",
+                            "eid25",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${stop}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${play}",
+                            '-65px',
+                            '-65px'
                         ],
                             [ "eid39", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_4}', [] ] ]
                     ]
@@ -702,7 +783,7 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
+                            rect: ['-117px', '0px', '433px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
@@ -710,17 +791,17 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
+                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
+                                id: 'texto_2',
+                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
                                 type: 'text'
                             }]
                         },
                         {
                             boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            rect: ['52px', '8px', '25px', '25px', 'auto', 'auto'],
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
                             stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
@@ -729,7 +810,7 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
+                            rect: ['-23px', '-65px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
                             fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
                             id: 'play',
@@ -763,6 +844,26 @@
                     },
                     data: [
                         [
+                            "eid22",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid15",
+                            "border-color",
+                            500,
+                            0,
+                            "linear",
+                            "${stop}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
                             "eid190",
                             "opacity",
                             0,
@@ -783,14 +884,14 @@
                             '1'
                         ],
                         [
-                            "eid15",
-                            "border-color",
+                            "eid21",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${stop}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${play}",
+                            '-65px',
+                            '-65px'
                         ],
                             [ "eid37", "trigger", 124, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${audiomp3_2}', [] ] ]
                     ]

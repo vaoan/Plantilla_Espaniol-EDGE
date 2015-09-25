@@ -20,7 +20,6 @@
             js+"EdgeCommons.js",
             js+"utility.js",
             js+"main.js",
-            js+"timerUtilities.js",
             js+"actividades_result.js",
             js+"r5.js",
             js+"ruleta.js"
@@ -57,15 +56,16 @@
                             {
                                 id: 'correcto',
                                 type: 'image',
-                                rect: ['840px', '278px', '150px', '150px', 'auto', 'auto'],
+                                rect: ['840px', '235px', '150px', '150px', 'auto', 'auto'],
                                 fill: ["rgba(0,0,0,0)",im+"correcto.png",'0px','0px']
                             },
                             {
                                 id: 'TextCopy3',
                                 type: 'text',
-                                rect: ['784px', '475px', 'auto', 'auto', 'auto', 'auto'],
+                                rect: ['735px', '411px', '360px', '43px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​¡Excelente trabajo!</p>",
-                                font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", "nowrap"]
+                                align: "center",
+                                font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", ""]
                             }]
                         },
                         {
@@ -97,13 +97,13 @@
                             {
                                 id: 'incorrecto',
                                 type: 'image',
-                                rect: ['840px', '269px', '150px', '150px', 'auto', 'auto'],
+                                rect: ['840px', '234px', '150px', '150px', 'auto', 'auto'],
                                 fill: ["rgba(0,0,0,0)",im+"incorrecto.png",'0px','0px']
                             },
                             {
                                 id: 'TextCopy4',
                                 type: 'text',
-                                rect: ['752px', '443px', '326px', '54px', 'auto', 'auto'],
+                                rect: ['735px', '398px', '360px', '54px', 'auto', 'auto'],
                                 text: "<p style=\"margin: 0px;\">​¡Respuesta incorrecta!</p>",
                                 align: "center",
                                 font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", ""]
@@ -113,7 +113,7 @@
                             id: 'R6_portada',
                             symbolName: 'R6_portada',
                             type: 'rect',
-                            rect: ['-1830px', '0px', '1830', '780', 'auto', 'auto']
+                            rect: ['-5px', '0px', '1830', '780', 'auto', 'auto']
                         },
                         {
                             id: 'R6_1',
@@ -148,17 +148,8 @@
                         {
                             id: 'R6_respuestas',
                             symbolName: 'R6_respuestas',
-                            display: 'none',
                             type: 'rect',
                             rect: ['1830px', '0', 'undefined', 'undefined', 'auto', 'auto']
-                        },
-                        {
-                            id: 'btnInicio',
-                            symbolName: 'btnInicio',
-                            display: 'block',
-                            type: 'rect',
-                            rect: ['802px', '599px', 'undefined', 'undefined', 'auto', 'auto'],
-                            cursor: 'pointer'
                         },
                         {
                             id: 'ruleta2',
@@ -201,7 +192,7 @@
                             display: 'none',
                             type: 'rect',
                             rect: ['1509px', '707px', '165', '38', 'auto', 'auto'],
-                            clip: 'rect(0px 193.8662109375px 38px -28.8662109375px)',
+                            clip: 'rect(0px 193.8662109375px 52.28564453125px -28.8662109375px)',
                             cursor: 'pointer'
                         }
                     ],
@@ -339,6 +330,16 @@
                             'none'
                         ],
                         [
+                            "eid3348",
+                            "display",
+                            500,
+                            0,
+                            "linear",
+                            "${ruleta_4}",
+                            'none',
+                            'none'
+                        ],
+                        [
                             "eid25",
                             "left",
                             500,
@@ -439,24 +440,14 @@
                             'none'
                         ],
                         [
-                            "eid42",
-                            "left",
-                            3500,
+                            "eid3294",
+                            "display",
                             500,
+                            0,
                             "linear",
-                            "${R6_4}",
-                            '1840px',
-                            '0px'
-                        ],
-                        [
-                            "eid52",
-                            "left",
-                            4000,
-                            500,
-                            "linear",
-                            "${R6_4}",
-                            '0px',
-                            '-1840px'
+                            "${ruleta2}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid374",
@@ -479,22 +470,22 @@
                             'none'
                         ],
                         [
-                            "eid315",
-                            "scaleY",
-                            10000,
-                            500,
-                            "linear",
-                            "${correctocontenedor}",
-                            '0.5',
-                            '1'
-                        ],
-                        [
-                            "eid1127",
+                            "eid1128",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${ruleta_1}",
+                            "${ruleta_2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid3346",
+                            "display",
+                            500,
+                            0,
+                            "linear",
+                            "${ruleta_2}",
                             'none',
                             'none'
                         ],
@@ -519,14 +510,24 @@
                             '-1840px'
                         ],
                         [
-                            "eid1128",
-                            "display",
-                            0,
-                            0,
+                            "eid42",
+                            "left",
+                            3500,
+                            500,
                             "linear",
-                            "${ruleta_2}",
-                            'none',
-                            'none'
+                            "${R6_4}",
+                            '1840px',
+                            '0px'
+                        ],
+                        [
+                            "eid52",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${R6_4}",
+                            '0px',
+                            '-1840px'
                         ],
                         [
                             "eid41",
@@ -559,14 +560,24 @@
                             '1'
                         ],
                         [
-                            "eid379",
+                            "eid1127",
                             "display",
-                            13500,
+                            0,
                             0,
                             "linear",
-                            "${R6_respuestas}",
+                            "${ruleta_1}",
                             'none',
-                            'block'
+                            'none'
+                        ],
+                        [
+                            "eid3295",
+                            "display",
+                            500,
+                            0,
+                            "linear",
+                            "${ruleta_1}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid326",
@@ -585,23 +596,33 @@
                             500,
                             "linear",
                             "${R6_portada}",
-                            '0px',
+                            '-5px',
                             '-1830px'
                         ],
                         [
-                            "eid421",
-                            "display",
-                            138,
-                            0,
+                            "eid315",
+                            "scaleY",
+                            10000,
+                            500,
                             "linear",
-                            "${btnInicio}",
-                            'block',
-                            'none'
+                            "${correctocontenedor}",
+                            '0.5',
+                            '1'
                         ],
                         [
                             "eid1129",
                             "display",
                             0,
+                            0,
+                            "linear",
+                            "${ruleta_3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid3347",
+                            "display",
+                            500,
                             0,
                             "linear",
                             "${ruleta_3}",
@@ -631,40 +652,42 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'precarga_gif',
-                            rect: ['834px', '622px', '161px', '12px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
-                        },
-                        {
-                            type: 'rect',
-                            rect: ['824px', '603px', '182', '49', 'auto', 'auto'],
-                            display: 'none',
-                            symbolName: 'btn_inicio',
-                            cursor: 'pointer',
-                            id: 'btn_inicio'
-                        },
-                        {
                             rect: ['0px', '0px', '1830px', '780px', 'auto', 'auto'],
                             borderRadius: ['20px', '20px', '20px', '20px 20px'],
                             id: 'fondotrivia-01',
+                            tag: 'img',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/fondotrivia-01.jpg', '0px', '0px']
                         },
                         {
+                            rect: ['834px', '622px', '161px', '12px', 'auto', 'auto'],
+                            id: 'precarga_gif',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
+                        },
+                        {
+                            rect: ['824px', '603px', '182', '49', 'auto', 'auto'],
+                            id: 'btn_inicio',
+                            display: 'none',
+                            symbolName: 'btn_inicio',
+                            cursor: 'pointer',
+                            type: 'rect'
+                        },
+                        {
                             type: 'image',
                             id: 'sopadeletras-09',
+                            tag: 'img',
                             rect: ['719px', '201px', '393px', '393px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/sopadeletras-09.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [41, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
+                            font: ['source-sans-pro, sans-serif', [41, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', '', 'break-word', ''],
                             type: 'text',
-                            align: 'center',
-                            id: 'Text',
-                            opacity: '1',
                             text: '<p style=\"margin: 0px;\">Ruleta</p>',
-                            rect: ['862px', '370px', 'auto', 'auto', 'auto', 'auto']
+                            id: 'texto_1',
+                            opacity: '1',
+                            align: 'center',
+                            rect: ['748px', '370px', '335px', '55px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -863,12 +886,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: ['13px', '6px', '155px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Inicio</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -899,17 +922,17 @@
                             type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '213px', '31px', 'auto', 'auto'],
+                            rect: ['0px', '0px', '213px', '50px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                rect: ['0px', '4px', '213px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                type: 'text',
                                 id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Volver a intentar</span></p>',
+                                text: '<p style=\"margin: 0px; text-align: center; line-height: 22px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Volver a intentar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                rect: ['0px', '0px', '213px', '31px', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -943,13 +966,13 @@
                             fill: ['rgba(0,0,0,0)', 'images/box_pregunta.png', '0px', '0px']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
                             type: 'text',
+                            rect: ['722px', '161px', '439px', '52px', 'auto', 'auto'],
                             align: 'center',
                             id: 'Text2Copy5',
                             text: '<p style=\"margin: 0px;\">​Respuestas Correctas</p>',
                             textStyle: ['', '', '', '', 'none'],
-                            rect: ['722px', '161px', '439px', '52px', 'auto', 'auto']
+                            font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                         },
                         {
                             rect: ['1028px', '272px', '401', '57', 'auto', 'auto'],
@@ -963,13 +986,13 @@
                                 fill: ['rgba(0,0,0,0)', 'images/box_respuesta5.png', '0px', '0px']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
                                 type: 'text',
+                                rect: ['43px', '3px', '323px', '52px', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text2',
                                 text: '<p style=\"margin: 0px;\">​Brazo</p>',
                                 textStyle: ['', '', '', '', 'none'],
-                                rect: ['43px', '3px', '323px', '52px', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                             }]
                         },
                         {
@@ -984,13 +1007,13 @@
                                 fill: ['rgba(0,0,0,0)', 'images/box_respuesta5.png', '0px', '0px']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
                                 type: 'text',
+                                rect: ['44px', '2px', '323px', '52px', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text2Copy',
                                 text: '<p style=\"margin: 0px;\">​Silla</p>',
                                 textStyle: ['', '', '', '', 'none'],
-                                rect: ['44px', '2px', '323px', '52px', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                             }]
                         },
                         {
@@ -1005,13 +1028,13 @@
                                 fill: ['rgba(0,0,0,0)', 'images/box_respuesta5.png', '0px', '0px']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
                                 type: 'text',
+                                rect: ['39px', '2px', '323px', '52px', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text2Copy2',
                                 text: '<p style=\"margin: 0px;\">​Caballo</p>',
                                 textStyle: ['', '', '', '', 'none'],
-                                rect: ['39px', '2px', '323px', '52px', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                             }]
                         },
                         {
@@ -1026,13 +1049,13 @@
                                 fill: ['rgba(0,0,0,0)', 'images/box_respuesta5.png', '0px', '0px']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
                                 type: 'text',
+                                rect: ['37px', '3px', '323px', '52px', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text2Copy3',
                                 text: '<p style=\"margin: 0px;\">​Paisaje</p>',
                                 textStyle: ['', '', '', '', 'none'],
-                                rect: ['37px', '3px', '323px', '52px', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                             }]
                         },
                         {
@@ -1047,89 +1070,89 @@
                                 fill: ['rgba(0,0,0,0)', 'images/box_respuesta5.png', '0px', '0px']
                             },
                             {
-                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', ''],
                                 type: 'text',
+                                rect: ['33px', '2px', '323px', '52px', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text2Copy4',
                                 text: '<p style=\"margin: 0px;\">​Cama</p>',
                                 textStyle: ['', '', '', '', 'none'],
-                                rect: ['33px', '2px', '323px', '52px', 'auto', 'auto']
+                                font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', '']
                             }]
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">2.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>',
-                            type: 'text',
-                            rect: ['441px', '360px', 'auto', 'auto', 'auto', 'auto']
+                            rect: ['441px', '360px', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text',
                             id: 'TextCopy',
                             text: '<p style=\"margin: 0px;\">3.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>',
-                            type: 'text',
-                            rect: ['441px', '440px', 'auto', 'auto', 'auto', 'auto']
+                            rect: ['441px', '440px', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text',
                             id: 'TextCopy2',
                             text: '<p style=\"margin: 0px;\">4.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>',
-                            type: 'text',
-                            rect: ['441px', '517px', 'auto', 'auto', 'auto', 'auto']
+                            rect: ['441px', '517px', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text',
                             id: 'TextCopy3',
                             text: '<p style=\"margin: 0px;\">5.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>',
-                            type: 'text',
-                            rect: ['441px', '595px', 'auto', 'auto', 'auto', 'auto']
+                            rect: ['441px', '595px', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap'],
+                            type: 'text',
                             id: 'TextCopy4',
                             text: '<p style=\"margin: 0px;\">1.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>',
-                            type: 'text',
-                            rect: ['441px', '280px', 'auto', 'auto', 'auto', 'auto']
+                            rect: ['441px', '280px', 'auto', 'auto', 'auto', 'auto'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(79,45,110,1.00)', '700', 'none', '', 'break-word', 'nowrap']
                         },
                         {
-                            transform: [[], [], [], ['1.1784', '1.1784']],
                             rect: ['651px', '285px', null, null, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'audio_1',
                             symbolName: 'audio_1',
                             cursor: 'pointer',
-                            type: 'rect'
+                            transform: [[], [], [], ['1.1784', '1.1784']]
                         },
                         {
-                            transform: [[], [], [], ['1.18', '1.18']],
                             rect: ['650px', '365px', null, null, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'audio_2',
                             symbolName: 'audio_2',
                             cursor: 'pointer',
-                            type: 'rect'
+                            transform: [[], [], [], ['1.18', '1.18']]
                         },
                         {
-                            transform: [[], [], [], ['1.18', '1.18']],
                             rect: ['650px', '445px', null, null, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'audio_3',
                             symbolName: 'audio_3',
                             cursor: 'pointer',
-                            type: 'rect'
+                            transform: [[], [], [], ['1.18', '1.18']]
                         },
                         {
-                            transform: [[], [], [], ['1.18', '1.18']],
                             rect: ['649px', '524px', null, null, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'audio_4',
                             symbolName: 'audio_4',
                             cursor: 'pointer',
-                            type: 'rect'
+                            transform: [[], [], [], ['1.18', '1.18']]
                         },
                         {
-                            transform: [[], [], [], ['1.18', '1.18']],
                             rect: ['650px', '601px', null, null, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'audio_5',
                             symbolName: 'audio_5',
                             cursor: 'pointer',
-                            type: 'rect'
+                            transform: [[], [], [], ['1.18', '1.18']]
                         },
                         {
                             type: 'rect',
@@ -1166,17 +1189,17 @@
                             type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['-24px', '3px', '213px', '31px', 'auto', 'auto'],
+                            rect: ['-24px', '3px', '213px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(182,154,212,1.00)', 50], ['rgba(158,122,196,1.00)', 50]]]],
                             c: [
                             {
-                                type: 'text',
-                                rect: ['60px', '-2px', '94px', '31px', 'auto', 'auto'],
-                                id: 'TextCopy3',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
+                                rect: ['0px', '-3px', '213px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                id: 'texto_3',
+                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1268,11 +1291,11 @@
                         {
                             font: ['Arial, Helvetica, sans-serif', [24, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            align: 'left',
-                            id: 'Text',
-                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-weight: 700; font-size: 28px;\">Iniciar</span></p>',
                             textStyle: ['', '', '', '', 'none'],
-                            rect: ['13px', '10px', '200px', '36px', 'auto', 'auto']
+                            id: 'texto_2',
+                            text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-weight: 700; font-size: 28px;\">Iniciar</span></p>',
+                            align: 'left',
+                            rect: ['0px', '10px', '225px', '36px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1299,8 +1322,8 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
                             id: 'wheel',
+                            type: 'image',
                             rect: ['0px', '0px', '515px', '515px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wheel.png', '0px', '0px']
                         },
@@ -1321,13 +1344,13 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            type: 'text',
+                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '35px', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Haga</p><p style=\"margin: 0px; line-height: 24px;\">​<span style=\"color: rgb(197, 0, 0); font-size: 40px;\">Click</span></p><p style=\"margin: 0px;\">​aquí</p>',
                             align: 'center',
-                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             rect: ['170px', '164px', '165px', '169px', 'auto', 'auto'],
@@ -1341,7 +1364,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '515px', '515px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '515px', '515px']
                         }
                     }
                 },
@@ -1371,7 +1395,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2894",
+                            "eid3399",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -1382,7 +1406,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2895",
+                            "eid3400",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -1393,7 +1417,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2896",
+                            "eid3401",
                             "msTransformOrigin",
                             0,
                             0,
@@ -1404,7 +1428,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2897",
+                            "eid3402",
                             "-o-transform-origin",
                             0,
                             0,
@@ -1415,7 +1439,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2898",
+                            "eid3403",
                             "transform-origin",
                             0,
                             0,
@@ -1437,7 +1461,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2899",
+                            "eid3404",
                             "-moz-transform-origin",
                             4000,
                             0,
@@ -1448,7 +1472,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2900",
+                            "eid3405",
                             "-ms-transform-origin",
                             4000,
                             0,
@@ -1459,7 +1483,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2901",
+                            "eid3406",
                             "msTransformOrigin",
                             4000,
                             0,
@@ -1470,7 +1494,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2902",
+                            "eid3407",
                             "-o-transform-origin",
                             4000,
                             0,
@@ -1481,7 +1505,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2903",
+                            "eid3408",
                             "transform-origin",
                             4000,
                             0,
@@ -1504,8 +1528,8 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
                             id: 'wheel',
+                            type: 'image',
                             rect: ['0px', '0px', '515px', '515px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wheel.png', '0px', '0px']
                         },
@@ -1526,13 +1550,13 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            type: 'text',
+                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '35px', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Haga</p><p style=\"margin: 0px; line-height: 24px;\">​<span style=\"color: rgb(197, 0, 0); font-size: 40px;\">Click</span></p><p style=\"margin: 0px;\">​aquí</p>',
                             align: 'center',
-                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             rect: ['170px', '164px', '165px', '169px', 'auto', 'auto'],
@@ -1546,7 +1570,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '515px', '515px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '515px', '515px']
                         }
                     }
                 },
@@ -1576,7 +1601,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2904",
+                            "eid3409",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -1587,7 +1612,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2905",
+                            "eid3410",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -1598,7 +1623,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2906",
+                            "eid3411",
                             "msTransformOrigin",
                             0,
                             0,
@@ -1609,7 +1634,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2907",
+                            "eid3412",
                             "-o-transform-origin",
                             0,
                             0,
@@ -1620,7 +1645,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2908",
+                            "eid3413",
                             "transform-origin",
                             0,
                             0,
@@ -1642,7 +1667,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2909",
+                            "eid3414",
                             "-moz-transform-origin",
                             4000,
                             0,
@@ -1653,7 +1678,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2910",
+                            "eid3415",
                             "-ms-transform-origin",
                             4000,
                             0,
@@ -1664,7 +1689,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2911",
+                            "eid3416",
                             "msTransformOrigin",
                             4000,
                             0,
@@ -1675,7 +1700,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2912",
+                            "eid3417",
                             "-o-transform-origin",
                             4000,
                             0,
@@ -1686,7 +1711,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2913",
+                            "eid3418",
                             "transform-origin",
                             4000,
                             0,
@@ -1709,8 +1734,8 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
                             id: 'wheel',
+                            type: 'image',
                             rect: ['0px', '0px', '515px', '515px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wheel.png', '0px', '0px']
                         },
@@ -1731,13 +1756,13 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            type: 'text',
+                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '35px', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Haga</p><p style=\"margin: 0px; line-height: 24px;\">​<span style=\"color: rgb(197, 0, 0); font-size: 40px;\">Click</span></p><p style=\"margin: 0px;\">​aquí</p>',
                             align: 'center',
-                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             rect: ['170px', '164px', '165px', '169px', 'auto', 'auto'],
@@ -1751,7 +1776,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '515px', '515px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '515px', '515px']
                         }
                     }
                 },
@@ -1781,7 +1807,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2914",
+                            "eid3419",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -1792,7 +1818,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2915",
+                            "eid3420",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -1803,7 +1829,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2916",
+                            "eid3421",
                             "msTransformOrigin",
                             0,
                             0,
@@ -1814,7 +1840,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2917",
+                            "eid3422",
                             "-o-transform-origin",
                             0,
                             0,
@@ -1825,7 +1851,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2918",
+                            "eid3423",
                             "transform-origin",
                             0,
                             0,
@@ -1847,7 +1873,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2919",
+                            "eid3424",
                             "-moz-transform-origin",
                             4000,
                             0,
@@ -1858,7 +1884,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2920",
+                            "eid3425",
                             "-ms-transform-origin",
                             4000,
                             0,
@@ -1869,7 +1895,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2921",
+                            "eid3426",
                             "msTransformOrigin",
                             4000,
                             0,
@@ -1880,7 +1906,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2922",
+                            "eid3427",
                             "-o-transform-origin",
                             4000,
                             0,
@@ -1891,7 +1917,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2923",
+                            "eid3428",
                             "transform-origin",
                             4000,
                             0,
@@ -1914,8 +1940,8 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
                             id: 'wheel',
+                            type: 'image',
                             rect: ['0px', '0px', '515px', '515px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wheel.png', '0px', '0px']
                         },
@@ -1936,13 +1962,13 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            type: 'text',
+                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '35px', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Haga</p><p style=\"margin: 0px; line-height: 24px;\">​<span style=\"color: rgb(197, 0, 0); font-size: 40px;\">Click</span></p><p style=\"margin: 0px;\">​aquí</p>',
                             align: 'center',
-                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             rect: ['170px', '164px', '165px', '169px', 'auto', 'auto'],
@@ -1956,7 +1982,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '515px', '515px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '515px', '515px']
                         }
                     }
                 },
@@ -1996,7 +2023,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2924",
+                            "eid3429",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -2007,7 +2034,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2925",
+                            "eid3430",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -2018,7 +2045,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2926",
+                            "eid3431",
                             "msTransformOrigin",
                             0,
                             0,
@@ -2029,7 +2056,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2927",
+                            "eid3432",
                             "-o-transform-origin",
                             0,
                             0,
@@ -2040,7 +2067,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2928",
+                            "eid3433",
                             "transform-origin",
                             0,
                             0,
@@ -2062,7 +2089,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2929",
+                            "eid3434",
                             "-moz-transform-origin",
                             4000,
                             0,
@@ -2073,7 +2100,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2930",
+                            "eid3435",
                             "-ms-transform-origin",
                             4000,
                             0,
@@ -2084,7 +2111,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2931",
+                            "eid3436",
                             "msTransformOrigin",
                             4000,
                             0,
@@ -2095,7 +2122,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2932",
+                            "eid3437",
                             "-o-transform-origin",
                             4000,
                             0,
@@ -2106,7 +2133,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2933",
+                            "eid3438",
                             "transform-origin",
                             4000,
                             0,
@@ -2129,8 +2156,8 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
                             id: 'wheel',
+                            type: 'image',
                             rect: ['0px', '0px', '515px', '515px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wheel.png', '0px', '0px']
                         },
@@ -2151,13 +2178,13 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
-                            type: 'text',
+                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '35px', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [30, 'px'], 'rgba(172,172,172,1.00)', '700', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​Haga</p><p style=\"margin: 0px; line-height: 24px;\">​<span style=\"color: rgb(197, 0, 0); font-size: 40px;\">Click</span></p><p style=\"margin: 0px;\">​aquí</p>',
                             align: 'center',
-                            rect: ['210px', '199px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             rect: ['170px', '164px', '165px', '169px', 'auto', 'auto'],
@@ -2171,7 +2198,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '515px', '515px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '515px', '515px']
                         }
                     }
                 },
@@ -2201,7 +2229,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2934",
+                            "eid3439",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -2212,7 +2240,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2935",
+                            "eid3440",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -2223,7 +2251,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2936",
+                            "eid3441",
                             "msTransformOrigin",
                             0,
                             0,
@@ -2234,7 +2262,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2937",
+                            "eid3442",
                             "-o-transform-origin",
                             0,
                             0,
@@ -2245,7 +2273,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2938",
+                            "eid3443",
                             "transform-origin",
                             0,
                             0,
@@ -2267,7 +2295,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2939",
+                            "eid3444",
                             "-moz-transform-origin",
                             4000,
                             0,
@@ -2278,7 +2306,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2940",
+                            "eid3445",
                             "-ms-transform-origin",
                             4000,
                             0,
@@ -2289,7 +2317,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2941",
+                            "eid3446",
                             "msTransformOrigin",
                             4000,
                             0,
@@ -2300,7 +2328,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2942",
+                            "eid3447",
                             "-o-transform-origin",
                             4000,
                             0,
@@ -2311,7 +2339,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid2943",
+                            "eid3448",
                             "transform-origin",
                             4000,
                             0,

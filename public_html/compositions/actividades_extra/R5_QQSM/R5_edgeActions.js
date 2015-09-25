@@ -158,16 +158,7 @@
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${volver}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         
-         // Ir a una etiqueta o a un momento específicos y parar. Por ejemplo:
-         // sym.stop(500); o sym.stop("miEtiqueta");
-         sym.stop(0);
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8000, function(sym, e) {
          // introducir código aquí
@@ -178,6 +169,18 @@
 
       Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
          do_submit(sym);
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${volver}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         
+         // Ir a una etiqueta o a un momento específicos y parar. Por ejemplo:
+         // sym.stop(500); o sym.stop("miEtiqueta");
+         sym.stop(0);
+         inicializarTimer(sym);
+         
 
       });
       //Edge binding end
@@ -272,14 +275,6 @@
    
    })("ayuda_3");
    //Edge symbol end:'ayuda_3'
-
-   //=========================================================
-   
-   //Edge symbol: 'Submit'
-   (function(symbolName) {   
-   
-   })("volver");
-   //Edge symbol end:'volver'
 
    //=========================================================
    
@@ -641,5 +636,13 @@
 
    })("escrita");
    //Edge symbol end:'escrita'
+
+   //=========================================================
+   
+   //Edge symbol: 'volver'
+   (function(symbolName) {   
+   
+   })("volver");
+   //Edge symbol end:'volver'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-4821767");

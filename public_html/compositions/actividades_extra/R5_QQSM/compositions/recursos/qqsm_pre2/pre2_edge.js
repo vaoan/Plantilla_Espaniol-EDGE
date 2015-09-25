@@ -21,7 +21,8 @@
             js+"timerUtilities.js",
             js+"interactionUtilities.js",
             js+"utility.js",
-            js+"audioUtilities.js"
+            js+"audioUtilities.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -40,7 +41,7 @@
                             fill: ["rgba(0,0,0,0)",im+"box_pregunta.png",'0px','0px']
                         },
                         {
-                            id: 'TextCopy3',
+                            id: 'texto_6',
                             type: 'text',
                             rect: ['656px', '336px', 'auto', 'auto', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">2.<span style=\"font-family: source-sans-pro, sans-serif; font-size: 20px;\"></span></p>",
@@ -78,7 +79,7 @@
                             id: 'audio_1',
                             symbolName: 'btn_audio_2',
                             type: 'rect',
-                            rect: ['854px', '342px', 'undefined', 'undefined', 'auto', 'auto'],
+                            rect: ['854px', '334px', 'undefined', 'undefined', 'auto', 'auto'],
                             cursor: 'pointer',
                             transform: [[],[],[],['1.1784','1.1784']]
                         },
@@ -109,7 +110,7 @@
                     }
                 },
                 timeline: {
-                    duration: 5445.4,
+                    duration: 8173.75,
                     autoPlay: true,
                     data: [
                         [
@@ -129,8 +130,8 @@
                             0,
                             "linear",
                             "${audio_1}",
-                            '342px',
-                            '342px'
+                            '334px',
+                            '334px'
                         ],
                         [
                             "eid86",
@@ -153,16 +154,6 @@
                             '1.1784'
                         ],
                         [
-                            "eid85",
-                            "left",
-                            500,
-                            0,
-                            "linear",
-                            "${audio_1}",
-                            '854px',
-                            '854px'
-                        ],
-                        [
                             "eid89",
                             "display",
                             0,
@@ -171,6 +162,16 @@
                             "${llamada}",
                             'none',
                             'none'
+                        ],
+                        [
+                            "eid85",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${audio_1}",
+                            '854px',
+                            '854px'
                         ]
                     ]
                 }
@@ -185,19 +186,19 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -275,12 +276,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         }
                     ],
@@ -338,40 +339,39 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta2',
                             type: 'image',
                             display: 'block',
+                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta2',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_over',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_over',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_hover',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_hover',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​a. Silla</p>',
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'texto_2',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​a. Silla</p>',
+                            rect: ['40px', '-3px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '401px', '57px']
+                            rect: [null, null, '401px', '57px']
                         }
                     }
                 },
@@ -430,7 +430,7 @@
                             0,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_2}",
                             '36px',
                             '36px'
                         ],
@@ -440,7 +440,7 @@
                             250,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_2}",
                             '36px',
                             '44px'
                         ],
@@ -450,7 +450,7 @@
                             500,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_2}",
                             '44px',
                             '36px'
                         ]
@@ -467,40 +467,39 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta2',
                             type: 'image',
                             display: 'block',
+                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta2',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_over',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_over',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_hover2',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '2px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_hover2',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​b. Villa</p>',
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'texto_4',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​b. Villa</p>',
+                            rect: ['40px', '-3px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '401px', '57px']
+                            rect: [null, null, '401px', '57px']
                         }
                     }
                 },
@@ -513,6 +512,56 @@
                         "hover": 500
                     },
                     data: [
+                        [
+                            "eid77",
+                            "display",
+                            500,
+                            0,
+                            "linear",
+                            "${box_respuesta_hover2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid74",
+                            "display",
+                            250,
+                            0,
+                            "linear",
+                            "${box_respuesta2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid97",
+                            "font-size",
+                            0,
+                            0,
+                            "linear",
+                            "${texto_4}",
+                            '36px',
+                            '36px'
+                        ],
+                        [
+                            "eid98",
+                            "font-size",
+                            250,
+                            0,
+                            "linear",
+                            "${texto_4}",
+                            '36px',
+                            '44px'
+                        ],
+                        [
+                            "eid99",
+                            "font-size",
+                            500,
+                            0,
+                            "linear",
+                            "${texto_4}",
+                            '44px',
+                            '36px'
+                        ],
                         [
                             "eid73",
                             "display",
@@ -532,56 +581,6 @@
                             "${box_respuesta_over}",
                             'block',
                             'none'
-                        ],
-                        [
-                            "eid74",
-                            "display",
-                            250,
-                            0,
-                            "linear",
-                            "${box_respuesta2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid97",
-                            "font-size",
-                            0,
-                            0,
-                            "linear",
-                            "${Text2}",
-                            '36px',
-                            '36px'
-                        ],
-                        [
-                            "eid98",
-                            "font-size",
-                            250,
-                            0,
-                            "linear",
-                            "${Text2}",
-                            '36px',
-                            '44px'
-                        ],
-                        [
-                            "eid99",
-                            "font-size",
-                            500,
-                            0,
-                            "linear",
-                            "${Text2}",
-                            '44px',
-                            '36px'
-                        ],
-                        [
-                            "eid77",
-                            "display",
-                            500,
-                            0,
-                            "linear",
-                            "${box_respuesta_hover2}",
-                            'none',
-                            'block'
                         ]
                     ]
                 }
@@ -596,40 +595,39 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta2',
                             type: 'image',
                             display: 'block',
+                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta2',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_over',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_over',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_hover3',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_hover3',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​c. Niña</p>',
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'texto_3',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​c. Niña</p>',
+                            rect: ['40px', '-3px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '401px', '57px']
+                            rect: [null, null, '401px', '57px']
                         }
                     }
                 },
@@ -678,7 +676,7 @@
                             0,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_3}",
                             '36px',
                             '36px'
                         ],
@@ -688,7 +686,7 @@
                             250,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_3}",
                             '36px',
                             '44px'
                         ],
@@ -698,7 +696,7 @@
                             500,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_3}",
                             '44px',
                             '36px'
                         ],
@@ -725,40 +723,39 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta2',
                             type: 'image',
                             display: 'block',
+                            rect: ['0px', '0px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta2',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_over',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '0', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_over',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_over.png', '0px', '0px']
                         },
                         {
-                            rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
-                            id: 'box_respuesta_hover4',
                             type: 'image',
                             display: 'none',
+                            rect: ['0', '1px', '401px', '57px', 'auto', 'auto'],
+                            id: 'box_respuesta_hover4',
                             fill: ['rgba(0,0,0,0)', 'images/box_respuesta_hover.png', '0px', '0px']
                         },
                         {
-                            rect: ['40px', '5px', '323px', '52px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [36, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'Text2',
-                            text: '<p style=\"margin: 0px;\">​d. Fila</p>',
+                            type: 'text',
                             align: 'center',
-                            type: 'text'
+                            id: 'texto_5',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​d. Fila</p>',
+                            rect: ['40px', '-3px', '323px', '52px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '401px', '57px']
+                            rect: [null, null, '401px', '57px']
                         }
                     }
                 },
@@ -807,7 +804,7 @@
                             0,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_5}",
                             '36px',
                             '36px'
                         ],
@@ -817,7 +814,7 @@
                             250,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_5}",
                             '36px',
                             '44px'
                         ],
@@ -827,7 +824,7 @@
                             500,
                             0,
                             "linear",
-                            "${Text2}",
+                            "${texto_5}",
                             '44px',
                             '36px'
                         ],
@@ -854,26 +851,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-50px', '-72px', '499px', '718px', 'auto', 'auto'],
-                            id: 'ayuda_llamada_1',
-                            transform: [[], [], [], ['0.8', '0.8']],
                             type: 'image',
+                            id: 'ayuda_llamada_1',
+                            rect: ['-50px', '-72px', '499px', '718px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.8', '0.8']],
                             fill: ['rgba(0,0,0,0)', 'images/ayuda_llamada_1.png', '0px', '0px']
                         },
                         {
-                            rect: ['38px', '453px', '315px', '85px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['38px', '453px', '315px', '85px', 'auto', 'auto'],
                             fill: ['rgba(255,255,255,1.00)']
                         },
                         {
+                            type: 'text',
                             rect: ['43px', '453px', '314px', '55px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [35, 'px'], 'rgba(79,45,110,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​La palabra correcta contiene la letra <span style=\"font-weight: 700;\">s</span></p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [35, 'px'], 'rgba(79,45,110,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -900,10 +897,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'millonario',
                             rect: ['0px', '0px', '399px', '509px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/millonario.png', '0px', '0px']
+                            id: 'millonario',
+                            fill: ['rgba(0,0,0,0)', 'images/millonario.png', '0px', '0px'],
+                            type: 'image',
+                            tag: 'img'
                         },
                         {
                             rect: ['83px', '185px', '13px', '223px', 'auto', 'auto'],
@@ -936,7 +934,8 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '399px', '509px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '399px', '509px']
                         }
                     }
                 },
@@ -958,40 +957,40 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-117px', '0px', '433px', '31px', 'auto', 'auto'],
-                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['-117px', '0px', '433px', '43px', 'auto', 'auto'],
+                            borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
+                                type: 'text',
+                                id: 'texto_1',
+                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
-                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)'],
-                            rect: ['52px', '3px', '25px', '25px', 'auto', 'auto'],
+                            type: 'rect',
                             borderRadius: ['2px', '2px', '2px', '2px 2px'],
-                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
                             id: 'stop',
                             opacity: '0',
-                            type: 'rect',
-                            fill: ['rgba(255,255,255,1)']
+                            rect: ['52px', '8px', '25px', '25px', 'auto', 'auto'],
+                            fill: ['rgba(255,255,255,1)'],
+                            stroke: [1, 'rgba(255,255,255,1.00)', 'solid'],
+                            boxShadow: ['', 2, 2, 4, 0, 'rgba(0,0,0,0.65098)']
                         },
                         {
-                            rect: ['-23px', '-71px', '175px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.2', '0.2']],
-                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px'],
+                            tag: 'img',
+                            type: 'image',
                             id: 'play',
                             opacity: '1',
-                            type: 'image',
-                            tag: 'img'
+                            rect: ['-23px', '-65px', '175px', '172px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/play-033.png', '0px', '0px']
                         },
                         {
                             preload: 'auto',
@@ -1005,13 +1004,12 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '213px', '31px']
+                            rect: [null, null, '213px', '31px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 5445.4,
+                    duration: 8173.75,
                     autoPlay: true,
                     labels: {
                         "stop": 0,

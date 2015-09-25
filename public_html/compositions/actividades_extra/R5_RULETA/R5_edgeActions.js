@@ -134,52 +134,39 @@
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
-         
-         sym.play();
          do_submit(sym);
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${btnInicio}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón
-         sym.play();
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          sym.stop();
-         pagina_actual("1");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          sym.stop();
-         pagina_actual("2");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          sym.stop();
-         pagina_actual("3");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
          sym.stop();
-         pagina_actual("4");
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5000, function(sym, e) {
          sym.stop();
-         pagina_actual("5");
 
       });
       //Edge binding end
@@ -353,13 +340,12 @@
    //Edge symbol: 'ruleta'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
          
          // Ocultar un elemento 
          sym.getSymbolElement().hide();
-         
          sym.getComposition().getStage().play("slide_1");
-         
+         sym.stop(0);
          
 
       });
@@ -393,12 +379,13 @@
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
          
          // Ocultar un elemento 
          sym.getSymbolElement().hide();
          
          sym.getComposition().getStage().play("slide_2");
+         sym.stop(0);
          
          
 
@@ -427,12 +414,13 @@
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
          
          // Ocultar un elemento 
          sym.getSymbolElement().hide();
          
          sym.getComposition().getStage().play("slide_3");
+         sym.stop(0);
          
          
 
@@ -461,13 +449,13 @@
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
          
          // Ocultar un elemento 
          sym.getSymbolElement().hide();
          
          sym.getComposition().getStage().play("slide_4");
-         
+         sym.stop(0);
          
 
       });
@@ -495,13 +483,14 @@
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
          
          // Ocultar un elemento 
          sym.getSymbolElement().hide();
          
          sym.getComposition().getStage().play("slide_5");
          
+         sym.stop(0);
          
 
       });

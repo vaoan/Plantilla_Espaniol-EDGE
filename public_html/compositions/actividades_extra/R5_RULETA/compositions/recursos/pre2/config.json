@@ -2,7 +2,7 @@
     "palabras_a_escribir": [
         {
         "ed_palabra":["o","O"],
-        "pregunta": "escuche el audio, lea la pregunta y escriba la respuesta correspondiente. Tiene dos intentos para esta actividad."
+        "pregunta": "escuche el audio y escriba la letra que corresponda."
     }    ],    
     "attempts": 2,
     "css_config": {

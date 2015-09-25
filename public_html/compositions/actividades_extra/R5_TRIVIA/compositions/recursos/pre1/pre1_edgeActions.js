@@ -239,6 +239,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${lupa}", "click", function(sym, e) {
+         sym.$("zoom_1").show();
+         sym.$("lupa").hide();
+         
+         
+         
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
@@ -398,6 +415,171 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    //=========================================================
    
+   //Edge symbol: 'audio_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+         sym.$("audiomp3_1")[0].pause();
+         sym.$("audiomp3_1")[0].currentTime = 0;
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
+         sym.play("stop");
+
+      });
+      //Edge binding end
+
+   })("audio_1");
+   //Edge symbol end:'audio_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'TIMER_CONTAINER_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
+         sym.play("alerta");
+
+      });
+      //Edge binding end
+
+   })("TIMER_CONTAINER_1");
+   //Edge symbol end:'TIMER_CONTAINER_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'lupa'
+   (function(symbolName) {   
+   
+   })("lupa");
+   //Edge symbol end:'lupa'
+
+   //=========================================================
+   
+   //Edge symbol: 'zoom'
+   (function(symbolName) {   
+   
+      Symbol.bindElementAction(compId, symbolName, "${cerrar_lupa}", "click", function(sym, e) {
+         
+         // Ocultar un elemento 
+         sym.getSymbolElement().hide();
+         
+         // Mostrar un elemento 
+         sym.getComposition().getStage().$("lupa").show();
+         
+         
+
+      });
+      //Edge binding end
+
+      
+
+   })("zoom");
+   //Edge symbol end:'zoom'
+
+   //=========================================================
+   
+   //Edge symbol: 'lupa_1'
+   (function(symbolName) {   
+   
+   })("cerrar_lupa");
+   //Edge symbol end:'cerrar_lupa'
+
+   //=========================================================
+   
+   //Edge symbol: 'zoom_1'
+   (function(symbolName) {   
+   
+      Symbol.bindElementAction(compId, symbolName, "${Zona_clic}", "click", function(sym, e) {
+         sym.getSymbolElement().hide();
+         sym.getComposition().getStage().$("lupa").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${cerrar_lupa}", "click", function(sym, e) {
+         
+         // Ocultar un elemento 
+         sym.getSymbolElement().hide();
+         
+         // Mostrar un elemento 
+         sym.getComposition().getStage().$("lupa").show();
+         
+         
+
+      });
+      //Edge binding end
+
+   })("zoom_1");
+   //Edge symbol end:'zoom_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'Skills_1'
+   (function(symbolName) {   
+   
+      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseover", function(sym, e) {
+         sym.getSymbol("lectora").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_lectora}", "mouseout", function(sym, e) {
+         sym.getSymbol("lectora").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseout", function(sym, e) {
+         sym.getSymbol("escrita").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_escrita}", "mouseover", function(sym, e) {
+         sym.getSymbol("escrita").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseout", function(sym, e) {
+         sym.getSymbol("auditiva").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_auditiva}", "mouseover", function(sym, e) {
+         sym.getSymbol("auditiva").play("b");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseout", function(sym, e) {
+         sym.getSymbol("oral").play("a");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Tool_oral}", "mouseover", function(sym, e) {
+         sym.getSymbol("oral").play("b");
+
+      });
+      //Edge binding end
+
+   })("Skills_1");
+   //Edge symbol end:'Skills_1'
+
+   //=========================================================
+   
    //Edge symbol: 'oral'
    (function(symbolName) {   
    
@@ -531,47 +713,5 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    })("escrita");
    //Edge symbol end:'escrita'
-
-   //=========================================================
-   
-   //Edge symbol: 'audio_1'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
-         sym.$("audiomp3_1")[0].pause();
-         sym.$("audiomp3_1")[0].currentTime = 0;
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         sym.play("stop");
-
-      });
-      //Edge binding end
-
-   })("audio_1");
-   //Edge symbol end:'audio_1'
-
-   //=========================================================
-   
-   //Edge symbol: 'TIMER_CONTAINER_1'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         sym.play(0);
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
-         sym.play("alerta");
-
-      });
-      //Edge binding end
-
-   })("TIMER_CONTAINER_1");
-   //Edge symbol end:'TIMER_CONTAINER_1'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-17298671");

@@ -9,7 +9,7 @@
     "paginas": {
         "1": {
             "type": "actividad",
-            "recurso": "21",
+            "recurso": "51",
             "actividad": "drag_drop",
             "url": "recursos/01/index.html",
             "interaction": {
@@ -19,7 +19,7 @@
         },
         "2": {
             "type": "actividad",
-            "recurso": "22",
+            "recurso": "52",
             "actividad": "drag_drop",
             "url": "recursos/02/index.html",
             "interaction": {
@@ -29,7 +29,7 @@
         },
         "3": {
             "type": "actividad",
-            "recurso": "23",
+            "recurso": "53",
             "actividad": "drag_drop",
             "url": "recursos/03/index.html",
             "interaction": {
@@ -39,7 +39,7 @@
         },
         "4": {
             "type": "actividad",
-            "recurso": "24",
+            "recurso": "54",
             "actividad": "drag_drop",
             "url": "recursos/04/index.html",
             "interaction": {

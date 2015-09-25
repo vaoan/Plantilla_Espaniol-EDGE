@@ -21,7 +21,8 @@
             js+"dragAndDropUtilities.js",
             js+"interactionUtilities.js",
             js+"timerUtilities.js",
-            js+"utility.js"
+            js+"utility.js",
+			js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
