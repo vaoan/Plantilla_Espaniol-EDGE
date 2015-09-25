@@ -1,0 +1,29 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Instrucción: relacione la información, seleccione y arrastre las palabras para completar la frase. ",
+    "tipo": "uno a uno",
+    "drags": {
+        "1": {
+            "descripcion": "somos"
+        },
+        "2": {
+            "descripcion": "colombianos"
+        },
+        "3": {
+            "descripcion": "es"
+        },
+        "4": {
+            "descripcion": "colombiano"
+        }
+    },
+    "drops": {
+        "1": {
+            "descripcion": "Nosotros... ...",
+            "accepted": []
+        },
+        "2": {
+            "descripcion": "Nosotros... ...",
+            "accepted": []
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "selecciones_a_elegir":
+            {
+                "1": {
+                    "text_default": "texto para el select",
+                    "opciones": [{
+                            "opcion": "opcion_1",
+                            "valor": "value_1"
+                        },
+                        {
+                            "opcion": "opcion_2",
+                            "valor": "value_2"
+                        }],
+                    "valor_correcto": "value_2",
+                    "descripcion": "descripcion de la pregunta"
+                },
+                "2": {
+                    "text_default": "texto para el select_2",
+                    "opciones": [{
+                            "opcion": "opcion_1_2",
+                            "valor": "value_1_2"
+                        },
+                        {
+                            "opcion": "opcion_2_2",
+                            "valor": "value_2_2"
+                        },
+                        {
+                            "opcion": "opcion_2_2",
+                            "valor": "value_2_2"
+                        }],
+                    "valor_correcto": "value_1_2",
+                    "descripcion": "descripcion de la pregunta_2"
+                },
+                "3": {
+                    "text_default": "texto para el select_3",
+                    "opciones": [{
+                            "opcion": "opcion_1_3",
+                            "valor": "value_1_3"
+                        },
+                        {
+                            "opcion": "opcion_2_3",
+                            "valor": "value_2_3"
+                        }],
+                    "valor_correcto": "value_2_3",
+                    "descripcion": "descripcion de la pregunta_3"
+                }
+
+            },
+    "attempts": 3,
+    "other_css": {
+        "tamano": "40px !important",
+        "ancho": "750px",
+        "fuente": "'Source Sans Pro', sans-serif !important;"
+    },
+    "css_config_select": {
+        "font-weight": "bold !important",
+        "font_size": "25px !important",
+        "font-family": "'Source Sans Pro', sans-serif;",
+        "text-align": "center !important"
+    },
+    "css_config_option": {
+        "color": "white",
+        "font-weight": "bold",
+        "font-family": "'Source Sans Pro', sans-serif;",
+        "text-align": "center",
+        "position": "relative"
+    }
+}

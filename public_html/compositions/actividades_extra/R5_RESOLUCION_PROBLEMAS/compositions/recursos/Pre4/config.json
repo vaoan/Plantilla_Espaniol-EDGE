@@ -1,0 +1,14 @@
+{
+    "num_intentos": 2,
+    "pregunta":"escuche el audio y seleccione la imagen según corresponda. Tiene dos intentos para esta actividad.",
+    "picks": {
+        "1": {
+            "descripcion": "esa ventana",
+            "esRespuesta": true
+        },
+        "2": {
+            "descripcion": "esta ventana",
+            "esRespuesta": false
+        }
+    }
+}

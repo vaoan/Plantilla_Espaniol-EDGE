@@ -1,0 +1,10 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Seleccione las vocales que tiene la palabra árbol.",
+    "picks": {
+        "1": {
+            "descripcion": "kiwi",
+            "esRespuesta": true
+        }
+    }
+}

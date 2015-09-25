@@ -110,7 +110,6 @@ function inicializarPickMany(sym) {
         stage.prop("cantidad_picks", cont);
         inicializarPicks(sym);
         stage.prop("usa_timer", !isEmpty(stage.prop("timer")));
-        //enviarEventoActividadTerminada(sym);
     });
 }
 
@@ -182,6 +181,7 @@ function pickClickeado(sym, nombrePick) {
 
 function seleccionarPick(sym, nombrePick) {
     var stage = $(sym.getComposition().getStage().ele);
+	
     if (stage.prop("tipo") === "many" || (stage.prop("tipo") === "one" && !sym.$(nombrePick).prop("selected"))) {
         var pickObj = sym.$(nombrePick);
         var boolSelected = pickObj.prop("selected");
@@ -194,6 +194,7 @@ function seleccionarPick(sym, nombrePick) {
 
         pickObj.prop("selected", !boolSelected);
         pickObj.prop("correct", pickObj.prop("esRespuesta") === pickObj.prop("selected"));
+	enviarCambios(sym);
     }
 }
 
@@ -224,10 +225,37 @@ function checkAnswersPickMany(sym) {
 
     var stage = $(sym.getComposition().getStage().ele);
     if (!stage.prop("blocked")) {
-        var CANTIDAD_PICKS = stage.prop("cantidad_picks");
-        var respuesta = {"selected": []};
-        var correct = true;
+		
+	var answers = getRespuestaPickMany(sym);
 
+        var timer = {};
+        if (stage.prop("usa_timer")) {
+            var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+            timer.remaining_time = timerObj.prop("segundos_restantes");
+            timer.current_state = timerObj.prop("alertState");
+        } else {
+            timer.remaining_time = null;
+            timer.current_state = null;
+        }
+
+        if (answers.correct) {
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), answers.resp, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+        }
+        else {
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), answers.resp, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+        }
+    }
+}
+
+
+//**********************************************************************************
+
+function getRespuestaPickMany(sym){
+	var correct = true;
+	var respuesta = {"selected": []};
+        var stage = $(sym.getComposition().getStage().ele);
+	var CANTIDAD_PICKS = stage.prop("cantidad_picks");
+	
         for (var i = 1; i <= CANTIDAD_PICKS; i++) {
             var pickObj = sym.$("PICK_" + i);
 
@@ -236,29 +264,10 @@ function checkAnswersPickMany(sym) {
             }
 
             if (pickObj.prop("selected")) {
-                respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("nombre") + ")");
+                respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("descripcion") + ")");
             }
         }
-
-        var timer = {};
-        if (stage.prop("usa_timer")) {
-            var timerObj = buscar_sym(sym, stage.prop("timer"), true);
-            timer.remaining_time = timerObj.prop("segundos_restantes");
-            timer.current_state = timerObj.prop("alertState");
-        } else {
-            //timer.timerObj = null;
-            timer.remaining_time = null;
-            timer.current_state = null;
-        }
-        //timer.time_out = false;
-
-        if (correct) {
-            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
-        }
-        else {
-            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
-        }
-    }
+	return {resp: respuesta,correct: correct} 
 }
 
 //**********************************************************************************
@@ -349,4 +358,12 @@ function nombreANumero(strNombre) {
 
 function inicializar(sym) {
     inicializarPickMany(sym);
+}
+
+//***********************************************************************
+
+
+function enviarCambios(sym) {
+    var objRespuesta = getRespuestaPickMany(sym);
+    enviarEventoCambio(sym, objRespuesta.resp);
 }

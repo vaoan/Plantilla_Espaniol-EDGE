@@ -1,0 +1,10 @@
+{
+    "num_intentos": 2,
+    "pregunta":"Escuche los sonidos y relaciónelos con las imágenes.",
+    "picks": {
+        "1": {
+            "descripcion": "esta ventana",
+            "esRespuesta": true
+        }
+    }
+}

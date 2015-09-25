@@ -1,0 +1,25 @@
+{
+    "palabras_a_escribir": [
+        {
+        "ed_palabra":["s","S"],
+        "pregunta": "escuche el audio, lea la pregunta y escriba la respuesta correspondiente. Tiene dos intentos para esta actividad."
+    }    ],    
+    "attempts": 2,
+    "css_config": {
+            "line-height": "1",
+            "color": "rgb(79,45,110,1.00)",
+            "background-color": "rgba(35, 130, 118, 0.1)",
+            "box-shadow": "inset 0 0.2rem 0.2rem rgba(2, 84, 73, 0.1)",
+            "border-radius": "0.5em",
+            "padding": "0 0.166666em",
+            "border": "0",
+            "border-bottom": "1px solid rgb(2, 84, 73)",
+            "font-weight": "600",
+            "font-size": "30px",
+            "color":"#6a3789" ,
+            "text-align": "center",
+            "margin": "0 0.3em",
+            "position": "absolute"
+    },
+    "pregunta": "ESTA ES UNA PREGUNTA DE PRUEBA PARA TOMAR TODAS LAS INTERACCIONES"
+}

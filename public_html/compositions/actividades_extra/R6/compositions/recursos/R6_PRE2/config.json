@@ -1,0 +1,23 @@
+{
+    "num_intentos": 2,
+    "pregunta":"¿Como se deletrea el audio?",
+    "picks": {
+        "1": {
+            "descripcion": "pe- a- ese- o",
+            "esRespuesta": true
+        },
+        "2": {
+            "descripcion": "te- ere- a- zeta- o",
+            "esRespuesta": false
+        },
+        "3": {
+            "descripcion": "eme- a- zeta- o",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "be- ere- a- zeta- o ama",
+            "esRespuesta": false
+        }      
+        
+    }
+}

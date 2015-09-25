@@ -1,0 +1,27 @@
+{
+    "words": [
+    {
+        "word":"palabra_a"
+    },
+    {
+        "word":"palabra_b"
+    },
+    {
+        "word":"palabra_c"
+    },
+    {
+        "word":"palabra_d"
+    },
+    {
+        "word":"palabra_x"
+    }],
+    "attempts": 3,
+    "css_config": {
+        "color": "#00FF00",
+        "background-color": "green",
+        "font-size": "30px",
+        "font-family": "'Source Sans Pro', sans-serif;",
+        "text-align": "center",
+        "border": "none"
+    }
+}

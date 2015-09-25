@@ -46,21 +46,27 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 
     var stage = $(data.sym.getComposition().getStage().ele);
 
-    if (data.show_answers) {
+    if (!isEmpty(data.show_answers) && data.show_answers) {
         mostrarRespuestasPickMany(data.sym);
     }
 
-    if (data.block) {
+    if (!isEmpty(data.block) && data.block) {
         stage.prop("blocked", true);
+        deshabilitarPickManys(data.sym);
+
         if (stage.prop("usa_timer")) {
             stopTimer(data.sym);
         }
     } else {
         if (stage.prop("usa_timer")) {
-            if (data.timer.reset_timer) {
+            if (!isEmpty(data.timer) && data.timer.hasOwnProperty("reset_timer") && data.timer.reset_timer) {
                 resetTimer(data.sym);
             }
         }
+    }
+    
+    if(data.sym.$("Submit").length>0 && symbolStateEquals(data.sym.getSymbol("Submit"),"activado")){
+        data.sym.getSymbol("Submit").stop("desactivado");
     }
 
     stage.prop("intentos_previos", data.attempts);
@@ -73,9 +79,14 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
-        if (stage.prop("usa_timer") ) {
+        deshabilitarPickManys(data.sym);
+        if (stage.prop("usa_timer")) {
             setHTMLTimer(data.timer.remaining_time, data.sym);
             cambiarEstadoTimer(data.sym, data.timer.current_state);
+        }
+        
+        if(data.sym.$("Submit").length>0 && symbolStateEquals(data.sym.getSymbol("Submit"),"activado")){
+            data.sym.getSymbol("Submit").stop("desactivado");
         }
     }
 
@@ -93,7 +104,9 @@ function inicializarPickMany(sym) {
     stage.prop("interaction_type", "choice");
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
-
+    $.ajaxSetup({
+            async: false
+    });
     $.getJSON("config.json", function (data) {
         $.each(data, function (key, val) {
             stage.prop(key, val);
@@ -106,8 +119,7 @@ function inicializarPickMany(sym) {
         });
         stage.prop("cantidad_picks", cont);
         inicializarPicks(sym);
-        stage.prop("usa_timer", typeof startTimer == 'function');
-        //enviarEventoActividadTerminada(sym);
+        stage.prop("usa_timer", !isEmpty(stage.prop("timer")));
     });
 }
 
@@ -179,11 +191,12 @@ function pickClickeado(sym, nombrePick) {
 
 function seleccionarPick(sym, nombrePick) {
     var stage = $(sym.getComposition().getStage().ele);
+	
     if (stage.prop("tipo") === "many" || (stage.prop("tipo") === "one" && !sym.$(nombrePick).prop("selected"))) {
         var pickObj = sym.$(nombrePick);
         var boolSelected = pickObj.prop("selected");
         if (boolSelected) {
-            cambiarEstadoPick(sym, nombrePick, "normal");
+            cambiarEstadoPick(sym, nombrePick, "hover");
         }
         else {
             cambiarEstadoPick(sym, nombrePick, "seleccionado")
@@ -191,6 +204,7 @@ function seleccionarPick(sym, nombrePick) {
 
         pickObj.prop("selected", !boolSelected);
         pickObj.prop("correct", pickObj.prop("esRespuesta") === pickObj.prop("selected"));
+	enviarCambios(sym);
     }
 }
 
@@ -207,9 +221,9 @@ function deseleccionarPick(sym, nombrePick) {
 
 //**********************************************************************************
 
-function cambiarEstadoPick(sym, nombrePick, new_state){
+function cambiarEstadoPick(sym, nombrePick, new_state) {
     var pickObj = sym.$(nombrePick);
-    if (pickObj.prop("current_state")!== new_state) {
+    if (pickObj.prop("current_state") !== new_state) {
         sym.getSymbol(nombrePick).play(new_state);
         pickObj.prop("current_state", new_state);
     }
@@ -219,13 +233,40 @@ function cambiarEstadoPick(sym, nombrePick, new_state){
 
 function checkAnswersPickMany(sym) {
 
-    var interactionId = "";
     var stage = $(sym.getComposition().getStage().ele);
-    if (!stage.prop("blocked")) {
-        var CANTIDAD_PICKS = stage.prop("cantidad_picks");
-        var respuesta = {"selected": []};
-        var correct = true;
+    if (!stage.prop("blocked") && (sym.$("Submit").length===0 || symbolStateEquals(sym.getSymbol("Submit"),"activado"))) {
+		
+	var answers = getRespuestaPickMany(sym);
 
+        var timer = {};
+        if (stage.prop("usa_timer")) {
+            var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+            timer.remaining_time = timerObj.prop("segundos_restantes");
+            timer.current_state = timerObj.prop("alertState");
+        } else {
+            timer.remaining_time = null;
+            timer.current_state = null;
+        }
+
+        if (answers.correct) {
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), answers.resp, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+        }
+        else {
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), answers.resp, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+        }
+    }
+}
+
+
+//**********************************************************************************
+
+function getRespuestaPickMany(sym){
+	var correct = true;
+	var respuesta = {"selected": []};
+        var stage = $(sym.getComposition().getStage().ele);
+	var CANTIDAD_PICKS = stage.prop("cantidad_picks");
+        var isReady = true;
+	
         for (var i = 1; i <= CANTIDAD_PICKS; i++) {
             var pickObj = sym.$("PICK_" + i);
 
@@ -234,29 +275,11 @@ function checkAnswersPickMany(sym) {
             }
 
             if (pickObj.prop("selected")) {
-                respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("nombre") + ")");
+                respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("descripcion") + ")");
             }
         }
-
-        var timer = {};
-        if (stage.prop("usa_timer")) {
-            var timerObj = buscar_sym(sym, stage.prop("timer"), true);
-            timer.remaining_time = timerObj.prop("segundos_restantes");
-            timer.current_state = timerObj.prop("alertState");
-        } else {
-            //timer.timerObj = null;
-            timer.remaining_time = null;
-            timer.current_state = null;
-        }
-        //timer.time_out = false;
-
-        if (correct) {
-            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
-        }
-        else {
-            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
-        }
-    }
+        isReady = respuesta.selected.length>0;
+	return {resp: respuesta, correct: correct, isReady : isReady};
 }
 
 //**********************************************************************************
@@ -288,6 +311,48 @@ function mostrarRespuestasPickMany(sym) {
 
 //***********************************************************************
 
+$("body").on("EDGE_Recurso_eliminarOpciones", function (data) {
+	eliminarPicks(data.sym, data.cantidad);
+});
+
+function eliminarPicks(sym, cantidad) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var CANTIDAD_PICKS = stage.prop("cantidad_picks");
+	
+	var arrayPicks = [];
+    for (var i = 1; i <= CANTIDAD_PICKS; i++) {
+        if(!sym.$("PICK_" + i).prop("esRespuesta")){
+			arrayPicks.push(sym.$("PICK_" + i));
+		}
+    }
+	arrayPicks = shuffleArray(arrayPicks);
+	for(var i=0; i<cantidad; i++){
+		if(i<arrayPicks.length){
+			arrayPicks[i].hide();
+			arrayPicks[i].prop("selected", false);
+			arrayPicks[i].prop("correct", true);
+		}
+	}
+}
+
+//***********************************************************************
+
+function deshabilitarPickManys(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var CANTIDAD_PICKS = stage.prop("cantidad_picks");
+    for (var i = 1; i <= CANTIDAD_PICKS; i++) {
+        sym.$("PICK_" + i).off();
+    }
+}
+//***********************************************************************
+
+function shuffleArray(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
+//***********************************************************************
+
 //retorna la parte numérica del nombre de un elemento
 // ej: DROP_1 -> 1
 
@@ -305,4 +370,25 @@ function nombreANumero(strNombre) {
 
 function inicializar(sym) {
     inicializarPickMany(sym);
-}       
+}
+
+//***********************************************************************
+
+
+function enviarCambios(sym) {
+    var objRespuesta = getRespuestaPickMany(sym);
+    if(sym.$("Submit").length>0){
+        if(objRespuesta.isReady){
+            if(symbolStateEquals(sym.getSymbol("Submit"),"desactivado")){
+                sym.getSymbol("Submit").stop("activado");
+            }
+        }else{
+            if(symbolStateEquals(sym.getSymbol("Submit"),"activado")){
+                sym.getSymbol("Submit").stop("desactivado");
+            }
+        }
+    }else{ 
+        enviarEventoCambio(sym, objRespuesta.isReady);
+    }
+}
+
