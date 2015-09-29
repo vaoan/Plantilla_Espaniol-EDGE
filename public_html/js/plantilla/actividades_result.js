@@ -271,13 +271,15 @@ function send_fake_submit() {
     var objEvt = {
         type: "EDGE_Recurso_postSubmitApplied",
         sym: pagina.stage,
-        //attempts: this.sym.prop("ed_attemps"),
+		identify : EDGE_Plantilla.config.paginas[EDGE_Plantilla.id_pagina_actual],
         show_answers: true
     };
     //alert("sending");
     var sym_contenedor =
             buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
     $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+	
+	save_extra_data(objEvt, objEvt);
 }
 $(document).on("EDGE_Plantilla_FakeSubmit", function () {
     send_fake_submit();
@@ -1282,7 +1284,7 @@ function save_extra_data(objData, evt) {
             console.log("READING extradata", objData) : false;
 
     var arrObjNeedKeys = [
-        "attempts", "block", "timer", "response_pattern"
+        "attempts", "block", "timer", "response_pattern", "show_answers"
     ];
 
     var objTrueData = {};
