@@ -31,17 +31,26 @@ $(document).on("EDGE_Plantilla_creationComplete", function (evt) {
         case "select":
             selecting_blanks_santiago_created(evt);
             break;
+        case "sopa_letras":
+            sopa_letras_toscano_created(evt);
+            break;
+        case "concentrese":
+            concentrese_santiago_created(evt);
+            break;
         case "R6":
             R6_heiner_created(evt);
             break;
         case "R5_QQSM":
             R6_heiner_created(evt);
             break;
-        case "sopa_letras":
-            sopa_letras_toscano_created(evt);
+        case "R5_TRIVIA":
+            R6_heiner_created(evt);
             break;
-        case "concentrese":
-            concentrese_santiago_created(evt);
+        case "R5_CARRERA":
+            R6_heiner_created(evt);
+            break;
+        case "R5_RULETA":
+            R6_heiner_created(evt);
             break;
         default:
             console.error("Creation inexistente", evt.identify);
@@ -66,7 +75,7 @@ function concentrese_santiago_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -87,7 +96,7 @@ function sopa_letras_toscano_created(evt) {
     };
 
     objEvt = merge_options(objEvt, read_extra_data(evt));
-
+	
     if (objEvt.block) {
         objEvt.show_answers = true;
     }
@@ -174,7 +183,7 @@ function drag_drop_toscano_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -194,7 +203,7 @@ function pick_many_toscano_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -240,10 +249,42 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
         case "R5_QQSM":
             R5_QQSM_heiner_submit(evt);
             break;
+        case "R5_TRIVIA":
+            R5_TRIVIA_toscano_submit(evt);
+            break;
+        case "R5_CARRERA":
+            R5_QQSM_heiner_submit(evt);
+            break;
+        case "R5_RULETA":
+            R5_QQSM_heiner_submit(evt);
+            break;
         default:
             console.error("Submit inexistente", evt.identify);
             break;
     }
+});
+
+function send_fake_submit() {
+    //console.log(EDGE_Plantilla.pagina_actual);
+    var pagina = EDGE_Plantilla.config.paginas[EDGE_Plantilla.id_pagina_actual];
+    
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: pagina.stage,
+		identify : EDGE_Plantilla.config.paginas[EDGE_Plantilla.id_pagina_actual],
+
+        show_answers: true
+    };
+    //alert("sending");
+    var sym_contenedor =
+            buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+    $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+	
+	save_extra_data(objEvt, objEvt);
+}
+
+$(document).on("EDGE_Plantilla_FakeSubmit", function () {
+    send_fake_submit();
 });
 
 function R5_QQSM_heiner_submit(evt) {
@@ -291,7 +332,7 @@ function R5_QQSM_heiner_submit(evt) {
         }
     });
 
-    if (resp_actual === "incorrect") {
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
         objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
         if (objEvt.attempts >= evt.attempts_limit) {
             objEvt.send_to = "failed";
@@ -319,9 +360,164 @@ function R5_QQSM_heiner_submit(evt) {
     merge_extra_scorm(evt.extra_data);
     merge_temp_scorm(evt.answer);
 
-    console.log(objEvt);
     save_extra_data(objEvt, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
+}
+
+function R5_TRIVIA_toscano_submit(evt) {
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: evt.sym,
+        attempts: evt.attempts
+    };
+
+    var max_preguntas = 0;
+
+    $.each(evt.position_which_is_right, function (key, value) {
+        max_preguntas++;
+    });
+
+    var actual_pregunta = evt.pagina_actual.recurso;
+    var id_actual_pregunta = actual_pregunta + "0000";
+
+    var resp_actual = evt.position_which_is_right[id_actual_pregunta];
+
+
+    var objInteraction = {
+        pregunta: evt.identify.titulo + " " + evt.identify.subtitulo,
+        respuesta: "",
+        estado: "",
+        type: "other"
+    };
+
+    var correct = 0;
+    var incorrect = 0;
+    var neutral = 0;
+
+    $.each(evt.position_which_is_right, function (key, val) {
+        if (val === "correct") {
+            correct++;
+        } else if (val === "incorrect") {
+            incorrect++;
+        } else {
+            neutral++;
+        }
+    });
+
+
+    if (resp_actual === "incorrect" || (evt.hasOwnProperty("timer") && evt.timer.time_out)) {
+        objEvt.attempts = evt.attempts + EDGE_Plantilla.attemps_increasment;
+        if (objEvt.attempts >= evt.attempts_limit) {
+            objEvt.send_to = "failed";
+            objInteraction.estado = "incorrect";
+            objEvt.block = true;
+        } else {
+            objEvt.send_to = "try_again";
+            objInteraction.estado = "neutral";
+        }
+    } else if (resp_actual === "neutral") {
+        retroalimentacion(resp_actual, evt.identify.actividad);
+        objEvt.send_to = "nothing";
+        objInteraction.estado = "neutral";
+    } else if (correct >= max_preguntas) {
+        objEvt.send_to = "correct";
+        objInteraction.estado = "correct";
+        objEvt.block = true;
+    } else {
+        objEvt.send_to = "next";
+        objInteraction.estado = "neutral";
+    }
+
+
+    evt.answer[evt.identify.recurso + "000"] = objInteraction;
+    merge_extra_scorm(evt.extra_data);
+    merge_temp_scorm(evt.answer);
+
+    save_extra_data(objEvt, evt);
+    send_evt_to(evt.identify, objEvt, evt.results);
+}
+
+function R6_heiner_submit(evt) {
+    var strRetro = null;
+
+    if (evt.attempts >= evt.attempts_limit) {
+        return false;
+    }
+
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: evt.sym
+    };
+
+    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+        delete evt.timer.time_out;
+        strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
+        var timer = {reset_timer: true};
+        objEvt = merge_options(objEvt, {timer: timer});
+    } else {
+        if (evt.results === "neutral") {
+            strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
+            evt.results = "neutral";
+            EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
+        }
+    }
+
+    if (evt.results === "correct") {
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
+        objEvt = merge_options(objEvt, {
+            block: true,
+            //show_answers: false,
+            attempts: evt.attempts
+        });
+        strRetro = isEmpty(strRetro) ? "correct" : strRetro;
+
+    } else if (evt.results === "incorrect") {
+        if (!isEmpty(evt.timer)) {
+            var timer = {reset_timer: true};
+            objEvt = merge_options(objEvt, {timer: timer});
+        }
+        EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
+        var attemps = attemps_answer(evt);
+        objEvt = merge_options(objEvt, attemps);
+        strRetro = isEmpty(strRetro) || attemps.block ? "incorrect" : strRetro;
+        if (!attemps.block) {
+            strRetro = "nuevo_intento";
+        }
+    }
+
+    retroalimentacion(strRetro);
+    save_extra_data(objEvt, evt);
+    merge_temp_scorm(evt.answer);
+    send_evt_to(evt.identify, objEvt, evt.results);
+
+    //puntuación SCORM
+    console.log("inicia puntuacion");
+    var correct = 0, total = 0;
+    $.each(evt.answer, function (key, value) {
+
+        if (value.estado === "neutral") {
+            return;
+        }
+
+        total++;
+        if (value.estado === "correct") {
+            correct++;
+        }
+    });
+
+    var porc = parseInt((correct / total) * 100);
+    console.log(porc);
+
+    if (porc >= 80) {
+        SET_TOTAL_SCORE(porc, "passed");
+    } else {
+        SET_TOTAL_SCORE(porc, "failed");
+    }
 }
 
 function R6_heiner_submit(evt) {
@@ -367,7 +563,7 @@ function R6_heiner_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        strRetro = isEmpty(strRetro) || attemps.block ? "incorrect" : strRetro;
         if (!attemps.block) {
             strRetro = "nuevo_intento";
         }
@@ -554,7 +750,7 @@ function selecting_blanks_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    upload_interaction(evt.json.preguntas, evt.position_which_is_right, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -606,7 +802,7 @@ function filling_blanks_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+    upload_interaction(evt.json.preguntas, evt.position_which_is_right, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -656,7 +852,7 @@ function sortable_santiago_submit(evt) {
 
     retroalimentacion(strRetro);
     save_extra_data(objEvt, evt);
-    upload_interaction(evt.json.preguntas, evt.answer, evt.position_which_is_right, evt.interactionType, evt);
+	upload_interaction(evt.json.preguntas, evt.position_which_is_right, evt.results, evt.interactionType, evt);
     send_evt_to(evt.identify, objEvt, evt.results);
 }
 
@@ -669,12 +865,18 @@ function drag_drop_toscano_submit(evt) {
 
     var objEvt = {type: "EDGE_Recurso_postSubmitApplied", sym: evt.sym};
 
-    if (!isEmpty(evt.timer) && evt.timer.time_out) {
+    var timer = null;
+    if (!isEmpty(evt.timer)) {
+        timer = {remaining_time: evt.timer.remaining_time, current_state: evt.timer.current_state};
+    }
+
+    if (timer !== null && evt.timer.time_out) {
         delete evt.timer.time_out;
         strRetro = isEmpty(strRetro) ? "timeout" : strRetro;
-        var timer = {reset_timer: true};
+        timer.reset_timer = true;
         objEvt = merge_options(objEvt, {timer: timer});
-    } else {
+    }
+    else {
         if (!check_answers(evt)) {
             strRetro = isEmpty(strRetro) ? "complete_all" : strRetro;
             evt.results = "neutral";
@@ -788,12 +990,11 @@ $(document).on("EDGE_Plantilla_ExtraSave", function (evt) {
             break;
     }
 });
-//</editor-fold>
 
-function R6_heiner_Extra_save(evt){
+function R6_heiner_Extra_save(evt) {
     merge_extra_scorm(evt.extra_data);
 }
-
+//</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Check data Actividades">
 function check_answers(evt) {
@@ -925,7 +1126,7 @@ function attemps_answer(evt) {
 
     objAttemps = merge_options(objAttemps, {
         block: this_block,
-        show_answers: this_show_answers,
+        //show_answers: this_show_answers,
         attempts: intentos
     });
 
@@ -936,6 +1137,17 @@ function attemps_answer(evt) {
 //<editor-fold defaultstate="collapsed" desc="DB Data Actividades">
 function merge_temp_scorm(temp_scorm) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, temp_scorm);
+
+    $.each(temp_scorm, function (key, value) {
+        if (value.estado !== "neutral") {
+            if (EDGE_Plantilla.scorm_available) {
+                SEND_INTERACTION_TO_LMS(key, JSON.stringify(value.respuesta), value.estado, value.pregunta, "other");
+            }
+        }
+    });
+    if (EDGE_Plantilla.scorm_available) {
+        SCORM_COMMIT();
+    }
 }
 
 function upload_interaction(json_data, answers, estado_answers, typeInteraction, evt) {
@@ -957,6 +1169,8 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
             var estado;
             if (typeof estado_answers !== "string") {
                 estado = estado_answers ? "correct" : "incorrect";
+            } else {
+                estado = estado_answers;
             }
 
             if (estado_answers === "neutral") {
@@ -969,6 +1183,12 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                 estado: estado_answers,
                 type: typeInteraction
             };
+
+            var id = id_interaction + "0";
+            if (EDGE_Plantilla.scorm_available) {
+                SEND_INTERACTION_TO_LMS(id, JSON.stringify(answers), estado, json_data, "other");
+            }
+
         } else {
             $.each(answers, function (key, value) {
                 var estado;
@@ -988,9 +1208,16 @@ function upload_interaction(json_data, answers, estado_answers, typeInteraction,
                     respuesta: value//JSON.stringify(value)
                 };
             });
-
+            var id = id_interaction + key;
+            if (EDGE_Plantilla.scorm_available) {
+                SEND_INTERACTION_TO_LMS(id, JSON.stringify(value), estado, json_data[key].pregunta, "other");
+            }
+        }
+        if (EDGE_Plantilla.scorm_available) {
+            SCORM_COMMIT();
         }
     }
+
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, interactions);
     EDGE_Plantilla.debug ? console.log("UPLOADING interactions", interactions, pagina, EDGE_Plantilla.temp_scorm) : false;
 
@@ -1059,7 +1286,7 @@ function save_extra_data(objData, evt) {
             console.log("READING extradata", objData) : false;
 
     var arrObjNeedKeys = [
-        "attempts", "block", "timer", "response_pattern"
+        "attempts", "block", "timer", "response_pattern", "show_answers"
     ];
 
     var objTrueData = {};
@@ -1077,11 +1304,20 @@ function save_extra_data(objData, evt) {
 
     EDGE_Plantilla.debug ?
             console.log("UPLOADED extradata", EDGE_Plantilla.temp_scorm_suspendData) : false;
+
+    if (EDGE_Plantilla.scorm_available) {
+        WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
+        SCORM_COMMIT();
+    }
 }
 
 function merge_extra_scorm(extra_scorm) {
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm_suspendData, extra_scorm);
     EDGE_Plantilla.debug ? console.log("EXTRA SCORM MERGED", EDGE_Plantilla.temp_scorm_suspendData) : false;
+    if (EDGE_Plantilla.scorm_available) {
+        WRITE_SUSPEND_DATA(JSON.stringify(EDGE_Plantilla.temp_scorm_suspendData));
+        SCORM_COMMIT();
+    }
 }
 
 function read_extra_data(evt) {

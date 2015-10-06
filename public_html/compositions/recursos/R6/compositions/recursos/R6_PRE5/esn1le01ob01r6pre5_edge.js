@@ -9,8 +9,7 @@
         js='js/',
         fonts = {
             'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
-            'sena_icon': '<link rel=\"stylesheet\" href=\"css/stylesheet.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />',
-                  },
+            'sena_icon': '<link rel=\"stylesheet\" href=\"css/stylesheet.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -37,8 +36,8 @@
                         {
                             id: 'texto_1_empuja_cont_1',
                             type: 'text',
-                            rect: ['104px', '71px', '1664px', '30px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px; line-height: 40px;\">​<span style=\"font-family: sena_icon; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">Z</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;</span><span style=\"font-size: 30px;\">Las consonantes</span></p><p style=\"margin: 0px; line-height: 40px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(106, 55, 137); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">5</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;&nbsp;</span><span style=\"font-size: 30px;\">Identifique las consonantes que tiene la palabra tomate</span></p><p style=\"margin: 0px; line-height: 40px;\"><span style=\"font-size: 30px;\">​</span></p><p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: 40px;\"><span style=\"font-style: italic;\">Instrucción: seleccione la respuesta correcta. Tiene distractores.</span></p><p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: 40px;\"><br></p>",
+                            rect: ['104px', '73px', '1664px', '30px', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; line-height: 40px;\">​<span style=\"font-family: sena_icon; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">Z</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;</span><span style=\"font-size: 30px;\">Las consonantes</span></p><p style=\"margin: 0px; line-height: 40px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(106, 55, 137); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">5</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;&nbsp;</span><span style=\"font-size: 30px;\">Identifique las consonantes que tiene la palabra </span><span style=\"font-size: 30px; font-style: italic;\">tomate.</span></p><p style=\"margin: 0px; line-height: 40px;\"><span style=\"font-size: 30px;\">​</span></p><p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: 40px;\"><span style=\"font-style: italic;\">Instrucción: seleccione la respuesta correcta. Tiene distractores.</span></p><p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: 40px;\"><br></p>",
                             align: "left",
                             font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "700", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
@@ -116,19 +115,19 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'text',
                             rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -206,12 +205,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'TextCopy3',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['60px', '0px', '94px', '31px', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -247,12 +246,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
+                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                rect: ['190px', '1px', '94px', '31px', 'auto', 'auto']
+                                font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
                         },
                         {
@@ -288,11 +287,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
@@ -300,9 +299,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -395,11 +394,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
@@ -407,9 +406,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -502,11 +501,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
@@ -514,9 +513,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -609,11 +608,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            fill: ['rgba(255,255,255,1.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            fill: ['rgba(255,255,255,1.00)']
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
                         },
                         {
                             type: 'ellipse',
@@ -621,9 +620,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
                         }
                     ],
                     style: {
@@ -714,40 +713,40 @@
                 content: {
                     dom: [
                         {
-                            rect: ['104px', '164px', '18px', '38px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(106,55,137,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            align: 'left',
+                            type: 'text',
+                            text: '<p style=\"margin: 0px;\">​1</p>',
                             id: 'TextCopy',
                             textStyle: ['', '', '', '', 'none'],
-                            text: '<p style=\"margin: 0px;\">​1</p>',
-                            type: 'text'
+                            align: 'left',
+                            rect: ['104px', '164px', '18px', '38px', 'auto', 'auto']
                         },
                         {
-                            rect: ['84px', '48px', '57px', '85px', 'auto', 'auto'],
-                            id: 'vineta_lila',
                             transform: [[], [], [], ['0.25', '0.25']],
+                            id: 'vineta_lila',
                             type: 'image',
+                            rect: ['84px', '48px', '57px', '85px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/vineta_lila22.png', '0px', '0px']
                         },
                         {
-                            type: 'rect',
+                            rect: ['1px', '0px', '266px', '80px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['1px', '0px', '266px', '80px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['0px', '80px', '104px', '127px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '80px', '104px', '127px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['120px', '80px', '18px', '127px', 'auto', 'auto'],
                             id: 'Rectangle3',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['120px', '80px', '18px', '127px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         }
                     ],

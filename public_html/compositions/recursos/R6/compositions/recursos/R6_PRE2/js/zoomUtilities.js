@@ -14,16 +14,13 @@ $("body").on("EDGE_Recurso_promiseCreated",function () {
 function resize() {
     var ancho = $("#Stage").width();
     var alto = $("#Stage").height();
-
-    //var zoom = detectZoom.zoom();
     var device = detectZoom.device();
-    
-    //console.warn("ZOOM LEVEL", device);
     
     aplicarZoom(device);
 }
 
 function inicializarZoom(){
+	$("#Stage").css("overflow-x", "hidden");
 	$("div[id*=texto]").each(function(){
 		$(this).find("p, span").each(function(){
 			var text_size = $(this).css("font-size");
@@ -35,17 +32,22 @@ function inicializarZoom(){
 	$("div[id*=_empuja_]").each(function(){
 		var split = this.id.split("_empuja_");
 		$(this).attr("zoomPush", split[1]);
-		$(this).prop("originalPosition", $(this).offset());
+		$(this).prop("originalPosition", parseInt($(this).css('top'), 10));
     });
 	
 	$("[zoomPush]").each(function(){
 		var pushedObj = $("[id*="+$(this).attr("zoomPush")+"]").not("[id*="+this.id+"]");
-		pushedObj.prop("originalPosition", pushedObj.offset());
+		pushedObj.prop("originalPosition", parseInt(pushedObj.css('top'), 10));
 		pushedObj.attr("zoomId", $(this).attr("zoomPush"));
     });
 }
 
 function aplicarZoom(zoomLevel){
+	
+	if(zoomLevel > 1.5){
+		zoomLevel = 1.5;
+	}
+	
     $("div[id*=texto]").each(function(){
 		$(this).find("p, span").each(function(){
 			$(this).css("font-size", ($(this).prop("current_font_size")*zoomLevel) + "px");
@@ -59,23 +61,27 @@ function aplicarZoom(zoomLevel){
 			$("#Stage").css("overflow-y", "hidden");
 		}
 		
+		if(zoomLevel>1){
 		$("[zoomPush]").each(function(){
 				newHeight = 10;
-				newHeight += $(this).offset().top;
+				newHeight += parseInt($(this).css("top"), 10);
 				
+				console.log(newHeight);
 				$('p', this).each(function () {
+					console.log($(this).height());
 					newHeight += $(this).height();
 				});
 				
 				var pushedObj = $("[zoomId="+$(this).attr("zoomPush")+"]");
 				console.log($(this).attr("id"));
-				console.log(newHeight + " > "+ pushedObj.prop("originalPosition").top);
-				if(zoomLevel > 1 && (newHeight > pushedObj.prop("originalPosition").top)){
+				console.log(newHeight + " > "+ pushedObj.prop("originalPosition"));
+				if(zoomLevel > 1 && (newHeight > pushedObj.prop("originalPosition"))){
 					pushedObj.css("top", newHeight);
 				}else{
-					pushedObj.css("top", pushedObj.prop("originalPosition").top);
+					pushedObj.css("top", pushedObj.prop("originalPosition"));
 				}
 		});
+		}
 	}
 }
 

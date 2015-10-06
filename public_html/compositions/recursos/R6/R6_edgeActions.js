@@ -15,42 +15,36 @@
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
             sym.stop();
-            pagina_actual(1);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
             sym.stop();
-            //pagina_actual("portada");
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function (sym, e) {
             sym.stop();
-            pagina_actual(2);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function (sym, e) {
             sym.stop();
-            pagina_actual(3);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function (sym, e) {
             sym.stop();
-            pagina_actual(4);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function (sym, e) {
             sym.stop();
-            pagina_actual(5);
 
         });
         //Edge binding end
@@ -79,7 +73,7 @@
         });
         //Edge binding end
 
-        Symbol.bindElementAction(compId, symbolName, "${r6_enviar}", "click", function (sym, e) {
+        Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function (sym, e) {
             // introducir aquí código para clic de ratón
             do_submit(sym);
         });
@@ -88,7 +82,6 @@
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          // introducir código aquí
          sym.stop();
-         pagina_actual("final");
 
       });
       //Edge binding end
@@ -194,7 +187,7 @@
     //Edge symbol: 'r6_enviar'
     (function (symbolName) {
 
-        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function (sym, e) {
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function (sym, e) {
             sym.stop();
 
         });

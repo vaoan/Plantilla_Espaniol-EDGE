@@ -8,7 +8,8 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
+            'sena_icon': '<link rel=\"stylesheet\" href=\"css/stylesheet.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -119,47 +120,79 @@
                             transform: [[],[],[],['1','1.00064']]
                         },
                         {
-                            id: 'Nav_R6_14',
+                            id: 'Text',
                             display: 'none',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['1577px', '665px', '240px', '100px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"Nav_R6_1.png",'0px','0px']
+                            type: 'text',
+                            rect: ['1564px', '675px', 'auto', 'auto', 'auto', 'auto'],
+                            opacity: '0.5',
+                            text: "<p style=\"margin: 0px;\"><span style=\"font-family: sena_icon; font-size: 82px;\">5</span></p>",
+                            align: "left",
+                            font: ['sena_icon', [28, "px"], "rgba(106,55,137,1.00)", "400", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
                         },
                         {
-                            id: 'Nav_R6_22',
+                            id: 'TextCopy2',
                             display: 'none',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['1577px', '665px', '240px', '100px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"Nav_R6_2.png",'0px','0px']
+                            type: 'text',
+                            rect: ['1740px', '674px', 'auto', 'auto', 'auto', 'auto'],
+                            opacity: '1',
+                            text: "<p style=\"margin: 0px;\"><span style=\"font-family: sena_icon; font-size: 82px;\">Z</span></p>",
+                            align: "left",
+                            font: ['sena_icon', [28, "px"], "rgba(106,55,137,1.00)", "400", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
                         },
                         {
-                            id: 'Nav_R6_32',
+                            id: 'Text2',
                             display: 'none',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['1577px', '665px', '240px', '100px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"Nav_R6_3.png",'0px','0px']
+                            type: 'text',
+                            rect: ['1658px', '697px', 'auto', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif;\">1 de 5</span></p>",
+                            align: "left",
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(106,55,137,1.00)", "700", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
                         },
                         {
-                            id: 'Nav_R6_42',
+                            id: 'Text2Copy',
                             display: 'none',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['1577px', '665px', '240px', '100px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"Nav_R6_4.png",'0px','0px']
+                            type: 'text',
+                            rect: ['1658px', '697px', 'auto', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​2<span style=\"font-family: source-sans-pro, sans-serif;\">&nbsp;de 5</span></p>",
+                            align: "left",
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(106,55,137,1.00)", "700", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
                         },
                         {
-                            id: 'Nav_R6_52',
+                            id: 'Text2Copy2',
                             display: 'none',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['1577px', '665px', '240px', '100px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"Nav_R6_5.png",'0px','0px']
+                            type: 'text',
+                            rect: ['1658px', '697px', 'auto', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​3<span style=\"font-family: source-sans-pro, sans-serif;\">&nbsp;de 5</span></p>",
+                            align: "left",
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(106,55,137,1)", "700", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
                         },
                         {
-                            id: 'r6_enviar',
+                            id: 'Text2Copy3',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['1658px', '697px', 'auto', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​4<span style=\"font-family: source-sans-pro, sans-serif;\">&nbsp;de 5</span></p>",
+                            align: "left",
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(106,55,137,1.00)", "700", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
+                            id: 'Text2Copy4',
+                            display: 'none',
+                            type: 'text',
+                            rect: ['1658px', '697px', 'auto', 'auto', 'auto', 'auto'],
+                            text: "<p style=\"margin: 0px; text-align: center;\">​5<span style=\"font-family: source-sans-pro, sans-serif;\">&nbsp;de 5</span></p>",
+                            align: "left",
+                            font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(106,55,137,1.00)", "700", "none", "normal", "break-word", "nowrap"],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
+                            id: 'Submit',
                             symbolName: 'r6_enviar',
                             display: 'none',
                             type: 'rect',
@@ -206,22 +239,32 @@
                     },
                     data: [
                         [
-                            "eid90",
+                            "eid80",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Submit}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid81",
                             "display",
                             450,
                             0,
                             "linear",
-                            "${Nav_R6_14}",
+                            "${Submit}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid91",
+                            "eid82",
                             "display",
-                            950,
+                            2550,
                             0,
                             "linear",
-                            "${Nav_R6_14}",
+                            "${Submit}",
                             'block',
                             'none'
                         ],
@@ -306,26 +349,6 @@
                             'block'
                         ],
                         [
-                            "eid92",
-                            "display",
-                            950,
-                            0,
-                            "linear",
-                            "${Nav_R6_22}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid93",
-                            "display",
-                            1460,
-                            0,
-                            "linear",
-                            "${Nav_R6_22}",
-                            'block',
-                            'none'
-                        ],
-                        [
                             "eid223",
                             "display",
                             0,
@@ -356,6 +379,26 @@
                             'block'
                         ],
                         [
+                            "eid459",
+                            "display",
+                            1460,
+                            0,
+                            "linear",
+                            "${Text2Copy2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid460",
+                            "display",
+                            1960,
+                            0,
+                            "linear",
+                            "${Text2Copy2}",
+                            'block',
+                            'none'
+                        ],
+                        [
                             "eid44",
                             "left",
                             500,
@@ -376,92 +419,244 @@
                             '-1840px'
                         ],
                         [
-                            "eid80",
-                            "display",
-                            0,
-                            0,
+                            "eid499",
+                            "opacity",
+                            2000,
+                            500,
                             "linear",
-                            "${r6_enviar}",
-                            'none',
-                            'none'
+                            "${TextCopy2}",
+                            '1',
+                            '0.5'
                         ],
                         [
-                            "eid81",
+                            "eid219",
+                            "-webkit-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid512",
+                            "-moz-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid513",
+                            "-ms-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid514",
+                            "msTransformOrigin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid515",
+                            "-o-transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid516",
+                            "transform-origin",
+                            3000,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid220",
+                            "-webkit-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid517",
+                            "-moz-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid518",
+                            "-ms-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid519",
+                            "msTransformOrigin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid520",
+                            "-o-transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid521",
+                            "transform-origin",
+                            6750,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            [100,50],
+                            [100,50],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid496",
+                            "opacity",
+                            450,
+                            550,
+                            "linear",
+                            "${Text}",
+                            '0.5',
+                            '1'
+                        ],
+                        [
+                            "eid492",
                             "display",
                             450,
                             0,
                             "linear",
-                            "${r6_enviar}",
+                            "${TextCopy2}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid82",
+                            "eid500",
                             "display",
                             2550,
                             0,
                             "linear",
-                            "${r6_enviar}",
+                            "${TextCopy2}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid98",
+                            "eid468",
+                            "display",
+                            1960,
+                            0,
+                            "linear",
+                            "${Text2Copy3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid469",
                             "display",
                             2455,
                             0,
                             "linear",
-                            "${Nav_R6_52}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid99",
-                            "display",
-                            2550,
-                            0,
-                            "linear",
-                            "${Nav_R6_52}",
+                            "${Text2Copy3}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid94",
+                            "eid470",
+                            "display",
+                            2455,
+                            0,
+                            "linear",
+                            "${Text2Copy4}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid471",
+                            "display",
+                            2550,
+                            0,
+                            "linear",
+                            "${Text2Copy4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid221",
+                            "rotateZ",
+                            3000,
+                            5000,
+                            "linear",
+                            "${medidor}",
+                            '0deg',
+                            '180deg'
+                        ],
+                        [
+                            "eid457",
+                            "display",
+                            950,
+                            0,
+                            "linear",
+                            "${Text2Copy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid458",
                             "display",
                             1460,
                             0,
                             "linear",
-                            "${Nav_R6_32}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid95",
-                            "display",
-                            1960,
-                            0,
-                            "linear",
-                            "${Nav_R6_32}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid96",
-                            "display",
-                            1960,
-                            0,
-                            "linear",
-                            "${Nav_R6_42}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid97",
-                            "display",
-                            2455,
-                            0,
-                            "linear",
-                            "${Nav_R6_42}",
+                            "${Text2Copy}",
                             'block',
                             'none'
                         ],
@@ -556,6 +751,36 @@
                             'block'
                         ],
                         [
+                            "eid456",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid452",
+                            "display",
+                            450,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid501",
+                            "display",
+                            2550,
+                            0,
+                            "linear",
+                            "${Text}",
+                            'block',
+                            'none'
+                        ],
+                        [
                             "eid226",
                             "display",
                             0,
@@ -584,6 +809,16 @@
                             "${texto_3}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid23",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${R6_portada}",
+                            '0px',
+                            '-1830px'
                         ],
                         [
                             "eid56",
@@ -616,156 +851,34 @@
                             'none'
                         ],
                         [
-                            "eid23",
-                            "left",
+                            "eid455",
+                            "display",
                             0,
-                            500,
-                            "linear",
-                            "${R6_portada}",
-                            '0px',
-                            '-1830px'
-                        ],
-                        [
-                            "eid221",
-                            "rotateZ",
-                            3000,
-                            5000,
-                            "linear",
-                            "${medidor}",
-                            '0deg',
-                            '180deg'
-                        ],
-                        [
-                            "eid219",
-                            "-webkit-transform-origin",
-                            3000,
                             0,
                             "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
+                            "${Text2}",
+                            'none',
+                            'none'
                         ],
                         [
-                            "eid518",
-                            "-moz-transform-origin",
-                            3000,
+                            "eid451",
+                            "display",
+                            450,
                             0,
                             "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
+                            "${Text2}",
+                            'none',
+                            'block'
                         ],
                         [
-                            "eid519",
-                            "-ms-transform-origin",
-                            3000,
+                            "eid453",
+                            "display",
+                            950,
                             0,
                             "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid520",
-                            "msTransformOrigin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid521",
-                            "-o-transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid522",
-                            "transform-origin",
-                            3000,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid220",
-                            "-webkit-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid523",
-                            "-moz-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid524",
-                            "-ms-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid525",
-                            "msTransformOrigin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid526",
-                            "-o-transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid527",
-                            "transform-origin",
-                            6750,
-                            0,
-                            "linear",
-                            "${medidor}",
-                            [100,50],
-                            [100,50],
-                            {valueTemplate: '@@0@@% @@1@@%'}
+                            "${Text2}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid57",
@@ -812,40 +925,40 @@
                         {
                             rect: ['37px', '29px', '563px', '749px', 'auto', 'auto'],
                             borderRadius: ['17px', '17px', '17px', '17px 17px'],
-                            tag: 'img',
+                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)'],
                             id: 'IMG_R6',
-                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px'],
-                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)']
+                            type: 'image',
+                            tag: 'img'
                         },
                         {
-                            type: 'rect',
                             rect: ['632px', '386px', '1198px', '106px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'cont_1',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(192,192,192,0.00)'],
                             c: [
                             {
-                                rect: ['509px', '52px', '161px', '12px', 'auto', 'auto'],
-                                id: 'precarga_gif',
                                 type: 'image',
+                                id: 'precarga_gif',
+                                rect: ['509px', '52px', '161px', '12px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
                             },
                             {
+                                rect: ['422px', '33px', '335', '49', 'auto', 'auto'],
                                 type: 'rect',
-                                id: 'btn_evaluemosCopy2',
                                 display: 'none',
                                 symbolName: 'btn_evaluemos',
                                 cursor: 'pointer',
-                                rect: ['422px', '33px', '335', '49', 'auto', 'auto']
+                                id: 'btn_evaluemosCopy2'
                             }]
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            id: 'texto_1_empuja_cont_1',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800; color: rgb(51, 51, 51);\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
                             type: 'text',
-                            rect: ['632px', '32px', '1198px', '348px', 'auto', 'auto']
+                            id: 'texto_1_empuja_cont_1',
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">2. Responda todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">3. Envíe el test una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800; color: rgb(51, 51, 51);\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
+                            rect: ['632px', '32px', '1198px', '348px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -1143,18 +1256,19 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             rect: ['0px', '0px', '165px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
+                            stroke: [1, 'rgba(120,78,166,1.00)', 'solid'],
+                            id: 'RoundRect',
+                            opacity: '0.5',
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['0px', '1px', '165px', '31px', 'auto', 'auto'],
+                                rect: ['0px', '19px', '165px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [25, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'texto_2',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
+                                text: '<p style=\"margin: 0px; text-align: center; line-height: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 30px;\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
                                 type: 'text'
                             }]
@@ -1162,37 +1276,28 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '165px', '38px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '165px', '38px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 250,
+                    duration: 2000,
                     autoPlay: true,
                     labels: {
-                        "a": 0,
-                        "b": 250
+                        "desactivado": 0,
+                        "activado": 2000
                     },
                     data: [
                         [
-                            "eid76",
-                            "background-image",
+                            "eid430",
+                            "opacity",
                             0,
-                            250,
+                            2000,
                             "linear",
                             "${RoundRect}",
-                            [270,[['rgba(149,115,187,1.00)',50],['rgba(120,78,166,1.00)',50]]],
-                            [270,[['rgba(111,67,158,1.00)',50],['rgba(84,53,118,1.00)',50]]]
-                        ],
-                        [
-                            "eid79",
-                            "textShadow.color",
-                            0,
-                            250,
-                            "linear",
-                            "${texto_2}",
-                            'rgba(0,0,0,0.49)',
-                            'rgba(0,0,0,0.65098)'
+                            '0.5',
+                            '1'
                         ]
                     ]
                 }
@@ -1209,25 +1314,19 @@
                         {
                             type: 'rect',
                             id: 'RoundRect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            stroke: [1, 'rgba(120,78,166,1.00)', 'solid'],
                             rect: ['0px', '0px', '336px', '49px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                                 type: 'text',
+                                rect: ['0px', '24px', '335px', '31px', 'auto', 'auto'],
                                 id: 'TextCopy',
-                                text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos</span></p>',
+                                text: '<p style=\"margin: 0px; text-align: center; line-height: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos </span><span style=\"font-family: sena_icon; font-weight: 600; color: rgb(255, 255, 255);\">Z</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto']
+                                font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                             }]
-                        },
-                        {
-                            type: 'image',
-                            id: 'signo_mas_que_1_Blancofw',
-                            rect: ['231px', '14px', '25px', '25px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/signo%20mas%20que%201%20Blanco.fw.png', '0px', '0px']
                         }
                     ],
                     style: {
@@ -1254,13 +1353,13 @@
                 content: {
                     dom: [
                         {
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            rect: ['0px', '0px', '91px', '33px', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'none'],
                             id: 'texto_4',
                             text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
                             align: 'center',
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal']
+                            rect: ['-29px', '0px', '151px', '33px', 'auto', 'auto']
                         }
                     ],
                     style: {

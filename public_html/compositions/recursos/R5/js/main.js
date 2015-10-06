@@ -11,7 +11,7 @@ EDGE_Plantilla = {
     allow_popups: false,
     play_general_sound: true,
     plantilla_sym: null,
-    debug: true,
+    debug: false,
     base_audio: new Audio('media/navigate-main.mp3'),
     config: null,
     popup_on_show: null,
@@ -257,7 +257,7 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
         EDGE_Plantilla.config.paginas[strPagina].stage = stage;
         $(stage.ele).prop("ed_identify", pagina);
 
-        if (!isEmpty(pagina.actividad)) {
+        //if (!isEmpty(pagina.actividad)) {
             var objEvt = {
                 type: "EDGE_Recurso_promiseCreated",
                 sym: stage,
@@ -265,7 +265,7 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
                 scorm_extra: EDGE_Plantilla.temp_scorm_suspendData
             };
             $("iframe", sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
-        }
+        //}
 
         EDGE_Plantilla.debug ? console.log("DONE MOSTRAR", pagina, stage) : false;
         if (!isEmpty(objRetro)) {

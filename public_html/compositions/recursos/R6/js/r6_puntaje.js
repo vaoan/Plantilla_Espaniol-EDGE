@@ -18,9 +18,7 @@ $("body").on("EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied", fun
 
     if (evt.block) {
         var sym = EDGE_Plantilla.plantilla_sym;
-        //sym.stop("slide_final");
-        
-        console.log(EDGE_Plantilla.temp_scorm);
+        //sym.stop("slide_final")
 
         var texto = buscar_sym(sym, ["text_percent"], true);
         

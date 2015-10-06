@@ -12,7 +12,7 @@
 $("body").on("EDGE_Recurso_promiseCreated", function (evt) {
     EDGE_Plantilla.temp_scorm = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_prev);
     EDGE_Plantilla.temp_scorm_suspendData = merge_options(EDGE_Plantilla.temp_scorm, evt.scorm_extra);
-    
+
     inicializar(evt.sym);
 });
 
@@ -22,14 +22,14 @@ $(document).on("EDGE_Plantilla_onChange", function (evt)
 {
     EDGE_Plantilla.pages_ready[evt.identify.recurso] = evt.isReady;
     var cont = 0;
-    for (var recurso in EDGE_Plantilla.pages_ready){
-        if(EDGE_Plantilla.pages_ready[recurso]){
+    for (var recurso in EDGE_Plantilla.pages_ready) {
+        if (EDGE_Plantilla.pages_ready[recurso]) {
             cont++;
         }
     }
-    
+
     var pagesCont = Object.keys(EDGE_Plantilla.config.paginas).length;
-    
+
     if (cont >= pagesCont) {
         if (symbolStateEquals(EDGE_Plantilla.plantilla_sym.getSymbol("Submit"), "desactivado")) {
             EDGE_Plantilla.plantilla_sym.getSymbol("Submit").stop("activado");
@@ -76,11 +76,11 @@ $("body").on("EDGE_Plantilla_StartTimer", function (evt) {
 /********************* Eventos de ENVIO a la PLANTILLA ********************/
 
 function do_submit(sym) {
-    if(sym.$("Submit").length===0 || symbolStateEquals(sym.getSymbol("Submit"),"activado")){
-    $("body").trigger({
-        type: "EDGE_Actividad_Submit",
-        sym: sym
-    });
+    if (sym.$("Submit").length === 0 || symbolStateEquals(sym.getSymbol("Submit"), "activado")) {
+        $("body").trigger({
+            type: "EDGE_Actividad_Submit",
+            sym: sym
+        });
     }
 }
 
@@ -180,7 +180,7 @@ function pagina_actual(strPaginaActual) {
     };
     $("body").trigger(objEvt);
     send_change_page(strPaginaActual);
-    
+
 }
 
 function send_change_page(strPaginaActual) {

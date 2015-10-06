@@ -91,7 +91,7 @@
                             id: 'texto_1_empuja_cont_1',
                             type: 'text',
                             rect: ['104px', '71px', '1674px', '30px', 'auto', 'auto'],
-                            text: "<p style=\"margin: 0px; line-height: 40px;\">​<span style=\"font-family: sena_icon; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">Z</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;</span>Las letras</p><p style=\"margin: 0px; line-height: 40px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(106, 55, 137); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">3&nbsp;</span>¿Con qué letra comienza la palabra del audio?</p><p style=\"margin: 0px; line-height: 40px;\">​<br></p><p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: 40px;\"><span style=\"font-style: italic;\">&nbsp;Instruccion: Seleccione &nbsp;la repuesta correcta, tiene distractores.&nbsp;</span></p>",
+                            text: "<p style=\"margin: 0px; line-height: 40px;\">​<span style=\"font-family: sena_icon; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">Z</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(84, 53, 118); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;</span>Las letras</p><p style=\"margin: 0px; line-height: 40px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 900; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(106, 55, 137); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">3&nbsp;</span>¿Con qué letra comienza la palabra del audio?</p><p style=\"margin: 0px; line-height: 40px;\">​<br></p><p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 400; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: 40px;\"><span style=\"font-style: italic;\">&nbsp;Instrucción: seleccione la respuesta correcta, tiene distractores.&nbsp;</span></p>",
                             align: "left",
                             font: ['source-sans-pro, sans-serif', [28, "px"], "rgba(0,0,0,1)", "700", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "", "", "none"]
@@ -107,7 +107,7 @@
                     }
                 },
                 timeline: {
-                    duration: 2089,
+                    duration: 848.125,
                     autoPlay: true,
                     data: [
 
@@ -124,10 +124,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
@@ -302,10 +302,10 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(90,114,173,1.00)', 50], ['rgba(68,90,144,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['199px', '0px', '234px', '31px', 'auto', 'auto'],
+                                rect: ['199px', '20px', '234px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                                 id: 'Text',
-                                text: '<p style=\"margin: 0px; text-align: left;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
+                                text: '<p style=\"margin: 0px; text-align: left; line-height: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255); font-size: 25px;\">Escucha</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
                                 type: 'text'
                             }]
@@ -388,31 +388,31 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '25px', '13px', '79px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [7, 'rgba(79,45,110,0.00)', 'solid'],
-                            rect: ['0px', '25px', '13px', '79px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(180,180,180,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['27px', '0px', '1735px', '11px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [7, 'rgba(79, 45, 110, 0)', 'solid'],
-                            rect: ['27px', '0px', '1735px', '11px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(180,180,180,1)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['27px', '118px', '1735px', '7px', 'auto', 'auto'],
                             id: 'Rectangle3',
                             stroke: [7, 'rgba(79, 45, 110, 0)', 'solid'],
-                            rect: ['27px', '118px', '1735px', '7px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(180,180,180,1)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['1776px', '25px', '13px', '79px', 'auto', 'auto'],
                             id: 'Rectangle4',
                             stroke: [7, 'rgba(79, 45, 110, 0)', 'solid'],
-                            rect: ['1776px', '25px', '13px', '79px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(180,180,180,1)']
                         }
                     ],
@@ -440,24 +440,24 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['1775px', '0px', '55px', '70px', 'auto', 'auto'],
                             id: 'Rectangle2Copy2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['1775px', '0px', '55px', '70px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(111,160,217,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '55px', '70px', 'auto', 'auto'],
                             id: 'Rectangle2Copy4',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '55px', '70px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(111,160,217,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['86px', '0px', '1689px', '70px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['86px', '0px', '1689px', '70px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(181,199,220,1.00)']
                         }
                     ],
@@ -485,24 +485,24 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '30px', '30px', 'auto', 'auto'],
                             id: 'Rectangle2Copy',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '30px', '30px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['0px', '92px', '30px', '30px', 'auto', 'auto'],
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '92px', '30px', '30px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['0px', '142px', '30px', '30px', 'auto', 'auto'],
                             id: 'Rectangle2Copy5',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '142px', '30px', '30px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         }
                     ],
@@ -532,11 +532,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            fill: ['rgba(255,255,255,1.00)'],
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
+                            fill: ['rgba(255,255,255,1.00)']
                         },
                         {
                             type: 'ellipse',
@@ -544,9 +544,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
                         }
                     ],
                     style: {
@@ -565,44 +565,24 @@
                     },
                     data: [
                         [
-                            "eid153",
-                            "boxShadow.color",
-                            0,
+                            "eid150",
+                            "left",
                             250,
-                            "linear",
-                            "${Ellipse}",
-                            'rgba(106,55,137,0.00)',
-                            'rgba(106,55,137,0.843137)'
-                        ],
-                        [
-                            "eid173",
-                            "boxShadow.color",
-                            500,
                             0,
-                            "linear",
-                            "${Ellipse}",
-                            'rgba(106,55,137,0.843137)',
-                            'rgba(106,55,137,0.843137)'
-                        ],
-                        [
-                            "eid166",
-                            "opacity",
-                            0,
-                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '0',
-                            '1'
+                            '3px',
+                            '3px'
                         ],
                         [
-                            "eid164",
-                            "opacity",
+                            "eid151",
+                            "top",
                             250,
-                            250,
+                            0,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '1',
-                            '0'
+                            '3px',
+                            '3px'
                         ],
                         [
                             "eid148",
@@ -645,72 +625,25 @@
                             '1px'
                         ],
                         [
-                            "eid151",
-                            "top",
-                            250,
+                            "eid166",
+                            "opacity",
                             0,
+                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '3px',
-                            '3px'
+                            '0',
+                            '1'
                         ],
                         [
-                            "eid150",
-                            "left",
+                            "eid164",
+                            "opacity",
                             250,
-                            0,
+                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '3px',
-                            '3px'
-                        ]
-                    ]
-                }
-            },
-            "PICK_3": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            fill: ['rgba(255,255,255,1.00)'],
-                            id: 'Ellipse',
-                            stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
-                            type: 'ellipse',
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
-                        },
-                        {
-                            type: 'ellipse',
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse2Copy2',
-                            opacity: '0',
-                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
-                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '20px', '20px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 500,
-                    autoPlay: true,
-                    labels: {
-                        "normal": 0,
-                        "seleccionado": 250,
-                        "hover": 500
-                    },
-                    data: [
+                            '1',
+                            '0'
+                        ],
                         [
                             "eid153",
                             "boxShadow.color",
@@ -730,26 +663,73 @@
                             "${Ellipse}",
                             'rgba(106,55,137,0.843137)',
                             'rgba(106,55,137,0.843137)'
-                        ],
+                        ]
+                    ]
+                }
+            },
+            "PICK_3": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
+                            id: 'Ellipse',
+                            stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
+                            type: 'ellipse',
+                            fill: ['rgba(255,255,255,1.00)']
+                        },
+                        {
+                            type: 'ellipse',
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            id: 'Ellipse2Copy2',
+                            opacity: '0',
+                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
+                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, '20px', '20px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 500,
+                    autoPlay: true,
+                    labels: {
+                        "normal": 0,
+                        "seleccionado": 250,
+                        "hover": 500
+                    },
+                    data: [
                         [
-                            "eid166",
-                            "opacity",
-                            0,
+                            "eid145",
+                            "left",
                             250,
+                            30,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '0',
-                            '1'
+                            '3px',
+                            '4px'
                         ],
                         [
-                            "eid164",
-                            "opacity",
+                            "eid147",
+                            "top",
                             250,
-                            250,
+                            30,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '1',
-                            '0'
+                            '3px',
+                            '4px'
                         ],
                         [
                             "eid141",
@@ -792,24 +772,44 @@
                             '0px'
                         ],
                         [
-                            "eid147",
-                            "top",
+                            "eid166",
+                            "opacity",
+                            0,
                             250,
-                            30,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '3px',
-                            '4px'
+                            '0',
+                            '1'
                         ],
                         [
-                            "eid145",
-                            "left",
+                            "eid164",
+                            "opacity",
                             250,
-                            30,
+                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '3px',
-                            '4px'
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid153",
+                            "boxShadow.color",
+                            0,
+                            250,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(106,55,137,0.00)',
+                            'rgba(106,55,137,0.843137)'
+                        ],
+                        [
+                            "eid173",
+                            "boxShadow.color",
+                            500,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(106,55,137,0.843137)',
+                            'rgba(106,55,137,0.843137)'
                         ]
                     ]
                 }
@@ -826,11 +826,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            fill: ['rgba(255,255,255,1.00)'],
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
+                            fill: ['rgba(255,255,255,1.00)']
                         },
                         {
                             type: 'ellipse',
@@ -838,9 +838,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
                         }
                     ],
                     style: {
@@ -933,11 +933,11 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            fill: ['rgba(255,255,255,1.00)'],
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
+                            fill: ['rgba(255,255,255,1.00)']
                         },
                         {
                             type: 'ellipse',
@@ -945,9 +945,9 @@
                             id: 'Ellipse2Copy2',
                             opacity: '0',
                             rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
                             stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
                         }
                     ],
                     style: {
@@ -1040,21 +1040,21 @@
                         {
                             rect: ['0px', '0px', '16px', '16px', 'auto', 'auto'],
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            fill: ['rgba(255,255,255,1.00)'],
+                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)'],
                             id: 'Ellipse',
                             stroke: [2, 'rgba(153,149,150,1.00)', 'solid'],
                             type: 'ellipse',
-                            boxShadow: ['inset', 0, 0, 4, 0, 'rgba(106,55,137,0.00)']
+                            fill: ['rgba(255,255,255,1.00)']
                         },
                         {
-                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]],
+                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)'],
                             type: 'ellipse',
                             borderRadius: ['50%', '50%', '50%', '50%'],
-                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
                             id: 'Ellipse2Copy2',
                             opacity: '0',
-                            rect: ['3px', '3px', '12px', '12px', 'auto', 'auto'],
-                            boxShadow: ['', 0, 0, 3, 0, 'rgba(0,0,0,0.65098)']
+                            stroke: [1, 'rgba(106,55,137,1.00)', 'solid'],
+                            fill: ['rgba(106,55,137,1.00)', [349, [['rgba(148,107,192,1.00)', 0], ['rgba(86,44,111,1.00)', 46]]]]
                         }
                     ],
                     style: {
@@ -1073,44 +1073,24 @@
                     },
                     data: [
                         [
-                            "eid153",
-                            "boxShadow.color",
-                            0,
+                            "eid156",
+                            "left",
                             250,
-                            "linear",
-                            "${Ellipse}",
-                            'rgba(106,55,137,0.00)',
-                            'rgba(106,55,137,0.843137)'
-                        ],
-                        [
-                            "eid173",
-                            "boxShadow.color",
-                            500,
                             0,
-                            "linear",
-                            "${Ellipse}",
-                            'rgba(106,55,137,0.843137)',
-                            'rgba(106,55,137,0.843137)'
-                        ],
-                        [
-                            "eid166",
-                            "opacity",
-                            0,
-                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '0',
-                            '1'
+                            '3px',
+                            '3px'
                         ],
                         [
-                            "eid164",
-                            "opacity",
+                            "eid157",
+                            "top",
                             250,
-                            250,
+                            0,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '1',
-                            '0'
+                            '3px',
+                            '3px'
                         ],
                         [
                             "eid152",
@@ -1153,24 +1133,44 @@
                             '1px'
                         ],
                         [
-                            "eid157",
-                            "top",
-                            250,
+                            "eid166",
+                            "opacity",
                             0,
+                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '3px',
-                            '3px'
+                            '0',
+                            '1'
                         ],
                         [
-                            "eid156",
-                            "left",
+                            "eid164",
+                            "opacity",
                             250,
-                            0,
+                            250,
                             "linear",
                             "${Ellipse2Copy2}",
-                            '3px',
-                            '3px'
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid153",
+                            "boxShadow.color",
+                            0,
+                            250,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(106,55,137,0.00)',
+                            'rgba(106,55,137,0.843137)'
+                        ],
+                        [
+                            "eid173",
+                            "boxShadow.color",
+                            500,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(106,55,137,0.843137)',
+                            'rgba(106,55,137,0.843137)'
                         ]
                     ]
                 }
@@ -1187,10 +1187,10 @@
                         {
                             rect: ['104px', '164px', '18px', '38px', 'auto', 'auto'],
                             font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(106,55,137,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            textStyle: ['', '', '', '', 'none'],
+                            align: 'left',
                             id: 'TextCopy',
                             text: '<p style=\"margin: 0px;\">​1</p>',
-                            align: 'left',
+                            textStyle: ['', '', '', '', 'none'],
                             type: 'text'
                         },
                         {
@@ -1201,24 +1201,24 @@
                             fill: ['rgba(0,0,0,0)', 'images/vineta_lila22.png', '0px', '0px']
                         },
                         {
-                            rect: ['1px', '0px', '266px', '80px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['1px', '0px', '266px', '80px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['0px', '80px', '104px', '127px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle2',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '80px', '104px', '127px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['120px', '80px', '18px', '127px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle3',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['120px', '80px', '18px', '127px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         }
                     ],

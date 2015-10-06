@@ -214,3 +214,7 @@ function last_actividad() {
     });
     EDGE_Plantilla.last_actividad = last_actividad;
 }
+
+function symbolStateEquals(symbol, state) {
+    return symbol.getPosition() === symbol.getLabelPosition(state);
+}

@@ -12,13 +12,81 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol: 'stage'
    (function(symbolName) {
       
+      
+      
+
+      
+
+      
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          // Insertar código para ejecutarse cuando el símbolo se crea aquí
+         
          inicializarPickMany(sym);
 
       });
       //Edge binding end
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
       
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "mouseover", function(sym, e) {
@@ -30,6 +98,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       });
       //Edge binding end
+
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "mouseout", function(sym, e) {
          // introducir código que se ejecute cuando el ratón se mueva fuera del objeto
          var nombrePick = "PICK_1";
@@ -39,16 +108,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       });
       //Edge binding end
+
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
          pickClickeado(sym, "PICK_1");
 
       });
       //Edge binding end
-
-      
-
-      
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_2}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
