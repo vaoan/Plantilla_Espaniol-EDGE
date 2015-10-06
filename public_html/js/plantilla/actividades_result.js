@@ -96,7 +96,7 @@ function sopa_letras_toscano_created(evt) {
     };
 
     objEvt = merge_options(objEvt, read_extra_data(evt));
-
+	
     if (objEvt.block) {
         //objEvt.show_answers = true;
     }
@@ -574,6 +574,7 @@ function R6_heiner_submit(evt) {
 
 
 function sopa_letras_toscano_submit(evt) {
+	
     //var sym = EDGE_Plantilla.plantilla_sym;
     //var sym_contenedor = buscar_sym(sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
     var strRetro = null;
@@ -597,7 +598,7 @@ function sopa_letras_toscano_submit(evt) {
                 EDGE_Plantilla.debug ? console.log("RESPUESTAS VACIAS ENCONTRADAS, DEBE LLENAR TODO PARA PODER ENVIAR", evt.results) : false;
             }
         }
-        console.log(timer);
+
         objEvt = merge_options(objEvt, {timer: timer});
     }
 
@@ -609,7 +610,7 @@ function sopa_letras_toscano_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
         objEvt = merge_options(objEvt, {
             block: true,
-            show_answers: false,
+            show_answers: true,
             attempts: evt.attempts
         });
         strRetro = isEmpty(strRetro) ? "correct" : strRetro;
@@ -622,6 +623,7 @@ function sopa_letras_toscano_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
+		
 
         if (!attemps.block) {
             strRetro = isEmpty(strRetro) ? "nuevo_intento" : strRetro;
@@ -1296,9 +1298,14 @@ function save_extra_data(objData, evt) {
     });
 
     interaction[id_interaction] = objTrueData;
+	if(EDGE_Plantilla.temp_scorm_suspendData.hasOwnProperty(id_interaction)){
+		EDGE_Plantilla.temp_scorm_suspendData[id_interaction] =
+			merge_options(EDGE_Plantilla.temp_scorm_suspendData[id_interaction], objTrueData);
+	}else{
 
     EDGE_Plantilla.temp_scorm_suspendData =
-            merge_options(EDGE_Plantilla.temp_scorm_suspendData, interaction);
+		merge_options(EDGE_Plantilla.temp_scorm_suspendData, interaction);
+	}
 
     EDGE_Plantilla.debug ?
             console.log("UPLOADED extradata", EDGE_Plantilla.temp_scorm_suspendData) : false;
